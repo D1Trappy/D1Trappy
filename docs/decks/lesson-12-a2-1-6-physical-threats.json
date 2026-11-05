@@ -1,0 +1,645 @@
+{
+ "id": "lesson-12-a2-1-6-physical-threats",
+ "title": "Lesson 12 - A2.1.6 Physical Threats",
+ "code": "IT · Unit 2 · A2.1.6",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can physical security protect devices, data and restricted areas?",
+ "sections": [
+  {
+   "heading": "What is physical security?",
+   "text": "Physical security means protecting devices, data, people and buildings from physical threats, such as theft, damage or unauthorised access.",
+   "points": [
+    "Example: a company leaves several laptops in an unlocked office overnight. A thief gets in and steals laptops holding customer information and company files",
+    "Application: a school keeps student records on laptops in a staff-only room, protected by a locked door, security pass and CCTV",
+    "Those measures make it harder for unauthorised people to get in and steal devices containing sensitive data"
+   ]
+  },
+  {
+   "heading": "Device theft",
+   "text": "Devices can contain sensitive or confidential data, which makes them a target for theft.",
+   "points": [
+    "Laptops, tablets and smartphones can be stolen from workplaces or while travelling",
+    "USB drives and other storage devices can be lost or stolen",
+    "If a device is stolen, criminals may be able to access or extract the data on it",
+    "Standard protections (from Lessons 1 and 6): encrypt devices and USB drives, never leave devices unattended, lock storage away"
+   ]
+  },
+  {
+   "heading": "Physical areas",
+   "text": "Poor security in buildings or restricted areas can let unauthorised people in. They could steal or damage equipment such as servers and computers, or get at sensitive data on servers or databases.",
+   "points": [
+    "Example: a server room is left unlocked, so any employee can walk in",
+    "Risk: someone could damage equipment, steal hardware or access sensitive data",
+    "Protection: locks, security passes, CCTV and regular access reviews",
+    "Only people with a business need should be allowed access, and access should be reviewed and audited regularly"
+   ]
+  },
+  {
+   "heading": "Security reviews: suggested timescales",
+   "text": "Security reviews check that only authorised people have access to restricted areas and systems.",
+   "table": {
+    "head": [
+     "When",
+     "What to check"
+    ],
+    "rows": [
+     [
+      "Daily",
+      "Doors, alarms and restricted areas are secure"
+     ],
+     [
+      "Monthly",
+      "Review access logs, security passes and CCTV"
+     ],
+     [
+      "Every 6 months",
+      "Check staff access and remove unnecessary permissions"
+     ],
+     [
+      "Annually",
+      "Carry out a full physical security audit"
+     ],
+     [
+      "After an incident",
+      "Review security immediately and make improvements"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Managing access",
+   "points": [
+    "Least privilege: users should only have access to what they need",
+    "Automated tools: use software to manage and record access rights where possible",
+    "Manager approval: privileged access should need approval",
+    "Remove access: revoke access immediately when staff leave or change roles",
+    "Keep records: document and log reviews for auditing and accountability",
+    "The goal: the right people have the right access, and unnecessary access is removed"
+   ]
+  },
+  {
+   "heading": "User vulnerability",
+   "text": "People can create security risks through mistakes, poor security practices or weak processes.",
+   "table": {
+    "head": [
+     "Type",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Accidental data leaks",
+      "Sending sensitive information to the wrong person, or posting private information publicly"
+     ],
+     [
+      "Sharing passwords",
+      "Sending passwords by email, or saying them where others can hear"
+     ],
+     [
+      "Weak security processes",
+      "Poor password-reset procedures, or hidden 'backdoors' attackers could exploit"
+     ]
+    ]
+   },
+   "points": [
+    "Example: an employee emails a confidential document to the wrong person, with the password in the same email",
+    "Risk: an unauthorised person can open the sensitive information",
+    "Prevention: check recipients carefully, and never share passwords through insecure methods"
+   ]
+  },
+  {
+   "heading": "Worked scenario: risks and measures",
+   "text": "The slides' scenario: a company stores sensitive customer data on laptops, USB drives and servers. Here's one way to answer 'identify the risks and suggest a measure for each' (my worked answer, so try it yourself first):",
+   "table": {
+    "head": [
+     "Weakness",
+     "Risk",
+     "Measure"
+    ],
+    "rows": [
+     [
+      "Laptops left unattended",
+      "Stolen, and customer data accessed",
+      "Never leave unattended; lock away; encrypt laptops"
+     ],
+     [
+      "USB drives not stored securely",
+      "Lost or stolen, exposing data",
+      "Encrypt them and keep them in a locked cabinet"
+     ],
+     [
+      "Server room often unlocked",
+      "Equipment damaged or stolen; data accessed",
+      "Locks, security passes and CCTV"
+     ],
+     [
+      "Too many people can enter the server room",
+      "More chances for damage, theft or misuse",
+      "Least privilege: only those with a business need"
+     ],
+     [
+      "Passwords shared by email",
+      "An unauthorised person gets the password and logs in",
+      "Never share passwords by email; training; a password policy"
+     ],
+     [
+      "Access rights not reviewed",
+      "Leavers or role-changers keep access they shouldn't have",
+      "Regular reviews (every 6 months) and remove access when staff leave"
+     ]
+    ]
+   }
+  }
+ ],
+ "keyIdea": "Devices and storage hold sensitive data, so theft, unlocked rooms and careless people all put data at risk. Physical security (locks, passes, CCTV), least-privilege access, regular reviews and good habits keep the wrong people away from devices and data.",
+ "flashcards": [
+  [
+   "Physical security",
+   "Protecting devices, data, people and buildings from physical threats such as theft, damage or unauthorised access."
+  ],
+  [
+   "Why devices are targeted",
+   "They can contain sensitive or confidential data that criminals can access or extract."
+  ],
+  [
+   "USB drive theft risk",
+   "Small and easily lost or stolen; anyone who has it may access the data on it."
+  ],
+  [
+   "Restricted area",
+   "An area, such as a server room, that only authorised people should enter."
+  ],
+  [
+   "Security pass",
+   "A card or badge that unlocks restricted areas for authorised people."
+  ],
+  [
+   "CCTV",
+   "Cameras that monitor entrances and restricted areas; footage is reviewed for suspicious activity."
+  ],
+  [
+   "Business need",
+   "The rule for access: only people who need it for their job should get into restricted areas."
+  ],
+  [
+   "Security review",
+   "A check that only authorised people have access to restricted areas and systems."
+  ],
+  [
+   "Daily review",
+   "Check doors, alarms and restricted areas are secure."
+  ],
+  [
+   "Monthly review",
+   "Review access logs, security passes and CCTV."
+  ],
+  [
+   "6-monthly review",
+   "Check staff access and remove unnecessary permissions."
+  ],
+  [
+   "Annual review",
+   "A full physical security audit."
+  ],
+  [
+   "After an incident",
+   "Review security immediately and make improvements."
+  ],
+  [
+   "Least privilege",
+   "Users only have access to what they need, no more."
+  ],
+  [
+   "Revoking access",
+   "Removing access immediately when staff leave or change roles."
+  ],
+  [
+   "Access log",
+   "A record of who entered or accessed what, and when."
+  ],
+  [
+   "User vulnerability",
+   "Risks people create through mistakes, poor practices or weak processes."
+  ],
+  [
+   "Accidental data leak",
+   "Sending sensitive information to the wrong person, or posting private information publicly."
+  ],
+  [
+   "Weak security process",
+   "E.g. a poor password-reset procedure or a hidden backdoor that attackers can exploit."
+  ],
+  [
+   "Never email passwords",
+   "Sharing passwords by email (especially with the file) lets anyone who gets the email open the data."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "Which types of equipment might contain sensitive data?",
+   "o": [
+    "Laptops, smartphones, USB drives and servers",
+    "Only printers",
+    "Only keyboards",
+    "Desks and chairs"
+   ],
+   "a": 0,
+   "e": "Any device or storage media can hold sensitive or confidential data."
+  },
+  {
+   "q": "Which is an example of something that could be physically stolen from an organisation?",
+   "o": [
+    "A firewall rule",
+    "A password policy",
+    "An IP address",
+    "A laptop"
+   ],
+   "a": 3,
+   "e": "Laptops, phones, tablets, USB drives and even server hardware can be stolen."
+  },
+  {
+   "q": "What could an organisation use to stop unauthorised people entering a restricted area?",
+   "o": [
+    "A faster Wi-Fi router",
+    "A brighter monitor",
+    "A locked door with security passes",
+    "A new logo"
+   ],
+   "a": 2,
+   "e": "Locks, security passes and CCTV restrict and monitor access."
+  },
+  {
+   "q": "What is physical security?",
+   "o": [
+    "Using antivirus only",
+    "Protecting devices, data, people and buildings from theft, damage or unauthorised access",
+    "Exercising at work",
+    "Backing up to the cloud"
+   ],
+   "a": 1,
+   "e": "It covers physical threats, not just digital ones."
+  },
+  {
+   "q": "Why is the theft of a USB drive a security risk?",
+   "o": [
+    "Whoever has it may be able to access the sensitive data on it",
+    "USB drives are expensive",
+    "It slows the network down",
+    "It isn't a risk"
+   ],
+   "a": 0,
+   "e": "Small storage devices are easily lost or stolen, and the data goes with them (unless encrypted)."
+  },
+  {
+   "q": "A server room is often left unlocked. What risk does this create?",
+   "o": [
+    "The servers run faster",
+    "No risk",
+    "Only a fire risk",
+    "Equipment could be damaged or stolen, and data accessed"
+   ],
+   "a": 3,
+   "e": "Anyone can walk in and steal, damage or access servers."
+  },
+  {
+   "q": "Who should have access to a restricted area such as a server room?",
+   "o": [
+    "Everyone in the company",
+    "Visitors only",
+    "Only people with a business need",
+    "Nobody, ever"
+   ],
+   "a": 2,
+   "e": "Least privilege: only those who need it for their job."
+  },
+  {
+   "q": "How often should a full physical security audit be carried out?",
+   "o": [
+    "Daily",
+    "Monthly",
+    "Every 6 months",
+    "Annually"
+   ],
+   "a": 3,
+   "e": "Annually: a full audit. Daily, monthly and 6-monthly checks fill in between."
+  },
+  {
+   "q": "How often should access logs, security passes and CCTV be reviewed?",
+   "o": [
+    "Daily",
+    "Monthly",
+    "Annually",
+    "Never"
+   ],
+   "a": 1,
+   "e": "Monthly review of logs, passes and CCTV."
+  },
+  {
+   "q": "When should an employee's access be removed if they leave the company?",
+   "o": [
+    "At the next annual audit",
+    "After six months",
+    "Only if they ask",
+    "Immediately"
+   ],
+   "a": 3,
+   "e": "Revoke access immediately when staff leave or change roles."
+  },
+  {
+   "q": "An employee emails a confidential document to the wrong person, with the password in the same email. What's the risk?",
+   "o": [
+    "No risk, it's password protected",
+    "The email will be too big",
+    "The wrong person can open the sensitive information",
+    "The password will expire"
+   ],
+   "a": 2,
+   "e": "Sending the password with the file defeats the protection."
+  },
+  {
+   "q": "Which is an example of a weak security process?",
+   "o": [
+    "An encrypted laptop",
+    "A poor password-reset procedure",
+    "A locked server room",
+    "Monthly CCTV reviews"
+   ],
+   "a": 1,
+   "e": "Weak processes, like easy password resets or hidden backdoors, can be exploited."
+  },
+  {
+   "q": "What should happen after a security incident?",
+   "o": [
+    "Review security immediately and make improvements",
+    "Wait for the annual audit",
+    "Delete the access logs",
+    "Nothing"
+   ],
+   "a": 0,
+   "e": "Review straight away to fix whatever allowed the incident."
+  },
+  {
+   "q": "What does 'least privilege' mean?",
+   "o": [
+    "Everyone gets admin rights",
+    "Managers have no access",
+    "Access is given at random",
+    "Users only have access to what they need"
+   ],
+   "a": 3,
+   "e": "No more access than the job needs."
+  },
+  {
+   "q": "Which TWO are physical security measures?",
+   "o": [
+    "Phishing and smishing",
+    "SQL and DNS",
+    "Locks and CCTV",
+    "Hashing and patching"
+   ],
+   "a": 2,
+   "e": "Also: security passes, security staff, locked cabinets, alarms."
+  },
+  {
+   "q": "Why should access reviews be documented and logged?",
+   "o": [
+    "To waste paper",
+    "For auditing and accountability",
+    "To slow down staff",
+    "It's not needed"
+   ],
+   "a": 1,
+   "e": "Records show who had access and what was checked."
+  }
+ ],
+ "apply": {
+  "title": "Risk and fix",
+  "intro": "Pick the risk, or the best measure, for each situation. This is exactly what the slides' scenario task asks.",
+  "items": [
+   {
+    "task": "A sales rep leaves their laptop on a train seat while getting a coffee.",
+    "o": [
+     "No risk",
+     "Device theft: never leave devices unattended; encrypt them",
+     "SQL injection",
+     "A zero-day"
+    ],
+    "a": 1,
+    "e": "Unattended devices can be stolen, and the data with them."
+   },
+   {
+    "task": "USB drives with customer data are kept in an open tray on reception.",
+    "o": [
+     "They could be stolen: encrypt them and lock them away",
+     "They will run out of storage",
+     "A phishing risk",
+     "No risk"
+    ],
+    "a": 0,
+    "e": "Store removable media securely and encrypt it."
+   },
+   {
+    "task": "The server room door is propped open because it gets too hot inside.",
+    "o": [
+     "A software vulnerability",
+     "Smishing",
+     "No risk",
+     "Unauthorised access to servers: keep it locked (and fix the cooling)"
+    ],
+    "a": 3,
+    "e": "Any unauthorised person could damage, steal or access the servers."
+   },
+   {
+    "task": "Forty staff have passes to the server room, but only three ever need to go in.",
+    "o": [
+     "Too few passes",
+     "An OEM problem",
+     "Too much access: apply least privilege",
+     "Port scanning"
+    ],
+    "a": 2,
+    "e": "Only people with a business need should have access."
+   },
+   {
+    "task": "A manager emails a staff member: 'The admin password is Summer2024!'",
+    "o": [
+     "Device theft",
+     "Sharing passwords insecurely",
+     "Physical forced entry",
+     "A hash check"
+    ],
+    "a": 1,
+    "e": "Never share passwords by email or where others can hear."
+   },
+   {
+    "task": "An employee left six months ago, but their security pass still opens the office doors.",
+    "o": [
+     "Access not revoked: remove access immediately when staff leave",
+     "A strong process",
+     "A patch problem",
+     "No issue"
+    ],
+    "a": 0,
+    "e": "Revoke access immediately and review access regularly."
+   },
+   {
+    "task": "Which check should happen DAILY?",
+    "o": [
+     "Full physical security audit",
+     "Remove unnecessary permissions",
+     "Review security policies",
+     "Doors, alarms and restricted areas are secure"
+    ],
+    "a": 3,
+    "e": "Daily: doors, alarms and restricted areas. Annual: the full audit."
+   },
+   {
+    "task": "Which check should happen EVERY 6 MONTHS?",
+    "o": [
+     "Check doors are locked",
+     "Watch live CCTV",
+     "Check staff access and remove unnecessary permissions",
+     "Nothing"
+    ],
+    "a": 2,
+    "e": "Every 6 months: staff access and unnecessary permissions."
+   },
+   {
+    "task": "A staff member reads out their password on a busy open-plan office phone call.",
+    "o": [
+     "A DoS attack",
+     "Sharing passwords where others can hear",
+     "Device theft",
+     "No risk"
+    ],
+    "a": 1,
+    "e": "Saying passwords aloud is a user vulnerability."
+   },
+   {
+    "task": "Anyone can reset a staff password just by phoning the helpdesk and giving a name.",
+    "o": [
+     "Weak security process (poor password reset)",
+     "Strong security",
+     "Physical theft",
+     "A hardware flaw"
+    ],
+    "a": 0,
+    "e": "Poor password-reset procedures can be exploited by attackers."
+   },
+   {
+    "task": "After a break-in, a company waits until its next annual audit to change anything. What should it do instead?",
+    "o": [
+     "Wait two years",
+     "Remove the CCTV",
+     "Give everyone server room access",
+     "Review security immediately and make improvements"
+    ],
+    "a": 3,
+    "e": "Review straight away after an incident."
+   },
+   {
+    "task": "A school wants to protect a staff room where laptops with student records are kept. Which combination is best?",
+    "o": [
+     "A bigger window",
+     "Free Wi-Fi",
+     "A locked door, security passes and CCTV",
+     "A notice saying 'please don't steal'"
+    ],
+    "a": 2,
+    "e": "That's the slides' application example."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define physical security.",
+   "m": 2,
+   "pts": [
+    "Protecting devices, data, people and buildings",
+    "from physical threats such as theft, damage or unauthorised access"
+   ],
+   "tip": "What's protected + what from."
+  },
+  {
+   "sc": "",
+   "q": "2. Explain why the theft of a USB drive is a security risk.",
+   "m": 2,
+   "pts": [
+    "USB drives can store sensitive or confidential data and are small, so they're easily lost or stolen",
+    "so whoever has the drive may be able to access or extract that data (especially if it isn't encrypted)"
+   ],
+   "tip": "Point + linked consequence. Mentioning encryption shows extra understanding."
+  },
+  {
+   "sc": "",
+   "q": "3. A server room is often left unlocked. Explain the security risk this creates.",
+   "m": 2,
+   "pts": [
+    "Unauthorised people could enter the server room",
+    "and damage equipment, steal hardware or access the sensitive data stored on the servers"
+   ],
+   "tip": "Who can get in + what they could do."
+  },
+  {
+   "sc": "",
+   "q": "4. Give two physical security measures an organisation could use.",
+   "m": 2,
+   "pts": [
+    "Any one: locks / locked doors",
+    "A second, different one: security passes / CCTV / security staff / locked storage"
+   ],
+   "tip": "\"Give\" = two short answers."
+  },
+  {
+   "sc": "",
+   "q": "5. Explain what is meant by least privilege and why it improves security.",
+   "m": 2,
+   "pts": [
+    "Users should only have access to what they need for their job",
+    "so fewer people can reach restricted areas or data, reducing the chance of theft, damage or misuse"
+   ],
+   "tip": "Definition + why it helps."
+  },
+  {
+   "sc": "",
+   "q": "6. Describe a suitable schedule of security reviews for an organisation.",
+   "m": 4,
+   "pts": [
+    "Daily: check doors, alarms and restricted areas are secure",
+    "Monthly: review access logs, security passes and CCTV",
+    "Every 6 months: check staff access and remove unnecessary permissions",
+    "Annually: a full physical security audit (and immediately after any incident)"
+   ],
+   "tip": "Learn the slides' timescales. One mark per correctly matched time and check."
+  },
+  {
+   "sc": "",
+   "q": "7. Explain two ways people can create security risks for an organisation.",
+   "m": 4,
+   "pts": [
+    "Way 1, e.g. accidental data leaks: sending sensitive information to the wrong person",
+    "so an unauthorised person could read confidential data",
+    "Way 2, e.g. sharing passwords by email or saying them aloud / weak processes like poor password resets",
+    "so attackers could get the password, or exploit the process, and access systems"
+   ],
+   "tip": "Use the slides' three user vulnerabilities: accidental leaks, sharing passwords, weak processes."
+  },
+  {
+   "sc": "A company stores sensitive customer data on laptops, USB drives and servers. It has several weaknesses: laptops are sometimes left unattended; USB drives are not stored securely; the server room is often left unlocked; too many employees have access to the server room; employees sometimes share passwords by email; and access rights are not regularly reviewed.",
+   "q": "8. Identify four security risks in this company and suggest a suitable security measure for each.",
+   "m": 8,
+   "pts": [
+    "Risk 1, e.g. unattended laptops could be stolen and customer data accessed",
+    "Measure 1, e.g. never leave laptops unattended, lock them away and encrypt them",
+    "Risk 2, e.g. USB drives not stored securely could be lost or stolen",
+    "Measure 2, e.g. encrypt USB drives and keep them in a locked cabinet",
+    "Risk 3, e.g. the unlocked server room lets anyone damage, steal or access servers",
+    "Measure 3, e.g. locks, security passes and CCTV; least privilege for the many staff who have access",
+    "Risk 4, e.g. passwords shared by email could be read by the wrong person / access rights not reviewed",
+    "Measure 4, e.g. never email passwords and use a password policy / review access every 6 months and remove leavers immediately"
+   ],
+   "tip": "This is the slides' scenario task. 1 mark per risk + 1 per matching measure. Each measure must fix ITS risk."
+  }
+ ]
+}
