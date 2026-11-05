@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: deck shelf on top, then the five study tabs for the chosen deck */
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #15212d;
+  --muted: #5a6875;
+  --line: #d9e0e6;
+  --accent: #0a6b84;
+  --accent-soft: #e2f0f4;
+  --amber: #a8650a;
+  --amber-soft: #fbf0dc;
+  --good: #1d7a45;
+  --good-soft: #e1f3e8;
+  --bad: #b3302b;
+  --bad-soft: #fbe5e3;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f161d; --surface: #17212b; --ink: #e5ecf2; --muted: #9aa9b6; --line: #2b3946;
+    --accent: #4fb6cf; --accent-soft: #15323c; --amber: #e2a645; --amber-soft: #3a2c14;
+    --good: #5cc98a; --good-soft: #163626; --bad: #ef7c76; --bad-soft: #3d1c1a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f161d; --surface: #17212b; --ink: #e5ecf2; --muted: #9aa9b6; --line: #2b3946;
+  --accent: #4fb6cf; --accent-soft: #15323c; --amber: #e2a645; --amber-soft: #3a2c14;
+  --good: #5cc98a; --good-soft: #163626; --bad: #ef7c76; --bad-soft: #3d1c1a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.55 var(--font-body); }
+.wrap { max-width: 920px; margin: 0 auto; padding: 18px 16px 60px; }
+.code { font-family: var(--font-mono); font-size: 13px; color: var(--accent); letter-spacing: .02em; }
+h1 { font-family: var(--font-display); font-size: 30px; line-height: 1.15; margin: 0 0 4px; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-size: 24px; margin: 0 0 10px; text-wrap: balance; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+.lead { color: var(--muted); max-width: 65ch; margin: 0 0 16px; }
+.muted { color: var(--muted); }
+/* Shelf */
+.shelf { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 10px; }
+.deck { flex: none; text-align: left; max-width: 230px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font: 500 14px/1.3 var(--font-body); }
+.deck small { display: block; font: 500 11px var(--font-mono); color: var(--muted); margin-bottom: 2px; }
+.deck[aria-pressed="true"] { border: 2px solid var(--accent); background: var(--accent-soft); }
+.deck.add { border-style: dashed; color: var(--accent); font-weight: 600; display: grid; place-items: center; min-width: 150px; }
+.status { font-size: 13px; color: var(--muted); }
+nav.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 20px; position: sticky; top: 0; background: var(--bg); padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--line); }
+nav.tabs button { font: 600 14px var(--font-body); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+nav.tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+button:focus-visible, textarea:focus-visible, input:focus-visible, .flash:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+.stack { display: grid; gap: 14px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+.sec { border-left: 4px solid var(--accent); }
+.card p { margin: 4px 0; }
+ul.tight { margin: 6px 0; padding-left: 20px; }
+ul.tight li { margin: 2px 0; }
+.callout { background: var(--amber-soft); border: 1px solid var(--amber); border-radius: 10px; padding: 12px 16px; }
+.callout strong { color: var(--amber); }
+.tablebox { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.btn { font: 600 15px var(--font-body); padding: 10px 16px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: var(--surface); cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--accent); }
+.btn.danger { background: transparent; color: var(--bad); border-color: var(--bad); }
+.btn.small { font-size: 13px; padding: 6px 12px; }
+.btn:disabled { opacity: .45; cursor: default; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.spacer { flex: 1; }
+.progress { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.progress > div { height: 100%; background: var(--accent); transition: width .25s; }
+.flash { min-height: 210px; display: grid; place-items: center; text-align: center; cursor: pointer; padding: 28px; border-radius: 14px; border: 2px solid var(--line); background: var(--surface); user-select: none; }
+.flash.back { border-color: var(--accent); background: var(--accent-soft); }
+.flash .term { font-family: var(--font-display); font-size: 28px; }
+.flash .def { font-size: 18px; max-width: 52ch; }
+.flash .hint { display: block; margin-top: 12px; font-size: 13px; color: var(--muted); }
+.options { display: grid; gap: 8px; margin-top: 12px; }
+.opt { text-align: left; font: 500 16px var(--font-body); padding: 12px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt.right { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+.opt.wrong { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.feedback { margin-top: 12px; padding: 12px 14px; border-radius: 8px; background: var(--accent-soft); }
+.score { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.big { font-family: var(--font-display); font-size: 44px; line-height: 1; }
+textarea, input[type=text] { width: 100%; font: 15px/1.5 var(--font-body); padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+textarea { min-height: 110px; resize: vertical; }
+label.field { display: grid; gap: 4px; font-weight: 600; font-size: 14px; }
+.marks { font-family: var(--font-mono); font-size: 13px; color: var(--muted); white-space: nowrap; }
+.scheme { margin-top: 12px; border-top: 1px dashed var(--line); padding-top: 12px; }
+.scheme label { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; cursor: pointer; }
+.scheme input { margin-top: 5px; width: 18px; height: 18px; accent-color: var(--good); flex: none; }
+.dstar { margin-top: 10px; font-size: 14px; background: var(--amber-soft); border-radius: 8px; padding: 10px 12px; }
+.dstar strong { color: var(--amber); }
+.ai { margin-top: 12px; border-radius: 8px; padding: 12px 14px; background: var(--accent-soft); font-size: 15px; }
+.ai h4 { margin: 8px 0 2px; font-size: 14px; }
+.scenario { background: var(--accent-soft); border-radius: 10px; padding: 12px 16px; }
+.drop { border: 2px dashed var(--line); border-radius: 12px; padding: 22px; text-align: center; cursor: pointer; }
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.err { color: var(--bad); }
+.hidden { display: none !important; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="row" style="align-items:baseline">
+    <span class="code">STUDY HUB</span><span class="spacer"></span><span class="status" id="save-status">Loading your decks…</span>
+  </div>
+  <div class="shelf" id="shelf" aria-label="Your decks"></div>
+
+  <!-- ADD DECK -->
+  <section id="add" class="stack hidden">
+    <div>
+      <h1>Add a PowerPoint</h1>
+      <p class="lead">Upload your lesson slides and Claude will turn them into a summary, flashcards, a quiz, scenario practice and exam questions with mark schemes. The deck is saved, so it'll be here next time.</p>
+    </div>
+    <div class="card stack">
+      <div class="drop" id="drop" tabindex="0" role="button">
+        <strong>Choose a file</strong> or drop it here<br>
+        <span class="muted">PowerPoint (.pptx) or PDF. For an old .ppt file, save it as .pptx first.</span>
+        <div id="file-name" class="code" style="margin-top:8px"></div>
+      </div>
+      <input type="file" id="file" accept=".pptx,.pdf,application/pdf,application/vnd.openxmlformats-officedocument.presentationml.presentation" class="hidden">
+      <details>
+        <summary class="muted" style="cursor:pointer">No file? Paste the slide text instead</summary>
+        <textarea id="paste" placeholder="Paste the text from your slides here…" style="margin-top:8px"></textarea>
+      </details>
+      <div class="grid2">
+        <label class="field" for="subject">Subject
+          <input type="text" id="subject" value="Information Technology">
+        </label>
+        <label class="field" for="level">Grade you're aiming for
+          <input type="text" id="level" value="Distinction* (D*)">
+        </label>
+      </div>
+      <div class="row">
+        <button class="btn" id="gen">Make my study pack</button>
+        <button class="btn ghost" id="cancel-add">Cancel</button>
+      </div>
+      <div id="gen-status" class="status" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- DECK VIEW -->
+  <section id="deckview">
+    <header>
+      <div class="code" id="d-code"></div>
+      <h1 id="d-title"></h1>
+      <p class="muted" id="d-q" style="margin:0"></p>
+    </header>
+    <nav class="tabs" role="tablist" aria-label="Study methods">
+      <button role="tab" data-tab="learn" aria-selected="true">1 · Learn</button>
+      <button role="tab" data-tab="flash" aria-selected="false">2 · Flashcards</button>
+      <button role="tab" data-tab="quiz" aria-selected="false">3 · Quiz</button>
+      <button role="tab" data-tab="apply" aria-selected="false">4 · Apply it</button>
+      <button role="tab" data-tab="exam" aria-selected="false">5 · Exam practice</button>
+    </nav>
+
+    <div id="learn" class="pane stack"></div>
+
+    <div id="flash" class="pane stack hidden">
+      <div><h2>Flashcards</h2><p class="lead">Say the answer out loud, then tap the card to flip it. Cards you mark "Still learning" come back round.</p></div>
+      <div class="row"><span class="score" id="fc-count"></span><span class="spacer"></span><button class="btn ghost small" id="fc-reset">Start again</button></div>
+      <div class="progress"><div id="fc-bar" style="width:0%"></div></div>
+      <div class="flash" id="fc-card" tabindex="0" role="button" aria-live="polite"></div>
+      <div class="row" id="fc-actions"><button class="btn ghost" id="fc-again">Still learning</button><span class="spacer"></span><button class="btn" id="fc-know">I knew it</button></div>
+    </div>
+
+    <div id="quiz" class="pane stack hidden">
+      <div><h2>Quiz</h2><p class="lead">Every answer comes with an explanation, so read it even when you get it right.</p></div>
+      <div class="row"><span class="score" id="qz-pos"></span><span class="spacer"></span><span class="score" id="qz-score"></span></div>
+      <div class="progress"><div id="qz-bar" style="width:0%"></div></div>
+      <div class="card" id="qz-box"></div>
+    </div>
+
+    <div id="apply" class="pane stack hidden">
+      <div><h2 id="ap-title">Apply it</h2><p class="lead" id="ap-intro"></p></div>
+      <div class="row"><span class="score" id="ap-pos"></span><span class="spacer"></span><span class="score" id="ap-score"></span></div>
+      <div class="progress"><div id="ap-bar" style="width:0%"></div></div>
+      <div class="card" id="ap-box"></div>
+    </div>
+
+    <div id="exam" class="pane stack hidden">
+      <div><h2>Exam practice</h2><p class="lead">Write your answer first. Then either tick the mark scheme yourself or ask Claude to mark it like an examiner. Your answers are saved.</p></div>
+      <div class="card tablebox">
+        <h3>Command words</h3>
+        <table><tbody>
+          <tr><td><strong>State / Give</strong></td><td>Recall a fact. Short answers are fine.</td></tr>
+          <tr><td><strong>Identify</strong></td><td>Pick out information from the scenario.</td></tr>
+          <tr><td><strong>Describe</strong></td><td>Give an account or the key features of something.</td></tr>
+          <tr><td><strong>Explain</strong></td><td>Make a point AND give a linked reason (…so… / …which means…).</td></tr>
+          <tr><td><strong>Evaluate</strong></td><td>Weigh up good and bad points, then give a judgement.</td></tr>
+        </tbody></table>
+      </div>
+      <div id="exam-list" class="stack"></div>
+      <div class="card row" style="position:sticky;bottom:8px">
+        <span>Your total</span><span class="spacer"></span><span class="big score" id="ex-total">0</span><span class="score" id="ex-max">/ 0</span>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:30px"><span class="spacer"></span><button class="btn danger small" id="del-deck">Delete this deck</button></div>
+  </section>
+</div>
+
+<script>
+// ================= Built-in deck =================
+const T = ['Port scanner', 'Network mapper / system discovery', 'Registry checker', 'Website vulnerability scanner', 'Detection & management software', 'Assessing user vulnerabilities'];
+const RIV = 'Riverside Leisure runs three leisure centres. Members book classes and pay online through its website. Reception staff use Windows PCs connected to the company network.';
+const MER = 'Meridian Print & Design is a medium-sized company. It has an office network of around 60 devices, a public-facing e-commerce website (online shop), Windows workstations and staff who have had very little security training, and no system to track problems once they have been found.';
+const BUILTIN = {
+  id: 'builtin-a24', builtin: true, createdAt: 0,
+  pack: {
+    title: 'Tools to Assess Vulnerabilities', code: 'IT · A2.4.1 – A2.4.6',
+    bigQuestion: 'How do organisations find their weaknesses before attackers do?',
+    sections: [
+      { heading: 'Vulnerability assessment', text: 'Finding, listing and ranking the weaknesses in a system, network or app, before an attacker can use them. Like a car service that finds faults before the car breaks down.', points: ['Open ports that aren\'t needed', 'Missing updates and security patches', 'Weak or wrong settings (configuration)', 'Risky user behaviour'] },
+      { heading: 'Vulnerability assessment vs penetration testing', table: { head: ['Vulnerability assessment', 'Penetration testing'], rows: [['Finds and lists weaknesses', 'An ethical hacker tries to break in, with permission'], ['Broad: many systems at once', 'Deep and targeted'], ['Often automated, e.g. weekly scans', 'Mostly manual'], ['Does NOT try to break in', 'Proves the real-world impact']] } },
+      { heading: 'A2.4.1 Port scanner', text: 'Sends a request to each numbered port and records the reply.', points: ['Open: accepts the connection, a service is listening', 'Closed: replies, but nothing is listening', 'Filtered: no reply, a firewall is blocking it', 'An open port is only a problem if it isn\'t needed or isn\'t protected'] },
+      { heading: 'A2.4.2 Network mapper / system discovery', text: 'Draws a map of every device: routers, switches, firewalls, access points, PCs, servers.', points: ['Spots rogue devices, e.g. an unknown wireless access point', 'Keeps the list of devices to patch up to date', 'System discovery builds a detailed list: IP address, operating system, protocols'] },
+      { heading: 'A2.4.3 Registry checker', text: 'The Windows registry is a database of settings (not files), stored as keys and values.', points: ['Attackers change keys to run malware at start-up or switch off antivirus/firewall', 'The checker finds unauthorised changes so they can be undone'] },
+      { heading: 'A2.4.4 Website vulnerability scanner', text: 'Sends test requests to a site and checks for OWASP Top 10 risks, then produces a report.', points: ['SQL injection: database commands typed into a form', 'XSS: a harmful script runs in visitors\' browsers', 'Weak TLS/SSL: old encryption, data could be intercepted', 'Exposed admin page: /admin reachable with no protection'] },
+      { heading: 'A2.4.5 Detection & management software', text: 'Scan → Score → Prioritise → Track.', points: ['Scan devices against a database of known vulnerabilities', 'Score each one with CVSS (0 to 10)', 'Prioritise the most dangerous and easiest to exploit', 'Track each fix until it is done and produce reports'] },
+      { heading: 'A2.4.6 Assessing user vulnerabilities', text: 'People are often the weakest link.', points: ['Device checks: updates and patches installed?', 'Phishing simulation: who clicks a fake email?', 'Physical social engineering: e.g. following staff through a door', 'Password audits & observation: weak passwords, sticky notes, unlocked screens'] },
+      { heading: 'Worked example: port scan of a college web server', table: { head: ['Port', 'Service', 'State', 'Problem?'], rows: [['80', 'HTTP', 'Open', 'OK, a web server needs it'], ['443', 'HTTPS', 'Open', 'OK, needed for secure pages'], ['21', 'FTP', 'Open', 'Risk: not encrypted. Close if not needed'], ['3389', 'Remote Desktop', 'Open', 'High risk: password-guessing target'], ['22', 'SSH', 'Filtered', 'Good: blocked from the internet'], ['8080', 'Web (alt)', 'Closed', 'Low risk now, keep scanning']] } },
+      { heading: 'Limitations of automated tools', points: ['Zero-day flaws: brand new, not in the database yet, so missed', 'False positive: flags a problem that isn\'t there, wasting time', 'False negative: misses a real problem, giving a false sense of security', 'Lacks context: can\'t judge how important a system is to the business'] }
+    ],
+    keyIdea: 'No single tool is enough. Each tool only covers one area (ports, devices, settings, websites, people). Attackers use whichever weakness is easiest, so organisations need a combination of tools, regular scanning and human judgement.',
+    flashcards: [
+      ['Vulnerability assessment', 'Finding, listing and ranking (prioritising) the weaknesses in a system, network or app, before an attacker can use them.'],
+      ['Penetration test', 'An ethical hacker tries to break in, with permission, to prove the real-world impact of a weakness. Deep, targeted, mostly manual.'],
+      ['Vulnerability', 'A weakness in a system that could be exploited, e.g. an unneeded open port or a missing patch.'],
+      ['Threat', 'Something or someone that could cause harm by exploiting a vulnerability, e.g. a hacker or malware.'],
+      ['Port', 'A numbered "door" used by one type of traffic, e.g. port 80 = HTTP, port 443 = HTTPS.'],
+      ['Port scanner', 'Sends a request to each port and records the reply, to find out which ports are open, closed or filtered.'],
+      ['Open port', 'Accepts the connection: a service is listening.'],
+      ['Closed port', 'Replies, but nothing is listening right now. Could become open later, so keep scanning.'],
+      ['Filtered port', 'No reply at all: a firewall is blocking it.'],
+      ['Port 3389', 'Remote Desktop. High risk if open to the internet: a password-guessing target.'],
+      ['Port 21', 'FTP (file transfer). Risky because data is not encrypted.'],
+      ['Port 22', 'SSH (secure remote admin).'],
+      ['Network mapper', 'Draws a map of every device on a network and spots rogue or unexpected devices.'],
+      ['System discovery', 'Builds a detailed list of connected devices with their IP address, operating system and protocols.'],
+      ['Windows registry', 'A database of settings for Windows, users, software and security, stored as keys and values. It does NOT store your files.'],
+      ['Registry checker', 'Scans the registry for unauthorised or suspicious changes so they can be undone.'],
+      ['Website vulnerability scanner', 'Automatically sends test requests to a website, tests for the OWASP Top 10 and produces a report.'],
+      ['OWASP Top 10', 'A list of the most serious web application security risks.'],
+      ['SQL injection', 'Database commands typed into a form or search box let an attacker read or change records.'],
+      ['Cross-site scripting (XSS)', 'A harmful script is saved on a page and runs in the browser of anyone who views it.'],
+      ['Weak TLS/SSL', 'A site uses an old encryption protocol, so data sent to it could be intercepted.'],
+      ['CVSS score', 'A severity score from 0 to 10. Higher = more serious, so fix it first.'],
+      ['Detection & management software', 'Scan → Score → Prioritise → Track. Tracks each fix until it is done.'],
+      ['Phishing simulation', 'Staff are sent a fake phishing email; the IT team records who clicks or enters details.'],
+      ['Physical social engineering', 'A trusted third party tries to get into restricted areas, e.g. following staff through a door.'],
+      ['Zero-day flaw', 'A brand-new vulnerability not yet in the tool\'s database, with no fix, so automated tools miss it.'],
+      ['False positive', 'The tool flags a problem that isn\'t really there, so time is wasted.'],
+      ['False negative', 'The tool misses a real vulnerability, giving a false sense of security. Usually worse than a false positive.']
+    ],
+    quiz: [
+      { q: 'Which port number is normally used for HTTP web traffic?', o: ['21', '80', '443', '3389'], a: 1, e: 'Port 80 is HTTP. 443 is HTTPS, 21 is FTP and 3389 is Remote Desktop.' },
+      { q: 'What is the difference between a threat and a vulnerability?', o: ['They mean the same thing', 'A threat is a weakness; a vulnerability is an attacker', 'A vulnerability is a weakness; a threat is something that could exploit it', 'A threat only applies to websites'], a: 2, e: 'A vulnerability is the weakness (e.g. an open port). A threat is what could take advantage of it (e.g. a hacker or malware).' },
+      { q: 'A company pays an ethical hacker to try to break into its web server to see how much data they can reach. What is this?', o: ['Vulnerability assessment', 'Penetration testing', 'Network mapping', 'Registry checking'], a: 1, e: 'Penetration testing actively tries to break in, with permission. A vulnerability assessment only finds and lists weaknesses.' },
+      { q: 'A port scanner sends a request to port 25 and gets no response at all. Which state is the port in?', o: ['Open', 'Closed', 'Filtered'], a: 2, e: 'No reply means a firewall is blocking it: filtered. A closed port still replies.' },
+      { q: 'True or false: "Every open port is a vulnerability."', o: ['True', 'False'], a: 1, e: 'False. An open port is only a problem if it isn\'t needed or isn\'t protected.' },
+      { q: 'A port replies, but nothing is listening. Why keep an eye on it?', o: ['It is already being attacked', 'It could become open later, e.g. when new software is installed', 'Closed ports slow the network down', 'It means the firewall has failed'], a: 1, e: 'A closed port can become open when new software is installed, so scan regularly.' },
+      { q: 'Which state would you WANT an unused port to show to someone on the internet?', o: ['Open', 'Closed', 'Filtered'], a: 2, e: 'Filtered: the attacker gets no reply and learns nothing about the device.' },
+      { q: 'A scanner opens /admin on a website with no password needed. Which vulnerability is this?', o: ['SQL injection', 'Cross-site scripting', 'Exposed admin page', 'Weak TLS/SSL'], a: 2, e: 'An exposed admin page: the control panel can be reached by anyone with no protection.' },
+      { q: 'Which is more serious: a CVSS score of 9.8 or 4.3?', o: ['9.8', '4.3', 'They are the same'], a: 0, e: 'CVSS runs from 0 to 10. Higher means more serious.' },
+      { q: 'What does the Windows registry store?', o: ['Your documents and photos', 'Settings for Windows, users, software and security', 'Website passwords only', 'A list of open ports'], a: 1, e: 'The registry stores settings as keys and values, not files.' },
+      { q: 'Which is usually worse: a false positive or a false negative?', o: ['False positive', 'False negative'], a: 1, e: 'A false negative: a real vulnerability is missed, so the organisation thinks it is safe when it is not.' },
+      { q: 'Odd one out: port scanner, network mapper, phishing simulation, registry checker.', o: ['Port scanner', 'Network mapper', 'Phishing simulation', 'Registry checker'], a: 2, e: 'Phishing simulation tests people. The other three test technology.' },
+      { q: 'Why can automated software miss a brand-new flaw in a booking system?', o: ['It is a zero-day: not yet in the tool\'s database', 'The tool was switched off', 'Booking systems can\'t be scanned', 'It is a false positive'], a: 0, e: 'Zero-day flaws are brand new, so they are not in the database the tool checks against.' },
+      { q: 'Oakfield Surgery: A Port 3389 open (9.8), B old TLS (7.4), C 4-character passwords (6.5), D minor browser update (4.3). Most urgent first?', o: ['D, C, B, A', 'A, B, C, D', 'C, A, D, B', 'B, A, C, D'], a: 1, e: 'Order by CVSS: A, B, C, D. A is open to the whole internet and gives remote control of a machine holding patient data.' }
+    ],
+    apply: {
+      title: 'Pick the tool', intro: 'Exam questions often give you a scenario and ask which tool to use. Pick the best one for each job.',
+      items: [
+        { task: 'Check that no one has plugged an unknown device into the network.', o: T, a: 1, e: 'A network mapper shows every device, including rogue ones.' },
+        { task: 'Test the school website for SQL injection.', o: T, a: 3, e: 'SQL injection is an OWASP Top 10 risk, tested by website vulnerability scanners.' },
+        { task: 'Check whether staff would fall for a fake email.', o: T, a: 5, e: 'A phishing simulation assesses user vulnerabilities.' },
+        { task: 'See which ports on a server can be reached from the internet.', o: T, a: 0, e: 'A port scanner reports each port as open, closed or filtered.' },
+        { task: 'Check a PC for unauthorised changes to its start-up settings.', o: T, a: 2, e: 'Start-up settings live in the Windows registry.' },
+        { task: 'Score, prioritise and track fixes over time.', o: T, a: 4, e: 'Detection & management software scans, scores, prioritises and tracks.' },
+        { task: 'Get a list of every device\'s IP address and operating system.', o: T, a: 1, e: 'System discovery builds a detailed device list.' },
+        { task: 'Find out if the online shop uses an old encryption protocol.', o: T, a: 3, e: 'Weak TLS/SSL is checked by a website vulnerability scanner.' },
+        { task: 'Check whether staff leave passwords on sticky notes.', o: T, a: 5, e: 'Password audits and observation assess user vulnerabilities.' },
+        { task: 'Find out whether malware has switched off the antivirus on reception PCs.', o: T, a: 2, e: 'Malware disables antivirus by changing registry keys.' },
+        { task: 'Make sure no fix is forgotten after a long list of problems is found.', o: T, a: 4, e: 'Tracking fixes until done is the job of management software.' },
+        { task: 'Check whether Remote Desktop is exposed on a server.', o: T, a: 0, e: 'Remote Desktop uses port 3389; a port scanner shows if it is open.' }
+      ]
+    },
+    exam: [
+      { sc: RIV, q: '1. State the three possible states of a port found by a port scanner.', m: 3, pts: ['Open', 'Closed', 'Filtered'], tip: '"State" = short answers are fine.' },
+      { sc: RIV, q: '2. Explain one reason why Riverside Leisure should use a registry checker on its reception PCs.', m: 2, pts: ['Point: malware/an attacker could change registry settings on the reception PCs, e.g. run malware at start-up or switch off antivirus', 'Linked reason: the checker detects these unauthorised changes so they can be undone, protecting members\' payment data'], tip: 'Use the scenario (reception PCs, members\' payments) and link with "…so…".' },
+      { sc: RIV, q: '3. Describe how Riverside Leisure could assess whether its reception staff are a security vulnerability.', m: 3, pts: ['Phishing simulation: send a fake email and record who clicks or enters details', 'Password audit / observation: weak passwords, sticky notes, unlocked screens', 'Physical social engineering: a trusted third party tries to get into staff-only areas', 'Device checks: latest updates and patches installed'], tip: 'Any 3 points. Finish by saying the results target training.' },
+      { sc: '', q: '4. A port scanner has tested three ports. State the state of each.\n(i) Port 23 sends back a refusal, nothing is listening.\n(ii) Port 445 gives no reply, a firewall drops the request.\n(iii) Port 22 accepts the connection and starts an SSH session.', m: 3, pts: ['(i) Closed', '(ii) Filtered', '(iii) Open'], tip: '"Accepts" = open, "refuses" = closed, "no reply" = filtered.' },
+      { sc: '', q: '5. Explain one difference between a vulnerability assessment and a penetration test.', m: 2, pts: ['A vulnerability assessment finds and lists weaknesses but does not try to break in', 'whereas a penetration test has an ethical hacker actively try to break in, with permission, to prove the impact'], tip: 'A difference needs both sides. Link with "whereas".' },
+      { sc: MER, q: '6(a). State one tool Meridian could use to assess its e-commerce website.', m: 1, pts: ['Website vulnerability scanner'], tip: 'Just name the tool.' },
+      { sc: MER, q: '6(b). Explain why Meridian should use a network mapper on its office network.', m: 2, pts: ['With around 60 devices, a mapper shows every device including rogue ones', 'so unknown devices can be removed and none are missed when patching'], tip: 'Use the "60 devices" from the scenario.' },
+      { sc: MER, q: '6(c). The assessment produces a long list of findings. Explain how the IT manager should decide which issues to deal with first.', m: 4, pts: ['Use the CVSS score and deal with the highest first', 'because a high score means the most serious damage if exploited', 'Consider how exposed/easy to exploit it is, e.g. the public e-commerce site', 'so it is more likely to be attacked and holds customer payment data, so the impact is greatest'], tip: '4-mark explain = two points, each with a reason. Use the scenario.' },
+      { sc: MER, q: '6(d). Explain one advantage of using vulnerability detection and management software instead of a one-off scan.', m: 2, pts: ['It scans regularly and tracks each fix until done', 'Meridian has no system to track problems, so issues won\'t be forgotten and new ones are caught'], tip: 'The scenario says "no system to track problems". Use it.' },
+      { sc: MER, q: '6(e). Explain one limitation of relying only on automated scanning tools.', m: 2, pts: ['They can miss zero-day flaws or give false negatives', 'which gives a false sense of security, so an attacker could still get in'], tip: 'Name the limitation precisely, then say what it leads to.' }
+    ]
+  }
+};
+
+// ================= Helpers =================
+const $ = id => document.getElementById(id);
+function esc(s) { return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function setStatus(t) { $('save-status').textContent = t; }
+
+// ================= Storage (account db, falls back to this browser) =================
+let db = null, uid = null, sample = null;
+const store = {
+  mode: 'local',
+  async listDecks() {
+    if (this.mode === 'db') {
+      const snap = await db.doc(`data/users/${uid}/profile`).collection('decks').get();
+      return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    }
+    try { return JSON.parse(localStorage.getItem('sh-decks') || '[]'); } catch (e) { return []; }
+  },
+  async saveDeck(deck) {
+    if (this.mode === 'db') { const { id, ...body } = deck; await db.doc(`data/users/${uid}/profile`).collection('decks').doc(id).set(body); return; }
+    const all = (await this.listDecks()).filter(d => d.id !== deck.id); all.push(deck);
+    localStorage.setItem('sh-decks', JSON.stringify(all));
+  },
+  async deleteDeck(id) {
+    if (this.mode === 'db') { const p = db.doc(`data/users/${uid}/profile`); await p.collection('decks').doc(id).delete(); await p.collection('progress').doc(id).delete(); return; }
+    localStorage.setItem('sh-decks', JSON.stringify((await this.listDecks()).filter(d => d.id !== id)));
+    try { localStorage.removeItem('sh-prog-' + id); } catch (e) {}
+  },
+  async getProgress(id) {
+    if (this.mode === 'db') { const s = await db.doc(`data/users/${uid}/profile`).collection('progress').doc(id).get(); return s.exists ? JSON.parse(JSON.stringify(s.data())) : {}; }
+    try { return JSON.parse(localStorage.getItem('sh-prog-' + id) || '{}'); } catch (e) { return {}; }
+  },
+  async saveProgress(id, p) {
+    if (this.mode === 'db') { await db.doc(`data/users/${uid}/profile`).collection('progress').doc(id).set(p); return; }
+    try { localStorage.setItem('sh-prog-' + id, JSON.stringify(p)); } catch (e) {}
+  }
+};
+
+let decks = [BUILTIN], current = null, progress = {};
+let tab = 'learn';
+
+function renderShelf() {
+  const shelf = $('shelf');
+  const sorted = [BUILTIN, ...decks.filter(d => !d.builtin).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))];
+  shelf.innerHTML = sorted.map(d => `<button class="deck" data-id="${esc(d.id)}" aria-pressed="${current && current.id === d.id && $('add').classList.contains('hidden')}"><small>${esc(d.pack.code || 'Deck')}</small>${esc(d.pack.title)}</button>`).join('')
+    + `<button class="deck add" id="add-btn" aria-pressed="${!$('add').classList.contains('hidden')}">+ Add a PowerPoint</button>`;
+  shelf.querySelectorAll('.deck[data-id]').forEach(b => b.onclick = () => openDeck(b.dataset.id));
+  $('add-btn').onclick = showAdd;
+}
+
+function showAdd() {
+  $('add').classList.remove('hidden'); $('deckview').classList.add('hidden'); renderShelf();
+  $('gen-status').textContent = sample ? '' : 'Making new study packs needs Claude, which isn\'t available in this view. Open this page on claude.ai while signed in.';
+  $('gen').disabled = !sample;
+}
+
+async function openDeck(id) {
+  const d = decks.find(x => x.id === id) || BUILTIN;
+  current = d;
+  $('add').classList.add('hidden'); $('deckview').classList.remove('hidden');
+  try { localStorage.setItem('sh-last', id); } catch (e) {}
+  progress = {};
+  try { progress = await store.getProgress(id); } catch (e) { progress = {}; }
+  if (!progress.answers) progress.answers = {};
+  renderShelf(); renderDeck(); showTab(tab);
+  $('del-deck').classList.toggle('hidden', !!d.builtin);
+}
+
+// ================= Tabs =================
+document.querySelectorAll('nav.tabs button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
+function showTab(t) {
+  tab = t;
+  document.querySelectorAll('nav.tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === t ? 'true' : 'false'));
+  document.querySelectorAll('.pane').forEach(p => p.classList.toggle('hidden', p.id !== t));
+}
+
+function renderDeck() {
+  const p = current.pack;
+  $('d-code').textContent = p.code || '';
+  $('d-title').textContent = p.title;
+  $('d-q').textContent = p.bigQuestion || '';
+  renderLearn(p); fcStart(); qzStart(); apStart(); renderExam();
+}
+
+// ================= Learn =================
+function renderLearn(p) {
+  const html = (p.sections || []).map(s => `
+    <div class="card sec ${s.table ? 'tablebox' : ''}">
+      <h3>${esc(s.heading)}</h3>
+      ${s.text ? `<p>${esc(s.text)}</p>` : ''}
+      ${s.points && s.points.length ? `<ul class="tight">${s.points.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      ${s.table ? `<table><thead><tr>${s.table.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : ''}
+    </div>`).join('');
+  $('learn').innerHTML = html + (p.keyIdea ? `<div class="callout"><strong>Key idea:</strong> ${esc(p.keyIdea)}</div>` : '')
+    + `<div class="row"><span class="spacer"></span><button class="btn" id="to-flash">Next: Flashcards →</button></div>`;
+  $('to-flash').onclick = () => { showTab('flash'); window.scrollTo(0, 0); };
+}
+
+// ================= Flashcards =================
+let fcDeck, fcIdx, fcFlipped, fcKnown, fcTotal;
+const fcCard = $('fc-card');
+function fcStart() { const c = current.pack.flashcards || []; fcTotal = c.length; fcDeck = shuffle(c); fcIdx = 0; fcKnown = 0; fcFlipped = false; fcRender(); }
+function fcRender() {
+  $('fc-count').textContent = `Known: ${fcKnown} / ${fcTotal}`;
+  $('fc-bar').style.width = (fcTotal ? fcKnown / fcTotal * 100 : 0) + '%';
+  if (!fcDeck.length) {
+    fcCard.className = 'flash back';
+    fcCard.innerHTML = `<div><div class="term">All ${fcTotal} cards done</div><span class="hint">Press "Start again" to go round once more, or try the Quiz.</span></div>`;
+    $('fc-actions').classList.add('hidden'); return;
+  }
+  $('fc-actions').classList.remove('hidden');
+  const [t, d] = fcDeck[fcIdx];
+  fcCard.className = 'flash' + (fcFlipped ? ' back' : '');
+  fcCard.innerHTML = fcFlipped ? `<div><div class="def">${esc(d)}</div><span class="hint">${esc(t)}</span></div>` : `<div><div class="term">${esc(t)}</div><span class="hint">Tap or press Space to flip</span></div>`;
+  $('fc-know').disabled = $('fc-again').disabled = !fcFlipped;
+}
+function fcFlip() { if (fcDeck.length) { fcFlipped = !fcFlipped; fcRender(); } }
+fcCard.onclick = fcFlip;
+fcCard.onkeydown = e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); fcFlip(); } };
+$('fc-know').onclick = () => { fcDeck.splice(fcIdx, 1); fcKnown++; if (fcIdx >= fcDeck.length) fcIdx = 0; fcFlipped = false; fcRender(); };
+$('fc-again').onclick = () => { fcDeck.push(fcDeck.splice(fcIdx, 1)[0]); if (fcIdx >= fcDeck.length) fcIdx = 0; fcFlipped = false; fcRender(); };
+$('fc-reset').onclick = fcStart;
+
+// ================= Multiple-choice runner (Quiz + Apply) =================
+function makeRunner(pre, getItems, qText) {
+  let order, i, score;
+  function start() { order = shuffle(getItems()); i = 0; score = 0; render(); }
+  function render() {
+    const box = $(pre + '-box');
+    $(pre + '-score').textContent = `Score: ${score}`;
+    $(pre + '-bar').style.width = (order.length ? i / order.length * 100 : 0) + '%';
+    if (!order.length) { box.innerHTML = '<p class="muted">No questions in this deck.</p>'; $(pre + '-pos').textContent = ''; return; }
+    if (i >= order.length) {
+      $(pre + '-pos').textContent = 'Finished';
+      const pct = Math.round(score / order.length * 100);
+      box.innerHTML = `<div class="big">${score} / ${order.length}</div><p>${pct >= 85 ? 'Excellent. You\'re ready for the next section.' : pct >= 60 ? 'Good work. Re-read the Learn tab for the ones you missed, then try again.' : 'Keep going. Go back through Learn and the Flashcards, then retry.'}</p><div class="row"><button class="btn" id="${pre}-again">Try again</button></div>`;
+      $(pre + '-again').onclick = start; return;
+    }
+    const it = order[i];
+    $(pre + '-pos').textContent = `Question ${i + 1} of ${order.length}`;
+    box.innerHTML = `<h3 style="white-space:pre-line">${esc(qText(it))}</h3><div class="options">${it.o.map((o, j) => `<button class="opt" data-i="${j}">${esc(o)}</button>`).join('')}</div><div id="${pre}-fb"></div>`;
+    box.querySelectorAll('.opt').forEach(b => b.onclick = () => answer(+b.dataset.i));
+  }
+  function answer(j) {
+    const it = order[i], btns = $(pre + '-box').querySelectorAll('.opt');
+    if (btns[0].disabled) return;
+    btns.forEach((b, k) => { b.disabled = true; if (k === it.a) b.classList.add('right'); else if (k === j) b.classList.add('wrong'); });
+    const ok = j === it.a; if (ok) score++;
+    $(pre + '-score').textContent = `Score: ${score}`;
+    $(pre + '-fb').innerHTML = `<div class="feedback"><strong>${ok ? 'Correct.' : 'Not quite.'}</strong> ${esc(it.e)}</div><div class="row" style="margin-top:12px"><span class="spacer"></span><button class="btn" id="${pre}-next">Next →</button></div>`;
+    const nx = $(pre + '-next'); nx.focus(); nx.onclick = () => { i++; render(); };
+  }
+  return start;
+}
+const qzStart = makeRunner('qz', () => current.pack.quiz || [], it => it.q);
+const apRun = makeRunner('ap', () => (current.pack.apply && current.pack.apply.items) || [], it => it.task);
+function apStart() {
+  const a = current.pack.apply || {};
+  $('ap-title').textContent = a.title || 'Apply it';
+  $('ap-intro').textContent = a.intro || 'Use what you\'ve learned on real situations.';
+  apRun();
+}
+
+// ================= Exam =================
+let saveTimer = null, saving = Promise.resolve();
+function queueSave() {
+  clearTimeout(saveTimer);
+  setStatus('Saving…');
+  const id = current.id, snapshot = JSON.parse(JSON.stringify(progress));
+  saveTimer = setTimeout(() => {
+    saving = saving.then(() => store.saveProgress(id, snapshot)).then(() => setStatus(store.mode === 'db' ? 'Saved to your account' : 'Saved in this browser')).catch(() => setStatus('Couldn\'t save. Check your connection.'));
+  }, 1000);
+}
+function renderExam() {
+  const list = $('exam-list'); list.innerHTML = '';
+  const exam = current.pack.exam || [];
+  let lastSc = null;
+  exam.forEach((item, idx) => {
+    const qid = 'e' + idx;
+    if (item.sc && item.sc !== lastSc) { const s = document.createElement('div'); s.className = 'scenario'; s.innerHTML = `<strong>Scenario:</strong> ${esc(item.sc)}`; list.appendChild(s); }
+    lastSc = item.sc || lastSc;
+    const st = progress.answers[qid] || { text: '', ticks: [] };
+    const c = document.createElement('div'); c.className = 'card';
+    c.innerHTML = `
+      <div class="row" style="align-items:flex-start"><h3 style="white-space:pre-line;flex:1">${esc(item.q)}</h3><span class="marks">(${item.m} mark${item.m > 1 ? 's' : ''})</span></div>
+      <textarea id="ans-${qid}" aria-label="Your answer" placeholder="Write your answer here first…">${esc(st.text)}</textarea>
+      <div class="row" style="margin-top:10px">
+        <button class="btn ghost small" data-act="scheme">Show mark scheme</button>
+        ${sample ? '<button class="btn small" data-act="ai">Ask Claude to mark it</button>' : ''}
+      </div>
+      <div class="ai hidden" data-role="ai"></div>
+      <div class="scheme hidden" data-role="scheme">
+        <p style="margin:0 0 4px"><strong>Mark scheme</strong> (tick what you got${item.pts.length > item.m ? `, max ${item.m}` : ''}):</p>
+        ${item.pts.map((pt, i) => `<label><input type="checkbox" data-i="${i}" ${st.ticks.includes(i) ? 'checked' : ''}><span>${esc(pt)}</span></label>`).join('')}
+        ${item.tip ? `<div class="dstar"><strong>Top-grade tip:</strong> ${esc(item.tip)}</div>` : ''}
+      </div>`;
+    list.appendChild(c);
+    const entry = () => (progress.answers[qid] = progress.answers[qid] || { text: '', ticks: [] });
+    const ta = c.querySelector('textarea');
+    ta.oninput = () => { entry().text = ta.value; queueSave(); };
+    const sch = c.querySelector('[data-role=scheme]'), sb = c.querySelector('[data-act=scheme]');
+    sb.onclick = () => { const h = sch.classList.toggle('hidden'); sb.textContent = h ? 'Show mark scheme' : 'Hide mark scheme'; };
+    c.querySelectorAll('input[type=checkbox]').forEach(cb => cb.onchange = () => {
+      const e = entry(), i = +cb.dataset.i; e.ticks = e.ticks.filter(x => x !== i); if (cb.checked) e.ticks.push(i); queueSave(); exTotal();
+    });
+    const aiBtn = c.querySelector('[data-act=ai]'), aiBox = c.querySelector('[data-role=ai]');
+    if (st.ai) showAi(aiBox, st.ai, item.m);
+    if (aiBtn) aiBtn.onclick = () => aiMark(item, ta.value, aiBtn, aiBox, entry);
+  });
+  exTotal();
+}
+function exTotal() {
+  let t = 0, m = 0;
+  (current.pack.exam || []).forEach((it, i) => { m += it.m; const s = progress.answers['e' + i]; t += Math.min(it.m, s ? s.ticks.length : 0); });
+  $('ex-total').textContent = t; $('ex-max').textContent = '/ ' + m;
+}
+function showAi(box, r, max) {
+  box.classList.remove('hidden');
+  box.innerHTML = `<div class="row"><strong>Claude's marking</strong><span class="spacer"></span><span class="big score" style="font-size:28px">${esc(r.score)} / ${esc(max)}</span></div>
+    ${r.good && r.good.length ? `<h4>What earned marks</h4><ul class="tight">${r.good.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+    ${r.missing && r.missing.length ? `<h4>What was missing</h4><ul class="tight">${r.missing.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+    ${r.feedback ? `<h4>How to improve</h4><p>${esc(r.feedback)}</p>` : ''}
+    ${r.model ? `<h4>Full-marks answer</h4><p>${esc(r.model)}</p>` : ''}`;
+}
+async function aiMark(item, answer, btn, box, entry) {
+  if (!answer.trim()) { box.classList.remove('hidden'); box.innerHTML = '<p>Write an answer first, then ask Claude to mark it.</p>'; return; }
+  btn.disabled = true; btn.textContent = 'Marking…';
+  box.classList.remove('hidden'); box.innerHTML = '<p class="muted">Claude is marking your answer…</p>';
+  const prompt = `You are a strict but encouraging UK vocational exam marker (e.g. BTEC / Cambridge Technical) marking a student who is aiming for a top grade.
+
+${item.sc ? 'Scenario: ' + item.sc + '\n\n' : ''}Question (${item.m} marks): ${item.q}
+
+Mark scheme points (one mark each unless stated, maximum ${item.m}):
+${item.pts.map(p => '- ' + p).join('\n')}
+
+Student's answer:
+"""${answer}"""
+
+Mark the answer against the mark scheme. Accept answers that are worded differently but show the same understanding. For "explain" questions, only give the reason mark when the reason is clearly linked to the point. Reward use of the scenario.
+
+Reply with ONLY a JSON object, no other text:
+{"score": <integer 0-${item.m}>, "good": ["short phrases: what earned marks"], "missing": ["short phrases: what lost marks"], "feedback": "2-3 short sentences on how to improve, written to the student", "model": "a full-marks answer in the student's voice, using the scenario"}`;
+  try {
+    const res = await sample(prompt, { modelTier: 'default', cache: false });
+    const r = parseJson(res.text);
+    r.score = Math.max(0, Math.min(item.m, parseInt(r.score, 10) || 0));
+    entry().ai = r; queueSave();
+    showAi(box, r, item.m);
+  } catch (e) {
+    box.innerHTML = `<p class="err">${e && e.code === 'rate_limited' ? 'Claude is busy right now. Wait a minute and try again.' : e && e.code === 'not_granted' ? 'Claude marking isn\'t allowed in this view.' : 'Couldn\'t mark that answer. Try again.'}</p>`;
+  }
+  btn.disabled = false; btn.textContent = 'Ask Claude to mark it again';
+}
+function parseJson(text) {
+  let t = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
+  try { return JSON.parse(t); } catch (e) {}
+  const a = t.indexOf('{'), b = t.lastIndexOf('}');
+  if (a >= 0 && b > a) return JSON.parse(t.slice(a, b + 1));
+  throw new Error('bad json');
+}
+
+$('del-deck').onclick = async () => {
+  const b = $('del-deck');
+  if (b.dataset.confirm !== '1') { b.dataset.confirm = '1'; b.textContent = 'Tap again to delete for good'; setTimeout(() => { b.dataset.confirm = ''; b.textContent = 'Delete this deck'; }, 4000); return; }
+  b.dataset.confirm = ''; b.textContent = 'Delete this deck';
+  const id = current.id;
+  try { await store.deleteDeck(id); decks = decks.filter(d => d.id !== id); setStatus('Deck deleted'); openDeck(BUILTIN.id); }
+  catch (e) { setStatus('Couldn\'t delete. Try again.'); }
+};
+
+// ================= File reading =================
+function loadScript(src) { return new Promise((res, rej) => { if (document.querySelector(`script[src="${src}"]`)) return res(); const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = () => rej(new Error('load ' + src)); document.head.appendChild(s); }); }
+const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+const PDFJS_W = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+const JSZIP = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+
+async function readPdf(file, wantImages, onStep) {
+  await loadScript(PDFJS); await loadScript(PDFJS_W);
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS_W;
+  const pdf = await window.pdfjsLib.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise;
+  let out = '', images = [];
+  for (let n = 1; n <= pdf.numPages; n++) {
+    onStep(`Reading page ${n} of ${pdf.numPages}…`);
+    const page = await pdf.getPage(n);
+    const tc = await page.getTextContent();
+    const txt = tc.items.map(i => i.str + (i.hasEOL ? '\n' : ' ')).join('').replace(/[ \t]+/g, ' ').trim();
+    out += `\n--- Slide ${n} ---\n${txt}\n`;
+    if (wantImages && images.length < 8 && txt.length < 120) {
+      const vp = page.getViewport({ scale: 1.3 });
+      const cv = document.createElement('canvas'); cv.width = vp.width; cv.height = vp.height;
+      await page.render({ canvasContext: cv.getContext('2d'), viewport: vp }).promise;
+      const blob = await new Promise(r => cv.toBlob(r, 'image/jpeg', 0.8));
+      if (blob) { images.push(blob); out += `[Slide ${n} is mostly a picture: see attached image ${images.length}]\n`; }
+    }
+  }
+  return { text: out, images };
+}
+async function readPptx(file, onStep) {
+  await loadScript(JSZIP);
+  const zip = await window.JSZip.loadAsync(file);
+  const A = 'http://schemas.openxmlformats.org/drawingml/2006/main';
+  const num = n => +n.match(/(\d+)\.xml$/)[1];
+  const xmlText = xml => {
+    const doc = new DOMParser().parseFromString(xml, 'application/xml');
+    return Array.from(doc.getElementsByTagNameNS(A, 'p')).map(p => Array.from(p.getElementsByTagNameNS(A, 't')).map(t => t.textContent).join('')).filter(s => s.trim()).join('\n');
+  };
+  const slides = Object.keys(zip.files).filter(n => /^ppt\/slides\/slide\d+\.xml$/.test(n)).sort((a, b) => num(a) - num(b));
+  let out = '';
+  for (const [i, name] of slides.entries()) {
+    onStep(`Reading slide ${i + 1} of ${slides.length}…`);
+    out += `\n--- Slide ${i + 1} ---\n${xmlText(await zip.file(name).async('string'))}\n`;
+    const rels = zip.file(name.replace('slides/', 'slides/_rels/') + '.rels');
+    if (rels) {
+      const m = (await rels.async('string')).match(/Target="\.\.\/notesSlides\/(notesSlide\d+\.xml)"/);
+      const nf = m && zip.file('ppt/notesSlides/' + m[1]);
+      if (nf) { const notes = xmlText(await nf.async('string')).split('\n').filter(l => !/^\d+$/.test(l.trim())).join('\n'); if (notes.trim()) out += `Speaker notes: ${notes}\n`; }
+    }
+  }
+  return { text: out, images: [] };
+}
+
+// ================= Add deck flow =================
+let chosenFile = null;
+const drop = $('drop'), fileInput = $('file');
+drop.onclick = () => fileInput.click();
+drop.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } };
+fileInput.onchange = () => pickFile(fileInput.files[0]);
+drop.ondragover = e => { e.preventDefault(); drop.classList.add('over'); };
+drop.ondragleave = () => drop.classList.remove('over');
+drop.ondrop = e => { e.preventDefault(); drop.classList.remove('over'); pickFile(e.dataTransfer.files[0]); };
+function pickFile(f) {
+  if (!f) return;
+  if (/\.ppt$/i.test(f.name)) { $('gen-status').innerHTML = '<span class="err">That\'s an old .ppt file. Open it in PowerPoint and use Save As → .pptx (or export as PDF), then upload that.</span>'; return; }
+  if (!/\.(pptx|pdf)$/i.test(f.name)) { $('gen-status').innerHTML = '<span class="err">Please choose a .pptx or .pdf file.</span>'; return; }
+  chosenFile = f; $('file-name').textContent = f.name; $('gen-status').textContent = '';
+}
+$('cancel-add').onclick = () => openDeck((current || BUILTIN).id);
+
+const SCHEMA = `{
+ "title": "short topic title from the slides",
+ "code": "unit/spec code if shown (e.g. 'IT · A2.4.1 – A2.4.6'), else the subject",
+ "bigQuestion": "the lesson's big question, or one you write that sums it up",
+ "sections": [ {"heading": "...", "text": "1-2 plain sentences", "points": ["short bullet", "..."], "table": {"head": ["..",".."], "rows": [["..",".."]]} } ],
+ "keyIdea": "the single most important takeaway, 1-2 sentences",
+ "flashcards": [ ["term", "definition in plain words"] ],
+ "quiz": [ {"q": "question", "o": ["option", "option", "option", "option"], "a": 0, "e": "why the answer is right, 1-2 sentences"} ],
+ "apply": {"title": "short name for this activity, e.g. 'Pick the tool' or 'Which method?'", "intro": "one sentence", "items": [ {"task": "a realistic scenario", "o": ["choice", "..."], "a": 0, "e": "why"} ] },
+ "exam": [ {"sc": "scenario text for this question, or empty string", "q": "numbered exam question using a command word", "m": 2, "pts": ["one marking point per mark"], "tip": "how to get full marks"} ]
+}`;
+
+$('gen').onclick = async () => {
+  const gs = $('gen-status'), btn = $('gen');
+  const pasted = $('paste').value.trim();
+  if (!chosenFile && !pasted) { gs.innerHTML = '<span class="err">Choose a file or paste some slide text first.</span>'; return; }
+  btn.disabled = true;
+  try {
+    let wantImages = false;
+    try { const lim = await sample.limits(); wantImages = !!(lim && lim.images); } catch (e) {}
+    let src = { text: pasted, images: [] };
+    if (chosenFile) {
+      src = /\.pdf$/i.test(chosenFile.name) ? await readPdf(chosenFile, wantImages, t => gs.textContent = t) : await readPptx(chosenFile, t => gs.textContent = t);
+      if (pasted) src.text += '\n\nExtra notes from the student:\n' + pasted;
+    }
+    if (src.text.replace(/--- Slide \d+ ---/g, '').trim().length < 80 && !src.images.length) throw { user: 'I couldn\'t find any text in that file. If the slides are pictures, paste the text instead.' };
+    const text = src.text.slice(0, 90000);
+    const prompt = `You are an expert UK teacher of ${$('subject').value || 'the subject'} for vocational/post-16 courses (BTEC, Cambridge Technical, T Level style). Make a complete revision pack for a student who is learning this topic for the FIRST time and is aiming for ${$('level').value || 'the top grade'}.
+
+Below is the text taken from their lesson slides (with speaker notes where available)${src.images.length ? ', plus images of slides that are mostly pictures' : ''}.
+
+Rules:
+- Build everything from the slides. You may add short standard explanations so things make sense, but do not add topics the slides don't cover.
+- If the slides include their own questions (warm-ups, check-ins, case studies, exam questions), include them with correct answers / mark schemes.
+- Plain UK English, short sentences, friendly but precise. No markdown inside strings.
+- sections: 5-10, covering the whole deck in order. Use "table" only when the slides compare things or have a table; otherwise omit it.
+- flashcards: 15-30 key terms.
+- quiz: 12-18 multiple-choice questions, 2-4 options each, "a" is the 0-based index of the correct option. Vary where the correct answer sits.
+- apply: 8-12 scenario items where the student must choose the right concept, tool, method or next step. Give each item its own "o" options array.
+- exam: 6-10 questions worth 1-6 marks, mixing State, Describe, Explain and (if fitting) Evaluate. Use 1-2 short realistic scenarios (repeat the scenario text in "sc" for each question that uses it). "pts" lists the marking points; for Explain questions alternate point then linked reason. Marks should total 20-35. "tip" says how to get full marks.
+
+Return ONLY a JSON object (no code fences, no other text) with exactly this shape:
+${SCHEMA}
+
+SLIDES:
+${text}`;
+    gs.textContent = 'Claude is building your study pack. This can take a minute or two…';
+    const opts = { modelTier: 'complex', cache: false, onText: ({ text }) => { gs.textContent = `Claude is writing your study pack… (${Math.round(text.length / 1000)}k characters so far)`; } };
+    if (src.images.length && wantImages) opts.images = src.images;
+    const res = await sample(prompt, opts);
+    if (res.truncated) throw { user: 'The deck was too big to finish in one go. Try splitting it into two smaller files.' };
+    const pack = parseJson(res.text);
+    if (!pack.title || !Array.isArray(pack.flashcards) || !Array.isArray(pack.quiz)) throw { user: 'Claude\'s answer came back incomplete. Press the button to try again.' };
+    clean(pack);
+    const deck = { id: 'd' + Date.now().toString(36), createdAt: Date.now(), source: chosenFile ? chosenFile.name : 'Pasted text', pack };
+    gs.textContent = 'Saving…';
+    try { await store.saveDeck(deck); setStatus(store.mode === 'db' ? 'Saved to your account' : 'Saved in this browser'); }
+    catch (e) { setStatus(e && e.code === 'quota_exceeded' ? 'Storage is full. Delete an old deck.' : 'Couldn\'t save this deck, but you can study it now.'); }
+    decks.push(deck);
+    chosenFile = null; fileInput.value = ''; $('file-name').textContent = ''; $('paste').value = ''; gs.textContent = '';
+    tab = 'learn'; openDeck(deck.id); window.scrollTo(0, 0);
+  } catch (e) {
+    gs.innerHTML = `<span class="err">${esc(e && e.user ? e.user : e && e.code === 'rate_limited' ? 'Claude is busy right now. Wait a minute and try again.' : e && e.code === 'not_granted' ? 'Claude isn\'t allowed in this view.' : 'Something went wrong making the pack. Try again.')}</span>`;
+  }
+  btn.disabled = false;
+};
+function clean(p) {
+  const arr = x => Array.isArray(x) ? x : [];
+  p.sections = arr(p.sections).filter(s => s && s.heading).map(s => ({ ...s, points: arr(s.points), table: s.table && arr(s.table.head).length && arr(s.table.rows).length ? s.table : undefined }));
+  p.flashcards = arr(p.flashcards).filter(c => Array.isArray(c) && c.length >= 2).map(c => [String(c[0]), String(c[1])]);
+  const mc = x => x && x.o && Array.isArray(x.o) && x.o.length > 1 && Number.isInteger(x.a) && x.a >= 0 && x.a < x.o.length;
+  p.quiz = arr(p.quiz).filter(mc);
+  p.apply = p.apply || {}; p.apply.items = arr(p.apply.items).filter(mc);
+  p.exam = arr(p.exam).filter(x => x && x.q && Array.isArray(x.pts)).map(x => ({ ...x, m: Math.max(1, parseInt(x.m, 10) || x.pts.length || 1), sc: x.sc || '' }));
+  for (const s of p.sections) if (!s.table) delete s.table;
+}
+
+// ================= Start up =================
+(async function init() {
+  const last = (() => { try { return localStorage.getItem('sh-last'); } catch (e) { return null; } })();
+  openDeck(BUILTIN.id);
+  if (!window.claude || !window.claude.use) { setStatus('Offline copy: decks save in this browser only'); await loadLocal(last); return; }
+  const [d, u, s] = await Promise.all([claude.use('db'), claude.use('user'), claude.use('sample')]);
+  sample = s || null;
+  if (d && u) { try { uid = await u.id(); } catch (e) { uid = null; } }
+  if (d && uid) { db = d; store.mode = 'db'; }
+  let timer = setTimeout(() => setStatus('Your saved decks can\'t be reached yet…'), 10000);
+  try {
+    const list = await store.listDecks();
+    clearTimeout(timer);
+    decks = [BUILTIN, ...list.filter(x => x && x.pack)];
+    setStatus(store.mode === 'db' ? `${list.length} saved deck${list.length === 1 ? '' : 's'} in your account` : 'Decks save in this browser');
+  } catch (e) { clearTimeout(timer); setStatus('Couldn\'t load your saved decks.'); }
+  const target = decks.find(x => x.id === last) ? last : BUILTIN.id;
+  await openDeck(target);
+})();
+async function loadLocal(last) {
+  decks = [BUILTIN, ...(await store.listDecks())];
+  await openDeck(decks.find(x => x.id === last) ? last : BUILTIN.id);
+}
+</script>
+</body>
+</html>
