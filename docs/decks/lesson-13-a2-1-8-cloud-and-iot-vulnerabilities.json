@@ -1,0 +1,652 @@
+{
+ "id": "lesson-13-a2-1-8-cloud-and-iot-vulnerabilities",
+ "title": "Lesson 13 - A2.1.8 Cloud & IoT Vulnerabilities",
+ "code": "IT · Unit 2 · A2.1.8",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can cloud and IoT devices create new security risks?",
+ "sections": [
+  {
+   "heading": "Cloud computing and IoT",
+   "table": {
+    "head": [
+     "",
+     "Cloud computing",
+     "IoT (Internet of Things)"
+    ],
+    "rows": [
+     [
+      "Meaning",
+      "Using storage, software or processing power over the internet, instead of keeping everything on your own equipment",
+      "Everyday devices that connect to a network or the internet to collect, send or receive data"
+     ],
+     [
+      "Examples",
+      "Microsoft 365, Google Drive, Amazon Web Services, OneDrive",
+      "Smart speakers, CCTV cameras, smart doorbells, fitness trackers, smart thermostats, sensors, smart TVs"
+     ],
+     [
+      "Business example",
+      "A business stores customer files in a cloud service instead of on its own server",
+      "A company uses smart CCTV cameras that can be viewed remotely"
+     ],
+     [
+      "Why it matters for security",
+      "The organisation has less direct physical control over where its data and systems are",
+      "Devices are small, cheap and low-powered, so they often have fewer security features than a normal computer"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Cloud vulnerabilities",
+   "table": {
+    "head": [
+     "Vulnerability",
+     "The problem",
+     "Reduce the risk"
+    ],
+    "rows": [
+     [
+      "Incorrect security settings",
+      "Default settings make setup easy but may not be secure enough, e.g. cloud storage accidentally shared so outsiders can open sensitive files",
+      "Check and configure settings properly. A secure cloud service can still be insecure if it's set up wrong"
+     ],
+     [
+      "Third-party access",
+      "Provider administrators, engineers and support staff may have technical access, so the organisation must trust the provider. What if the provider's security is weak?",
+      "Choose a trustworthy provider and manage third-party risk (TPRM)"
+     ],
+     [
+      "Data moving over the internet",
+      "Data travels between the organisation, the internet and the provider, so it could be intercepted, stolen or changed",
+      "Encryption and secure connections such as HTTPS and VPNs"
+     ]
+    ]
+   },
+   "points": [
+    "Remember: data needs protecting when it's stored AND when it's being transferred"
+   ]
+  },
+  {
+   "heading": "IoT vulnerabilities",
+   "table": {
+    "head": [
+     "Vulnerability",
+     "Example / risk",
+     "Prevention"
+    ],
+    "rows": [
+     [
+      "Default passwords",
+      "A smart camera keeps its default login; an attacker finds it online, tries the manufacturer's default and gets into the camera or its settings",
+      "Change default passwords to strong, unique ones"
+     ],
+     [
+      "Weak or no encryption",
+      "A device sends data across the network without suitable encryption; an attacker intercepts it, so information is exposed or changed",
+      "Secure communications and appropriate encryption"
+     ],
+     [
+      "Lack of updates",
+      "The manufacturer doesn't provide patches, or the user doesn't install them, so the vulnerability stays and can be targeted for a long time",
+      "Install updates; replace devices that no longer get them"
+     ],
+     [
+      "Insecure control interfaces",
+      "A camera's online control panel (app, website or cloud dashboard) has weak authentication; an attacker takes control and changes settings",
+      "Strong authentication on apps, websites and dashboards"
+     ],
+     [
+      "Poor network security",
+      "Devices installed by people outside the IT team, with no checks; they may not work with the firewall, may not be monitored, and could be a route into the wider network",
+      "IT checks every device before it connects, and monitors it"
+     ],
+     [
+      "Always listening",
+      "Smart speakers, doorbells, meeting assistants and cameras record continuously; if compromised, they could be used for eavesdropping or surveillance",
+      "Keep them out of rooms where confidential information is discussed"
+     ]
+    ]
+   },
+   "points": [
+    "Key point: every device connected to a network is another potential entry point",
+    "Remember: a device can work normally and still be vulnerable"
+   ]
+  },
+  {
+   "heading": "Exam method",
+   "text": "Don't just name the vulnerability. Your slides' exam tip is to build each point as a chain:",
+   "points": [
+    "Point: name the vulnerability",
+    "Explain the risk: how an attacker could exploit it",
+    "Explain the impact: what could happen to the organisation or its data",
+    "Suggest a control: what would reduce the risk",
+    "It's the same idea as Lesson 9's Cause → Risk → Impact → Response chain"
+   ]
+  },
+  {
+   "heading": "Worked scenario: cameras, doorbells, speakers and cloud",
+   "text": "The slides' scenario: a business installed 20 smart cameras, 10 smart doorbells, smart speakers in meeting rooms and cloud storage, quickly, and some still use original settings. Here's one possible answer (mine, so try it first):",
+   "table": {
+    "head": [
+     "Vulnerability",
+     "Risk",
+     "Prevention"
+    ],
+    "rows": [
+     [
+      "Cameras and doorbells still on default passwords",
+      "Attackers find them online and log in with the manufacturer's default, viewing or switching off cameras",
+      "Change to strong, unique passwords"
+     ],
+     [
+      "Smart speakers in meeting rooms (always listening)",
+      "If compromised, used to eavesdrop on confidential meetings",
+      "Remove them from meeting rooms or switch microphones off"
+     ],
+     [
+      "Cloud storage on default settings",
+      "Files accidentally shared publicly, so sensitive documents are exposed",
+      "Check and configure sharing and access settings"
+     ],
+     [
+      "Devices installed quickly without IT checks",
+      "Not monitored or behind the firewall, giving a route into the wider network",
+      "IT checks, monitoring and keeping devices updated"
+     ]
+    ]
+   }
+  }
+ ],
+ "keyIdea": "Cloud services move data and control to a third party over the internet, so wrong settings, provider access and data in transit become risks. IoT devices are cheap and connected, so default passwords, weak encryption, missing updates, insecure apps, unchecked network connections and always-on microphones all create new entry points.",
+ "flashcards": [
+  [
+   "Cloud computing",
+   "Using storage, software or processing power over the internet instead of on your own equipment."
+  ],
+  [
+   "Cloud examples",
+   "Microsoft 365, Google Drive, Amazon Web Services, OneDrive."
+  ],
+  [
+   "Cloud security issue",
+   "The organisation has less direct physical control over where its data and systems are stored."
+  ],
+  [
+   "Incorrect security settings (cloud)",
+   "Default or wrong settings, e.g. storage that lets outsiders see sensitive files."
+  ],
+  [
+   "Third-party access",
+   "Provider administrators, engineers and support staff may have technical access to your systems and data."
+  ],
+  [
+   "TPRM",
+   "Third-party risk management: checking and managing the risks of relying on outside providers."
+  ],
+  [
+   "Data in transit",
+   "Data moving between the organisation, the internet and the provider. It could be intercepted, stolen or changed."
+  ],
+  [
+   "VPN",
+   "Virtual private network: a secure, encrypted connection over the internet."
+  ],
+  [
+   "Stored AND transferred",
+   "Data needs protecting both when it's stored and when it's moving."
+  ],
+  [
+   "IoT",
+   "Internet of Things: everyday devices that connect to a network to collect, send or receive data."
+  ],
+  [
+   "Why IoT is weaker",
+   "Devices are small, cheap and low-powered, so they often have fewer security features."
+  ],
+  [
+   "Default password",
+   "The username and password a device ships with. Attackers can guess or look them up."
+  ],
+  [
+   "Weak or no encryption (IoT)",
+   "Data sent without proper protection can be intercepted, read or changed."
+  ],
+  [
+   "Lack of updates (IoT)",
+   "No patches from the maker, or not installed, so a known vulnerability can be targeted for a long time."
+  ],
+  [
+   "Control interface",
+   "The app, website or cloud dashboard used to control an IoT device. Weak authentication lets attackers take over."
+  ],
+  [
+   "Poor network security (IoT)",
+   "Devices connected without IT checks may not be monitored or firewalled: a route into the network."
+  ],
+  [
+   "Entry point",
+   "Every device connected to a network is another possible way in."
+  ],
+  [
+   "Always listening",
+   "Devices with microphones or cameras that record continuously. If compromised, they enable eavesdropping."
+  ],
+  [
+   "Point → Risk → Impact → Control",
+   "The slides' exam method: name it, how it's exploited, what happens, how to reduce it."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "Which of these is an IoT device?",
+   "o": [
+    "A smart thermostat",
+    "A paper notebook",
+    "A wooden desk",
+    "A printed map"
+   ],
+   "a": 0,
+   "e": "IoT devices connect to a network or the internet to send or receive data."
+  },
+  {
+   "q": "Where might your photos, documents or messages be stored online?",
+   "o": [
+    "Only on a USB stick",
+    "In the printer",
+    "Nowhere",
+    "In cloud storage such as Google Drive or OneDrive"
+   ],
+   "a": 3,
+   "e": "Cloud storage keeps files on a provider's servers, accessed over the internet."
+  },
+  {
+   "q": "What could happen if someone hacked a smart camera or smart speaker?",
+   "o": [
+    "It would get faster",
+    "Nothing",
+    "They could watch or listen in",
+    "It would update itself"
+   ],
+   "a": 2,
+   "e": "Always-on cameras and microphones can be used for surveillance or eavesdropping."
+  },
+  {
+   "q": "Why should you change the default password on a new device?",
+   "o": [
+    "Default passwords are too long",
+    "Attackers can guess or look up default passwords",
+    "It makes the device louder",
+    "You don't need to"
+   ],
+   "a": 1,
+   "e": "Manufacturers' default logins are often published online."
+  },
+  {
+   "q": "What is cloud computing?",
+   "o": [
+    "Using storage, software or processing power over the internet",
+    "Weather forecasting",
+    "Building your own server room",
+    "Printing documents"
+   ],
+   "a": 0,
+   "e": "Instead of keeping everything on your own equipment, you use a provider's."
+  },
+  {
+   "q": "Why does using the cloud change an organisation's security?",
+   "o": [
+    "It has more physical control",
+    "The cloud can't be hacked",
+    "It removes all risk",
+    "It has less direct physical control over where its data is stored"
+   ],
+   "a": 3,
+   "e": "The data sits with an external provider."
+  },
+  {
+   "q": "A company accidentally sets its cloud storage so anyone with the link can open sensitive files. Which vulnerability?",
+   "o": [
+    "Always listening",
+    "Default password",
+    "Incorrect security settings",
+    "Lack of updates"
+   ],
+   "a": 2,
+   "e": "A secure cloud service can still become insecure if configured wrongly."
+  },
+  {
+   "q": "Why can using a third-party cloud provider create a security risk?",
+   "o": [
+    "Providers never have access",
+    "The provider's staff may have access, so you must trust their security",
+    "It makes data faster",
+    "It doesn't"
+   ],
+   "a": 1,
+   "e": "If the provider's security is weak, your data is at risk."
+  },
+  {
+   "q": "How can data moving to and from the cloud be protected?",
+   "o": [
+    "Encryption and secure connections like HTTPS and VPNs",
+    "Larger files",
+    "Turning off the firewall",
+    "Using default passwords"
+   ],
+   "a": 0,
+   "e": "Protect data in transit as well as at rest."
+  },
+  {
+   "q": "Why do IoT devices often have fewer security features?",
+   "o": [
+    "They're always made by hackers",
+    "They don't use electricity",
+    "They're too expensive",
+    "They're designed to be small, cheap and low-powered"
+   ],
+   "a": 3,
+   "e": "Limited power and cost mean less built-in security."
+  },
+  {
+   "q": "Why can an IoT device be a security risk even if it's working normally?",
+   "o": [
+    "Working devices can't be hacked",
+    "It uses too much power",
+    "It may have unpatched vulnerabilities that attackers can target",
+    "It isn't a risk"
+   ],
+   "a": 2,
+   "e": "A device can work fine while still being vulnerable."
+  },
+  {
+   "q": "A smart camera's online control panel has weak login security, and an attacker changes its settings. Which vulnerability?",
+   "o": [
+    "Data in transit",
+    "Insecure control interface",
+    "Third-party access",
+    "Always listening"
+   ],
+   "a": 1,
+   "e": "Apps, websites and dashboards that control devices need strong authentication."
+  },
+  {
+   "q": "A member of staff plugs a smart speaker into the office network without telling IT. What's the main risk?",
+   "o": [
+    "It isn't checked or monitored and could be a route into the network",
+    "It will play music too loudly",
+    "It makes the network faster",
+    "No risk"
+   ],
+   "a": 0,
+   "e": "Every connected device is another potential entry point."
+  },
+  {
+   "q": "A company has 100 IoT devices that haven't had updates for years. What should it consider?",
+   "o": [
+    "Doing nothing, as they still work",
+    "Turning off its firewall",
+    "Buying 100 more of the same",
+    "Replacing or updating them, and separating them from sensitive systems"
+   ],
+   "a": 3,
+   "e": "Unpatched devices leave known vulnerabilities open for a long time."
+  },
+  {
+   "q": "Would you want an always-listening device in a room where confidential business information is discussed?",
+   "o": [
+    "No, if compromised it could be used to eavesdrop",
+    "Yes, always",
+    "Only if it's switched to loud"
+   ],
+   "a": 0,
+   "e": "Keep always-listening devices out of confidential spaces."
+  },
+  {
+   "q": "A smart device sends data across the network without encryption, and an attacker intercepts it. What could happen?",
+   "o": [
+    "The device becomes faster",
+    "Information could be exposed or changed",
+    "Nothing",
+    "The data is deleted safely"
+   ],
+   "a": 1,
+   "e": "Weak or no encryption means intercepted data can be read or altered."
+  }
+ ],
+ "apply": {
+  "title": "Spot the cloud or IoT risk",
+  "intro": "Pick the vulnerability or the best prevention for each situation.",
+  "items": [
+   {
+    "task": "A new smart doorbell still uses 'admin / admin' as its login.",
+    "o": [
+     "Data in transit",
+     "Default password: change to a strong, unique one",
+     "Third-party access",
+     "Always listening"
+    ],
+    "a": 1,
+    "e": "Default logins are easy for attackers to find and try."
+   },
+   {
+    "task": "A company's cloud folder of payroll files is set to 'anyone with the link can view'.",
+    "o": [
+     "Incorrect security settings",
+     "Default password",
+     "Always listening",
+     "Lack of updates"
+    ],
+    "a": 0,
+    "e": "Wrong settings can expose data even on a secure cloud service."
+   },
+   {
+    "task": "Engineers at the cloud provider can technically reach a company's stored data.",
+    "o": [
+     "Weak encryption",
+     "Default password",
+     "No risk",
+     "Third-party access: choose a trusted provider and manage third-party risk"
+    ],
+    "a": 3,
+    "e": "The organisation must trust the provider's people and security."
+   },
+   {
+    "task": "Staff upload files to the cloud from home over public Wi-Fi with no protection.",
+    "o": [
+     "Always listening",
+     "Default password",
+     "Data in transit: use encryption, HTTPS and a VPN",
+     "Insecure control interface"
+    ],
+    "a": 2,
+    "e": "Data moving over the internet could be intercepted, stolen or changed."
+   },
+   {
+    "task": "A fitness tracker sends health data to its app without encryption.",
+    "o": [
+     "Third-party access",
+     "Weak or no encryption",
+     "Incorrect cloud settings",
+     "Always listening"
+    ],
+    "a": 1,
+    "e": "Intercepted data could be read or changed. Use secure communications."
+   },
+   {
+    "task": "A manufacturer stopped releasing updates for a model of smart camera three years ago, but the cameras still work.",
+    "o": [
+     "Lack of updates: replace them",
+     "Fully secure because they still work",
+     "Data in transit",
+     "Default password"
+    ],
+    "a": 0,
+    "e": "A device can work normally while being vulnerable."
+   },
+   {
+    "task": "Someone logs in to a smart thermostat's web dashboard using a weak password and changes the office heating.",
+    "o": [
+     "Always listening",
+     "Third-party access",
+     "Data in transit",
+     "Insecure control interface"
+    ],
+    "a": 3,
+    "e": "Weak authentication on the control interface lets attackers take control."
+   },
+   {
+    "task": "The marketing team plugs a smart TV into the office network without telling IT.",
+    "o": [
+     "No risk",
+     "Third-party access",
+     "Poor network security: it's an unchecked entry point",
+     "Incorrect cloud settings"
+    ],
+    "a": 2,
+    "e": "IT should check and monitor every connected device."
+   },
+   {
+    "task": "A smart speaker sits in the boardroom where takeover plans are discussed.",
+    "o": [
+     "Default password only",
+     "Always listening: risk of eavesdropping",
+     "Data in transit",
+     "Lack of updates only"
+    ],
+    "a": 1,
+    "e": "If compromised, it could be used to listen to confidential meetings."
+   },
+   {
+    "task": "Which is the BEST answer structure for an 'explain' question on cloud or IoT risks?",
+    "o": [
+     "Point → risk → impact → control",
+     "Just list device names",
+     "Write only the control",
+     "Copy the question"
+    ],
+    "a": 0,
+    "e": "That's the slides' exam tip: don't just name it."
+   },
+   {
+    "task": "Which TWO places must data be protected when using the cloud?",
+    "o": [
+     "Only when printed",
+     "Only on Fridays",
+     "Only on the device's screen",
+     "When stored and when being transferred"
+    ],
+    "a": 3,
+    "e": "Data needs protecting at rest AND in transit."
+   },
+   {
+    "task": "Why are IoT devices described as extra 'entry points'?",
+    "o": [
+     "They have doors",
+     "They block attackers",
+     "Each connected device is another possible way into the network",
+     "They are never online"
+    ],
+    "a": 2,
+    "e": "More connected devices means more ways in."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Identify two vulnerabilities associated with IoT devices.",
+   "m": 2,
+   "pts": [
+    "Any one: default passwords / weak or no encryption / lack of updates",
+    "A second: insecure control interfaces / poor network security / always-listening microphones or cameras"
+   ],
+   "tip": "From your slides' exam practice. \"Identify\" = name them, no need to explain."
+  },
+  {
+   "sc": "",
+   "q": "2. Explain how incorrect security settings could create a security risk when using cloud computing.",
+   "m": 4,
+   "pts": [
+    "Cloud services often use default settings to make setup easy",
+    "but these may not be secure enough, e.g. storage configured so people outside the organisation can open files",
+    "so sensitive data could be viewed, copied or leaked by unauthorised people",
+    "A secure service can become insecure if configured wrongly, so settings must be checked and configured properly"
+   ],
+   "tip": "From your slides' exam practice. Point → risk → impact → control."
+  },
+  {
+   "sc": "",
+   "q": "3. Explain why using a third-party cloud provider can create a security risk for an organisation.",
+   "m": 2,
+   "pts": [
+    "People outside the organisation, such as the provider's administrators, engineers and support staff, may have technical access to its systems and data",
+    "so the organisation has to trust the provider, and if the provider's security is weak, its data is at risk"
+   ],
+   "tip": "Who has access + why that's a risk."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain why an IoT device can be a security risk even if it is working normally.",
+   "m": 2,
+   "pts": [
+    "It may contain software vulnerabilities that haven't been patched, because the maker stopped updates or they weren't installed",
+    "so attackers can keep targeting the known vulnerability for a long time without the user noticing"
+   ],
+   "tip": "Working ≠ secure. Explain why."
+  },
+  {
+   "sc": "",
+   "q": "5. Explain how data could be at risk when it is moved to and from a cloud provider, and how this risk can be reduced.",
+   "m": 3,
+   "pts": [
+    "Data travels between the organisation, the internet and the cloud provider",
+    "so it could be intercepted, stolen or changed while being transferred",
+    "Reduce it with encryption and secure connections such as HTTPS and VPNs"
+   ],
+   "tip": "Remember: protect data when stored AND when transferred."
+  },
+  {
+   "sc": "",
+   "q": "6. A company has 100 IoT devices that have not received updates for several years. What should the company consider doing?",
+   "m": 3,
+   "pts": [
+    "Check whether updates are still available and install them",
+    "Replace devices that no longer receive updates",
+    "Until then, separate them from sensitive systems, monitor them, and make sure default passwords have been changed"
+   ],
+   "tip": "From the plenary. Give practical actions, ideally ranked by urgency."
+  },
+  {
+   "sc": "A business has installed 20 smart security cameras, 10 smart doorbells, smart speakers in its meeting rooms, and cloud storage for its business documents. The devices were installed quickly, and some are still using their original settings.",
+   "q": "7. Identify four possible vulnerabilities in this business and, for each, explain the risk and a possible prevention.",
+   "m": 8,
+   "pts": [
+    "Vulnerability and risk 1, e.g. cameras and doorbells still on default passwords, so attackers can log in and view or disable them",
+    "Prevention 1: change to strong, unique passwords",
+    "Vulnerability and risk 2, e.g. smart speakers in meeting rooms are always listening and could be used to eavesdrop",
+    "Prevention 2: remove them from meeting rooms or switch microphones off",
+    "Vulnerability and risk 3, e.g. cloud storage on default settings could expose business documents to outsiders",
+    "Prevention 3: check and configure the sharing and access settings",
+    "Vulnerability and risk 4, e.g. devices installed quickly without IT checks, so they're unmonitored entry points / not updated",
+    "Prevention 4: IT checks, monitoring, firewall rules and installing updates"
+   ],
+   "tip": "This is the slides' scenario task. 2 marks per vulnerability: name it and explain the risk, then a matching prevention."
+  },
+  {
+   "sc": "A business uses cloud storage and several internet-connected security cameras.",
+   "q": "8. Explain the security risks the business should consider and how these risks could be reduced.",
+   "m": 6,
+   "pts": [
+    "Cloud risk: incorrect settings could let outsiders see sensitive files. Reduce by configuring and checking settings",
+    "Cloud risk: third-party access, since the provider's staff may reach data. Reduce by choosing a trusted provider and managing third-party risk",
+    "Cloud risk: data intercepted in transit. Reduce with encryption, HTTPS and VPNs",
+    "Camera risk: default passwords or insecure control apps let attackers view or switch off cameras. Reduce with strong, unique passwords and secure authentication",
+    "Camera risk: no updates or unchecked network connection, giving a route into the network. Reduce by updating, monitoring and firewalling the cameras",
+    "Impact explained, e.g. confidential data leaked, or security cameras disabled so the building is exposed"
+   ],
+   "tip": "From your slides' exam practice. For 6 marks, cover BOTH the cloud and the cameras, and pair each risk with a control."
+  }
+ ]
+}
