@@ -10,6 +10,8 @@ const ls = {
 };
 
 let index = [], current = null, progress = { answers: {} }, tab = 'learn';
+// Lets the AI helper (assistant.js) see which lesson is open.
+window.studyHub = { get deck() { return current; } };
 const cache = {};
 
 // ---------- Shelf ----------
@@ -45,6 +47,7 @@ async function openDeck(id) {
   $('d-title').textContent = current.title;
   $('d-q').textContent = current.bigQuestion || '';
   renderLearn(); fcStart(); qzStart(); apStart(); renderExam(); showTab(tab);
+  window.dispatchEvent(new CustomEvent('studyhub:deck', { detail: { id, title: current.title } }));
 }
 
 // ---------- Tabs ----------

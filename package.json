@@ -1,0 +1,9 @@
+{
+  "name": "study-hub",
+  "private": true,
+  "type": "module",
+  "description": "Study Hub revision site. Static pages in docs/, AI helper in functions/ (Cloudflare Pages Functions).",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.5.0"
+  }
+}
