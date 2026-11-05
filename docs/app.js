@@ -135,8 +135,17 @@ function apStart() {
 }
 
 // ---------- Exam ----------
-let saveTimer = null;
-function save() { clearTimeout(saveTimer); const id = current.id, p = progress; saveTimer = setTimeout(() => ls.set('sh-prog-' + id, p), 500); }
+let saveTimer = null, pendingSave = null;
+function save() {
+  clearTimeout(saveTimer);
+  const id = current.id, p = progress;
+  pendingSave = () => { ls.set('sh-prog-' + id, p); pendingSave = null; };
+  saveTimer = setTimeout(pendingSave, 500);
+}
+// Save straight away if the page is closed or hidden mid-typing.
+const flushSave = () => { if (pendingSave) { clearTimeout(saveTimer); pendingSave(); } };
+addEventListener('pagehide', flushSave);
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushSave(); });
 function markingText(item, answer) {
   return `Please mark my exam answer like a strict examiner, then tell me how to get full marks.\n\n${item.sc ? 'Scenario: ' + item.sc + '\n\n' : ''}Question (${item.m} marks): ${item.q}\n\nMark scheme:\n${item.pts.map(p => '- ' + p).join('\n')}\n\nMy answer:\n${answer}`;
 }
