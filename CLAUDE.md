@@ -1,7 +1,7 @@
 # Study Hub
 
 A static revision website in `docs/`, served by GitHub Pages from the `main` branch, `/docs` folder.
-Live at https://nbastudyhub.github.io/D1Trappy/ (repository `nbastudyhub/D1Trappy`; the owner was previously `d1trappy`). No build step and no server.
+Live at https://nbastudyhub.github.io/nba/ (repository `nbastudyhub/nba`; previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`). No build step and no server.
 
 - `docs/index.html`, `docs/app.js`, `docs/style.css`: the site
 - `docs/decks/<id>.json`: one study pack per lesson / PowerPoint
