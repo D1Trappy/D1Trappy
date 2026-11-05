@@ -23,14 +23,11 @@ When the user uploads slides (PDF or PowerPoint):
 3. Run `node scripts/build-index.mjs` and fix anything it reports.
 4. Commit and push, then publish as below.
 
-### Publishing: owner or friend?
+### Publishing
 
-Check which repository you are in (`git remote -v`).
+Only the owner adds lessons; the site has no "add a lesson" page. The live site is built from `main` of `nbastudyhub/nba`, and the owner wants new lessons published there. If you are working on another branch, bring `main` up to date with your work too (a fast-forward, or a pull request if `main` has moved on). The site updates about a minute after `main` changes.
 
-- **The owner's repository, `nbastudyhub/nba`:** the live site is built from `main`, and the owner wants new lessons published there. If you are working on another branch, bring `main` up to date with your work too (a fast-forward, or a pull request if `main` has moved on). The site updates about a minute after `main` changes. The owner's message is "Add this lesson to the Study Hub and publish it."
-- **A fork (anyone else's copy):** never try to publish. Push your branch to the fork, then open a pull request from it into `nbastudyhub/nba` `main`. If you can't open it yourself, give the user the fork's GitHub link and tell them to press Contribute → Open pull request → Create pull request. In the pull request, say which lesson it adds and that it only adds files in `docs/decks/`. A friend's message is "Add this lesson to the Study Hub, then open a pull request to nbastudyhub/nba so the owner can approve it."
-
-A suggested lesson should only add `docs/decks/<id>.json` and update `docs/decks/index.json`. Don't change the site's code in a lesson pull request.
+If `git remote -v` shows you are in someone else's fork, don't publish: push to the fork and open a pull request into `nbastudyhub/nba` `main` that only adds the lesson's files in `docs/decks/`.
 
 Build the pack only from the slides. Short standard explanations are fine, but don't add topics the slides don't cover. If the slides have their own warm-ups, check-ins, case studies or exam questions, include them with correct answers and mark schemes. Use plain UK English and short sentences.
 

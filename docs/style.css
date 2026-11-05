@@ -47,7 +47,6 @@ h3 { font-size: 17px; margin: 0 0 6px; }
 .deck { flex: none; text-align: left; max-width: 230px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font: 500 14px/1.3 var(--font-body); }
 .deck small { display: block; font: 500 11px var(--font-mono); color: var(--muted); margin-bottom: 2px; }
 .deck[aria-pressed="true"] { border: 2px solid var(--accent); background: var(--accent-soft); }
-.deck.add { border-style: dashed; color: var(--accent); font-weight: 600; display: grid; place-items: center; min-width: 150px; }
 .status { font-size: 13px; color: var(--muted); }
 nav.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 20px; position: sticky; top: 0; background: var(--bg); padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--line); }
 nav.tabs button { font: 600 14px var(--font-body); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
@@ -109,14 +108,3 @@ label.field { display: grid; gap: 4px; font-weight: 600; font-size: 14px; }
 .toolbar input[type=search] { flex: 1; min-width: 180px; font: 15px var(--font-body); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
 .toolbar input[type=search]:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
 footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
-/* Add a lesson */
-ol.steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; gap: 12px; }
-ol.steps > li { counter-increment: step; position: relative; padding-left: 58px; }
-ol.steps > li::before { content: counter(step); position: absolute; left: 16px; top: 16px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--surface); font: 600 14px/28px var(--font-mono); text-align: center; }
-ol.steps a { color: var(--accent); font-weight: 600; }
-.copybox { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; margin-top: 6px; }
-.copybox p { margin: 0; font-weight: 600; }
-.who { display: flex; flex-wrap: wrap; gap: 6px; }
-.who button { font: 600 14px var(--font-body); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
-.who button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
-.who button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }

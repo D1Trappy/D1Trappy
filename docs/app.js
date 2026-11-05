@@ -19,40 +19,9 @@ function renderShelf() {
   $('shelf').innerHTML = list.length
     ? list.map(d => `<button class="deck" data-id="${esc(d.id)}" aria-pressed="${current && current.id === d.id}"><small>${esc(d.code || d.subject || 'Topic')}</small>${esc(d.title)}</button>`).join('')
     : '<p class="muted">No topics match that search.</p>';
-  $('shelf').insertAdjacentHTML('beforeend', `<button class="deck add" id="add-btn" aria-pressed="${addOpen()}">+ Add a lesson</button>`);
-  $('shelf').querySelectorAll('.deck[data-id]').forEach(b => b.onclick = () => { location.hash = b.dataset.id; });
-  $('add-btn').onclick = () => { location.hash = 'add-lesson'; };
+  $('shelf').querySelectorAll('.deck').forEach(b => b.onclick = () => { location.hash = b.dataset.id; });
 }
 
-// ---------- Add a lesson ----------
-const addOpen = () => !$('addview').classList.contains('hidden');
-function showAdd(on) {
-  $('addview').classList.toggle('hidden', !on);
-  $('deckview').classList.toggle('hidden', on);
-  if (on) { document.title = 'Add a lesson · Study Hub'; window.scrollTo(0, 0); }
-  renderShelf();
-}
-// "Suggest a lesson" (friends, via fork + pull request) or "I run this site" (owner).
-function showWho(who) {
-  document.querySelectorAll('.who button').forEach(b => b.setAttribute('aria-selected', b.dataset.who === who ? 'true' : 'false'));
-  document.querySelectorAll('ol.steps[data-for]').forEach(o => o.classList.toggle('hidden', o.dataset.for !== who));
-  ls.set('sh-who', who);
-}
-document.querySelectorAll('.who button').forEach(b => b.onclick = () => showWho(b.dataset.who));
-showWho(ls.get('sh-who', 'friend'));
-
-document.querySelectorAll('[data-copy]').forEach(btn => btn.onclick = async () => {
-  const el = $(btn.dataset.copy);
-  try {
-    await navigator.clipboard.writeText(el.textContent);
-    btn.textContent = 'Copied ✓'; setTimeout(() => { btn.textContent = 'Copy message'; }, 2500);
-  } catch (e) {
-    const r = document.createRange(); r.selectNodeContents(el);
-    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
-    btn.textContent = 'Selected: copy it now';
-  }
-});
-$('add-back').onclick = () => { const last = ls.get('sh-last', null); location.hash = last || (index[0] && index[0].id) || ''; };
 $('search').oninput = renderShelf;
 
 async function loadDeck(id) {
@@ -70,7 +39,6 @@ async function openDeck(id) {
   progress = ls.get('sh-prog-' + id, { answers: {} });
   if (!progress.answers) progress.answers = {};
   ls.set('sh-last', id);
-  showAdd(false);
   document.title = current.title + ' · Study Hub';
   renderShelf();
   $('d-code').textContent = current.code || current.subject || '';
@@ -231,8 +199,7 @@ function exTotal() {
 // ---------- Start ----------
 window.addEventListener('hashchange', () => {
   const id = location.hash.slice(1);
-  if (id === 'add-lesson') showAdd(true);
-  else if (id && index.some(d => d.id === id)) openDeck(id);
+  if (id && index.some(d => d.id === id)) openDeck(id);
 });
 (async function init() {
   try {
@@ -242,6 +209,5 @@ window.addEventListener('hashchange', () => {
   renderShelf();
   const fromHash = location.hash.slice(1), last = ls.get('sh-last', null);
   const id = [fromHash, last].find(x => x && index.some(d => d.id === x)) || (index[0] && index[0].id);
-  if (fromHash === 'add-lesson') showAdd(true);
-  else if (id) openDeck(id); else $('d-title').textContent = 'No topics yet.';
+  if (id) openDeck(id); else $('d-title').textContent = 'No topics yet.';
 })();
