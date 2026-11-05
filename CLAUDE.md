@@ -1,7 +1,11 @@
 # Study Hub
 
-A static revision website in `docs/`, served by GitHub Pages from the `main` branch, `/docs` folder.
-Live at https://nbastudyhub.github.io/nba/ (repository `nbastudyhub/nba`; previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`). No build step and no server.
+A static revision website in `docs/`. No build step and no server. Repository `nbastudyhub/nba` (previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`).
+
+- **Main address:** https://nbastudyhub.pages.dev/ (Cloudflare Pages, production branch `main`, output directory `docs`, no build command)
+- **Backup address:** https://nbastudyhub.github.io/nba/ (GitHub Pages, `main` branch, `/docs` folder)
+
+Both rebuild by themselves about a minute after `main` changes. When telling people the site's link, give the main address.
 
 - `docs/index.html`, `docs/app.js`, `docs/style.css`: the site
 - `docs/decks/<id>.json`: one study pack per lesson / PowerPoint
