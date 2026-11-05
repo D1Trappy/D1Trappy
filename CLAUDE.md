@@ -33,7 +33,7 @@ Build the pack only from the slides. Short standard explanations are fine, but d
 
 ## Deck format
 
-Copy `docs/decks/a2-4-tools-to-assess-vulnerabilities.json` as the example.
+Copy `docs/decks/lesson-1-a1-1-internal-threats.json` as the example. Titles follow the slides, e.g. "Lesson 1 - Internal Threats".
 
 ```jsonc
 {

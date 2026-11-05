@@ -1,0 +1,690 @@
+{
+ "id": "lesson-1-a1-1-internal-threats",
+ "title": "Lesson 1 - Internal Threats",
+ "code": "IT · Unit 2 · A1.1",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "Why are people the biggest cyber security risk?",
+ "sections": [
+  {
+   "heading": "What is an internal threat?",
+   "text": "Internal cyber security threats are risks from within an organisation caused by employees or insiders through error, poor practice, theft, or deliberate sabotage.",
+   "points": [
+    "Example: an employee installs unauthorised software on a work computer, introducing malware to the network",
+    "An employee sends confidential data to the wrong person",
+    "A lost or stolen device exposes sensitive data"
+   ]
+  },
+  {
+   "heading": "About this unit",
+   "text": "We rely more and more on computers and digital data, so we are more at risk from cyber criminals, accidents and natural disasters. As security improves, attacks get more advanced too, so organisations need plans to handle cyber security problems before they happen.",
+   "points": [
+    "Exam: one paper, 90 marks, 2 hours 15 minutes, short and long answer questions",
+    "You must relate your answers to the contexts and data given in the question",
+    "Topics: threats, vulnerabilities and protection; networking for security; cyber security documentation; forensic procedures",
+    "This lesson is Topic A1.1: internal threats"
+   ]
+  },
+  {
+   "heading": "Common misconceptions",
+   "table": {
+    "head": [
+     "Misconception",
+     "The truth"
+    ],
+    "rows": [
+     [
+      "Cyber security is mainly about technical controls",
+      "People, policies, training and physical security matter just as much"
+     ],
+     [
+      "Backup and disaster recovery are the same thing",
+      "A backup is a copy of data. Disaster recovery is the whole plan to get systems running again"
+     ],
+     [
+      "Security policies are documents nobody reads",
+      "Policies set the rules staff must follow. Training makes sure they are understood"
+     ],
+     [
+      "Antivirus means a system is completely secure",
+      "Antivirus only catches known malware. You still need updates, passwords, firewalls and trained staff"
+     ],
+     [
+      "Updates only add features",
+      "Many updates fix security weaknesses, so skipping them leaves systems open to attack"
+     ],
+     [
+      "GDPR only applies to large organisations",
+      "GDPR applies to any organisation that handles personal data"
+     ],
+     [
+      "Small organisations don't need security policies",
+      "Small organisations hold data worth protecting and are still targeted"
+     ],
+     [
+      "MAC addresses can't be spoofed",
+      "A MAC address can be faked (spoofed), so it should not be trusted on its own"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "A1.1 Internal threats: deliberate or accidental",
+   "text": "Internal threats come from INSIDE an organisation. They can be deliberate sabotage by an employee who wants to cause damage and loss, or accidental, caused by an employee or visitor without them even knowing.",
+   "table": {
+    "head": [
+     "Area",
+     "Deliberate",
+     "Accidental"
+    ],
+    "rows": [
+     [
+      "Physical devices",
+      "A worker being made redundant damages a server in revenge. Devices are sold, kept or 'removed' to cause disruption",
+      "A laptop is left on the car roof and driven off. Drinks are spilled or devices knocked over"
+     ],
+     [
+      "Data loss",
+      "Industrial espionage: a rival bribes an employee to steal a client list or intellectual property. Staff delete a colleague's files after a disagreement",
+      "An employee accidentally reformats a disk or deletes key data in a client or product database"
+     ],
+     [
+      "Software licences",
+      "A dishonest employee shares a licence key online for profit",
+      "Staff install work software on personal devices to catch up at home, not realising the licence doesn't allow it"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Use of unauthorised software",
+   "text": "Organisations must only use authorised software and follow the terms of each licence. Companies should:",
+   "points": [
+    "Have the correct licence, so they are not prosecuted and fined",
+    "Make sure new software is compatible with the software they already use",
+    "Monitor new software so it doesn't harm existing software or network resources, or get used to bypass monitoring tools",
+    "Check it has no security weaknesses, such as pre-installed spyware or other malware"
+   ]
+  },
+  {
+   "heading": "Other internal threats: accidental or deliberate",
+   "points": [
+    "Fire: from an electrical fault, arson, or spreading from a nearby building",
+    "Flood: water can destroy computer systems and the electrics that power them",
+    "Power loss: intentional or accidental, local or national; can damage systems and corrupt or lose data",
+    "Natural disasters: earthquakes, storms, extreme heat or cold can damage equipment and infrastructure",
+    "Terrorism: not just physical damage; attacks can target computer systems to destroy them or disrupt people who rely on them"
+   ]
+  },
+  {
+   "heading": "Accidental disclosure and human factors",
+   "text": "Accidental loss of data damages an organisation's reputation, and so its profitability. Organisations should train all staff, report all possible breaches, build a culture of security awareness, and lock ex-employees' accounts as soon as they leave.",
+   "points": [
+    "Negligence: leaving devices unlocked or sharing passwords can lead to data breaches",
+    "Poor training: staff may not recognise phishing emails or unsafe behaviour",
+    "Not following procedures increases the risk of malware or unauthorised access",
+    "Credentials (usernames and passwords) must be protected and never shared",
+    "Weak passwords, or passwords written down, let attackers get in"
+   ]
+  },
+  {
+   "heading": "Monitoring, reporting and security culture",
+   "points": [
+    "Monitor systems and network activity to spot suspicious behaviour quickly",
+    "Report incidents immediately to reduce damage and data loss",
+    "A weak security culture leads staff to ignore policies and work unsafely",
+    "Regular training helps staff understand threats and their responsibilities",
+    "Logs and monitoring help identify attacks and support investigations"
+   ]
+  },
+  {
+   "heading": "Mitigating unsafe practices and securing storage",
+   "text": "Steps organisations can take to reduce internal threats:",
+   "points": [
+    "Physical measures, e.g. door locks to restrict access to digital systems",
+    "Software measures, e.g. passwords to restrict access to computers",
+    "Security vetting: checking the identity of visitors to stop unauthorised access to sites",
+    "Software to block access to untrustworthy websites",
+    "Encrypt USB drives and external hard drives, because removable media can be lost or stolen",
+    "Dispose of storage devices securely so confidential data can't be recovered",
+    "Restrict access to backup drives to authorised staff, and lock devices away when not in use"
+   ]
+  },
+  {
+   "heading": "You do: writing a report",
+   "points": [
+    "Introduce the purpose of the report and use subheadings",
+    "Explain concepts with the right terminology and refer to the scenario",
+    "Analyse and evaluate: pros and cons, impact, effectiveness. Not just description",
+    "Use evidence and point-evidence-explain",
+    "Conclude, and make recommendations that are specific, realistic and justified",
+    "Formal, third-person language: \"This report will examine\", not \"I will examine\"",
+    "Reference your sources at the end using Harvard style"
+   ]
+  }
+ ],
+ "keyIdea": "People are the biggest cyber security risk. Internal threats can be deliberate (sabotage, theft, espionage) or accidental (human error, negligence, poor practice), so organisations need training, clear policies, monitoring and physical and software controls, not just technology.",
+ "flashcards": [
+  [
+   "Cyber security",
+   "Protecting computer systems, networks and data from attack, damage or unauthorised access."
+  ],
+  [
+   "Internal cyber security threat",
+   "A risk from within an organisation caused by employees or insiders through error, poor practice, theft or deliberate sabotage."
+  ],
+  [
+   "Sabotage",
+   "Deliberately damaging equipment, data or systems to cause loss or disruption, e.g. a redundant worker damaging a server."
+  ],
+  [
+   "Negligence",
+   "Carelessness, such as leaving a device unlocked or sharing a password, that can lead to a data breach."
+  ],
+  [
+   "Human error",
+   "An honest mistake that causes a security problem, e.g. sending confidential data to the wrong person."
+  ],
+  [
+   "Data breach",
+   "When sensitive or confidential data is lost, stolen or seen by someone who shouldn't have it."
+  ],
+  [
+   "Industrial espionage",
+   "When a rival organisation bribes an employee to steal things like a client list or intellectual property."
+  ],
+  [
+   "Intellectual property",
+   "Ideas, designs and creations an organisation owns, which rivals may try to steal."
+  ],
+  [
+   "Software licence",
+   "The legal terms for using software. Breaking them, e.g. installing it on personal devices, can lead to fines."
+  ],
+  [
+   "Unauthorised software",
+   "Software not approved by the organisation. It may be unlicensed, incompatible or contain spyware or malware."
+  ],
+  [
+   "Accidental disclosure",
+   "Data shared by mistake. It damages the organisation's reputation and so its profitability."
+  ],
+  [
+   "Credentials",
+   "Usernames and passwords. They must be protected and never shared."
+  ],
+  [
+   "Phishing",
+   "Fake messages that trick people into clicking links or giving details. Poorly trained staff may not spot them."
+  ],
+  [
+   "Security culture",
+   "How seriously staff take security. A weak culture leads to ignored policies and unsafe practice."
+  ],
+  [
+   "Monitoring and logs",
+   "Watching system and network activity to spot suspicious behaviour quickly and support investigations."
+  ],
+  [
+   "Security vetting",
+   "Checking the identity of visitors to reduce the risk of unauthorised access to a site."
+  ],
+  [
+   "Physical security measure",
+   "A physical control such as a door lock that restricts access to digital systems."
+  ],
+  [
+   "Software security measure",
+   "A software control such as passwords, or blocking untrustworthy websites."
+  ],
+  [
+   "Encryption",
+   "Scrambling data so it can't be read without the key. USB drives and external hard drives should be encrypted."
+  ],
+  [
+   "Removable media",
+   "Portable storage such as USB drives. Easily lost or stolen, exposing sensitive data."
+  ],
+  [
+   "Secure disposal",
+   "Destroying or wiping storage devices properly so confidential data can't be recovered."
+  ],
+  [
+   "Locking ex-employee accounts",
+   "Disabling a leaver's accounts as soon as they leave, so they can't still get in."
+  ],
+  [
+   "Backup vs disaster recovery",
+   "A backup is a copy of data. Disaster recovery is the whole plan to get systems and the business running again."
+  ],
+  [
+   "GDPR",
+   "Data protection law that applies to any organisation handling personal data, whatever its size."
+  ],
+  [
+   "MAC spoofing",
+   "Faking a device's MAC address. It shows MAC addresses can't be trusted on their own."
+  ],
+  [
+   "Cyber terrorism",
+   "Terrorist attacks that target computer systems to destroy them or disrupt the people who rely on them."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "True or false: most cyber security incidents are caused only by external hackers.",
+   "o": [
+    "True",
+    "False"
+   ],
+   "a": 1,
+   "e": "False. Many incidents come from inside, through human error, negligence, poor practice or deliberate sabotage. That's why people are called the biggest risk."
+  },
+  {
+   "q": "Which of these is an internal threat?",
+   "o": [
+    "A hacker in another country attacks the website",
+    "An employee sends confidential data to the wrong person",
+    "A virus spreads across the internet",
+    "A rival company advertises a cheaper product"
+   ],
+   "a": 1,
+   "e": "It comes from inside the organisation, caused by an employee's error."
+  },
+  {
+   "q": "A worker who is being made redundant damages a server in revenge. What type of threat is this?",
+   "o": [
+    "Accidental disclosure",
+    "Natural disaster",
+    "Deliberate employee sabotage",
+    "Software licence misuse"
+   ],
+   "a": 2,
+   "e": "It is deliberate sabotage of a physical device by an insider."
+  },
+  {
+   "q": "A rival company bribes an employee to steal your client list. What is this called?",
+   "o": [
+    "Industrial espionage",
+    "Phishing",
+    "Security vetting",
+    "Negligence"
+   ],
+   "a": 0,
+   "e": "Industrial espionage is when a rival pays an insider to steal things like client lists or intellectual property."
+  },
+  {
+   "q": "An employee installs work software on their home laptop to catch up on work, not knowing the licence doesn't allow it. This is:",
+   "o": [
+    "Deliberate sabotage",
+    "Industrial espionage",
+    "Accidental misuse of a software licence",
+    "Cyber terrorism"
+   ],
+   "a": 2,
+   "e": "They didn't mean any harm, so it is accidental, but it still breaks the licence terms."
+  },
+  {
+   "q": "Why should a company check new software before installing it?",
+   "o": [
+    "It might contain spyware or other malware",
+    "New software is always illegal",
+    "It makes the computer faster",
+    "Licences only last one day"
+   ],
+   "a": 0,
+   "e": "Unchecked software can have security weaknesses such as pre-installed spyware. It also needs the right licence and must be compatible."
+  },
+  {
+   "q": "When should an ex-employee's accounts be locked?",
+   "o": [
+    "After a month",
+    "Only if they were sacked",
+    "As soon as they leave",
+    "Never, in case they come back"
+   ],
+   "a": 2,
+   "e": "Lock them straight away, so a former member of staff can't still access systems or data."
+  },
+  {
+   "q": "What is the main knock-on effect of an accidental data disclosure?",
+   "o": [
+    "The computers run slower",
+    "Staff get more holiday",
+    "Nothing, if it was an accident",
+    "It damages the organisation's reputation and profitability"
+   ],
+   "a": 3,
+   "e": "Customers lose trust, which damages reputation and so profitability, even if it was an accident."
+  },
+  {
+   "q": "\"If we have antivirus software installed, our system is completely secure.\" Is this right?",
+   "o": [
+    "No, antivirus is only one layer of protection",
+    "Yes, antivirus stops everything"
+   ],
+   "a": 0,
+   "e": "Antivirus only catches known malware. It can't stop human error, weak passwords or unpatched software."
+  },
+  {
+   "q": "Why are software updates important for security?",
+   "o": [
+    "They only add new features",
+    "They often fix security weaknesses",
+    "They delete old files",
+    "They are only needed on servers"
+   ],
+   "a": 1,
+   "e": "Many updates patch vulnerabilities. Skipping them leaves systems open to attack."
+  },
+  {
+   "q": "Who does GDPR apply to?",
+   "o": [
+    "Only large organisations",
+    "Only government departments",
+    "Any organisation that handles personal data"
+   ],
+   "a": 2,
+   "e": "Size doesn't matter: any organisation handling personal data must follow GDPR."
+  },
+  {
+   "q": "Are backup and disaster recovery the same thing?",
+   "o": [
+    "No: a backup is a copy of data; disaster recovery is the plan to get running again",
+    "Yes, they mean the same"
+   ],
+   "a": 0,
+   "e": "A backup is one part of disaster recovery, which is the whole plan to restore systems and the business."
+  },
+  {
+   "q": "Can a MAC address be spoofed (faked)?",
+   "o": [
+    "Yes, so it shouldn't be trusted on its own",
+    "No, it is fixed forever"
+   ],
+   "a": 0,
+   "e": "MAC addresses can be spoofed, so relying on them alone for security is a mistake."
+  },
+  {
+   "q": "Why should USB drives be encrypted?",
+   "o": [
+    "So data can't be read if the drive is lost or stolen",
+    "So they hold more data",
+    "So they work on more computers",
+    "So they never break"
+   ],
+   "a": 0,
+   "e": "Removable media is easily lost or stolen. Encryption keeps the data unreadable to whoever finds it."
+  },
+  {
+   "q": "What is security vetting?",
+   "o": [
+    "Checking the identity of visitors",
+    "Scanning for viruses",
+    "Backing up data",
+    "Updating software"
+   ],
+   "a": 0,
+   "e": "Vetting checks who visitors are, to reduce the risk of unauthorised access to a site."
+  },
+  {
+   "q": "Why should security incidents be reported immediately?",
+   "o": [
+    "To get someone in trouble",
+    "To reduce damage and data loss",
+    "Because the law says to wait a week",
+    "It doesn't matter when"
+   ],
+   "a": 1,
+   "e": "The sooner an incident is reported, the sooner it can be contained, so less data is lost."
+  },
+  {
+   "q": "Which of these is a physical security measure?",
+   "o": [
+    "A strong password",
+    "Blocking untrustworthy websites",
+    "A door lock on the server room",
+    "Encryption software"
+   ],
+   "a": 2,
+   "e": "A door lock is physical. Passwords, web filtering and encryption are software measures."
+  }
+ ],
+ "apply": {
+  "title": "Spot the threat",
+  "intro": "Read each situation and pick the best answer. In the exam, always link your answer to the scenario.",
+  "items": [
+   {
+    "task": "A receptionist emails a spreadsheet of customer details to the wrong address. What type of threat is this?",
+    "o": [
+     "Accidental disclosure of data",
+     "Industrial espionage",
+     "Natural disaster",
+     "Software licence misuse"
+    ],
+    "a": 0,
+    "e": "It's a mistake that exposes data: accidental disclosure caused by human error."
+   },
+   {
+    "task": "A visitor walks into the server room without anyone checking who they are. What would best prevent this?",
+    "o": [
+     "Antivirus software",
+     "Security vetting and a locked door",
+     "Encrypting USB drives",
+     "Installing updates"
+    ],
+    "a": 1,
+    "e": "Vetting checks visitors' identity and door locks physically restrict access."
+   },
+   {
+    "task": "A manager keeps their password on a sticky note on their monitor. Which human factor is this?",
+    "o": [
+     "Industrial espionage",
+     "Power loss",
+     "Poor credential security (negligence)",
+     "Software licensing"
+    ],
+    "a": 2,
+    "e": "Written-down passwords are poor credential security and let others get in."
+   },
+   {
+    "task": "An employee downloads a free, unapproved file converter. Soon after, the network slows down and antivirus warnings appear. What is the main threat?",
+    "o": [
+     "Flood",
+     "Unauthorised software introducing malware",
+     "Accidental reformatting",
+     "Cyber terrorism"
+    ],
+    "a": 1,
+    "e": "Unapproved software wasn't checked, and it brought malware onto the network."
+   },
+   {
+    "task": "An unencrypted USB drive holding patient records is lost on the bus. What would have best protected the data?",
+    "o": [
+     "A stronger door lock",
+     "Encrypting the USB drive",
+     "Installing antivirus",
+     "Blocking websites"
+    ],
+    "a": 1,
+    "e": "Encryption keeps data unreadable if removable media is lost or stolen."
+   },
+   {
+    "task": "An employee left a week ago but can still log in to the company system from home. What should have happened?",
+    "o": [
+     "Their account should have been locked as soon as they left",
+     "They should have been given a new password",
+     "The server should have been backed up",
+     "Nothing, they were trusted"
+    ],
+    "a": 0,
+    "e": "Lock ex-employees' accounts immediately so they can't still get in."
+   },
+   {
+    "task": "Staff click a link in a fake email because no one ever showed them what phishing looks like. What is the root cause?",
+    "o": [
+     "Natural disaster",
+     "Poor training",
+     "Industrial espionage",
+     "Software licensing"
+    ],
+    "a": 1,
+    "e": "Without training, staff can't recognise phishing emails or unsafe behaviour."
+   },
+   {
+    "task": "Old office hard drives are thrown in a skip, and someone recovers client data from them. What should the company have done?",
+    "o": [
+     "Backed them up first",
+     "Disposed of them securely",
+     "Updated their software",
+     "Spoofed their MAC address"
+    ],
+    "a": 1,
+    "e": "Secure disposal stops confidential information being recovered."
+   },
+   {
+    "task": "The IT team only notices weeks later that huge amounts of data were downloaded at 3am. What would have caught this sooner?",
+    "o": [
+     "Monitoring systems and checking logs",
+     "A door lock",
+     "A software licence",
+     "Buying more USB drives"
+    ],
+    "a": 0,
+    "e": "Monitoring spots suspicious behaviour quickly, and logs support the investigation."
+   },
+   {
+    "task": "A small firm's server is in a basement next to a river, and heavy rain is forecast. Which threat is most relevant?",
+    "o": [
+     "Industrial espionage",
+     "Flood",
+     "Phishing",
+     "Software licence misuse"
+    ],
+    "a": 1,
+    "e": "Flood water can destroy computer systems and the electrics that power them."
+   },
+   {
+    "task": "A team member is angry after an argument and deletes files their colleague needs. Deliberate or accidental?",
+    "o": [
+     "Accidental",
+     "Deliberate"
+    ],
+    "a": 1,
+    "e": "They meant to cause harm, so it is deliberate sabotage causing data loss."
+   },
+   {
+    "task": "Staff keep visiting unsafe websites on work PCs and picking up malware. Which measure helps most?",
+    "o": [
+     "Software that restricts access to untrustworthy websites",
+     "Security vetting of visitors",
+     "Locking the server room",
+     "Fire alarms"
+    ],
+    "a": 0,
+    "e": "Web filtering is a software measure that blocks access to risky sites."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. State what is meant by an internal cyber security threat.",
+   "m": 2,
+   "pts": [
+    "A risk that comes from inside the organisation, caused by employees or insiders",
+    "through error, poor practice, theft or deliberate sabotage"
+   ],
+   "tip": "Two marks = two parts: WHO causes it (insiders) and HOW (error, poor practice, theft or sabotage)."
+  },
+  {
+   "sc": "",
+   "q": "2. Give one example of human error that could cause a security incident.",
+   "m": 1,
+   "pts": [
+    "Any one valid example, e.g. sending confidential data to the wrong person, losing a USB drive, leaving a device unlocked, accidentally deleting key data"
+   ],
+   "tip": "\"Give\" = a short answer is fine. Make it a clear mistake, not something deliberate."
+  },
+  {
+   "sc": "",
+   "q": "3. Give two examples of information that an organisation would want to protect.",
+   "m": 2,
+   "pts": [
+    "Any one of: customers' personal data, financial or payment details, staff records, passwords",
+    "A second different example, e.g. client lists or intellectual property"
+   ],
+   "tip": "Two different types of information, one mark each."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain why internal threats can be dangerous to an organisation.",
+   "m": 2,
+   "pts": [
+    "Insiders already have trusted access to systems, data and buildings",
+    "so they can steal, damage or leak data without having to break in, and it may go unnoticed"
+   ],
+   "tip": "Point + linked reason. Use \"…so…\" to join them."
+  },
+  {
+   "sc": "",
+   "q": "5. Explain why having antivirus software installed does not mean a system is completely secure.",
+   "m": 2,
+   "pts": [
+    "Antivirus only detects known malware",
+    "so it can't stop other threats such as human error, weak passwords, sabotage or unpatched software"
+   ],
+   "tip": "This is one of the lesson's misconceptions. Say what antivirus does, then what it misses."
+  },
+  {
+   "sc": "Greenway Dental is a small dental practice with 12 staff. Patient records are stored on a server in a back office that is not locked. Reception staff share two PCs, and some staff take work home on USB drives. A receptionist left last month, and the practice has no written security policy.",
+   "q": "6. Describe two internal threats to Greenway Dental.",
+   "m": 4,
+   "pts": [
+    "Threat 1 identified from the scenario, e.g. USB drives taken home could be lost or stolen",
+    "Description: patient records on an unencrypted USB could be read by anyone who finds it, causing a data breach",
+    "Threat 2 identified from the scenario, e.g. the receptionist who left may still have an active account, or the unlocked server room",
+    "Description: they could still log in or walk in and access, change or delete patient records"
+   ],
+   "tip": "Use the scenario! Pick threats the practice actually has (USB drives, ex-employee, unlocked room, shared PCs, no policy)."
+  },
+  {
+   "sc": "Greenway Dental is a small dental practice with 12 staff. Patient records are stored on a server in a back office that is not locked. Reception staff share two PCs, and some staff take work home on USB drives. A receptionist left last month, and the practice has no written security policy.",
+   "q": "7. Explain two measures Greenway Dental should take to reduce the risk of accidental disclosure of patient data.",
+   "m": 4,
+   "pts": [
+    "Measure 1, e.g. train all staff in data security",
+    "so they know how to handle patient data and can spot phishing emails",
+    "Measure 2, e.g. encrypt USB drives / lock ex-employee accounts / create a security policy",
+    "so data is unreadable if a drive is lost / former staff can't get in / staff know the rules to follow"
+   ],
+   "tip": "4-mark explain = two measures, each with a linked reason. Make each measure fit Greenway's problems."
+  },
+  {
+   "sc": "Greenway Dental is a small dental practice with 12 staff. Patient records are stored on a server in a back office that is not locked. Reception staff share two PCs, and some staff take work home on USB drives. A receptionist left last month, and the practice has no written security policy.",
+   "q": "8. Explain two reasons why Greenway Dental should only use authorised, correctly licensed software.",
+   "m": 4,
+   "pts": [
+    "Having the correct licence",
+    "means the practice won't be prosecuted and fined",
+    "Authorised software has been checked for security weaknesses",
+    "so it is less likely to contain spyware or malware that could expose patient records"
+   ],
+   "tip": "Also accept: compatibility with existing software, or monitoring that it doesn't harm the network. Always add the \"so…\"."
+  },
+  {
+   "sc": "Greenway Dental is a small dental practice with 12 staff. Patient records are stored on a server in a back office that is not locked. Reception staff share two PCs, and some staff take work home on USB drives. A receptionist left last month, and the practice has no written security policy.",
+   "q": "9. Assess which internal threat poses the greatest risk to Greenway Dental. Justify your answer.",
+   "m": 6,
+   "pts": [
+    "Identifies one internal threat as the greatest risk, e.g. USB drives with patient data being lost or stolen",
+    "Explains why it is likely to happen, using the scenario (e.g. staff regularly take work home; USBs are small and easy to lose)",
+    "Explains the impact: sensitive patient data exposed, a data breach, possible GDPR fines, damage to reputation and profitability",
+    "Compares it with at least one other threat (e.g. the ex-receptionist's account, or the unlocked server room) and says why that is less serious",
+    "Considers that there is no security policy, so nothing currently controls the risk",
+    "Reaches a justified conclusion, ideally with a specific recommendation (e.g. encrypt all USB drives and train staff)"
+   ],
+   "tip": "Top-grade \"assess\" answers weigh up more than one threat, compare likelihood AND impact, use the scenario, and finish with a clear judgement."
+  }
+ ]
+}
