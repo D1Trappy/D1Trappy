@@ -32,15 +32,26 @@ function showAdd(on) {
   if (on) { document.title = 'Add a lesson · Study Hub'; window.scrollTo(0, 0); }
   renderShelf();
 }
-$('copy-msg').onclick = async () => {
-  const text = $('add-msg').textContent;
-  try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'Copied. Paste it into Claude with your slides.'; }
-  catch (e) {
-    const r = document.createRange(); r.selectNodeContents($('add-msg'));
+// "Suggest a lesson" (friends, via fork + pull request) or "I run this site" (owner).
+function showWho(who) {
+  document.querySelectorAll('.who button').forEach(b => b.setAttribute('aria-selected', b.dataset.who === who ? 'true' : 'false'));
+  document.querySelectorAll('ol.steps[data-for]').forEach(o => o.classList.toggle('hidden', o.dataset.for !== who));
+  ls.set('sh-who', who);
+}
+document.querySelectorAll('.who button').forEach(b => b.onclick = () => showWho(b.dataset.who));
+showWho(ls.get('sh-who', 'friend'));
+
+document.querySelectorAll('[data-copy]').forEach(btn => btn.onclick = async () => {
+  const el = $(btn.dataset.copy);
+  try {
+    await navigator.clipboard.writeText(el.textContent);
+    btn.textContent = 'Copied ✓'; setTimeout(() => { btn.textContent = 'Copy message'; }, 2500);
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(el);
     const s = getSelection(); s.removeAllRanges(); s.addRange(r);
-    $('copy-status').textContent = 'Selected. Copy it with your keyboard or long-press.';
+    btn.textContent = 'Selected: copy it now';
   }
-};
+});
 $('add-back').onclick = () => { const last = ls.get('sh-last', null); location.hash = last || (index[0] && index[0].id) || ''; };
 $('search').oninput = renderShelf;
 

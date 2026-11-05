@@ -17,9 +17,16 @@ When the user uploads slides (PDF or PowerPoint):
 1. Read every slide, including speaker notes.
 2. Write `docs/decks/<id>.json`. The `<id>` is lowercase words joined with hyphens, e.g. `a2-5-third-party-reviews`.
 3. Run `node scripts/build-index.mjs` and fix anything it reports.
-4. Commit and push. The live site is built from `main`, and the owner wants new lessons published there: if you are working on another branch, bring `main` up to date with your work too (a fast-forward, or a pull request if `main` has moved on). The site updates about a minute after `main` changes.
+4. Commit and push, then publish as below.
 
-The site's "Add a lesson" page (`#add-lesson`) tells people to open Claude Code on this repository, attach their slides and send "Add this lesson to the Study Hub and publish it." Treat that message as this request.
+### Publishing: owner or friend?
+
+Check which repository you are in (`git remote -v`).
+
+- **The owner's repository, `nbastudyhub/nba`:** the live site is built from `main`, and the owner wants new lessons published there. If you are working on another branch, bring `main` up to date with your work too (a fast-forward, or a pull request if `main` has moved on). The site updates about a minute after `main` changes. The owner's message is "Add this lesson to the Study Hub and publish it."
+- **A fork (anyone else's copy):** never try to publish. Push your branch to the fork, then open a pull request from it into `nbastudyhub/nba` `main`. If you can't open it yourself, give the user the fork's GitHub link and tell them to press Contribute → Open pull request → Create pull request. In the pull request, say which lesson it adds and that it only adds files in `docs/decks/`. A friend's message is "Add this lesson to the Study Hub, then open a pull request to nbastudyhub/nba so the owner can approve it."
+
+A suggested lesson should only add `docs/decks/<id>.json` and update `docs/decks/index.json`. Don't change the site's code in a lesson pull request.
 
 Build the pack only from the slides. Short standard explanations are fine, but don't add topics the slides don't cover. If the slides have their own warm-ups, check-ins, case studies or exam questions, include them with correct answers and mark schemes. Use plain UK English and short sentences.
 

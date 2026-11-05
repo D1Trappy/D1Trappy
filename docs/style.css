@@ -116,3 +116,7 @@ ol.steps > li::before { content: counter(step); position: absolute; left: 16px; 
 ol.steps a { color: var(--accent); font-weight: 600; }
 .copybox { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; margin-top: 6px; }
 .copybox p { margin: 0; font-weight: 600; }
+.who { display: flex; flex-wrap: wrap; gap: 6px; }
+.who button { font: 600 14px var(--font-body); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.who button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.who button:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
