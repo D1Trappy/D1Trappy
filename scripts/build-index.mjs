@@ -40,6 +40,7 @@ if (errors.length) {
   console.error('Problems found:\n- ' + errors.join('\n- '));
   process.exit(1);
 }
-decks.sort((a, b) => b.added.localeCompare(a.added) || a.title.localeCompare(b.title));
+// Sort by title in natural number order, so "Lesson 2" comes before "Lesson 10".
+decks.sort((a, b) => a.title.localeCompare(b.title, 'en', { numeric: true, sensitivity: 'base' }) || a.added.localeCompare(b.added));
 writeFileSync(join(dir, 'index.json'), JSON.stringify({ decks }, null, 1) + '\n');
 console.log(`OK: ${decks.length} deck(s) listed in docs/decks/index.json`);

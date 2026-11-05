@@ -1,0 +1,758 @@
+{
+ "id": "lesson-2-a1-2-function-of-external-threats",
+ "title": "Lesson 2 - A1.2 Function of External Threats",
+ "code": "IT · Unit 2 · A1.2",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How does malware threaten systems, data and users?",
+ "sections": [
+  {
+   "heading": "What is malware?",
+   "text": "Malware is malicious software designed to harm, disrupt, steal data from, or gain unauthorised access to a computer system or network. It can lock devices, steal or encrypt data, and hijack systems to attack other networks.",
+   "points": [
+    "Steal usernames, passwords and personal information",
+    "Encrypt or delete important files",
+    "Monitor user activity",
+    "Disrupt organisations and stop employees working",
+    "Example: WannaCry ransomware (2017) infected over 200,000 computers worldwide, encrypted files and demanded payment, and badly affected the NHS"
+   ]
+  },
+  {
+   "heading": "Four questions for every threat",
+   "text": "For each external threat in this lesson, make sure you can answer:",
+   "points": [
+    "What is it?",
+    "How does it work, and what does it do?",
+    "What can be done to prevent it?",
+    "How can it be detected?"
+   ]
+  },
+  {
+   "heading": "Viruses",
+   "text": "A virus spreads between computers and damages data and software, causing disruption, data loss and leakage. A legitimate antivirus can detect and block viruses, and quarantine and delete any it finds.",
+   "table": {
+    "head": [
+     "Type",
+     "What it does",
+     "Prevent / detect"
+    ],
+    "rows": [
+     [
+      "Boot sector virus",
+      "Targets the master boot record (MBR). Injects code into the disk's partition table, then moves into memory when the computer restarts",
+      "Signs: boot-up problems, poor performance, hard disk can't be found. Write-protect disks; don't start up with untrusted external drives connected. Modern PCs have boot sector safeguards"
+     ],
+     [
+      "Web scripting virus",
+      "Attacks web browser security so hackers can inject web pages with malicious code and steal usernames and passwords. Used to send spam, commit fraud and damage server files. Spread by clicking infected adverts or pop-ups",
+      "Real-time browser protection, cookie security, disabling scripts, malware removal tools"
+     ],
+     [
+      "Resident (TSR) virus",
+      "Infects applications as the user opens them. A non-resident virus infects executable files when programs are not running",
+      "Use antivirus; reboot at least once a week so updates are found and applied"
+     ],
+     [
+      "Macro virus",
+      "Malicious code hidden in a macro runs when the infected document or template is opened, without the user knowing. Can corrupt or steal data and bypass security controls",
+      "Only enable macros from trusted sources; scan regularly with reputable antivirus"
+     ],
+     [
+      "Polymorphic virus",
+      "Changes its code or signature but keeps its harmful function, making many slightly different copies. Example: VirLock, polymorphic ransomware spread through shared apps and cloud storage",
+      "Hard to detect: signature-based antivirus fails to recognise the new copies"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Worms",
+   "text": "A worm is self-replicating malware. It jumps from device to device by itself, through email attachments, malicious links or a local area network (LAN). Unlike a virus, it doesn't need to infect another file to spread.",
+   "table": {
+    "head": [
+     "Consequence",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "Infestation",
+      "The worm just copies itself, until it fills storage and memory and crashes the device"
+     ],
+     [
+      "Infection",
+      "The worm opens the device to other malware, downloads it, or changes settings (e.g. turning off Windows Defender)"
+     ],
+     [
+      "Parasitism",
+      "The worm steals data by installing backdoors and spyware. WannaCry spread ransomware across the NHS in 2017"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Trojans, rootkits and browser hijackers",
+   "table": {
+    "head": [
+     "Threat",
+     "What it is / does",
+     "Prevent / detect"
+    ],
+    "rows": [
+     [
+      "Trojan",
+      "Pretends to be something it isn't to get onto a device and infect it, e.g. hidden in unofficial games, apps, file-sharing sites or bootleg movies",
+      "Only download from official, trusted sources"
+     ],
+     [
+      "Rootkit",
+      "Gives attackers root-level (maximum) privileges to run commands. Can disable antivirus software",
+      "Scan regularly and keep all applications updated. Signs: slow apps, frequent crashes, antivirus crashing or not working"
+     ],
+     [
+      "Browser hijacker",
+      "Changes browser settings: homepage, new tab page, default search engine. Redirects to malicious sites and may include adware pop-ups. Not technically a virus, as it can't infect files",
+      "Comes with free software and apps from unverified sites: use trusted software and reliable antivirus"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Spyware",
+   "text": "Spyware secretly monitors device activity, captures sensitive data like passwords and keystrokes, and tracks personal information without the user's knowledge or consent.",
+   "table": {
+    "head": [
+     "Type",
+     "What it does"
+    ],
+    "rows": [
+     [
+      "Keylogger / data thief",
+      "Records keystrokes and sends them to criminals to steal usernames, passwords and PINs"
+     ],
+     [
+      "System monitor",
+      "Records documents opened, websites visited and emails sent; can take screenshots. Companies may legally monitor work devices if employees are told, usually in an acceptable use policy"
+     ],
+     [
+      "Mobile device tracker (stalkerware)",
+      "Tracks location by GPS, internet use, calls and messages; can record calls and audio on smartphones"
+     ],
+     [
+      "Web beacon",
+      "Tracks behaviour on a web page: visits, what got attention, what users tried to click. Linked to 'dead pixels'. Cannot be declined"
+     ],
+     [
+      "Tracking cookie",
+      "Collects device model, location/IP address, pages visited and search terms. Can be declined"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Adware",
+   "text": "Adware makes money for cybercriminals by bombarding the user with pop-ups, often tracking online behaviour and installing more unwanted programs.",
+   "points": [
+    "Potentially unwanted program (PUP): bundled with free software; can steal usernames, passwords and card details, slow the device and make it crash",
+    "Legitimate adware: e.g. a free game shows adverts after each level and offers a paid version to remove them",
+    "Legal deceptive adware: makes it tricky to opt out of installing extra harmless software",
+    "Legal abusive adware: floods you with ads, e.g. through browser toolbars, but contains no malware",
+    "Illegal malicious adware: knowingly spreads spyware, viruses or other malware through ads, the sites they advertise, or bundled software"
+   ]
+  },
+  {
+   "heading": "Ransomware",
+   "text": "Ransomware locks or encrypts a system's files, blocking access until a ransom is paid.",
+   "table": {
+    "head": [
+     "Type",
+     "How it works"
+    ],
+    "rows": [
+     [
+      "Encryptor",
+      "Encrypts files on the hard drive so they can't be used without the decryption key. Payment demanded in Bitcoin, MoneyPak, PaySafeCard, Ukash or prepaid cards"
+     ],
+     [
+      "Locker",
+      "Locks you out of the whole computer. A lock screen shows the ransom demand, often with a countdown clock to create urgency"
+     ],
+     [
+      "Scareware",
+      "Pop-ups claim you have a virus and push you to download fake 'fix' software. Uses social engineering and spoofing; can steal account or card details, leading to identity theft or fraud"
+     ],
+     [
+      "Leakware (doxware)",
+      "Encrypts files AND threatens to publish sensitive data unless paid: 'double extortion' (pay to decrypt and pay to stop the leak)"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Case studies",
+   "points": [
+    "RyUK (2020): many local schools were hit. It got in through an insecure third-party device, then spread across machines that were switched on",
+    "Garmin: read the BBC article on the slide and answer: why were Garmin reluctant to talk about the attack? Why did attackers want Bitcoin? How could Garmin have prevented the loss?",
+    "Thinking points: organisations fear reputational damage; Bitcoin payments are hard to trace; offline backups, updates, antivirus and staff training reduce the risk"
+   ]
+  },
+  {
+   "heading": "Bots and botnets",
+   "text": "A bot is a program that does tasks automatically. Malicious bots can send junk email, steal personal data or break into other computers. A botnet is a large network of infected computers, secretly controlled by a hacker to cause damage on a massive scale."
+  }
+ ],
+ "keyIdea": "Malware is software built to harm, disrupt, steal or gain unauthorised access. Each type works differently (viruses infect files, worms spread themselves, Trojans disguise themselves, ransomware holds data hostage), so for every threat you must know what it does, how to prevent it and how to detect it.",
+ "flashcards": [
+  [
+   "Malware",
+   "Software designed to harm, disrupt, steal data from, or gain unauthorised access to a computer system or network."
+  ],
+  [
+   "Virus",
+   "Malware that spreads between computers by infecting files and software, damaging data and causing disruption."
+  ],
+  [
+   "Worm",
+   "Self-replicating malware that spreads by itself between devices through email attachments, links or a LAN."
+  ],
+  [
+   "Boot sector virus",
+   "Targets the master boot record (MBR) and loads into memory when the computer restarts. Signs: boot-up problems."
+  ],
+  [
+   "Master boot record (MBR)",
+   "The part of a disk that starts the computer up. The target of a boot sector virus."
+  ],
+  [
+   "Web scripting virus",
+   "Injects malicious code into web pages through browser weaknesses to steal usernames and passwords."
+  ],
+  [
+   "Browser hijacker",
+   "Changes your homepage, new tab page or search engine and redirects you to malicious sites. Not technically a virus."
+  ],
+  [
+   "Resident (TSR) virus",
+   "Stays in memory and infects applications as the user opens them."
+  ],
+  [
+   "Non-resident virus",
+   "Infects executable files when programs are not running."
+  ],
+  [
+   "Trojan",
+   "Malware disguised as something harmless, e.g. hidden in unofficial games, apps or bootleg movies."
+  ],
+  [
+   "Macro virus",
+   "Malicious code inside a macro that runs when an infected document is opened. Only enable macros from trusted sources."
+  ],
+  [
+   "Polymorphic virus",
+   "Changes its code or signature while keeping its harmful function, so signature-based antivirus fails to spot it."
+  ],
+  [
+   "Signature-based detection",
+   "How traditional antivirus spots malware: by matching known code patterns. Fails against polymorphic viruses."
+  ],
+  [
+   "Infestation (worm)",
+   "The worm copies itself until storage and memory fill up and the device crashes."
+  ],
+  [
+   "Infection (worm)",
+   "The worm opens the device to other malware or turns off protection such as Windows Defender."
+  ],
+  [
+   "Parasitism (worm)",
+   "The worm steals data by installing backdoors and spyware, e.g. WannaCry."
+  ],
+  [
+   "Rootkit",
+   "Gives attackers root-level privileges and can disable antivirus. Signs: slow apps, crashes, antivirus failing."
+  ],
+  [
+   "Spyware",
+   "Secretly monitors activity and captures data like passwords and keystrokes without consent."
+  ],
+  [
+   "Keylogger",
+   "Spyware that records keystrokes to steal usernames, passwords and PINs."
+  ],
+  [
+   "Stalkerware",
+   "Spyware on a phone that tracks GPS location, calls, messages and internet use, and can record audio."
+  ],
+  [
+   "Web beacon vs tracking cookie",
+   "Both track users. Web beacons track behaviour on one page and can't be declined; tracking cookies can be declined."
+  ],
+  [
+   "Adware",
+   "Bombards users with pop-ups to make money, often tracking behaviour and installing unwanted programs."
+  ],
+  [
+   "PUP",
+   "Potentially unwanted program: bundled with free software; can steal details, slow the device and cause crashes."
+  ],
+  [
+   "Ransomware",
+   "Locks or encrypts files and demands a ransom to restore access."
+  ],
+  [
+   "Encryptor vs locker",
+   "An encryptor scrambles your files; a locker locks you out of the whole computer with a ransom screen."
+  ],
+  [
+   "Scareware",
+   "Fake pop-ups saying you have a virus, pushing you to download fake software. Can lead to identity theft."
+  ],
+  [
+   "Leakware (doxware)",
+   "Ransomware that also threatens to publish your data: double extortion."
+  ],
+  [
+   "Botnet",
+   "A large network of bot-infected computers secretly controlled by a hacker to attack on a massive scale."
+  ],
+  [
+   "WannaCry (2017)",
+   "Ransomware worm that infected over 200,000 computers worldwide and badly affected the NHS."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "Why might cybercriminals use malware?",
+   "o": [
+    "To make computers run faster",
+    "To steal data or money, spy on users, or disrupt organisations",
+    "To install security updates",
+    "To back up files"
+   ],
+   "a": 1,
+   "e": "Malware is used to steal (data, passwords, money), spy, encrypt files for ransom, or disrupt organisations."
+  },
+  {
+   "q": "What is the main difference between a virus and a worm?",
+   "o": [
+    "A worm spreads by itself; a virus spreads by infecting other files",
+    "A virus only affects phones",
+    "A worm is harmless",
+    "There is no difference"
+   ],
+   "a": 0,
+   "e": "A worm is self-replicating and moves between devices on its own. A virus infects files and software to spread."
+  },
+  {
+   "q": "A school's files have been encrypted and staff can't access them. Which malware is most likely?",
+   "o": [
+    "Adware",
+    "Spyware",
+    "Browser hijacker",
+    "Ransomware"
+   ],
+   "a": 3,
+   "e": "Ransomware encrypts or locks files and demands payment to restore access."
+  },
+  {
+   "q": "What does a boot sector virus target?",
+   "o": [
+    "The web browser",
+    "The master boot record (MBR)",
+    "Email attachments",
+    "Tracking cookies"
+   ],
+   "a": 1,
+   "e": "It targets the MBR and loads into memory when the computer restarts, causing boot-up problems."
+  },
+  {
+   "q": "Why are polymorphic viruses hard for antivirus to detect?",
+   "o": [
+    "They change their code or signature, so signature-based detection doesn't recognise them",
+    "They only run at night",
+    "They are too small to see",
+    "They delete the antivirus licence"
+   ],
+   "a": 0,
+   "e": "They make many slightly different copies, so antivirus that matches known signatures misses them."
+  },
+  {
+   "q": "When does a macro virus run?",
+   "o": [
+    "When the computer is switched off",
+    "When the infected document or template is opened",
+    "Only when connected to Wi-Fi",
+    "When you buy software"
+   ],
+   "a": 1,
+   "e": "The malicious code is inside the macro and runs when the document is opened, so only enable macros from trusted sources."
+  },
+  {
+   "q": "Which can a user decline: web beacons or tracking cookies?",
+   "o": [
+    "Web beacons",
+    "Tracking cookies",
+    "Both",
+    "Neither"
+   ],
+   "a": 1,
+   "e": "Tracking cookies can be declined. Web beacons cannot."
+  },
+  {
+   "q": "When is it legal for a company to use system monitoring software on an employee's work device?",
+   "o": [
+    "Never",
+    "Only at weekends",
+    "When the employee has been told, usually in an acceptable use policy",
+    "Only if the employee is under 18"
+   ],
+   "a": 2,
+   "e": "Monitoring company-issued devices is legal if employees are aware, usually through an acceptable use policy."
+  },
+  {
+   "q": "Which malware can give attackers root-level privileges and disable your antivirus?",
+   "o": [
+    "Rootkit",
+    "Adware",
+    "Web beacon",
+    "Legitimate adware"
+   ],
+   "a": 0,
+   "e": "A rootkit gives maximum privileges, which is where the name comes from, and can switch off antivirus."
+  },
+  {
+   "q": "Why is a browser hijacker technically not a virus?",
+   "o": [
+    "It is legal",
+    "It only affects phones",
+    "It cannot infect files",
+    "It doesn't change any settings"
+   ],
+   "a": 2,
+   "e": "It changes browser settings and redirects you, but it can't infect files, so it isn't a virus."
+  },
+  {
+   "q": "How do PUPs (potentially unwanted programs) usually get onto a device?",
+   "o": [
+    "Through the power cable",
+    "Bundled with free software",
+    "Only through USB drives",
+    "From the operating system"
+   ],
+   "a": 1,
+   "e": "PUPs are often bundled with free software and installed alongside it."
+  },
+  {
+   "q": "What is 'double extortion' in leakware attacks?",
+   "o": [
+    "Charging twice the normal ransom",
+    "Attacking two companies at once",
+    "Demanding payment to decrypt files AND to stop data being leaked",
+    "Encrypting files twice"
+   ],
+   "a": 2,
+   "e": "Leakware (doxware) encrypts data and threatens to publish it, so victims are pushed to pay for both."
+  },
+  {
+   "q": "What is a botnet?",
+   "o": [
+    "A network of infected computers secretly controlled by a hacker",
+    "A type of firewall",
+    "A website for robots",
+    "Antivirus software"
+   ],
+   "a": 0,
+   "e": "Bots on many infected computers are controlled together to cause damage on a massive scale."
+  },
+  {
+   "q": "How did RyUK ransomware get into local schools' networks in 2020?",
+   "o": [
+    "Through a fire",
+    "Through an insecure third-party device",
+    "Through a locked door",
+    "Through a printer update"
+   ],
+   "a": 1,
+   "e": "It entered through an insecure third-party device, then spread across machines that were switched on."
+  },
+  {
+   "q": "A worm fills up a device's storage and memory until it crashes. Which consequence is this?",
+   "o": [
+    "Infection",
+    "Parasitism",
+    "Infestation"
+   ],
+   "a": 2,
+   "e": "Infestation: the worm just keeps copying itself until resources run out."
+  },
+  {
+   "q": "Which ransomware shows a lock screen with a countdown clock?",
+   "o": [
+    "Locker",
+    "Encryptor",
+    "Scareware",
+    "Leakware"
+   ],
+   "a": 0,
+   "e": "Lockers lock you out completely and use a countdown to create urgency."
+  },
+  {
+   "q": "Give one method that helps prevent malware infections. Which is best?",
+   "o": [
+    "Turning off updates",
+    "Enabling all macros",
+    "Using up-to-date antivirus and installing updates",
+    "Downloading free software from any site"
+   ],
+   "a": 2,
+   "e": "Reputable antivirus and regular updates help prevent and detect malware. The others increase the risk."
+  }
+ ],
+ "apply": {
+  "title": "Name that malware",
+  "intro": "Read each situation and pick the threat or the best fix. In the exam, link your answer to the scenario.",
+  "items": [
+   {
+    "task": "A marketing team downloads a free video converter. Later, strange pop-ups appear and the homepage changes to a search engine nobody recognises. What type of threat is this?",
+    "o": [
+     "Boot sector virus",
+     "Browser hijacker (with adware) bundled with free software",
+     "Locker ransomware",
+     "Keylogger"
+    ],
+    "a": 1,
+    "e": "Changed homepage and search engine plus pop-ups is a browser hijacker with adware, which came bundled with free software. Avoid it by only using trusted software; remove it with reliable antivirus or malware removal tools."
+   },
+   {
+    "task": "A PC struggles to start up, runs slowly, and then says it can't find the hard disk.",
+    "o": [
+     "Boot sector virus",
+     "Tracking cookie",
+     "Legitimate adware",
+     "Scareware"
+    ],
+    "a": 0,
+    "e": "Boot-up problems, poor performance and a missing hard disk are signs of a boot sector virus."
+   },
+   {
+    "task": "Someone types their bank PIN, and a criminal later uses it. The PC had hidden software recording every key pressed.",
+    "o": [
+     "Rootkit",
+     "Adware",
+     "Keylogger (spyware)",
+     "Worm"
+    ],
+    "a": 2,
+    "e": "A keylogger records keystrokes and sends them to criminals to steal credentials and PINs."
+   },
+   {
+    "task": "A pop-up says 'Your PC has 37 viruses! Download our cleaner now!' The download is fake and steals card details.",
+    "o": [
+     "Encryptor",
+     "Scareware",
+     "Botnet",
+     "Macro virus"
+    ],
+    "a": 1,
+    "e": "Scareware uses fake alarms to trick people into downloading fake software."
+   },
+   {
+    "task": "An invoice document arrives by email and asks the user to 'enable content'. When they do, files start to corrupt.",
+    "o": [
+     "Macro virus",
+     "Stalkerware",
+     "Browser hijacker",
+     "Web beacon"
+    ],
+    "a": 0,
+    "e": "The malicious code is in the macro, which runs when content is enabled. Only enable macros from trusted sources."
+   },
+   {
+    "task": "Malware spreads from one PC across the whole office network overnight with nobody opening anything.",
+    "o": [
+     "Trojan",
+     "Worm",
+     "Legitimate adware",
+     "Tracking cookie"
+    ],
+    "a": 1,
+    "e": "A worm self-replicates and spreads by itself across a LAN."
+   },
+   {
+    "task": "A free 'cracked' version of a popular game is downloaded from a file-sharing site and secretly installs malware.",
+    "o": [
+     "Trojan",
+     "Locker",
+     "Web beacon",
+     "Polymorphic adware"
+    ],
+    "a": 0,
+    "e": "A Trojan pretends to be something it isn't, like an unofficial game, to get onto the device."
+   },
+   {
+    "task": "Attackers have encrypted a company's files and also threaten to publish customer data online unless paid.",
+    "o": [
+     "Scareware",
+     "Locker",
+     "Leakware (doxware)",
+     "Adware"
+    ],
+    "a": 2,
+    "e": "Encrypting plus threatening to leak is leakware: double extortion."
+   },
+   {
+    "task": "The antivirus keeps crashing and won't restart, apps are slow, and the system crashes more often.",
+    "o": [
+     "Tracking cookie",
+     "Rootkit",
+     "Legitimate adware",
+     "Web scripting virus"
+    ],
+    "a": 1,
+    "e": "Rootkits can disable antivirus and cause slow apps and frequent crashes."
+   },
+   {
+    "task": "Thousands of home PCs are secretly used together to send millions of junk emails.",
+    "o": [
+     "Botnet",
+     "Keylogger",
+     "Boot sector virus",
+     "PUP"
+    ],
+    "a": 0,
+    "e": "A botnet is a network of infected computers controlled by a hacker to act on a massive scale."
+   },
+   {
+    "task": "Antivirus keeps missing a virus because every copy of it looks slightly different. What is it?",
+    "o": [
+     "Resident virus",
+     "Polymorphic virus",
+     "Macro virus",
+     "Browser hijacker"
+    ],
+    "a": 1,
+    "e": "Polymorphic viruses change their code or signature, beating signature-based detection."
+   },
+   {
+    "task": "A visitor's laptop is plugged into a school network and ransomware spreads to every PC that is switched on. What would most reduce this risk?",
+    "o": [
+     "Using bigger monitors",
+     "Stopping untrusted third-party devices connecting to the network",
+     "Disabling tracking cookies",
+     "Turning on legitimate adware"
+    ],
+    "a": 1,
+    "e": "This is how RyUK hit schools in 2020: through an insecure third-party device."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term malware.",
+   "m": 2,
+   "pts": [
+    "Software designed to harm, disrupt, steal data from",
+    "or gain unauthorised access to a computer system or network"
+   ],
+   "tip": "Use the key words: harm, disrupt, steal, unauthorised access."
+  },
+  {
+   "sc": "",
+   "q": "2. State the type of malware that encrypts files and demands payment to restore access.",
+   "m": 1,
+   "pts": [
+    "Ransomware (accept: encryptor ransomware)"
+   ],
+   "tip": "\"State\" = one or two words is enough."
+  },
+  {
+   "sc": "",
+   "q": "3. Explain the difference between a virus and a worm.",
+   "m": 2,
+   "pts": [
+    "A virus spreads by infecting other files or software",
+    "whereas a worm is self-replicating and spreads by itself between devices, e.g. through email, links or a LAN"
+   ],
+   "tip": "Difference = both sides, joined with \"whereas\"."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain why polymorphic viruses are difficult for antivirus software to detect.",
+   "m": 2,
+   "pts": [
+    "They change their code or signature each time they copy themselves",
+    "so signature-based antivirus doesn't recognise the new copies"
+   ],
+   "tip": "Point (it changes) + linked reason (so signature matching fails)."
+  },
+  {
+   "sc": "",
+   "q": "5. Describe two types of spyware.",
+   "m": 4,
+   "pts": [
+    "Type 1 named, e.g. keylogger",
+    "Description, e.g. records keystrokes and sends them to criminals to steal passwords and PINs",
+    "Type 2 named, e.g. system monitor / stalkerware / tracking cookies",
+    "Description, e.g. records websites, documents and emails and takes screenshots / tracks GPS location, calls and messages"
+   ],
+   "tip": "Name it, then say what it does. Two types x two marks."
+  },
+  {
+   "sc": "",
+   "q": "6. Explain one difference between encryptor ransomware and leakware.",
+   "m": 2,
+   "pts": [
+    "Encryptor ransomware only encrypts files and demands payment for the key",
+    "whereas leakware also threatens to publish the data if not paid (double extortion)"
+   ],
+   "tip": "Show you know the extra threat that makes leakware worse."
+  },
+  {
+   "sc": "Brightwater Academy is a secondary school with 900 students. Staff often open email attachments from parents and enable macros in documents. Visiting contractors sometimes plug their own laptops into the school network. Some classroom PCs have not been updated for over a year, and the backup drive is always connected to the network.",
+   "q": "7. Identify two features of Brightwater Academy's set-up that increase the risk of malware.",
+   "m": 2,
+   "pts": [
+    "Any one from the scenario: staff enable macros / open attachments from parents; contractors plug in their own laptops",
+    "A second, different one: PCs not updated for over a year; backup drive always connected to the network"
+   ],
+   "tip": "\"Identify\" = pick them straight out of the scenario."
+  },
+  {
+   "sc": "Brightwater Academy is a secondary school with 900 students. Staff often open email attachments from parents and enable macros in documents. Visiting contractors sometimes plug their own laptops into the school network. Some classroom PCs have not been updated for over a year, and the backup drive is always connected to the network.",
+   "q": "8. Explain how a macro virus could infect Brightwater Academy's network.",
+   "m": 3,
+   "pts": [
+    "A document with malicious code hidden in a macro is emailed to a member of staff",
+    "When they open it and enable macros, the code runs without their knowledge",
+    "so it can corrupt or steal data, bypass security controls and spread across the school network"
+   ],
+   "tip": "Tell the story step by step: arrives, is opened, runs, causes damage. Use the scenario's detail about enabling macros."
+  },
+  {
+   "sc": "Brightwater Academy is a secondary school with 900 students. Staff often open email attachments from parents and enable macros in documents. Visiting contractors sometimes plug their own laptops into the school network. Some classroom PCs have not been updated for over a year, and the backup drive is always connected to the network.",
+   "q": "9. Brightwater Academy is hit by ransomware like RyUK. Explain two ways the school could have prevented the attack or reduced its impact.",
+   "m": 4,
+   "pts": [
+    "Way 1, e.g. stop contractors' untrusted devices connecting to the network",
+    "because RyUK got into schools through an insecure third-party device",
+    "Way 2, e.g. keep a backup that is disconnected from the network / install updates / train staff",
+    "so files can be restored without paying / known weaknesses are fixed / staff don't open infected attachments"
+   ],
+   "tip": "Link each measure to a weakness in the scenario. The always-connected backup is a big one: ransomware can encrypt it too."
+  },
+  {
+   "sc": "Brightwater Academy is a secondary school with 900 students. Staff often open email attachments from parents and enable macros in documents. Visiting contractors sometimes plug their own laptops into the school network. Some classroom PCs have not been updated for over a year, and the backup drive is always connected to the network.",
+   "q": "10. Evaluate whether installing antivirus software on every PC would be enough to protect Brightwater Academy from malware.",
+   "m": 6,
+   "pts": [
+    "Strength: antivirus can detect, quarantine and delete known viruses",
+    "Strength: regular scanning can catch threats like macro viruses and rootkits",
+    "Weakness: signature-based antivirus can miss polymorphic or brand-new malware",
+    "Weakness: rootkits can disable antivirus, and the PCs haven't been updated, leaving known weaknesses open",
+    "Weakness: antivirus doesn't stop staff enabling macros or contractors plugging in devices (human behaviour)",
+    "Justified conclusion: not enough on its own; it needs updates, offline backups, staff training and device controls too"
+   ],
+   "tip": "Top-grade \"evaluate\" = both sides, linked to the scenario, then a clear judgement. Finish with \"Therefore, antivirus alone is not enough because…\"."
+  }
+ ]
+}

@@ -33,7 +33,7 @@ Build the pack only from the slides. Short standard explanations are fine, but d
 
 ## Deck format
 
-Copy `docs/decks/lesson-1-a1-1-internal-threats.json` as the example. Titles follow the slides, e.g. "Lesson 1 - Internal Threats".
+Copy `docs/decks/lesson-1-a1-1-internal-threats.json` as the example. Title each pack with the lesson number and PowerPoint name, e.g. "Lesson 2 - A1.2 Function of External Threats" (Lesson 1 is "Lesson 1 - Internal Threats", as the owner asked). The topic list is sorted by title, so lessons appear in order.
 
 ```jsonc
 {
