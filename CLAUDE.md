@@ -1,6 +1,7 @@
 # Study Hub
 
-A static revision website in `docs/`, served by GitHub Pages. No build step and no server.
+A static revision website in `docs/`, served by GitHub Pages from the `main` branch, `/docs` folder.
+Live at https://nbastudyhub.github.io/D1Trappy/ (repository `nbastudyhub/D1Trappy`; the owner was previously `d1trappy`). No build step and no server.
 
 - `docs/index.html`, `docs/app.js`, `docs/style.css`: the site
 - `docs/decks/<id>.json`: one study pack per lesson / PowerPoint
@@ -16,7 +17,9 @@ When the user uploads slides (PDF or PowerPoint):
 1. Read every slide, including speaker notes.
 2. Write `docs/decks/<id>.json`. The `<id>` is lowercase words joined with hyphens, e.g. `a2-5-third-party-reviews`.
 3. Run `node scripts/build-index.mjs` and fix anything it reports.
-4. Commit and push. The site updates about a minute later.
+4. Commit and push. The live site is built from `main`, and the owner wants new lessons published there: if you are working on another branch, bring `main` up to date with your work too (a fast-forward, or a pull request if `main` has moved on). The site updates about a minute after `main` changes.
+
+The site's "Add a lesson" page (`#add-lesson`) tells people to open Claude Code on this repository, attach their slides and send "Add this lesson to the Study Hub and publish it." Treat that message as this request.
 
 Build the pack only from the slides. Short standard explanations are fine, but don't add topics the slides don't cover. If the slides have their own warm-ups, check-ins, case studies or exam questions, include them with correct answers and mark schemes. Use plain UK English and short sentences.
 

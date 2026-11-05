@@ -17,6 +17,39 @@
   </div>
   <div class="shelf" id="shelf" aria-label="Topics"></div>
 
+  <section id="addview" class="stack hidden">
+    <div>
+      <h1>Add a lesson</h1>
+      <p class="lead">New lessons are made from your slides by Claude, then published here for everyone. It takes about five minutes from upload to live.</p>
+    </div>
+    <ol class="steps">
+      <li class="card">
+        <h3>Open Claude Code</h3>
+        <p>Go to <a href="https://claude.ai/code" target="_blank" rel="noopener">claude.ai/code</a> and start a new session with the repository <strong>nbastudyhub/D1Trappy</strong> selected.</p>
+      </li>
+      <li class="card">
+        <h3>Attach your slides</h3>
+        <p>Add the PowerPoint (<span class="code">.pptx</span>) or PDF. One lesson per file works best. Keep the speaker notes in: that's often where the answers are.</p>
+      </li>
+      <li class="card">
+        <h3>Send this message</h3>
+        <div class="copybox">
+          <p id="add-msg">Add this lesson to the Study Hub and publish it.</p>
+          <button class="btn small" id="copy-msg">Copy message</button>
+        </div>
+        <p class="muted" id="copy-status" aria-live="polite"></p>
+      </li>
+      <li class="card">
+        <h3>Refresh this page</h3>
+        <p>When Claude says it's published, wait about a minute and refresh. The new lesson appears in the topic list at the top.</p>
+      </li>
+    </ol>
+    <div class="callout">
+      <strong>Tips:</strong> An old <span class="code">.ppt</span> file needs saving as <span class="code">.pptx</span> or PDF first. If a slide is mostly a picture, tell Claude what it shows. Using someone else's Study Hub? Send your slides to its owner and they can add them.
+    </div>
+    <div class="row"><button class="btn ghost" id="add-back">← Back to my topics</button></div>
+  </section>
+
   <section id="deckview">
     <header>
       <div class="code" id="d-code"></div>

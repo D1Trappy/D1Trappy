@@ -19,8 +19,29 @@ function renderShelf() {
   $('shelf').innerHTML = list.length
     ? list.map(d => `<button class="deck" data-id="${esc(d.id)}" aria-pressed="${current && current.id === d.id}"><small>${esc(d.code || d.subject || 'Topic')}</small>${esc(d.title)}</button>`).join('')
     : '<p class="muted">No topics match that search.</p>';
-  $('shelf').querySelectorAll('.deck').forEach(b => b.onclick = () => { location.hash = b.dataset.id; });
+  $('shelf').insertAdjacentHTML('beforeend', `<button class="deck add" id="add-btn" aria-pressed="${addOpen()}">+ Add a lesson</button>`);
+  $('shelf').querySelectorAll('.deck[data-id]').forEach(b => b.onclick = () => { location.hash = b.dataset.id; });
+  $('add-btn').onclick = () => { location.hash = 'add-lesson'; };
 }
+
+// ---------- Add a lesson ----------
+const addOpen = () => !$('addview').classList.contains('hidden');
+function showAdd(on) {
+  $('addview').classList.toggle('hidden', !on);
+  $('deckview').classList.toggle('hidden', on);
+  if (on) { document.title = 'Add a lesson · Study Hub'; window.scrollTo(0, 0); }
+  renderShelf();
+}
+$('copy-msg').onclick = async () => {
+  const text = $('add-msg').textContent;
+  try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'Copied. Paste it into Claude with your slides.'; }
+  catch (e) {
+    const r = document.createRange(); r.selectNodeContents($('add-msg'));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    $('copy-status').textContent = 'Selected. Copy it with your keyboard or long-press.';
+  }
+};
+$('add-back').onclick = () => { const last = ls.get('sh-last', null); location.hash = last || (index[0] && index[0].id) || ''; };
 $('search').oninput = renderShelf;
 
 async function loadDeck(id) {
@@ -38,6 +59,7 @@ async function openDeck(id) {
   progress = ls.get('sh-prog-' + id, { answers: {} });
   if (!progress.answers) progress.answers = {};
   ls.set('sh-last', id);
+  showAdd(false);
   document.title = current.title + ' · Study Hub';
   renderShelf();
   $('d-code').textContent = current.code || current.subject || '';
@@ -196,7 +218,11 @@ function exTotal() {
 }
 
 // ---------- Start ----------
-window.addEventListener('hashchange', () => { const id = location.hash.slice(1); if (id && index.some(d => d.id === id)) openDeck(id); });
+window.addEventListener('hashchange', () => {
+  const id = location.hash.slice(1);
+  if (id === 'add-lesson') showAdd(true);
+  else if (id && index.some(d => d.id === id)) openDeck(id);
+});
 (async function init() {
   try {
     const r = await fetch('decks/index.json', { cache: 'no-cache' });
@@ -205,5 +231,6 @@ window.addEventListener('hashchange', () => { const id = location.hash.slice(1);
   renderShelf();
   const fromHash = location.hash.slice(1), last = ls.get('sh-last', null);
   const id = [fromHash, last].find(x => x && index.some(d => d.id === x)) || (index[0] && index[0].id);
-  if (id) openDeck(id); else $('d-title').textContent = 'No topics yet.';
+  if (fromHash === 'add-lesson') showAdd(true);
+  else if (id) openDeck(id); else $('d-title').textContent = 'No topics yet.';
 })();
