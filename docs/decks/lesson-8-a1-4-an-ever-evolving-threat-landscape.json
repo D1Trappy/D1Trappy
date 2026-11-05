@@ -1,0 +1,669 @@
+{
+ "id": "lesson-8-a1-4-an-ever-evolving-threat-landscape",
+ "title": "Lesson 8 - A1.4 An Ever-Evolving Threat Landscape (Independent Study)",
+ "code": "IT · Unit 2 · A1.4",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How do we stay ahead of cyber threats?",
+ "sections": [
+  {
+   "heading": "Cyber threats and the threat landscape",
+   "text": "Cyber security threats are actions or events that try to damage, steal or disrupt computer systems, networks or data. The threat landscape is the whole picture of threats that exist at any time, and it keeps changing.",
+   "points": [
+    "Example: a phishing email tricks someone into clicking a fake link and entering their password",
+    "Apply it: a student gets an email saying they've won a free gift and must click a link to claim it",
+    "The risk: it's probably phishing, and the link could steal their details or install malware",
+    "What to do: don't click, don't reply, report it, and delete it"
+   ]
+  },
+  {
+   "heading": "Why cyber threats keep changing",
+   "points": [
+    "Criminals adapt: from the earliest viruses in the 1970s to today's ransomware, they keep changing their tactics, approaches and targets",
+    "Geopolitics changes: conflicts and relations between countries change who attacks whom, and why",
+    "New laws and organisations are created to meet new threats",
+    "Technology changes: systems become obsolete or get new features, creating new weaknesses, vulnerabilities and things to exploit",
+    "Recent example from the slides: ransomware attackers now target backups too, so data resilience is critical",
+    "So users, governments and organisations need the latest information to protect their assets"
+   ]
+  },
+  {
+   "heading": "The three organisations (A1.4.1 to A1.4.3)",
+   "table": {
+    "head": [
+     "Organisation",
+     "Where and when",
+     "What it does"
+    ],
+    "rows": [
+     [
+      "NCSC: National Cyber Security Centre",
+      "UK, launched 2016, supported by GCHQ",
+      "Central point of contact and expertise; advice for individuals and organisations of all sizes; news on the latest threats, malware analysis and cybercrime"
+     ],
+     [
+      "NIST: National Institute of Standards and Technology",
+      "USA, created 1901",
+      "Develops cyber security standards and best practice, including the NIST Cybersecurity Framework, used internationally"
+     ],
+     [
+      "OWASP: Open Web Application Security Project",
+      "Online, non-profit, set up 2001",
+      "Improves software security for everyone; not linked to any government; publishes the OWASP Top 10 risks for web apps"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "NCSC (UK)",
+   "points": [
+    "Launched in 2016 as a central point of contact and expertise for government, organisations and the public",
+    "The UK's centre for cyber intelligence, supported by GCHQ (the UK's intelligence, security and cyber agency)",
+    "Gives advice and guidance to individuals and organisations of all sizes",
+    "Publishes news on the latest threats, malware analysis and recent cybercrime",
+    "Your task: complete the NCSC 'Top tips' training and note tips on securing devices, spotting phishing and strong passwords",
+    "Standard NCSC advice to note: use three random words for passwords, use a password manager, turn on 2-step verification, install updates, back up your data"
+   ]
+  },
+  {
+   "heading": "NIST (USA)",
+   "text": "Created in 1901 to support US industry. Its modern role includes developing cyber security standards and best practice.",
+   "points": [
+    "NICE (National Initiative for Cybersecurity Education; your slide says 'Institute'), created 2008, supports government, academic and industry partners",
+    "NCCoE (National Cybersecurity Center of Excellence) creates standards-based solutions for all types of organisation",
+    "The NIST Cybersecurity Framework (CSF) is used internationally, so NIST influences security practice worldwide"
+   ]
+  },
+  {
+   "heading": "The NIST Cybersecurity Framework: five core functions",
+   "text": "Your slides name the five functions. These short meanings are standard explanations to help you remember them:",
+   "table": {
+    "head": [
+     "Function",
+     "What it means"
+    ],
+    "rows": [
+     [
+      "Identify",
+      "Know what you need to protect: your systems, data, people and risks"
+     ],
+     [
+      "Protect",
+      "Put safeguards in place, e.g. access control, training, updates, encryption"
+     ],
+     [
+      "Detect",
+      "Spot attacks and unusual activity quickly, e.g. monitoring and logs"
+     ],
+     [
+      "Respond",
+      "Take action when an incident happens, to contain it and limit damage"
+     ],
+     [
+      "Recover",
+      "Get systems and data back to normal, e.g. from backups, and learn from it"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "OWASP and the Top 10",
+   "text": "OWASP is a non-profit online community, set up in 2001 and not linked to any government, focused on improving software security for everyone. The OWASP Top 10 is a live document of the biggest security risks for developers of software and web applications.",
+   "table": {
+    "head": [
+     "#",
+     "Risk (2021 list; check owasp.org for the 2025 update)"
+    ],
+    "rows": [
+     [
+      "A01",
+      "Broken access control: users can do or see things they shouldn't"
+     ],
+     [
+      "A02",
+      "Cryptographic failures: sensitive data not encrypted properly"
+     ],
+     [
+      "A03",
+      "Injection: e.g. SQL injection, where commands typed into a form run on the database"
+     ],
+     [
+      "A04",
+      "Insecure design: security not planned in from the start"
+     ],
+     [
+      "A05",
+      "Security misconfiguration: wrong or default settings left in place"
+     ],
+     [
+      "A06",
+      "Vulnerable and outdated components: old software with known weaknesses"
+     ],
+     [
+      "A07",
+      "Identification and authentication failures: weak logins and passwords"
+     ],
+     [
+      "A08",
+      "Software and data integrity failures: trusting updates or data that haven't been checked"
+     ],
+     [
+      "A09",
+      "Security logging and monitoring failures: attacks not noticed"
+     ],
+     [
+      "A10",
+      "Server-side request forgery: tricking a server into making requests it shouldn't"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Worked example for your OWASP task",
+   "text": "Task: choose one OWASP Top 10 risk, explain it simply, say why it threatens web security, and find a real example. Here's one done for you, so pick a different one for your own task:",
+   "points": [
+    "Risk: Injection (SQL injection)",
+    "What it is: an attacker types database commands into a website's form or search box, and the site runs them",
+    "Why it's a threat: the attacker can read, change or delete records in the database, such as customer details",
+    "Real example: TalkTalk (2015). Attackers used SQL injection to steal data on around 157,000 customers, and the ICO fined TalkTalk £400,000. Your Lesson 1 links include the ICO's article on it"
+   ]
+  }
+ ],
+ "keyIdea": "The threat landscape never stands still: criminals adapt, technology changes and politics shifts. To stay ahead, people and organisations use up-to-date guidance from bodies like the NCSC (UK advice), NIST (the Identify-Protect-Detect-Respond-Recover framework) and OWASP (the Top 10 web risks).",
+ "flashcards": [
+  [
+   "Cyber security threat",
+   "An action or event that tries to damage, steal or disrupt computer systems, networks or data."
+  ],
+  [
+   "Threat landscape",
+   "The whole picture of cyber threats at a given time. It keeps changing."
+  ],
+  [
+   "Why threats change",
+   "Criminals adapt; geopolitics shifts; new laws and organisations appear; technology changes and creates new weaknesses."
+  ],
+  [
+   "Phishing",
+   "Fake messages that trick people into clicking links or giving away details such as passwords."
+  ],
+  [
+   "NCSC",
+   "National Cyber Security Centre: UK, launched 2016, supported by GCHQ; gives advice, threat news and guidance."
+  ],
+  [
+   "GCHQ",
+   "The UK's intelligence, security and cyber agency, which supports the NCSC."
+  ],
+  [
+   "NIST",
+   "National Institute of Standards and Technology: USA, created 1901; develops cyber security standards and the CSF."
+  ],
+  [
+   "NIST CSF",
+   "NIST Cybersecurity Framework: used internationally to improve security practice."
+  ],
+  [
+   "Five NIST CSF functions",
+   "Identify, Protect, Detect, Respond, Recover."
+  ],
+  [
+   "Identify (NIST)",
+   "Know what you need to protect: systems, data, people and risks."
+  ],
+  [
+   "Protect (NIST)",
+   "Put safeguards in place, e.g. access control, training, updates."
+  ],
+  [
+   "Detect (NIST)",
+   "Spot attacks and unusual activity quickly."
+  ],
+  [
+   "Respond (NIST)",
+   "Take action during an incident to contain it and limit damage."
+  ],
+  [
+   "Recover (NIST)",
+   "Restore systems and data to normal and learn from the incident."
+  ],
+  [
+   "NICE",
+   "National Initiative for Cybersecurity Education (part of NIST; your slide says 'Institute'), created 2008 to support education and industry partners."
+  ],
+  [
+   "NCCoE",
+   "National Cybersecurity Center of Excellence (part of NIST): creates standards-based solutions for organisations."
+  ],
+  [
+   "OWASP",
+   "Open Web Application Security Project: non-profit, set up 2001, not linked to any government; improves software security."
+  ],
+  [
+   "OWASP Top 10",
+   "A live document of the ten biggest security risks for developers of software and web applications."
+  ],
+  [
+   "Injection (OWASP)",
+   "Attacker input, e.g. SQL commands typed into a form, gets run by the system."
+  ],
+  [
+   "Broken access control (OWASP)",
+   "Users can see or do things they shouldn't be allowed to."
+  ],
+  [
+   "TalkTalk (2015)",
+   "SQL injection attack; data on around 157,000 customers stolen; £400,000 ICO fine."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is cyber security?",
+   "o": [
+    "Protecting computer systems, networks and data from attack, damage or unauthorised access",
+    "Making websites look nicer",
+    "Selling computers",
+    "Writing emails"
+   ],
+   "a": 0,
+   "e": "Cyber security protects systems and data from threats."
+  },
+  {
+   "q": "Which of these could be a cyber threat?",
+   "o": [
+    "A software update from the official provider",
+    "A locked server room",
+    "A strong password",
+    "A phishing email with a fake link"
+   ],
+   "a": 3,
+   "e": "Phishing tries to steal details or install malware, so it's a cyber threat."
+  },
+  {
+   "q": "Why do organisations need to protect their data?",
+   "o": [
+    "Data has no value",
+    "Because computers ask them to",
+    "To avoid losses: stolen data, downtime, fines and damaged reputation",
+    "To make backups slower"
+   ],
+   "a": 2,
+   "e": "Lesson 7 showed the losses: operational, financial, reputational and IP."
+  },
+  {
+   "q": "What is phishing?",
+   "o": [
+    "A firewall setting",
+    "Fake messages that trick people into clicking links or giving away details",
+    "A type of backup",
+    "A network cable"
+   ],
+   "a": 1,
+   "e": "Phishing uses deception, usually by email, to steal information."
+  },
+  {
+   "q": "Which organisation gives UK cyber security advice and updates?",
+   "o": [
+    "NCSC",
+    "NIST",
+    "NASA",
+    "OWASP"
+   ],
+   "a": 0,
+   "e": "The National Cyber Security Centre is the UK's central point for cyber security guidance."
+  },
+  {
+   "q": "Why do cyber threats keep changing?",
+   "o": [
+    "They don't change",
+    "Antivirus stops all of them",
+    "Laws make threats disappear",
+    "Criminals adapt, and technology changes and creates new weaknesses"
+   ],
+   "a": 3,
+   "e": "Tactics, targets, technology and geopolitics all keep moving."
+  },
+  {
+   "q": "When was the NCSC launched?",
+   "o": [
+    "1901",
+    "2001",
+    "2016",
+    "2025"
+   ],
+   "a": 2,
+   "e": "The NCSC launched in 2016, supported by GCHQ."
+  },
+  {
+   "q": "Which country is NIST based in?",
+   "o": [
+    "UK",
+    "USA",
+    "Germany",
+    "Not linked to any country"
+   ],
+   "a": 1,
+   "e": "NIST is the US National Institute of Standards and Technology, created in 1901."
+  },
+  {
+   "q": "What are the five core functions of the NIST Cybersecurity Framework?",
+   "o": [
+    "Identify, Protect, Detect, Respond, Recover",
+    "Plan, Build, Test, Launch, Sell",
+    "Scan, Score, Prioritise, Track, Report",
+    "Lock, Watch, Alarm, Call, Fix"
+   ],
+   "a": 0,
+   "e": "Identify, Protect, Detect, Respond, Recover. Learn them in order."
+  },
+  {
+   "q": "What makes OWASP different from the NCSC and NIST?",
+   "o": [
+    "It's part of GCHQ",
+    "It's over 100 years old",
+    "It only makes hardware",
+    "It's a non-profit online community not linked to any government"
+   ],
+   "a": 3,
+   "e": "OWASP is non-profit and independent of government; NCSC and NIST are government bodies."
+  },
+  {
+   "q": "What is the OWASP Top 10?",
+   "o": [
+    "The top 10 antivirus programs",
+    "The 10 largest hacking groups",
+    "A live list of the biggest security risks for software and web applications",
+    "A ranking of websites by speed"
+   ],
+   "a": 2,
+   "e": "It's aimed at developers of software and web apps."
+  },
+  {
+   "q": "Which NIST function is about getting systems back to normal after an attack?",
+   "o": [
+    "Identify",
+    "Recover",
+    "Detect",
+    "Protect"
+   ],
+   "a": 1,
+   "e": "Recover = restore systems and data, e.g. from backups."
+  },
+  {
+   "q": "Which NIST function is about spotting attacks quickly?",
+   "o": [
+    "Detect",
+    "Recover",
+    "Identify",
+    "Respond"
+   ],
+   "a": 0,
+   "e": "Detect = monitoring and noticing unusual activity."
+  },
+  {
+   "q": "Which agency supports the NCSC?",
+   "o": [
+    "NIST",
+    "OWASP",
+    "NICE",
+    "GCHQ"
+   ],
+   "a": 3,
+   "e": "GCHQ is the UK's intelligence, security and cyber agency."
+  },
+  {
+   "q": "What is the threat landscape?",
+   "o": [
+    "A map of computer shops",
+    "A type of firewall",
+    "The whole, changing picture of cyber threats at a given time",
+    "A NIST function"
+   ],
+   "a": 2,
+   "e": "It changes as criminals, technology and politics change."
+  },
+  {
+   "q": "A student gets an email: 'You've won a free gift! Click here to claim.' What should they do?",
+   "o": [
+    "Click quickly before it expires",
+    "Not click, report it and delete it",
+    "Reply with their address",
+    "Forward it to friends"
+   ],
+   "a": 1,
+   "e": "It's probably phishing, and the link could steal details or install malware."
+  }
+ ],
+ "apply": {
+  "title": "Who, what or which function?",
+  "intro": "Pick the right organisation, NIST function or OWASP risk for each situation.",
+  "items": [
+   {
+    "task": "A UK small business owner wants free, trusted advice on protecting their company from cyber attacks.",
+    "o": [
+     "NIST",
+     "NCSC",
+     "OWASP",
+     "NICE"
+    ],
+    "a": 1,
+    "e": "The NCSC gives UK advice for organisations of all sizes."
+   },
+   {
+    "task": "A web developer wants to know the biggest security risks to check for before launching a web app.",
+    "o": [
+     "The OWASP Top 10",
+     "NCSC news",
+     "GCHQ",
+     "The NIST Recover function"
+    ],
+    "a": 0,
+    "e": "The OWASP Top 10 is aimed at developers of software and web applications."
+   },
+   {
+    "task": "An international company wants a recognised framework to organise its whole security approach.",
+    "o": [
+     "The OWASP Top 10 only",
+     "A phishing email",
+     "A password manager",
+     "The NIST Cybersecurity Framework"
+    ],
+    "a": 3,
+    "e": "The NIST CSF is used internationally to improve security practices."
+   },
+   {
+    "task": "A company makes a list of all its devices, data and the risks to each. Which NIST function?",
+    "o": [
+     "Recover",
+     "Respond",
+     "Identify",
+     "Detect"
+    ],
+    "a": 2,
+    "e": "Identify: know what you need to protect and the risks."
+   },
+   {
+    "task": "A company installs a firewall, trains staff and turns on 2-step verification. Which NIST function?",
+    "o": [
+     "Detect",
+     "Protect",
+     "Recover",
+     "Identify"
+    ],
+    "a": 1,
+    "e": "Protect: put safeguards in place."
+   },
+   {
+    "task": "Monitoring software alerts the IT team to strange logins at 3am. Which NIST function?",
+    "o": [
+     "Detect",
+     "Recover",
+     "Protect",
+     "Identify"
+    ],
+    "a": 0,
+    "e": "Detect: spot attacks and unusual activity quickly."
+   },
+   {
+    "task": "During an attack, the IT team disconnects infected PCs and tells staff what's happening. Which NIST function?",
+    "o": [
+     "Identify",
+     "Protect",
+     "Recover",
+     "Respond"
+    ],
+    "a": 3,
+    "e": "Respond: take action to contain an incident and limit damage."
+   },
+   {
+    "task": "After a ransomware attack, the company restores its files from backups and reviews what went wrong. Which NIST function?",
+    "o": [
+     "Detect",
+     "Identify",
+     "Recover",
+     "Protect"
+    ],
+    "a": 2,
+    "e": "Recover: get back to normal and learn from it."
+   },
+   {
+    "task": "A website lets attackers type database commands into its search box. Which OWASP risk?",
+    "o": [
+     "Insecure design only",
+     "Injection",
+     "Logging failures",
+     "Server-side request forgery"
+    ],
+    "a": 1,
+    "e": "That's injection (SQL injection), like the TalkTalk attack."
+   },
+   {
+    "task": "A normal user changes a number in the web address and can see other customers' orders. Which OWASP risk?",
+    "o": [
+     "Broken access control",
+     "Cryptographic failures",
+     "Injection",
+     "Outdated components"
+    ],
+    "a": 0,
+    "e": "Users seeing things they shouldn't is broken access control."
+   },
+   {
+    "task": "A website still runs a plug-in that hasn't been updated for years and has known weaknesses. Which OWASP risk?",
+    "o": [
+     "Broken access control",
+     "Injection",
+     "Insecure design",
+     "Vulnerable and outdated components"
+    ],
+    "a": 3,
+    "e": "Old software with known weaknesses is a vulnerable and outdated component."
+   },
+   {
+    "task": "Ransomware attackers start deleting backups before encrypting files. What does this show about the threat landscape?",
+    "o": [
+     "Threats never change",
+     "Backups are no longer needed",
+     "Criminals adapt their tactics, so defences must keep up",
+     "Only governments are targeted"
+    ],
+    "a": 2,
+    "e": "Attackers change tactics, which is why up-to-date information matters."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term cyber security threat.",
+   "m": 2,
+   "pts": [
+    "An action or event that tries to damage, steal or disrupt",
+    "computer systems, networks or data"
+   ],
+   "tip": "Two parts: what it tries to do + what it targets."
+  },
+  {
+   "sc": "",
+   "q": "2. Explain two reasons why cyber threats keep changing.",
+   "m": 4,
+   "pts": [
+    "Cybercriminals adapt their tactics, approaches and targets",
+    "so new kinds of attack appear, e.g. ransomware now targeting backups",
+    "Technology changes: systems become obsolete or get new features",
+    "which creates new weaknesses and vulnerabilities to exploit (also accept: geopolitical changes, new laws)"
+   ],
+   "tip": "Two reasons, each with a linked explanation."
+  },
+  {
+   "sc": "",
+   "q": "3. Describe the role of the National Cyber Security Centre (NCSC).",
+   "m": 3,
+   "pts": [
+    "The UK's central point of contact and expertise on cyber security, launched in 2016 and supported by GCHQ",
+    "Gives advice and guidance to individuals and organisations of all sizes",
+    "Publishes news on the latest threats, malware analysis and recent cybercrime"
+   ],
+   "tip": "Who it is + who it helps + what it provides."
+  },
+  {
+   "sc": "",
+   "q": "4. State the five core functions of the NIST Cybersecurity Framework.",
+   "m": 5,
+   "pts": [
+    "Identify",
+    "Protect",
+    "Detect",
+    "Respond",
+    "Recover"
+   ],
+   "tip": "One mark each. Learn them in order: Identify, Protect, Detect, Respond, Recover."
+  },
+  {
+   "sc": "",
+   "q": "5. Describe what the OWASP Top 10 is.",
+   "m": 2,
+   "pts": [
+    "A live document listing the biggest security risks",
+    "for developers of software and web applications, published by OWASP, a non-profit organisation"
+   ],
+   "tip": "What it is + who it's for."
+  },
+  {
+   "sc": "Bloom Florists is a small UK business with 8 staff. It sells flowers through a website that a freelancer built three years ago and hasn't updated since. The owner knows cyber attacks are increasing but doesn't know where to start. There is no plan for what to do if the business is attacked, and backups are rarely checked.",
+   "q": "6. Recommend which organisation's guidance Bloom Florists should use to check its website, and explain why.",
+   "m": 2,
+   "pts": [
+    "OWASP: use the OWASP Top 10",
+    "because it lists the biggest risks for web applications, and Bloom's website hasn't been updated in three years (e.g. outdated components)"
+   ],
+   "tip": "Recommend + justify using the scenario."
+  },
+  {
+   "sc": "Bloom Florists is a small UK business with 8 staff. It sells flowers through a website that a freelancer built three years ago and hasn't updated since. The owner knows cyber attacks are increasing but doesn't know where to start. There is no plan for what to do if the business is attacked, and backups are rarely checked.",
+   "q": "7. Explain how Bloom Florists could use two functions of the NIST Cybersecurity Framework to improve its security.",
+   "m": 4,
+   "pts": [
+    "Function 1, e.g. Respond",
+    "write a plan for what to do if attacked, because Bloom currently has none, so damage is limited",
+    "Function 2, e.g. Recover",
+    "check backups regularly so the website and data can be restored after an attack (also accept Identify, Protect or Detect with a scenario link)"
+   ],
+   "tip": "Pick functions that fix Bloom's actual problems (no plan, unchecked backups, outdated website)."
+  },
+  {
+   "sc": "Bloom Florists is a small UK business with 8 staff. It sells flowers through a website that a freelancer built three years ago and hasn't updated since. The owner knows cyber attacks are increasing but doesn't know where to start. There is no plan for what to do if the business is attacked, and backups are rarely checked.",
+   "q": "8. Evaluate how useful organisations such as the NCSC, NIST and OWASP are to a small business like Bloom Florists.",
+   "m": 6,
+   "pts": [
+    "Strength: NCSC gives free, UK-focused advice for organisations of all sizes, ideal for an owner who doesn't know where to start",
+    "Strength: they track the changing threat landscape, so Bloom gets up-to-date information",
+    "Strength: the NIST CSF gives a clear structure (Identify to Recover), and OWASP shows what to check on the website",
+    "Weakness: guidance only helps if someone acts on it; a small business may lack the time, skills or money",
+    "Weakness: NIST is US-based and fairly technical, so it may be less suited to a small UK business than the NCSC",
+    "Justified conclusion: very useful, especially the NCSC, but Bloom still needs to act, e.g. update the website and test backups"
+   ],
+   "tip": "Top-grade \"evaluate\" = strengths AND weaknesses, linked to Bloom, then a clear judgement."
+  }
+ ]
+}
