@@ -1,0 +1,606 @@
+{
+ "id": "lesson-11-a2-1-4-5-operating-systems-and-mobile-devices",
+ "title": "Lesson 11 - A2.1.4-5 Operating Systems and Mobile Devices (Independent Study)",
+ "code": "IT · Unit 2 · A2.1.4–A2.1.5",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How do unsupported devices create security risks?",
+ "sections": [
+  {
+   "heading": "Operating system vulnerabilities",
+   "text": "An operating system (OS) is the system software that runs a device: it manages the hardware and lets apps run. An OS vulnerability is a weakness in an OS that could be exploited by an attacker, especially when the OS is unsupported, unpatched or poorly secured.",
+   "points": [
+    "Example: an old OS reaches end-of-life and no longer gets security patches, leaving known vulnerabilities unfixed",
+    "Application: enable automatic updates, keep anti-malware and firewalls switched on, and upgrade or replace devices when the OS becomes unsupported"
+   ]
+  },
+  {
+   "heading": "Why operating systems become a risk",
+   "points": [
+    "An OS can be used for many years, especially on desktop PCs",
+    "Both GUI (graphical, point-and-click) and CLI (command line, typed commands) systems need regular updates to fix security problems",
+    "End-of-life: the manufacturer stops supporting the OS and stops providing security updates",
+    "People delay upgrading because of cost, compatibility issues or older hardware",
+    "To stay secure: enable automatic updates, and switch on anti-malware and firewall settings",
+    "If vulnerabilities aren't fixed through updates and patches, attackers can damage systems, steal data or spread malware"
+   ]
+  },
+  {
+   "heading": "Real-world OS vulnerabilities",
+   "table": {
+    "head": [
+     "Attack",
+     "Vulnerability",
+     "What happened and impact",
+     "Lesson"
+    ],
+    "rows": [
+     [
+      "Blaster worm (2003)",
+      "Weakness in Windows XP/2000",
+      "Spread between vulnerable computers, causing crashes and restarts. Millions infected",
+      "Install security patches and use firewalls"
+     ],
+     [
+      "Conficker (2008)",
+      "Weakness in the Windows Server service",
+      "Spread across networks and built a large botnet. Millions infected",
+      "Use patches, antivirus and network security"
+     ],
+     [
+      "WannaCry (2017)",
+      "Weakness in Windows' SMB network service",
+      "Ransomware spread across networks without anyone opening a file. Over 200,000 computers, including the NHS",
+      "Install security updates as soon as possible"
+     ],
+     [
+      "Spectre and Meltdown (2018)",
+      "Weaknesses in computer processors, not the OS itself",
+      "Attackers could potentially read data in memory. Affected many modern computers",
+      "Security problems can exist in hardware as well as software"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Mobile devices and OEM updates",
+   "text": "Mobile devices run an operating system such as Android or iOS. Apps often update automatically, but system updates depend on the OEM (original equipment manufacturer, i.e. the device maker) releasing them.",
+   "points": [
+    "If an OEM is slow to release an update, the device stays vulnerable to known threats",
+    "Google or Apple may create the security fix, but the phone manufacturer and network provider may need to approve and release it first",
+    "Older devices may stop getting updates completely, leaving vulnerabilities unpatched",
+    "Key point: a phone can work perfectly normally but still be vulnerable if its manufacturer no longer provides security updates"
+   ]
+  },
+  {
+   "heading": "Lifecycle of a mobile device",
+   "table": {
+    "head": [
+     "Stage",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "1. Device release",
+      "The device is launched and becomes available to users"
+     ],
+     [
+      "2. Active updates",
+      "The manufacturer provides regular OS and security updates to keep it secure"
+     ],
+     [
+      "3. End-of-support",
+      "Updates stop. The device still works, but new vulnerabilities are no longer fixed"
+     ],
+     [
+      "4. Potential risks",
+      "Without security updates, it becomes more and more vulnerable to malware, hacking and other threats"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Reducing the risk of unsupported devices",
+   "text": "From the slides, plus standard measures (marked *) to use in exam answers:",
+   "points": [
+    "Upgrade or replace devices when the OS or phone becomes unsupported",
+    "Enable automatic updates for as long as updates are available",
+    "Keep anti-malware and firewalls switched on",
+    "* Check a device's update policy (how many years of support) before buying, and plan replacements",
+    "* Stop unsupported devices accessing sensitive data or the main network until they're replaced",
+    "* Use mobile device management (MDM) software to track which devices are out of support"
+   ]
+  },
+  {
+   "heading": "Your independent study tasks",
+   "points": [
+    "Do the Flying Start from memory first",
+    "Watch the Professor Messer 'Operating System Vulnerabilities' video (slide 9) and add 3 key points to your notes",
+    "Read the wider reading on OS vulnerabilities and on phone makers' update policies",
+    "Answer the exam question about 50 unsupported smartphones in full sentences. It's in Exam practice with a mark scheme",
+    "Do the plenary, then check your answers"
+   ]
+  }
+ ],
+ "keyIdea": "Devices stay safe only while they get security updates. When an operating system or phone reaches end-of-life, or its OEM is slow to release fixes, known vulnerabilities stay open, as Blaster, Conficker and WannaCry showed. So update automatically and replace unsupported devices.",
+ "flashcards": [
+  [
+   "Operating system (OS)",
+   "System software that manages a device's hardware and lets applications run, e.g. Windows, Android, iOS."
+  ],
+  [
+   "OS vulnerability",
+   "A weakness in an OS that could be exploited, especially when it is unsupported, unpatched or poorly secured."
+  ],
+  [
+   "End-of-life (EOL)",
+   "When the manufacturer stops supporting an OS or device and stops providing security updates."
+  ],
+  [
+   "Unsupported OS",
+   "An operating system that no longer receives security updates, so known vulnerabilities stay unfixed."
+  ],
+  [
+   "GUI",
+   "Graphical user interface: point-and-click windows and icons. Needs regular updates like any OS."
+  ],
+  [
+   "CLI",
+   "Command line interface: users type commands. Also needs regular updates."
+  ],
+  [
+   "Why people delay upgrading",
+   "Cost, compatibility issues and older hardware."
+  ],
+  [
+   "Staying secure (OS)",
+   "Enable automatic updates; keep anti-malware and firewall switched on; upgrade when unsupported."
+  ],
+  [
+   "Blaster worm (2003)",
+   "Exploited a Windows XP/2000 weakness, caused crashes and restarts, infected millions. Lesson: patch and use firewalls."
+  ],
+  [
+   "Conficker (2008)",
+   "Exploited the Windows Server service and built a large botnet. Lesson: patches, antivirus, network security."
+  ],
+  [
+   "WannaCry (2017)",
+   "Ransomware exploiting Windows' SMB service; spread without opening a file; 200,000+ computers including the NHS."
+  ],
+  [
+   "SMB",
+   "A Windows network service for sharing files. Its weakness was exploited by WannaCry."
+  ],
+  [
+   "Spectre and Meltdown (2018)",
+   "Processor (hardware) weaknesses that could let attackers read data in memory."
+  ],
+  [
+   "OEM",
+   "Original equipment manufacturer: the company that makes the device and releases its system updates."
+  ],
+  [
+   "Why OEMs matter",
+   "They release system updates; if they're slow or stop, devices stay vulnerable."
+  ],
+  [
+   "Update chain (mobile)",
+   "Google/Apple create the fix → the phone maker and network provider approve and release it."
+  ],
+  [
+   "Mobile device lifecycle",
+   "Device release → active updates → end-of-support → growing risks."
+  ],
+  [
+   "End-of-support device",
+   "Still works normally, but no longer gets fixes for new vulnerabilities."
+  ],
+  [
+   "Mobile device management (MDM)",
+   "Software organisations use to manage and track their phones and tablets (standard term)."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is an operating system?",
+   "o": [
+    "System software that manages the hardware and lets apps run",
+    "A web browser",
+    "A type of virus",
+    "A printer driver only"
+   ],
+   "a": 0,
+   "e": "Examples: Windows, macOS, Android, iOS."
+  },
+  {
+   "q": "What is a software vulnerability?",
+   "o": [
+    "A new feature",
+    "A licence key",
+    "A backup",
+    "A weakness or flaw that could be exploited"
+   ],
+   "a": 3,
+   "e": "From Lesson 10: a weakness that could be exploited to cause harm or gain access."
+  },
+  {
+   "q": "Why is it important to keep an operating system updated?",
+   "o": [
+    "To change the wallpaper",
+    "It isn't important",
+    "Updates fix security weaknesses, so attackers can't exploit them",
+    "To use more storage"
+   ],
+   "a": 2,
+   "e": "Patches close known vulnerabilities."
+  },
+  {
+   "q": "What is an unsupported operating system?",
+   "o": [
+    "One that is brand new",
+    "One that no longer receives security updates from the manufacturer",
+    "One that only runs games",
+    "One with no users"
+   ],
+   "a": 1,
+   "e": "After end-of-life, known vulnerabilities stay unfixed."
+  },
+  {
+   "q": "Why might people delay upgrading their OS?",
+   "o": [
+    "Cost, compatibility issues or older hardware",
+    "Upgrades are always free and easy",
+    "Old OSs are more secure",
+    "Upgrades delete the internet"
+   ],
+   "a": 0,
+   "e": "These are the three reasons on the slides."
+  },
+  {
+   "q": "What does OEM stand for?",
+   "o": [
+    "Online email manager",
+    "Operating error message",
+    "Open encryption method",
+    "Original equipment manufacturer"
+   ],
+   "a": 3,
+   "e": "The OEM is the device maker, responsible for releasing system updates."
+  },
+  {
+   "q": "Why are OEMs important for mobile device security?",
+   "o": [
+    "They choose the phone's colour",
+    "They write all the apps",
+    "They release system updates; if they're slow or stop, the device stays vulnerable",
+    "They aren't important"
+   ],
+   "a": 2,
+   "e": "Apps update themselves, but OS updates depend on the OEM."
+  },
+  {
+   "q": "A phone works perfectly but no longer gets security updates. Is it secure?",
+   "o": [
+    "No, new vulnerabilities won't be fixed",
+    "Yes, it still works",
+    "Only if it's switched off"
+   ],
+   "a": 0,
+   "e": "Working normally doesn't mean secure."
+  },
+  {
+   "q": "Which attack spread through a weakness in Windows' SMB service without users opening a file?",
+   "o": [
+    "WannaCry",
+    "Spectre",
+    "Blaster",
+    "Smishing"
+   ],
+   "a": 0,
+   "e": "WannaCry (2017) hit over 200,000 computers, including the NHS."
+  },
+  {
+   "q": "What made Spectre and Meltdown different from the other examples?",
+   "o": [
+    "They only affected phones",
+    "They were phishing emails",
+    "They were fixed before release",
+    "They were weaknesses in processors (hardware), not the OS"
+   ],
+   "a": 3,
+   "e": "Security problems can exist in hardware as well as software."
+  },
+  {
+   "q": "Which attack built a large botnet using a weakness in the Windows Server service?",
+   "o": [
+    "WannaCry",
+    "Spectre",
+    "Conficker",
+    "Meltdown"
+   ],
+   "a": 2,
+   "e": "Conficker (2008) infected millions of computers."
+  },
+  {
+   "q": "What comes straight after 'Active updates' in a mobile device's lifecycle?",
+   "o": [
+    "End-of-support",
+    "Device release",
+    "Manufacturing"
+   ],
+   "a": 0,
+   "e": "Release → active updates → end-of-support → growing risks."
+  },
+  {
+   "q": "Who may need to approve an Android security fix before it reaches your phone?",
+   "o": [
+    "The phone manufacturer and network provider",
+    "Only you",
+    "Your school",
+    "Nobody"
+   ],
+   "a": 0,
+   "e": "Google may make the fix, but the OEM and network may need to release it."
+  },
+  {
+   "q": "Which is a good way to reduce the risk of unsupported devices?",
+   "o": [
+    "Keep using them for sensitive work",
+    "Turn off the firewall",
+    "Disable updates",
+    "Upgrade or replace them"
+   ],
+   "a": 3,
+   "e": "Replace unsupported devices; until then, update, use anti-malware and keep firewalls on."
+  },
+  {
+   "q": "Do CLI (command line) operating systems need security updates?",
+   "o": [
+    "Yes, both GUI and CLI systems need regular updates",
+    "No, only GUI systems do"
+   ],
+   "a": 0,
+   "e": "The slides say both need updates to fix security problems."
+  },
+  {
+   "q": "What was the lesson from the Blaster worm?",
+   "o": [
+    "Buy faster computers",
+    "Install security patches and use firewalls",
+    "Avoid email",
+    "Use CLI only"
+   ],
+   "a": 1,
+   "e": "Blaster spread between unpatched Windows XP/2000 machines."
+  }
+ ],
+ "apply": {
+  "title": "Supported or at risk?",
+  "intro": "Decide what the risk is, or what should be done, in each situation.",
+  "items": [
+   {
+    "task": "A school still uses PCs running an operating system that reached end-of-life three years ago.",
+    "o": [
+     "Completely safe, as it still works",
+     "Unsupported OS: known vulnerabilities stay unfixed",
+     "A hardware flaw like Spectre",
+     "An OEM update"
+    ],
+    "a": 1,
+    "e": "No more security patches, so known vulnerabilities stay open. Upgrade or replace."
+   },
+   {
+    "task": "A shop delays upgrading its till PCs because its old card machine software won't work on the new OS. Which reason is this?",
+    "o": [
+     "Compatibility issues",
+     "Cost",
+     "Older hardware",
+     "OEM support"
+    ],
+    "a": 0,
+    "e": "Compatibility problems are a common reason for delaying upgrades, and they leave systems exposed."
+   },
+   {
+    "task": "Google releases an Android security fix, but a particular phone brand takes months to send it to users.",
+    "o": [
+     "The phones are now fully secure",
+     "A CLI problem",
+     "A Spectre attack",
+     "Slow OEM update: the phones stay vulnerable"
+    ],
+    "a": 3,
+    "e": "Fixes depend on the OEM releasing them."
+   },
+   {
+    "task": "Ransomware spreads across a hospital network through an unpatched Windows network service, without anyone opening a file.",
+    "o": [
+     "Like Spectre: buy new processors",
+     "Phishing: train staff only",
+     "Like WannaCry: install security updates ASAP",
+     "Nothing could prevent it"
+    ],
+    "a": 2,
+    "e": "WannaCry exploited unpatched SMB. The patch was the fix."
+   },
+   {
+    "task": "A worker's 6-year-old phone still makes calls and runs apps, but the maker stopped updates two years ago. Should it access company email?",
+    "o": [
+     "Yes, it works fine",
+     "No, it's past end-of-support and vulnerable",
+     "Only on Mondays",
+     "Only with the screen dimmed"
+    ],
+    "a": 1,
+    "e": "A working phone can still be insecure if it no longer gets updates."
+   },
+   {
+    "task": "Researchers find a flaw in computer processors that could let attackers read data in memory.",
+    "o": [
+     "Hardware vulnerability, like Spectre and Meltdown",
+     "An OEM delay",
+     "SQL injection",
+     "Unsupported CLI"
+    ],
+    "a": 0,
+    "e": "Security problems can exist in hardware as well as software."
+   },
+   {
+    "task": "Which setting should be switched on to keep an OS secure?",
+    "o": [
+     "Screen saver",
+     "Dark mode",
+     "Larger text",
+     "Automatic updates"
+    ],
+    "a": 3,
+    "e": "Automatic updates, plus anti-malware and firewall."
+   },
+   {
+    "task": "A worm spreads between unpatched Windows XP computers, making them crash and restart.",
+    "o": [
+     "Like Spectre: a hardware flaw",
+     "A phishing attack",
+     "Like Blaster: patch and use firewalls",
+     "An OEM approval delay"
+    ],
+    "a": 2,
+    "e": "Blaster (2003) exploited unpatched Windows XP/2000."
+   },
+   {
+    "task": "A company is choosing new phones for staff. What should it check, security-wise?",
+    "o": [
+     "Only the camera quality",
+     "How many years of security updates the OEM promises",
+     "The phone's colour",
+     "Nothing"
+    ],
+    "a": 1,
+    "e": "Update policies differ between makers, as in the wider reading."
+   },
+   {
+    "task": "A device has just been launched, and the maker sends regular OS and security updates. Which lifecycle stage is this?",
+    "o": [
+     "Active updates",
+     "End-of-support",
+     "Potential risks",
+     "Device release only"
+    ],
+    "a": 0,
+    "e": "During active updates the device is kept secure."
+   },
+   {
+    "task": "Malware spreads across a network and turns infected computers into a huge botnet using a Windows Server weakness.",
+    "o": [
+     "Like Spectre",
+     "Like smishing",
+     "Like a hash check",
+     "Like Conficker"
+    ],
+    "a": 3,
+    "e": "Conficker (2008) built a large botnet."
+   },
+   {
+    "task": "A company can't replace its unsupported phones until next year. What's the best way to reduce the risk until then?",
+    "o": [
+     "Give them admin access",
+     "Turn off the firewall",
+     "Limit their access to sensitive data and keep anti-malware on",
+     "Ignore it"
+    ],
+    "a": 2,
+    "e": "Reduce what an unsupported device can reach, and keep other protections on, until it's replaced."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. What is an operating system?",
+   "m": 2,
+   "pts": [
+    "System software that manages a device's hardware and resources",
+    "and lets applications run and users interact with the device (e.g. Windows, Android, iOS)"
+   ],
+   "tip": "What it is + what it does, with an example."
+  },
+  {
+   "sc": "",
+   "q": "2. What is an unsupported operating system?",
+   "m": 2,
+   "pts": [
+    "An operating system that has reached end-of-life, so the manufacturer no longer supports it",
+    "and no longer provides security updates, so known vulnerabilities stay unfixed"
+   ],
+   "tip": "End-of-life + no security updates + the consequence."
+  },
+  {
+   "sc": "",
+   "q": "3. Explain why it is important to keep an operating system updated.",
+   "m": 2,
+   "pts": [
+    "Updates and patches fix known security weaknesses in the OS",
+    "so attackers can't exploit them to damage systems, steal data or spread malware"
+   ],
+   "tip": "Point + linked consequence. You could use WannaCry as evidence."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain why OEMs are important for mobile device security.",
+   "m": 3,
+   "pts": [
+    "System (OS) updates for mobile devices depend on the OEM (the device manufacturer) releasing them",
+    "If the OEM is slow, or fixes from Google/Apple must be approved by the OEM and network provider first, the device stays vulnerable for longer",
+    "When the OEM stops updates (end-of-support), vulnerabilities are never fixed, even though the phone still works"
+   ],
+   "tip": "Who releases updates → what happens if they're slow → what happens when they stop."
+  },
+  {
+   "sc": "",
+   "q": "5. Give two ways an organisation can reduce the risks of unsupported devices.",
+   "m": 2,
+   "pts": [
+    "Any one: upgrade or replace unsupported devices",
+    "A second: enable automatic updates / keep anti-malware and firewalls on / restrict unsupported devices' access to sensitive data"
+   ],
+   "tip": "\"Give\" = two short, different answers."
+  },
+  {
+   "sc": "",
+   "q": "6. Describe the lifecycle of a mobile device.",
+   "m": 4,
+   "pts": [
+    "Device release: launched and available to users",
+    "Active updates: the manufacturer provides regular OS and security updates",
+    "End-of-support: updates stop, but the device can still work",
+    "Potential risks: without updates it becomes more and more vulnerable to malware and hacking"
+   ],
+   "tip": "One mark per stage, in order."
+  },
+  {
+   "sc": "",
+   "q": "7. Using the WannaCry attack as an example, explain how an unpatched operating system vulnerability can be exploited.",
+   "m": 3,
+   "pts": [
+    "WannaCry exploited a weakness in Windows' SMB network service",
+    "Computers without the security update were vulnerable, and the ransomware spread across networks without anyone opening a file",
+    "Over 200,000 computers were affected, including NHS systems, which shows why updates must be installed quickly"
+   ],
+   "tip": "Vulnerability → how it spread → impact → lesson."
+  },
+  {
+   "sc": "A company has 50 smartphones that are no longer receiving security updates from the manufacturer.",
+   "q": "8. Explain the security risks to the company and suggest ways these risks could be reduced.",
+   "m": 6,
+   "pts": [
+    "Risk: new vulnerabilities in the phones' OS will no longer be patched, so known weaknesses stay open",
+    "Risk: attackers could exploit them to install malware or spyware, or take control of the phones",
+    "Impact: company data on the phones (emails, files, passwords) could be stolen, and an infected phone could be a route into the company network",
+    "Scale: with 50 phones, there are many weak points, and one compromised phone is enough",
+    "Reduce: replace or upgrade the phones with models that still get updates, and check the OEM's update policy before buying",
+    "Reduce (until replaced): restrict the phones' access to sensitive data and the network, keep anti-malware on, and install any remaining updates"
+   ],
+   "tip": "This is the slides' own exam question. Top marks need risks AND impacts AND realistic solutions, all linked to the 50 phones."
+  }
+ ]
+}
