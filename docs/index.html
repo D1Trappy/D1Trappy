@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study Hub</title>
+<meta name="description" content="Revision packs made from lesson slides: summaries, flashcards, quizzes and exam practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="toolbar">
+    <span class="code">STUDY HUB</span>
+    <input type="search" id="search" placeholder="Find a topic…" aria-label="Find a topic">
+  </div>
+  <div class="shelf" id="shelf" aria-label="Topics"></div>
+
+  <section id="deckview">
+    <header>
+      <div class="code" id="d-code"></div>
+      <h1 id="d-title">Loading…</h1>
+      <p class="muted" id="d-q" style="margin:0"></p>
+    </header>
+    <nav class="tabs" role="tablist" aria-label="Study methods">
+      <button role="tab" data-tab="learn" aria-selected="true">1 · Learn</button>
+      <button role="tab" data-tab="flash" aria-selected="false">2 · Flashcards</button>
+      <button role="tab" data-tab="quiz" aria-selected="false">3 · Quiz</button>
+      <button role="tab" data-tab="apply" aria-selected="false">4 · Apply it</button>
+      <button role="tab" data-tab="exam" aria-selected="false">5 · Exam practice</button>
+    </nav>
+
+    <div id="learn" class="pane stack"></div>
+
+    <div id="flash" class="pane stack hidden">
+      <div><h2>Flashcards</h2><p class="lead">Say the answer out loud, then tap the card to flip it. Cards you mark "Still learning" come back round.</p></div>
+      <div class="row"><span class="score" id="fc-count"></span><span class="spacer"></span><button class="btn ghost small" id="fc-reset">Start again</button></div>
+      <div class="progress"><div id="fc-bar" style="width:0%"></div></div>
+      <div class="flash" id="fc-card" tabindex="0" role="button" aria-live="polite"></div>
+      <div class="row" id="fc-actions"><button class="btn ghost" id="fc-again">Still learning</button><span class="spacer"></span><button class="btn" id="fc-know">I knew it</button></div>
+    </div>
+
+    <div id="quiz" class="pane stack hidden">
+      <div><h2>Quiz</h2><p class="lead">Every answer comes with an explanation, so read it even when you get it right.</p></div>
+      <div class="row"><span class="score" id="qz-pos"></span><span class="spacer"></span><span class="score" id="qz-score"></span></div>
+      <div class="progress"><div id="qz-bar" style="width:0%"></div></div>
+      <div class="card" id="qz-box"></div>
+    </div>
+
+    <div id="apply" class="pane stack hidden">
+      <div><h2 id="ap-title">Apply it</h2><p class="lead" id="ap-intro"></p></div>
+      <div class="row"><span class="score" id="ap-pos"></span><span class="spacer"></span><span class="score" id="ap-score"></span></div>
+      <div class="progress"><div id="ap-bar" style="width:0%"></div></div>
+      <div class="card" id="ap-box"></div>
+    </div>
+
+    <div id="exam" class="pane stack hidden">
+      <div><h2>Exam practice</h2><p class="lead">Write your answer first, then open the mark scheme and tick each point you got. Your answers are saved on this device.</p></div>
+      <div class="card tablebox">
+        <h3>Command words</h3>
+        <table><tbody>
+          <tr><td><strong>State / Give</strong></td><td>Recall a fact. Short answers are fine.</td></tr>
+          <tr><td><strong>Identify</strong></td><td>Pick out information from the scenario.</td></tr>
+          <tr><td><strong>Describe</strong></td><td>Give an account or the key features of something.</td></tr>
+          <tr><td><strong>Explain</strong></td><td>Make a point AND give a linked reason (…so… / …which means…).</td></tr>
+          <tr><td><strong>Evaluate</strong></td><td>Weigh up good and bad points, then give a judgement.</td></tr>
+        </tbody></table>
+      </div>
+      <div id="exam-list" class="stack"></div>
+      <div class="card row" style="position:sticky;bottom:8px">
+        <span>Your total</span><span class="spacer"></span><span class="big score" id="ex-total">0</span><span class="score" id="ex-max">/ 0</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>Answers and progress are saved in this browser only. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
