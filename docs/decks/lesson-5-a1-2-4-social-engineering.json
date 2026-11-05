@@ -1,0 +1,651 @@
+{
+ "id": "lesson-5-a1-2-4-social-engineering",
+ "title": "Lesson 5 - A1.2.4 Social Engineering",
+ "code": "IT · Unit 2 · A1.2.4",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How do social-engineering attacks work?",
+ "sections": [
+  {
+   "heading": "What is social engineering?",
+   "text": "Social engineering is when attackers trick people into giving away secure information. It relies on deception rather than technical hacking: it manipulates people's desire to do the right thing.",
+   "points": [
+    "The aim: engage the target, gain their trust, and extract key information",
+    "Example: a fake email pretending to be your bank asks you to 'verify your password'",
+    "Example: a scam phone call claims to be from IT support and asks for login details",
+    "Humans are usually the weakest link in any security, so training staff is essential",
+    "Defence: spot fake emails, messages and calls before responding; don't click suspicious links or share personal information"
+   ]
+  },
+  {
+   "heading": "Phishing, vishing and smishing",
+   "table": {
+    "head": [
+     "Attack",
+     "How it reaches you",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Phishing",
+      "Email",
+      "A fake email from 'your bank' with a link to a site that installs malware or harvests usernames and passwords"
+     ],
+     [
+      "Vishing (voice phishing)",
+      "Phone call or voice message",
+      "A caller pretending to be IT support or your bank asks for login details"
+     ],
+     [
+      "Smishing (SMS phishing)",
+      "Text message",
+      "'Your parcel has been redirected due to an unpaid shipping fee. Visit postoffice-redelivery…'"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Phishing: the most common attack",
+   "points": [
+    "Tools on the dark web copy emails and websites from real organisations",
+    "The emails look legitimate and contain links to sites that carry malware or harvest usernames and passwords",
+    "Tells: a sense of urgency, not personalised (e.g. 'Hi there'), a link that seems 'off'",
+    "Phishing tools are getting more sophisticated, so they're hard to spot when you're in a hurry"
+   ]
+  },
+  {
+   "heading": "Smishing tells: real examples from the slides",
+   "text": "Every one of these texts on your slides is fake. Look for the same warning signs:",
+   "points": [
+    "Urgency or threats: 'formal warning and £250 fine', 'arrest warrant', 'to avoid fees'",
+    "Look-alike links that aren't the real site: authorisedevice365.com, ee.uk.billing45.com, gov.uk-repay.com, postoffice-redelivery",
+    "Unexpected good news: a tax rebate or a 'loyalty reward' on a parcel you didn't order",
+    "Asking you to pay, update billing details, or follow a link to 'secure' your account",
+    "Pretending to be trusted names: GOV.UK, EE, Amazon, Post Office, the tax office"
+   ]
+  },
+  {
+   "heading": "Phishing vs spear phishing vs whaling",
+   "table": {
+    "head": [
+     "Type",
+     "Who it targets",
+     "Slide example"
+    ],
+    "rows": [
+     [
+      "Phishing",
+      "Mass mailing to lots of people",
+      "'Hi there, It is time to reset your account so your phone will update. Click here'"
+     ],
+     [
+      "Spear phishing",
+      "A carefully chosen target, with personalised language, tone and wording",
+      "'Jack, please confirm your details… so we can send you a substantial discount on your bill for your loyalty'"
+     ],
+     [
+      "Whaling",
+      "Spear phishing aimed at high net-worth, powerful people (e.g. a CEO)",
+      "'Dear Grace, As CEO we need you to confirm your company's entitlement to a discount on your corporate account'"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Pretexting and impersonation",
+   "text": "Pretexting is creating a deceptive scenario to get access to information, systems or services. The attacker invents a fake situation and poses as a trusted person who can sort it out.",
+   "points": [
+    "Most pretexts have two parts: a character (who they pretend to be) and a situation (the made-up problem)",
+    "It makes a later social engineering attack more likely to succeed",
+    "Protect yourself: check credentials and verify who you're speaking to",
+    "Ask for a direct line to call back, and check the number against your bank card, statements or other official materials"
+   ]
+  },
+  {
+   "heading": "What is DNS?",
+   "text": "The Domain Name System (DNS) turns domain names (like google.com) into IP addresses, which browsers use to load web pages. Every internet-connected device has its own IP address so other devices can find it.",
+   "points": [
+    "1. Your device sends a DNS query: 'What is the IP address of www.google.com?'",
+    "2. The DNS server replies with the IP address",
+    "3. Your device sends the web request to that IP address"
+   ]
+  },
+  {
+   "heading": "DNS spoofing",
+   "text": "The hacker inserts a fraudulent DNS entry. When the user asks for the genuine website, the request resolves to a malicious look-alike site instead.",
+   "points": [
+    "The fake site looks like the official one, so it's a perfect phishing trap",
+    "It can collect passwords, banking information, card numbers, contact details and location data",
+    "Users rarely notice the small red flags on a spoofed site",
+    "Big red flag: the fake site usually has no encryption certificate, so the connection is unencrypted (cleartext)",
+    "Browsers warn when a connection isn't secure, but many people ignore it and log in anyway"
+   ]
+  },
+  {
+   "heading": "Tools to identify a host or IP address",
+   "points": [
+    "Reverse DNS lookup: turn an IP address into a host name (e.g. dnschecker.org reverse DNS)",
+    "DNS record lookup: find all the DNS records and IP addresses for a host name or URL",
+    "Useful when checking firewall logs or intrusion detection tools: an unrecognised source can be added to the firewall's deny list",
+    "Useful for blocking staff from untrusted websites or subdomains"
+   ]
+  }
+ ],
+ "keyIdea": "Social engineering attacks people, not computers. Attackers use deception (fake emails, calls, texts, made-up scenarios and spoofed websites) to win trust and steal information, so spotting the tells, verifying who you're dealing with, and training staff are the key defences.",
+ "flashcards": [
+  [
+   "Social engineering",
+   "Tricking people into giving away secure information. It relies on deception, not technical hacking."
+  ],
+  [
+   "Phishing",
+   "Fake emails that look legitimate, with links to malware or sites that harvest usernames and passwords."
+  ],
+  [
+   "Vishing",
+   "Voice phishing: scam phone calls or voice messages, e.g. fake IT support asking for login details."
+  ],
+  [
+   "Smishing",
+   "SMS phishing: scam text messages, e.g. a fake parcel redelivery fee with a link."
+  ],
+  [
+   "Spear phishing",
+   "A targeted phishing attack on a carefully chosen person, with personalised language and wording."
+  ],
+  [
+   "Whaling",
+   "Spear phishing aimed at high net-worth, powerful people such as a CEO."
+  ],
+  [
+   "Phishing tells",
+   "A sense of urgency, not personalised, a link that seems 'off'."
+  ],
+  [
+   "Look-alike link",
+   "A web address made to look real but isn't, e.g. gov.uk-repay.com or ee.uk.billing45.com."
+  ],
+  [
+   "Pretexting",
+   "Creating a deceptive scenario to get information, posing as a trusted person who can solve a fake problem."
+  ],
+  [
+   "Two parts of a pretext",
+   "A character (who they pretend to be) and a situation (the made-up problem)."
+  ],
+  [
+   "Impersonation",
+   "Pretending to be someone trustworthy, like a bank, IT support or a manager."
+  ],
+  [
+   "Defending against pretexting",
+   "Check credentials, verify identity, and call back on a number from your card or statement."
+  ],
+  [
+   "Weakest link",
+   "Humans are usually the weakest link in security, which is why staff training is essential."
+  ],
+  [
+   "DNS",
+   "Domain Name System: turns domain names into IP addresses so browsers can load pages."
+  ],
+  [
+   "IP address",
+   "A unique number for every internet-connected device, used by other devices to find it."
+  ],
+  [
+   "DNS query",
+   "A request asking a DNS server for the IP address of a domain name."
+  ],
+  [
+   "DNS spoofing",
+   "A hacker inserts a fraudulent DNS entry, so requests for a real site go to a fake look-alike site."
+  ],
+  [
+   "Spoofed website",
+   "A fake site that looks like the official one, used to steal passwords, bank and card details."
+  ],
+  [
+   "Encryption certificate red flag",
+   "Spoofed sites usually have no certificate, so the connection is unencrypted (cleartext) and the browser warns you."
+  ],
+  [
+   "Cleartext",
+   "Data sent without encryption, so it can be read if intercepted."
+  ],
+  [
+   "Reverse DNS lookup",
+   "A tool that turns an IP address back into a host name."
+  ],
+  [
+   "Firewall deny list",
+   "A list of blocked sources. Unrecognised IPs found in logs can be added to it."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is social engineering?",
+   "o": [
+    "Tricking people into giving away secure information",
+    "Building social media apps",
+    "Fixing network cables",
+    "Writing antivirus software"
+   ],
+   "a": 0,
+   "e": "It relies on deception: manipulating people rather than hacking technology."
+  },
+  {
+   "q": "What is the difference between phishing, vishing and smishing?",
+   "o": [
+    "They are different viruses",
+    "Phishing = phone, vishing = video, smishing = social media",
+    "There is no difference",
+    "Phishing = email, vishing = voice calls, smishing = text messages"
+   ],
+   "a": 3,
+   "e": "Same trick, different channel: email, voice (phone) or SMS (text)."
+  },
+  {
+   "q": "What is spear phishing?",
+   "o": [
+    "A phishing email sent to millions of people",
+    "A type of firewall",
+    "A targeted, personalised phishing attack on a chosen person",
+    "Fishing for passwords on the dark web"
+   ],
+   "a": 2,
+   "e": "Spear phishing picks its target carefully and personalises the message."
+  },
+  {
+   "q": "What is pretexting?",
+   "o": [
+    "Sending a text message before a call",
+    "Creating a fake scenario and posing as a trusted person to get information",
+    "Encrypting a website",
+    "Deleting DNS records"
+   ],
+   "a": 1,
+   "e": "A pretext is a made-up situation plus a fake character who can 'solve' it."
+  },
+  {
+   "q": "Why is DNS spoofing dangerous?",
+   "o": [
+    "Users are sent to a fake site that looks real, and enter their details",
+    "It slows down the internet",
+    "It deletes your browser",
+    "It only affects printers"
+   ],
+   "a": 0,
+   "e": "Because the fake site looks official, people hand over passwords, bank and card details."
+  },
+  {
+   "q": "Which is the most common type of social engineering attack?",
+   "o": [
+    "Whaling",
+    "DNS spoofing",
+    "Pretexting",
+    "Phishing"
+   ],
+   "a": 3,
+   "e": "Your slides say phishing is the most common."
+  },
+  {
+   "q": "An email says 'Dear Grace, As CEO we need you to confirm your company's entitlement…'. Which attack is this?",
+   "o": [
+    "Mass phishing",
+    "Smishing",
+    "Whaling",
+    "Vishing"
+   ],
+   "a": 2,
+   "e": "It targets a powerful, senior person (a CEO), so it's whaling."
+  },
+  {
+   "q": "Which of these is a phishing 'tell'?",
+   "o": [
+    "It uses your full name and account number correctly",
+    "It creates a sense of urgency and has a link that seems 'off'",
+    "It comes from someone you're expecting",
+    "It has no links at all"
+   ],
+   "a": 1,
+   "e": "Urgency, a generic greeting and odd-looking links are classic tells."
+  },
+  {
+   "q": "A text says your EE bill couldn't be processed and links to ee.uk.billing45.com. What's the main warning sign?",
+   "o": [
+    "The link is a look-alike address, not EE's real site",
+    "It mentions EE",
+    "It was sent in the afternoon",
+    "It's a text, not an email"
+   ],
+   "a": 0,
+   "e": "The domain is billing45.com dressed up to look like EE. That's smishing."
+  },
+  {
+   "q": "What are the two main parts of most pretexts?",
+   "o": [
+    "A virus and a worm",
+    "An IP address and a domain",
+    "A password and a PIN",
+    "A character and a situation"
+   ],
+   "a": 3,
+   "e": "The attacker plays a character and invents a situation for you."
+  },
+  {
+   "q": "Someone calls claiming to be your bank. What's the safest thing to do?",
+   "o": [
+    "Give them your PIN to prove who you are",
+    "Ask them to text you instead",
+    "Hang up and call back on the number on your bank card",
+    "Follow their instructions quickly"
+   ],
+   "a": 2,
+   "e": "Verify identity by calling back on an official number from your card or statement."
+  },
+  {
+   "q": "What does DNS do?",
+   "o": [
+    "Encrypts emails",
+    "Turns domain names into IP addresses",
+    "Blocks viruses",
+    "Stores passwords"
+   ],
+   "a": 1,
+   "e": "Browsers need the IP address, and DNS looks it up from the domain name."
+  },
+  {
+   "q": "In DNS spoofing, what does the hacker change?",
+   "o": [
+    "A DNS entry, so the real domain points to a fake site",
+    "The user's keyboard",
+    "The website's logo only",
+    "The user's IP address"
+   ],
+   "a": 0,
+   "e": "A fraudulent DNS entry makes requests for the real site resolve to the malicious one."
+  },
+  {
+   "q": "What red flag often appears on a spoofed website?",
+   "o": [
+    "It loads very fast",
+    "It has too many pictures",
+    "It asks you to log in",
+    "No encryption certificate, so the browser warns the connection isn't secure"
+   ],
+   "a": 3,
+   "e": "Spoofed sites usually use an unencrypted (cleartext) connection, and browsers warn about it."
+  },
+  {
+   "q": "Why are humans called 'the weakest link' in security?",
+   "o": [
+    "They type slowly",
+    "They don't use computers",
+    "Attackers can trick them, even when the technology is secure",
+    "They are always hackers"
+   ],
+   "a": 2,
+   "e": "Social engineering targets people's trust and wish to help, which is why staff training matters."
+  },
+  {
+   "q": "An IT technician finds an unknown IP address in the firewall logs. What can a reverse DNS lookup do?",
+   "o": [
+    "Delete the logs",
+    "Turn the IP address into a host name to identify the source",
+    "Encrypt the network",
+    "Send a phishing email back"
+   ],
+   "a": 1,
+   "e": "Once identified, an untrusted source can be added to the firewall's deny list."
+  }
+ ],
+ "apply": {
+  "title": "Name that scam",
+  "intro": "Read each message or situation and pick the attack, or the best response. Several come straight from your slides.",
+  "items": [
+   {
+    "task": "Text: 'A new device has successfully logged in at 19:25. If this was not authorised by you follow this link: www.authorisedevice365.com'",
+    "o": [
+     "Vishing",
+     "Smishing",
+     "Whaling",
+     "DNS spoofing"
+    ],
+    "a": 1,
+    "e": "A scam text with a look-alike link is smishing (SMS phishing)."
+   },
+   {
+    "task": "A phone call: 'Hi, it's IT support. We've spotted a problem with your account, can you read me your password so I can fix it?'",
+    "o": [
+     "Vishing",
+     "Smishing",
+     "Data poisoning",
+     "Spear phishing by email"
+    ],
+    "a": 0,
+    "e": "Voice phishing by phone, using a pretext (a fake IT problem)."
+   },
+   {
+    "task": "An email to thousands of people: 'Hi there, It is time to reset your account so your phone will update. Click here to reset'",
+    "o": [
+     "Whaling",
+     "Spear phishing",
+     "Pretexting by phone",
+     "Phishing"
+    ],
+    "a": 3,
+    "e": "A mass, non-personalised email is standard phishing."
+   },
+   {
+    "task": "Email: 'Jack, please confirm your details by clicking the link below so we can send you a substantial discount on your bill for your loyalty.'",
+    "o": [
+     "Phishing",
+     "Smishing",
+     "Spear phishing",
+     "DNS spoofing"
+    ],
+    "a": 2,
+    "e": "It's personalised to one chosen person: spear phishing."
+   },
+   {
+    "task": "Text: 'GOV.UK ALERT: You have been out of the house more than once. We are issuing you a £250 fine… Call 0800 345 9999.'",
+    "o": [
+     "A genuine government alert",
+     "Smishing using threats and urgency",
+     "Whaling",
+     "DNS spoofing"
+    ],
+    "a": 1,
+    "e": "Threats, fines and urgency in a text are classic smishing tells."
+   },
+   {
+    "task": "You type your bank's correct web address, but end up on a fake copy of the site. The browser warns the connection isn't secure.",
+    "o": [
+     "DNS spoofing",
+     "Smishing",
+     "Vishing",
+     "Whaling"
+    ],
+    "a": 0,
+    "e": "A fraudulent DNS entry sent you to a look-alike site. The missing encryption is the red flag."
+   },
+   {
+    "task": "A caller says they're from the bank's fraud team and need to 'verify' your card number. What should you do?",
+    "o": [
+     "Read them the card number",
+     "Text them the number instead",
+     "Ask them to email you",
+     "Hang up and call the number on the back of your card"
+    ],
+    "a": 3,
+    "e": "Verify the person by calling back on an official number. Never use one they give you."
+   },
+   {
+    "task": "Someone dressed as a delivery driver says they need to 'just pop in' to the server room to collect a parcel.",
+    "o": [
+     "Smishing",
+     "DNS spoofing",
+     "Pretexting / impersonation",
+     "Phishing email"
+    ],
+    "a": 2,
+    "e": "A fake character plus a fake situation: a pretext to gain access."
+   },
+   {
+    "task": "Text: 'Post Office: Your parcel has been redirected due to an unpaid shipping fee. To reschedule a delivery please visit postoffice-redelivery…'",
+    "o": [
+     "Genuine delivery text",
+     "Smishing",
+     "Vishing",
+     "Whaling"
+    ],
+    "a": 1,
+    "e": "An unexpected fee, urgency and a look-alike link are smishing tells."
+   },
+   {
+    "task": "A company's finance director gets a carefully written email, addressed to her by name and job title, asking her to approve a large transfer.",
+    "o": [
+     "Whaling",
+     "Phishing",
+     "Smishing",
+     "Vishing"
+    ],
+    "a": 0,
+    "e": "A personalised attack on a senior, powerful person is whaling."
+   },
+   {
+    "task": "Text: 'Records show that you have a pending tax rebate. To calculate your claim, click here: gov.uk-repay.com'",
+    "o": [
+     "A real HMRC text",
+     "DNS spoofing",
+     "Pretexting by email",
+     "Smishing with a look-alike link"
+    ],
+    "a": 3,
+    "e": "Unexpected good news plus a fake 'gov.uk' address is smishing."
+   },
+   {
+    "task": "The IT team finds an unknown IP address repeatedly trying to connect in the firewall logs. What should they do?",
+    "o": [
+     "Ignore it",
+     "Email it a password",
+     "Use a reverse DNS lookup to identify it, then add it to the firewall's deny list",
+     "Turn off the firewall"
+    ],
+    "a": 2,
+    "e": "Identify the source, and if it's untrusted, block it on the firewall."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term social engineering.",
+   "m": 2,
+   "pts": [
+    "Tricking or manipulating people into giving away secure information",
+    "using deception rather than technical hacking"
+   ],
+   "tip": "Two parts: what happens (people are tricked) and how (deception, not technical hacking)."
+  },
+  {
+   "sc": "",
+   "q": "2. Describe the difference between phishing, vishing and smishing.",
+   "m": 3,
+   "pts": [
+    "Phishing uses fake emails",
+    "Vishing uses phone calls or voice messages",
+    "Smishing uses text (SMS) messages"
+   ],
+   "tip": "One mark each: name the channel for each attack."
+  },
+  {
+   "sc": "",
+   "q": "3. What is spear phishing?",
+   "m": 2,
+   "pts": [
+    "A targeted phishing attack on a carefully chosen person",
+    "using personalised language, tone and wording"
+   ],
+   "tip": "Contrast it with normal phishing (mass mailing) to show understanding."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain the difference between spear phishing and whaling.",
+   "m": 2,
+   "pts": [
+    "Spear phishing targets a chosen individual with a personalised message",
+    "whereas whaling is spear phishing aimed specifically at high net-worth or powerful people, e.g. a CEO"
+   ],
+   "tip": "Whaling is a type of spear phishing, so say what makes it special: the target."
+  },
+  {
+   "sc": "",
+   "q": "5. What is pretexting in social engineering?",
+   "m": 2,
+   "pts": [
+    "Creating a deceptive scenario (a fake situation)",
+    "and posing as a trusted person (a character) who can resolve it, to get information or access"
+   ],
+   "tip": "Mention both parts of a pretext: the character and the situation."
+  },
+  {
+   "sc": "",
+   "q": "6. Describe how a DNS spoofing attack works.",
+   "m": 3,
+   "pts": [
+    "The hacker inserts a fraudulent DNS entry",
+    "The user requests the genuine website",
+    "The request resolves to the IP address of a fake look-alike website instead"
+   ],
+   "tip": "Follow the diagram on the slides: hacker → user's request → fake site."
+  },
+  {
+   "sc": "",
+   "q": "7. Explain why DNS spoofing is dangerous.",
+   "m": 3,
+   "pts": [
+    "The fake website looks like the official one, with no obvious red flags",
+    "so users trust it and enter passwords, bank or card details",
+    "Many users miss or ignore the browser's warning that the connection isn't encrypted"
+   ],
+   "tip": "Why it works (it looks real) + what's stolen + why people don't notice."
+  },
+  {
+   "sc": "Oakwood Estate Agents has 25 staff and stores clients' bank details for deposits. The managing director, Sarah Khan, regularly posts about the business on social media. Staff often get phone calls from people saying they are from 'IT support', and they use their work phones for texts from clients. Staff have never had any security training.",
+   "q": "8. Sarah Khan receives an email addressed to her by name, mentioning her role as managing director and a recent social media post. Identify the type of attack.",
+   "m": 1,
+   "pts": [
+    "Whaling (accept: spear phishing aimed at a senior person)"
+   ],
+   "tip": "Personalised + senior, powerful target = whaling."
+  },
+  {
+   "sc": "Oakwood Estate Agents has 25 staff and stores clients' bank details for deposits. The managing director, Sarah Khan, regularly posts about the business on social media. Staff often get phone calls from people saying they are from 'IT support', and they use their work phones for texts from clients. Staff have never had any security training.",
+   "q": "9. Explain two ways Oakwood Estate Agents could protect its staff from vishing and pretexting calls.",
+   "m": 4,
+   "pts": [
+    "Way 1, e.g. train staff to recognise social engineering techniques",
+    "so they know never to give passwords to callers claiming to be IT support",
+    "Way 2, e.g. a policy to verify callers by calling back on a known, official number",
+    "so an impersonator can't prove a fake identity and the attack fails"
+   ],
+   "tip": "Link each method to the scenario: the 'IT support' calls and the lack of training."
+  },
+  {
+   "sc": "Oakwood Estate Agents has 25 staff and stores clients' bank details for deposits. The managing director, Sarah Khan, regularly posts about the business on social media. Staff often get phone calls from people saying they are from 'IT support', and they use their work phones for texts from clients. Staff have never had any security training.",
+   "q": "10. Evaluate whether staff training would be enough to protect Oakwood Estate Agents from social engineering attacks.",
+   "m": 6,
+   "pts": [
+    "Strength: humans are the weakest link, and staff have had no training, so training tackles the main weakness",
+    "Strength: trained staff can spot tells (urgency, look-alike links, odd callers) in emails, calls and texts",
+    "Weakness: phishing tools are increasingly sophisticated and hard to spot in a hurry, so trained staff can still be fooled",
+    "Weakness: some attacks, like DNS spoofing, send users to convincing fake sites without them doing anything obviously wrong",
+    "Other measures: verify-and-call-back procedures, reviewing what Sarah posts publicly, firewall deny lists and blocking untrusted sites",
+    "Justified conclusion: training is the most important defence but not enough on its own; it should be combined with policies and technical controls"
+   ],
+   "tip": "Top-grade \"evaluate\" = strengths AND weaknesses, linked to Oakwood, then a clear judgement with a reason."
+  }
+ ]
+}
