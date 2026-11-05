@@ -335,8 +335,14 @@ const store = {
     }
     try { return JSON.parse(localStorage.getItem('sh-decks') || '[]'); } catch (e) { return []; }
   },
+  // If this person isn't allowed to save to their account (e.g. a guest with view-only access),
+  // switch to saving in their browser for the rest of the visit.
+  async dbWrite(fn) {
+    try { await fn(); return true; }
+    catch (e) { if (e && (e.code === 'invalid_argument' || e.code === 'not_granted' || e.code === 'revoked')) { this.mode = 'local'; return false; } throw e; }
+  },
   async saveDeck(deck) {
-    if (this.mode === 'db') { const { id, ...body } = deck; await db.doc(`data/users/${uid}/profile`).collection('decks').doc(id).set(body); return; }
+    if (this.mode === 'db') { const { id, ...body } = deck; if (await this.dbWrite(() => db.doc(`data/users/${uid}/profile`).collection('decks').doc(id).set(body))) return; }
     const all = (await this.listDecks()).filter(d => d.id !== deck.id); all.push(deck);
     localStorage.setItem('sh-decks', JSON.stringify(all));
   },
@@ -350,7 +356,7 @@ const store = {
     try { return JSON.parse(localStorage.getItem('sh-prog-' + id) || '{}'); } catch (e) { return {}; }
   },
   async saveProgress(id, p) {
-    if (this.mode === 'db') { await db.doc(`data/users/${uid}/profile`).collection('progress').doc(id).set(p); return; }
+    if (this.mode === 'db') { if (await this.dbWrite(() => db.doc(`data/users/${uid}/profile`).collection('progress').doc(id).set(p))) return; }
     try { localStorage.setItem('sh-prog-' + id, JSON.stringify(p)); } catch (e) {}
   }
 };
@@ -740,7 +746,9 @@ function clean(p) {
   const [d, u, s] = await Promise.all([claude.use('db'), claude.use('user'), claude.use('sample')]);
   sample = s || null;
   if (d && u) { try { uid = await u.id(); } catch (e) { uid = null; } }
-  if (d && uid) { db = d; store.mode = 'db'; }
+  let canWrite = null;
+  try { canWrite = u ? await u.can('data.write') : null; } catch (e) { canWrite = null; }
+  if (d && uid && canWrite !== false) { db = d; store.mode = 'db'; }
   let timer = setTimeout(() => setStatus('Your saved decks can\'t be reached yet…'), 10000);
   try {
     const list = await store.listDecks();
