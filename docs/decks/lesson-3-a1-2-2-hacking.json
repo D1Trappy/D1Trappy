@@ -1,0 +1,686 @@
+{
+ "id": "lesson-3-a1-2-2-hacking",
+ "title": "Lesson 3 - A1.2.2 Hacking",
+ "code": "IT · Unit 2 · A1.2.2",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How does hacking threaten data and what are the consequences?",
+ "sections": [
+  {
+   "heading": "What is hacking?",
+   "text": "Hacking is gaining unauthorised access to a computer system, network or data without the owner's permission. Anyone, from large multinational companies to individuals, can be a victim.",
+   "points": [
+    "Used to steal sensitive information, disrupt services, alter data, or take control of systems",
+    "Targets businesses, government organisations and individuals",
+    "Example: the 2017 Equifax data breach exposed the personal information of millions of people after hackers got into company systems",
+    "Example: the M&S cyber attack (covered by BBC News) took down services such as digital click & collect"
+   ]
+  },
+  {
+   "heading": "Data theft",
+   "text": "Hackers often get into systems to steal confidential information.",
+   "points": [
+    "They may COPY the data, so the victim doesn't even know they've been hacked",
+    "Or they may REMOVE it from the system completely, to cause maximum damage and disruption",
+    "Stolen data can be sold",
+    "Taking data and threatening the victim with it is known as double extortion"
+   ]
+  },
+  {
+   "heading": "Data tampering",
+   "text": "Instead of stealing data, a hacker might change it for someone's benefit or to cause damage.",
+   "table": {
+    "head": [
+     "Type",
+     "What is changed",
+     "Examples"
+    ],
+    "rows": [
+     [
+      "Back-end tampering",
+      "Databases and other data stores behind the scenes",
+      "Changing personal or financial details for personal gain; making big changes so a system stops working properly"
+     ],
+     [
+      "Front-end tampering",
+      "The appearance of a website or other public-facing information",
+      "Defacing a website as a prank, or taking it over and demanding a ransom to restore it"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "DoS and DDoS attacks",
+   "points": [
+    "DoS (denial of service): an attack designed to shut down a network. One machine, often a web server, is flooded with traffic so it stops working properly or crashes",
+    "DDoS (distributed denial of service): a large-scale, co-ordinated attack from a network of computers",
+    "In a DDoS, hackers spread bots across many compromised computers",
+    "The infected computers ('zombies') flood the target with requests from many different locations at once"
+   ]
+  },
+  {
+   "heading": "DoS vs DDoS",
+   "table": {
+    "head": [
+     "",
+     "DoS",
+     "DDoS"
+    ],
+    "rows": [
+     [
+      "Where it comes from",
+      "One machine, using a script or tool",
+      "Many infected machines (bots) in a botnet, run by a command-and-control (C&C) server"
+     ],
+     [
+      "Detection and stopping it",
+      "Easier: one source, so the connection can be cut. A good firewall can do this",
+      "Harder: comes from many remote locations, which disguises its origin"
+     ],
+     [
+      "Tracing the source",
+      "Easier to trace",
+      "Much harder, because of the botnet"
+     ],
+     [
+      "Speed",
+      "Slower to deploy",
+      "Faster to deploy, so harder to spot in time: more damage, possibly catastrophic"
+     ],
+     [
+      "Traffic volume",
+      "Limited to one machine's traffic",
+      "Huge amounts of traffic at once, overloading the server rapidly"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Browser hijacking for hacking",
+   "text": "A browser hijacker can be used to steal confidential data such as usernames and passwords.",
+   "points": [
+    "Browsers often save usernames and passwords",
+    "Hackers can use these to get into accounts: banking, shopping and streaming services",
+    "Link to Lesson 2: hijackers also change your homepage and search engine and redirect you to malicious sites"
+   ]
+  },
+  {
+   "heading": "Cyber warfare",
+   "text": "Organisations, governments and countries hacking each other to access secret information, and blocking each other's attempts to hack them.",
+   "table": {
+    "head": [
+     "Type",
+     "What it is",
+     "Motivation"
+    ],
+    "rows": [
+     [
+      "Espionage",
+      "Spying on another country's or organisation's systems to steal secrets",
+      "Gain a military, political or economic advantage"
+     ],
+     [
+      "Sabotage",
+      "Attacking systems to damage or disrupt them, e.g. government or military systems",
+      "Weaken an enemy and disrupt their operations"
+     ],
+     [
+      "Economic",
+      "Attacking banks, financial systems or businesses",
+      "Damage another country's economy"
+     ],
+     [
+      "Infrastructure",
+      "Attacking essential services such as power, water, transport and communications",
+      "Cause widespread disruption, danger and panic"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Consequences: who gets hurt?",
+   "table": {
+    "head": [
+     "Victim",
+     "Possible consequences"
+    ],
+    "rows": [
+     [
+      "Businesses",
+      "Services go down and sales are lost; customer data stolen; damaged reputation and trust; ransom demands; possible fines"
+     ],
+     [
+      "Governments",
+      "Secret information stolen; public services disrupted; risks to national security and critical infrastructure"
+     ],
+     [
+      "Individuals",
+      "Personal and financial details stolen; accounts accessed with saved or stolen passwords; identity theft and fraud"
+     ]
+    ]
+   }
+  }
+ ],
+ "keyIdea": "Hacking is unauthorised access to systems or data. Hackers steal data, tamper with it, knock services offline with DoS and DDoS attacks, or hijack browsers to grab passwords, and the consequences hit businesses, governments and individuals.",
+ "flashcards": [
+  [
+   "Hacking",
+   "Gaining unauthorised access to a computer system, network or data without the owner's permission."
+  ],
+  [
+   "Unauthorised access",
+   "Getting into a system or data you don't have permission to use."
+  ],
+  [
+   "Data theft",
+   "Stealing confidential information, either by copying it (victim may not notice) or removing it completely."
+  ],
+  [
+   "Double extortion",
+   "Hackers take data and use it against the victim, e.g. threatening to sell or leak it as well as disrupting systems."
+  ],
+  [
+   "Data tampering",
+   "Changing data instead of stealing it, for someone's benefit or to cause damage."
+  ],
+  [
+   "Back-end data tampering",
+   "Editing databases or data stores, e.g. changing financial details or breaking how a system works."
+  ],
+  [
+   "Front-end data tampering",
+   "Changing how a website or public display looks, e.g. defacing it as a prank or for ransom."
+  ],
+  [
+   "DoS attack",
+   "Denial of service: one machine floods a target, often a web server, with traffic so it stops working or crashes."
+  ],
+  [
+   "DDoS attack",
+   "Distributed denial of service: many infected computers flood a target at once from many locations."
+  ],
+  [
+   "Bot / zombie",
+   "An infected computer secretly controlled by a hacker and used in attacks such as DDoS."
+  ],
+  [
+   "Botnet",
+   "A network of bots used together for a large-scale attack."
+  ],
+  [
+   "Command-and-control (C&C) server",
+   "The server a hacker uses to control the bots in a botnet."
+  ],
+  [
+   "Why DDoS is harder to stop",
+   "It comes from many locations, which disguises its origin, so you can't just block one source."
+  ],
+  [
+   "Firewall vs DoS",
+   "Because a DoS comes from one location, a good firewall can detect it and cut the connection."
+  ],
+  [
+   "Traffic volume (DDoS)",
+   "Many bots send far more traffic at once, overloading a server rapidly."
+  ],
+  [
+   "Browser hijacker (hacking)",
+   "Used to steal usernames and passwords, including ones saved in the browser."
+  ],
+  [
+   "Saved passwords risk",
+   "Passwords saved in a browser can be used by hackers to get into banking, shopping and streaming accounts."
+  ],
+  [
+   "Cyber warfare",
+   "Organisations, governments and countries hacking each other for secret information and blocking each other's attacks."
+  ],
+  [
+   "Cyber espionage",
+   "Spying on systems to steal secrets for a military, political or economic advantage."
+  ],
+  [
+   "Cyber sabotage",
+   "Attacking systems to damage or disrupt an enemy's operations."
+  ],
+  [
+   "Economic cyber warfare",
+   "Attacking banks, financial systems or businesses to damage another country's economy."
+  ],
+  [
+   "Infrastructure attack",
+   "Targeting essential services like power, water, transport or communications to cause widespread disruption."
+  ],
+  [
+   "Equifax (2017)",
+   "Data breach that exposed the personal information of millions of people after hackers got into company systems."
+  ],
+  [
+   "M&S cyber attack",
+   "Attack that took down M&S services such as digital click & collect, shown in the BBC News report on the slides."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is hacking?",
+   "o": [
+    "Fixing a broken computer",
+    "Gaining unauthorised access to a computer system, network or data",
+    "Installing software updates",
+    "Backing up files"
+   ],
+   "a": 1,
+   "e": "Hacking is getting into systems or data without the owner's permission."
+  },
+  {
+   "q": "What is the main difference between a DoS and a DDoS attack?",
+   "o": [
+    "A DDoS comes from many computers at once; a DoS comes from one",
+    "A DoS is always more powerful",
+    "A DDoS only targets phones",
+    "There is no difference"
+   ],
+   "a": 0,
+   "e": "The extra D is for 'distributed': many infected computers attack together."
+  },
+  {
+   "q": "Which is something hackers might do after gaining access?",
+   "o": [
+    "Install security patches for you",
+    "Steal, change or delete data",
+    "Speed up your network",
+    "Report the weakness to the police"
+   ],
+   "a": 1,
+   "e": "Once inside, hackers may steal data, tamper with it, disrupt services or take control of systems."
+  },
+  {
+   "q": "What is the main purpose of a DDoS attack?",
+   "o": [
+    "To steal passwords quietly",
+    "To change a website's colours",
+    "To install antivirus",
+    "To flood a target with traffic so it slows down, stops working or crashes"
+   ],
+   "a": 3,
+   "e": "DDoS attacks overload a target, often a web server, so legitimate users can't use it."
+  },
+  {
+   "q": "A hacker copies a company's customer list but leaves the original in place. Why might they do this?",
+   "o": [
+    "So the victim doesn't know they've been hacked",
+    "To make the database faster",
+    "Because copying is legal",
+    "To fix errors in the data"
+   ],
+   "a": 0,
+   "e": "Copying data can go unnoticed, so the hacker can use or sell it without the victim reacting."
+  },
+  {
+   "q": "A hacker changes the bank details stored in a company's payroll database. What is this?",
+   "o": [
+    "Front-end data tampering",
+    "A DoS attack",
+    "Back-end data tampering",
+    "Cyber espionage"
+   ],
+   "a": 2,
+   "e": "Editing databases and data stores behind the scenes is back-end tampering."
+  },
+  {
+   "q": "A council's website homepage is replaced with a joke message. What is this?",
+   "o": [
+    "Back-end data tampering",
+    "Front-end data tampering",
+    "Browser hijacking",
+    "Data theft"
+   ],
+   "a": 1,
+   "e": "Changing the public-facing appearance of a website is front-end tampering."
+  },
+  {
+   "q": "Why is a DoS attack easier to stop than a DDoS attack?",
+   "o": [
+    "It comes from one location, so the connection can be cut, e.g. by a firewall",
+    "It only happens at night",
+    "It uses less electricity",
+    "It always targets small websites"
+   ],
+   "a": 0,
+   "e": "One source is easy to identify and block. A DDoS comes from many places, disguising its origin."
+  },
+  {
+   "q": "In a DDoS attack, what controls the botnet?",
+   "o": [
+    "The victim's firewall",
+    "A command-and-control (C&C) server",
+    "The web browser",
+    "An antivirus program"
+   ],
+   "a": 1,
+   "e": "The hacker uses a C&C server to co-ordinate all the infected machines."
+  },
+  {
+   "q": "Why can a DDoS attack overload a server so quickly?",
+   "o": [
+    "It uses a faster cable",
+    "It switches the server off",
+    "It deletes the website",
+    "Many bots send huge amounts of traffic at the same time"
+   ],
+   "a": 3,
+   "e": "Lots of machines attacking at once means huge traffic volume, very quickly."
+  },
+  {
+   "q": "How can a browser hijacker help a hacker get into someone's bank account?",
+   "o": [
+    "It mails them the bank card",
+    "It changes the bank's interest rate",
+    "It can't",
+    "It uses usernames and passwords saved in the browser"
+   ],
+   "a": 3,
+   "e": "Browsers often save login details, which a hijacker can steal and use."
+  },
+  {
+   "q": "Countries hacking each other to access secret information is called:",
+   "o": [
+    "Front-end tampering",
+    "Adware",
+    "Cyber warfare",
+    "A DoS attack"
+   ],
+   "a": 2,
+   "e": "Cyber warfare includes espionage, sabotage, economic attacks and infrastructure attacks."
+  },
+  {
+   "q": "An attack on a country's power grid that causes blackouts is an example of:",
+   "o": [
+    "An infrastructure attack",
+    "Front-end tampering",
+    "Legitimate adware",
+    "Data backup"
+   ],
+   "a": 0,
+   "e": "Attacks on essential services like power, water and transport are infrastructure attacks."
+  },
+  {
+   "q": "How can data tampering affect an organisation?",
+   "o": [
+    "It always improves the data",
+    "It has no effect if nothing is stolen",
+    "It only affects printers",
+    "Wrong data can stop systems working, cause financial loss and damage trust"
+   ],
+   "a": 3,
+   "e": "Changed data can break systems, lead to wrong decisions or payments, and damage reputation."
+  },
+  {
+   "q": "Which is a difference between front-end and back-end tampering?",
+   "o": [
+    "Front-end changes what the public sees; back-end changes the data stores behind it",
+    "Back-end is only done by accident",
+    "Front-end only affects databases",
+    "They are the same"
+   ],
+   "a": 0,
+   "e": "Front-end = public appearance (e.g. a website). Back-end = databases and data stores."
+  },
+  {
+   "q": "Who can be a victim of hacking?",
+   "o": [
+    "Only large companies",
+    "Only governments",
+    "Anyone, from multinational companies to individuals"
+   ],
+   "a": 2,
+   "e": "Businesses, governments and individuals are all targets."
+  }
+ ],
+ "apply": {
+  "title": "Name that attack",
+  "intro": "Read each situation and pick the attack or the best answer. In the exam, always link your answer to the scenario.",
+  "items": [
+   {
+    "task": "An online shop's website crashes after being flooded with requests from thousands of computers around the world.",
+    "o": [
+     "DoS attack",
+     "DDoS attack",
+     "Front-end tampering",
+     "Cyber espionage"
+    ],
+    "a": 1,
+    "e": "Thousands of computers in many locations = distributed denial of service."
+   },
+   {
+    "task": "A small website crashes after one computer sends it a huge stream of requests. The IT team blocks that one address and it stops.",
+    "o": [
+     "DoS attack",
+     "DDoS attack",
+     "Data theft",
+     "Browser hijack"
+    ],
+    "a": 0,
+    "e": "One source that can be blocked = DoS."
+   },
+   {
+    "task": "A hacker quietly copies a company's customer database and later sells it online. The company doesn't notice for months.",
+    "o": [
+     "Front-end tampering",
+     "DoS attack",
+     "Data theft",
+     "Infrastructure attack"
+    ],
+    "a": 2,
+    "e": "Copying data so the victim doesn't notice, then selling it, is data theft."
+   },
+   {
+    "task": "Students' exam grades in a school database are secretly changed.",
+    "o": [
+     "Back-end data tampering",
+     "Front-end data tampering",
+     "DDoS attack",
+     "Cyber warfare"
+    ],
+    "a": 0,
+    "e": "Changing data in a database is back-end tampering."
+   },
+   {
+    "task": "A football club's website is replaced with a message saying 'Pay us £10,000 to get your site back'.",
+    "o": [
+     "Back-end tampering",
+     "Front-end tampering for ransom",
+     "DoS attack",
+     "Data copying"
+    ],
+    "a": 1,
+    "e": "Changing the public-facing site and demanding a ransom to restore it is front-end tampering."
+   },
+   {
+    "task": "After installing a free toolbar, someone's streaming and shopping accounts are logged into from another country.",
+    "o": [
+     "Browser hijacker stealing saved passwords",
+     "DDoS attack",
+     "Back-end tampering",
+     "Infrastructure attack"
+    ],
+    "a": 0,
+    "e": "Hijackers can grab usernames and passwords saved in the browser."
+   },
+   {
+    "task": "One country hacks another country's defence ministry to read secret military plans.",
+    "o": [
+     "Economic cyber warfare",
+     "Cyber espionage",
+     "Front-end tampering",
+     "DoS attack"
+    ],
+    "a": 1,
+    "e": "Spying to steal secrets is espionage."
+   },
+   {
+    "task": "Hackers backed by a foreign state shut down a nation's water treatment systems.",
+    "o": [
+     "Infrastructure attack",
+     "Data copying",
+     "Browser hijack",
+     "Front-end tampering"
+    ],
+    "a": 0,
+    "e": "Attacking essential services such as water is an infrastructure attack."
+   },
+   {
+    "task": "A country's banks and stock exchange are attacked to damage its economy.",
+    "o": [
+     "Espionage",
+     "Economic cyber warfare",
+     "Front-end tampering",
+     "A DoS from one PC"
+    ],
+    "a": 1,
+    "e": "Targeting financial systems to harm an economy is economic cyber warfare."
+   },
+   {
+    "task": "The IT team can't work out where a website attack is coming from, because traffic arrives from thousands of different addresses. Why?",
+    "o": [
+     "The attack uses a botnet, which disguises its origin",
+     "The firewall is switched off",
+     "The website has no domain name",
+     "It is front-end tampering"
+    ],
+    "a": 0,
+    "e": "In a DDoS, bots in many locations hide the real source, making tracing much harder."
+   },
+   {
+    "task": "Hackers take a company's files off its system completely and threaten to release them unless they're paid.",
+    "o": [
+     "Front-end tampering",
+     "Double extortion",
+     "A DoS attack",
+     "Cyber espionage"
+    ],
+    "a": 1,
+    "e": "Taking data and using it to pressure the victim is described on the slides as double extortion."
+   },
+   {
+    "task": "A shop's click & collect service stops working after a cyber attack, and customers can't collect orders. Who is affected?",
+    "o": [
+     "Only the hackers",
+     "The business (lost sales and reputation) and its customers",
+     "Nobody, it's just a website",
+     "Only the government"
+    ],
+    "a": 1,
+    "e": "Like the M&S attack: the business loses money and trust, and customers can't get their orders."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term hacking.",
+   "m": 2,
+   "pts": [
+    "Gaining unauthorised access to a computer system, network or data",
+    "without the permission of the owner"
+   ],
+   "tip": "Two marks = two parts: what (unauthorised access) and the condition (without permission)."
+  },
+  {
+   "sc": "",
+   "q": "2. Give one example of what a hacker might do after gaining access to a system.",
+   "m": 1,
+   "pts": [
+    "Any one: steal data; tamper with/change data; delete data; disrupt services; take control of the system; sell the data"
+   ],
+   "tip": "\"Give\" = one clear example is enough."
+  },
+  {
+   "sc": "",
+   "q": "3. State the main purpose of a DDoS attack.",
+   "m": 1,
+   "pts": [
+    "To flood a target (e.g. a web server) with traffic so it slows down, stops working or crashes"
+   ],
+   "tip": "Keep it short: overload the target so it can't work."
+  },
+  {
+   "sc": "",
+   "q": "4. Describe one difference between front-end and back-end data tampering.",
+   "m": 2,
+   "pts": [
+    "Front-end tampering changes the appearance of a website or public-facing information",
+    "whereas back-end tampering changes the data stored in databases or other data stores"
+   ],
+   "tip": "Describe BOTH sides. \"Whereas\" links them neatly."
+  },
+  {
+   "sc": "",
+   "q": "5. Explain how data tampering could affect an organisation.",
+   "m": 2,
+   "pts": [
+    "Changed data could be wrong or stop a system working properly",
+    "so the organisation could lose money, make wrong decisions or payments, and lose customers' trust"
+   ],
+   "tip": "Point + consequence. Use \"…so…\" or \"…which means…\"."
+  },
+  {
+   "sc": "",
+   "q": "6. Describe two types of cyber warfare.",
+   "m": 4,
+   "pts": [
+    "Type 1 named, e.g. espionage",
+    "Description, e.g. spying on another country's systems to steal secret information for an advantage",
+    "Type 2 named, e.g. sabotage / economic / infrastructure",
+    "Description, e.g. damaging enemy systems / attacking banks to harm the economy / attacking power or water supplies"
+   ],
+   "tip": "Name each type, then say what it is or why it's done."
+  },
+  {
+   "sc": "Pennine Outdoor sells camping gear through its website and three shops. Its customer database holds names, addresses, card details and order history. Staff log in to the admin systems using passwords saved in their web browsers. Last month the website went offline for six hours after being flooded with traffic from thousands of computers around the world.",
+   "q": "7. Identify the type of attack that took Pennine Outdoor's website offline.",
+   "m": 1,
+   "pts": [
+    "DDoS (distributed denial of service) attack"
+   ],
+   "tip": "The clue is \"thousands of computers around the world\": that makes it distributed."
+  },
+  {
+   "sc": "Pennine Outdoor sells camping gear through its website and three shops. Its customer database holds names, addresses, card details and order history. Staff log in to the admin systems using passwords saved in their web browsers. Last month the website went offline for six hours after being flooded with traffic from thousands of computers around the world.",
+   "q": "8. Explain why the attack on Pennine Outdoor's website was harder to stop than a DoS attack from one computer.",
+   "m": 4,
+   "pts": [
+    "The traffic came from thousands of computers (a botnet) in many locations",
+    "so the origin was disguised and couldn't be blocked by cutting one connection or using a firewall",
+    "Many bots sent huge amounts of traffic at the same time",
+    "so the server was overloaded rapidly and the attack was harder to detect in time"
+   ],
+   "tip": "Two points, each with a reason. Use the slide's comparison: source, tracing, speed, volume."
+  },
+  {
+   "sc": "Pennine Outdoor sells camping gear through its website and three shops. Its customer database holds names, addresses, card details and order history. Staff log in to the admin systems using passwords saved in their web browsers. Last month the website went offline for six hours after being flooded with traffic from thousands of computers around the world.",
+   "q": "9. Explain how a browser hijacker could be used to steal data from Pennine Outdoor.",
+   "m": 3,
+   "pts": [
+    "A browser hijacker is installed on a staff member's web browser",
+    "It steals the usernames and passwords saved in the browser",
+    "so the hacker can log in to the admin systems and steal the customer database (names, addresses, card details)"
+   ],
+   "tip": "Use the scenario: staff save their passwords in the browser. That's the weakness."
+  },
+  {
+   "sc": "Pennine Outdoor sells camping gear through its website and three shops. Its customer database holds names, addresses, card details and order history. Staff log in to the admin systems using passwords saved in their web browsers. Last month the website went offline for six hours after being flooded with traffic from thousands of computers around the world.",
+   "q": "10. Assess the impact a hacking attack could have on Pennine Outdoor and its customers.",
+   "m": 6,
+   "pts": [
+    "Impact on the business: lost sales while the website is down (e.g. the six-hour outage)",
+    "Impact on the business: stolen or tampered customer data damages reputation and trust, and could lead to fines or a ransom demand",
+    "Impact on customers: names, addresses and card details could be stolen and sold",
+    "Impact on customers: risk of fraud and identity theft, and accounts being accessed",
+    "Weighs up which impact is most serious (e.g. data theft lasts longer than a few hours of downtime)",
+    "Justified conclusion linked to the scenario"
+   ],
+   "tip": "Top-grade \"assess\" = cover BOTH the business and customers, compare how serious each impact is, and finish with a clear judgement."
+  }
+ ]
+}
