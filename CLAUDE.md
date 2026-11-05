@@ -9,7 +9,7 @@ Both rebuild by themselves about a minute after `main` changes. When telling peo
 
 - `docs/index.html`, `docs/app.js`, `docs/style.css`: the site
 - `docs/decks/<id>.json`: one study pack per lesson / PowerPoint
-- `docs/decks/index.json`: the list of packs. Generated, don't edit by hand
+- `docs/decks/index.json`: the list of packs, and `docs/decks/topics.json`: the AI helper's course index (every lesson's headings and key terms). Both generated, don't edit by hand
 - `scripts/build-index.mjs`: checks every pack and rebuilds the list
 - `docs/assistant.js` + `functions/api/ask.js`: the AI study helper (chat bubble, bottom right). The function runs on Cloudflare Pages only (not the GitHub Pages backup), loads the open lesson's pack as context, and calls Claude Haiku 5.5 (`claude-haiku-5-5`, chosen by the owner for cost) with the official `@anthropic-ai/sdk` (`package.json` at the repo root). The API key is the Cloudflare secret `ANTHROPIC_API_KEY`; never put a key in the repo. Safety rules for students live in `systemPrompt()` in the function.
 

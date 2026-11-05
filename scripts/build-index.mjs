@@ -1,4 +1,4 @@
-// Checks every study pack in docs/decks/ and rebuilds docs/decks/index.json.
+// Checks every study pack in docs/decks/ and rebuilds docs/decks/index.json and topics.json.
 // Run after adding or editing a deck:  node scripts/build-index.mjs
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const dir = join(dirname(fileURLToPath(import.meta.url)), '..', 'docs', 'decks');
 const errors = [];
 const decks = [];
+const topics = []; // course index for the AI helper (functions/api/ask.js)
 
 const isStr = x => typeof x === 'string' && x.trim().length > 0;
 const checkMc = (items, where) => items.forEach((it, i) => {
@@ -15,7 +16,7 @@ const checkMc = (items, where) => items.forEach((it, i) => {
   if (!isStr(it.e)) errors.push(`${where}[${i}]: missing explanation "e"`);
 });
 
-for (const file of readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'index.json').sort()) {
+for (const file of readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'index.json' && f !== 'topics.json').sort()) {
   const id = file.replace(/\.json$/, '');
   const where = file;
   let d;
@@ -34,6 +35,7 @@ for (const file of readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'in
     if (!Array.isArray(q.pts) || !q.pts.length) errors.push(`${where} exam[${i}]: needs marking points "pts"`);
   });
   decks.push({ id, title: d.title, code: d.code || '', subject: d.subject, added: d.added });
+  topics.push({ id, title: d.title, headings: (d.sections || []).map(x => x.heading), terms: (d.flashcards || []).map(c => c[0]) });
 }
 
 if (errors.length) {
@@ -43,4 +45,7 @@ if (errors.length) {
 // Sort by title in natural number order, so "Lesson 2" comes before "Lesson 10".
 decks.sort((a, b) => a.title.localeCompare(b.title, 'en', { numeric: true, sensitivity: 'base' }) || a.added.localeCompare(b.added));
 writeFileSync(join(dir, 'index.json'), JSON.stringify({ decks }, null, 1) + '\n');
-console.log(`OK: ${decks.length} deck(s) listed in docs/decks/index.json`);
+const order = new Map(decks.map((d, i) => [d.id, i]));
+topics.sort((a, b) => order.get(a.id) - order.get(b.id));
+writeFileSync(join(dir, 'topics.json'), JSON.stringify({ topics }) + '\n');
+console.log(`OK: ${decks.length} deck(s) listed in docs/decks/index.json (and the helper's course index, topics.json)`);
