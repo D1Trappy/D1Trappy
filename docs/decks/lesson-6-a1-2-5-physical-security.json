@@ -1,0 +1,663 @@
+{
+ "id": "lesson-6-a1-2-5-physical-security",
+ "title": "Lesson 6 - A1.2.5 Physical Security",
+ "code": "IT · Unit 2 · A1.2.5",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can physical security prevent unauthorised access?",
+ "sections": [
+  {
+   "heading": "What is physical security?",
+   "text": "Physical security is the protection of computer systems, devices and data from unauthorised physical access, damage or theft.",
+   "points": [
+    "Example: an employee leaves a laptop unattended in a café; it's stolen, and the attacker gets into sensitive company data",
+    "Controls: key cards, CCTV, locked doors and security staff",
+    "A simple method: keep the device in a room secured by a combination lock, digital control, sensor, or biometrics (fingerprint or facial recognition)",
+    "Only people with the right access can reach the device, so it can't be damaged, stolen, or have data taken in person"
+   ]
+  },
+  {
+   "heading": "Getting into secure areas: the four techniques",
+   "table": {
+    "head": [
+     "Technique",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "Tailgating",
+      "An authorised person opens the door, and an unauthorised person follows them in"
+     ],
+     [
+      "Forced entry",
+      "Breaking the door, the lock, or the walls around it"
+     ],
+     [
+      "Impersonation",
+      "Pretending to be someone else, e.g. a member of staff or an authorised visitor"
+     ],
+     [
+      "Coercion",
+      "Putting pressure on an authorised person to let someone in, through bribery, social engineering or blackmail"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Case study: the doughnut delivery driver",
+   "text": "In 2016, Lukas Yla got into some of Silicon Valley's largest tech companies dressed as a doughnut delivery driver. He printed a delivery company's logo on a T-shirt and put his CV inside boxes of doughnuts, hoping to get job interviews.",
+   "points": [
+    "The businesses were shocked at how easily he got into their offices",
+    "Lesson: impersonation works when staff don't check ID or challenge visitors"
+   ]
+  },
+  {
+   "heading": "Stopping tailgating",
+   "points": [
+    "Train staff not to hold the door open for anyone, and to challenge people they don't know",
+    "Turnstiles let only one person through at a time",
+    "Mantraps (airlocks): a small space with two doors. People must be authenticated at both ends, and it's impossible to have two people inside at once, so tailgating can't happen"
+   ]
+  },
+  {
+   "heading": "Guarding against impersonation (model answer)",
+   "table": {
+    "head": [
+     "Check",
+     "What to do"
+    ],
+    "rows": [
+     [
+      "Identity verification",
+      "Check official photo ID badges and expiry dates; compare the name and photo with the person; log names, entry times and reasons in a visitor management system"
+     ],
+     [
+      "Visitor protocols",
+      "Visitors sign in and are escorted at all times; issue temporary badges and collect them on exit; confirm appointments with staff in advance"
+     ],
+     [
+      "Access control systems",
+      "Key cards, biometric scanners or PIN codes unique to each person, so only pre-authorised people get into secure areas"
+     ],
+     [
+      "Staff training",
+      "Challenge anyone unknown or without visible ID; learn common impersonation tactics and how to respond"
+     ],
+     [
+      "CCTV and monitoring",
+      "Cameras at entrances and access points; security staff watch live footage and review anything suspicious"
+     ],
+     [
+      "Communication and alerts",
+      "Tell staff when contractors or visitors are expected; report and investigate suspicious behaviour immediately"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Why staff should challenge unknown people",
+   "points": [
+    "Unknown people might be trying to get in using impersonation or coercion",
+    "Challenging them protects sensitive information and keeps the organisation secure",
+    "Unaccompanied, unauthorised people can cause damage, or steal data, information or devices"
+   ]
+  },
+  {
+   "heading": "Getting at devices: the risks",
+   "table": {
+    "head": [
+     "Risk",
+     "What happens"
+    ],
+    "rows": [
+     [
+      "Unattended devices",
+      "A risk whenever left alone, and worse in public spaces with no controlled access"
+     ],
+     [
+      "Shoulder surfing",
+      "Reading security information by looking at someone's screen: up close, from further away with binoculars, or secretly using CCTV"
+     ],
+     [
+      "Small items",
+      "Access cards, fobs and USB security keys are easily lost and may be targeted to get access"
+     ],
+     [
+      "Portable devices",
+      "Phones and laptops are easily lost, especially on public transport. If the device is used for multi-factor authentication, losing it is even more serious"
+     ],
+     [
+      "Public-facing devices",
+      "ATMs and supermarket payment machines are especially vulnerable to shoulder surfing"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Protecting devices",
+   "text": "Your slides list the risks. These are standard ways to reduce them (they link back to Lesson 1):",
+   "points": [
+    "Never leave devices unattended, and lock screens when you step away",
+    "Keep devices, servers and storage in locked rooms or cabinets",
+    "Shield PINs and passwords, and use privacy screens in public places",
+    "Encrypt laptops and storage, so a stolen device doesn't expose data",
+    "Report lost devices, cards and fobs straight away so access can be blocked"
+   ]
+  },
+  {
+   "heading": "Task: training guide for new office tenants",
+   "text": "The slides' one-page training document for new businesses in an office block uses these headings. Use this lesson to fill in each one:",
+   "points": [
+    "1. Control access to your office",
+    "2. Prevent tailgating",
+    "3. Monitor visitors",
+    "4. Install surveillance and alarms",
+    "5. Secure devices and data",
+    "6. Train your staff",
+    "7. Emergency preparedness"
+   ]
+  }
+ ],
+ "keyIdea": "Physical security stops people getting their hands on systems, devices and data. Attackers bypass it by tailgating, forcing entry, impersonating or coercing staff, or by grabbing and watching devices, so organisations layer locks, access control, visitor checks, CCTV and trained staff who challenge strangers.",
+ "flashcards": [
+  [
+   "Physical security",
+   "Protecting computer systems, devices and data from unauthorised physical access, damage or theft."
+  ],
+  [
+   "Tailgating",
+   "An authorised person opens a door and an unauthorised person follows them in."
+  ],
+  [
+   "Forced entry",
+   "Breaking a door, lock or the surrounding walls to get in."
+  ],
+  [
+   "Impersonation",
+   "Pretending to be someone else, such as staff or an authorised visitor, to get access."
+  ],
+  [
+   "Coercion",
+   "Pressuring an authorised person to let someone in, through bribery, social engineering or blackmail."
+  ],
+  [
+   "Impersonation vs coercion",
+   "Impersonation = pretending to be someone. Coercion = pressuring someone who IS authorised."
+  ],
+  [
+   "Shoulder surfing",
+   "Reading security information by looking at someone's screen: up close, with binoculars, or via CCTV."
+  ],
+  [
+   "Mantrap (airlock)",
+   "A space with two doors where people are authenticated at both ends; only one person fits, so tailgating is impossible."
+  ],
+  [
+   "Turnstile",
+   "A gate that lets one person through at a time, to stop tailgating."
+  ],
+  [
+   "Biometric access",
+   "Using physical features such as fingerprints or facial recognition to unlock a secure area."
+  ],
+  [
+   "Access control system",
+   "Key cards, biometric scanners or PINs unique to each person, so only pre-authorised people get in."
+  ],
+  [
+   "Visitor protocol",
+   "Visitors sign in, wear a temporary badge, are escorted at all times, and return the badge on exit."
+  ],
+  [
+   "Visitor management system",
+   "A system that logs visitors' names, entry times and reasons for visiting."
+  ],
+  [
+   "Identity verification",
+   "Checking photo ID and its expiry date, and comparing the name and photo with the person."
+  ],
+  [
+   "CCTV and monitoring",
+   "Cameras at entrances, watched live by security staff who review suspicious activity."
+  ],
+  [
+   "Challenging strangers",
+   "Staff questioning unknown people, because they may be using impersonation or coercion to get in."
+  ],
+  [
+   "Unattended device",
+   "A device left alone, especially in public, that can be stolen or accessed."
+  ],
+  [
+   "Portable device risk",
+   "Phones and laptops are easily lost; worse if the device is used for multi-factor authentication."
+  ],
+  [
+   "Multi-factor authentication (MFA)",
+   "Logging in with more than one proof of identity, e.g. a password plus a code on your phone."
+  ],
+  [
+   "Public-facing devices",
+   "Devices like ATMs and supermarket payment machines, especially open to shoulder surfing."
+  ],
+  [
+   "Lukas Yla (2016)",
+   "Got into big Silicon Valley tech offices dressed as a doughnut delivery driver: impersonation in action."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is tailgating?",
+   "o": [
+    "Following an authorised person through a secure door",
+    "Driving too close to another car",
+    "Reading someone's screen",
+    "Breaking a lock"
+   ],
+   "a": 0,
+   "e": "An authorised person opens the door, and an unauthorised person follows them in."
+  },
+  {
+   "q": "What is shoulder surfing?",
+   "o": [
+    "Hacking a Wi-Fi network",
+    "Stealing a laptop",
+    "Pretending to be a visitor",
+    "Looking at someone's screen to read security information"
+   ],
+   "a": 3,
+   "e": "It can be done up close, with binoculars, or secretly through CCTV."
+  },
+  {
+   "q": "Which is a good way for organisations to prevent device theft?",
+   "o": [
+    "Leave laptops on desks overnight",
+    "Share access cards",
+    "Lock devices away and never leave them unattended",
+    "Turn off CCTV"
+   ],
+   "a": 2,
+   "e": "Locked rooms or cabinets and never leaving devices unattended stop easy theft."
+  },
+  {
+   "q": "What is physical security?",
+   "o": [
+    "Using strong passwords only",
+    "Protecting systems, devices and data from unauthorised physical access, damage or theft",
+    "Installing antivirus",
+    "Backing up to the cloud"
+   ],
+   "a": 1,
+   "e": "It's about physically controlling who can reach the equipment and data."
+  },
+  {
+   "q": "What is the difference between impersonation and coercion?",
+   "o": [
+    "Impersonation is pretending to be someone; coercion is pressuring an authorised person to let you in",
+    "They are the same",
+    "Coercion is pretending to be someone; impersonation is breaking a door",
+    "Impersonation is only online"
+   ],
+   "a": 0,
+   "e": "Impersonation fakes an identity. Coercion uses bribery, social engineering or blackmail on someone who has access."
+  },
+  {
+   "q": "A burglar breaks the lock on a server room door. Which technique is this?",
+   "o": [
+    "Tailgating",
+    "Coercion",
+    "Impersonation",
+    "Forced entry"
+   ],
+   "a": 3,
+   "e": "Breaking a door, lock or walls is forced entry."
+  },
+  {
+   "q": "An employee is bribed to let an outsider into the server room. Which technique is this?",
+   "o": [
+    "Tailgating",
+    "Shoulder surfing",
+    "Coercion",
+    "Forced entry"
+   ],
+   "a": 2,
+   "e": "Coercion includes bribery, social engineering and blackmail."
+  },
+  {
+   "q": "How does a mantrap stop tailgating?",
+   "o": [
+    "It sprays water",
+    "People are authenticated at both doors, and only one person fits inside at once",
+    "It locks everyone out",
+    "It plays an alarm all day"
+   ],
+   "a": 1,
+   "e": "With authentication at both ends and room for one, a second person can't follow."
+  },
+  {
+   "q": "Why should staff challenge unknown people in secure areas?",
+   "o": [
+    "They may be using impersonation or coercion, and could steal or damage things",
+    "To be rude",
+    "It's only needed at night",
+    "Visitors always have permission"
+   ],
+   "a": 0,
+   "e": "Challenging protects sensitive information, devices and the organisation."
+  },
+  {
+   "q": "Which of these is a visitor protocol from the slides?",
+   "o": [
+    "Let visitors wander freely",
+    "Visitors share staff key cards",
+    "Visitors don't need appointments",
+    "Visitors sign in, are escorted at all times, and return temporary badges on exit"
+   ],
+   "a": 3,
+   "e": "Signing in, escorts and temporary badges keep visitors controlled."
+  },
+  {
+   "q": "Why is losing a phone used for multi-factor authentication especially serious?",
+   "o": [
+    "Phones are expensive",
+    "It can't be replaced",
+    "Whoever has it may be able to pass the second login check",
+    "It has no effect"
+   ],
+   "a": 2,
+   "e": "The phone is part of proving who you are, so losing it weakens account security."
+  },
+  {
+   "q": "Which devices are especially vulnerable to shoulder surfing?",
+   "o": [
+    "Servers in locked rooms",
+    "ATMs and supermarket payment machines",
+    "Backup drives in a safe",
+    "Printers"
+   ],
+   "a": 1,
+   "e": "Public-facing devices are used in the open, where people nearby can watch PINs being typed."
+  },
+  {
+   "q": "In 2016, how did Lukas Yla get into Silicon Valley tech offices?",
+   "o": [
+    "Dressed as a doughnut delivery driver (impersonation)",
+    "By forced entry",
+    "Through a DDoS attack",
+    "By bribing the CEO"
+   ],
+   "a": 0,
+   "e": "A printed logo T-shirt and boxes of doughnuts were enough. Staff didn't check who he really was."
+  },
+  {
+   "q": "Which is an example of biometric access?",
+   "o": [
+    "A combination lock",
+    "A visitor badge",
+    "A turnstile",
+    "A fingerprint scanner"
+   ],
+   "a": 3,
+   "e": "Biometrics use physical features such as fingerprints or facial recognition."
+  },
+  {
+   "q": "What is impersonation in physical security?",
+   "o": [
+    "Breaking a window",
+    "Watching CCTV",
+    "Pretending to be someone else, e.g. staff or an authorised visitor, to get in",
+    "Encrypting a laptop"
+   ],
+   "a": 2,
+   "e": "Impersonators fake an identity, like a delivery driver or contractor."
+  },
+  {
+   "q": "Give one way devices can be left vulnerable. Which is it?",
+   "o": [
+    "Locked in a cabinet",
+    "Left unattended in a public place",
+    "Encrypted",
+    "Kept in a mantrap"
+   ],
+   "a": 1,
+   "e": "Unattended devices, especially in public, can be stolen or accessed."
+  }
+ ],
+ "apply": {
+  "title": "Spot the threat, pick the fix",
+  "intro": "Read each situation and choose the threat or the best way to stop it.",
+  "items": [
+   {
+    "task": "A man carrying a heavy box waits by the secure door. When a staff member swipes in, he follows them through.",
+    "o": [
+     "Coercion",
+     "Tailgating",
+     "Forced entry",
+     "Shoulder surfing"
+    ],
+    "a": 1,
+    "e": "Following an authorised person through a door is tailgating."
+   },
+   {
+    "task": "Someone in a hi-vis jacket says he's 'from the electricity company' and needs to check the server room.",
+    "o": [
+     "Impersonation",
+     "Forced entry",
+     "Shoulder surfing",
+     "Tailgating"
+    ],
+    "a": 0,
+    "e": "Pretending to be an authorised visitor is impersonation. Check ID and confirm the appointment."
+   },
+   {
+    "task": "A criminal threatens to reveal an employee's secrets unless they let him into the data centre.",
+    "o": [
+     "Tailgating",
+     "Shoulder surfing",
+     "Impersonation",
+     "Coercion (blackmail)"
+    ],
+    "a": 3,
+    "e": "Blackmail to pressure an authorised person is coercion."
+   },
+   {
+    "task": "Someone at the next table on a train watches a worker type their password on their laptop.",
+    "o": [
+     "Forced entry",
+     "Coercion",
+     "Shoulder surfing",
+     "Tailgating"
+    ],
+    "a": 2,
+    "e": "Reading security information by watching a screen is shoulder surfing."
+   },
+   {
+    "task": "Thieves smash a window at night to get into an office and take the computers.",
+    "o": [
+     "Impersonation",
+     "Forced entry",
+     "Tailgating",
+     "Shoulder surfing"
+    ],
+    "a": 1,
+    "e": "Breaking doors, locks or walls is forced entry."
+   },
+   {
+    "task": "A company keeps finding people following staff through its main entrance. Which measure stops this best?",
+    "o": [
+     "A mantrap or turnstile",
+     "A bigger sign",
+     "More printers",
+     "Free Wi-Fi"
+    ],
+    "a": 0,
+    "e": "Mantraps and turnstiles only let one authenticated person through at a time."
+   },
+   {
+    "task": "A 'contractor' arrives without warning and asks to be let into the comms room. What should reception do?",
+    "o": [
+     "Let him in, he looks official",
+     "Give him a staff key card",
+     "Ask him to come back at night",
+     "Check his photo ID and confirm the appointment with staff first"
+    ],
+    "a": 3,
+    "e": "Verify identity and confirm appointments in advance. That's the model answer for impersonation."
+   },
+   {
+    "task": "A worker loses their access fob on the bus. What's the biggest risk?",
+    "o": [
+     "The bus will be late",
+     "The fob will run out of battery",
+     "Whoever finds it could use it to get into the building",
+     "No risk at all"
+    ],
+    "a": 2,
+    "e": "Small items like fobs and access cards are easily lost and can be used to get in. Report them immediately."
+   },
+   {
+    "task": "A visitor is signed in, then left alone to wander the office while staff are in a meeting. What's missing?",
+    "o": [
+     "A turnstile",
+     "An escort at all times",
+     "Antivirus software",
+     "A bigger reception"
+    ],
+    "a": 1,
+    "e": "Visitor protocols say visitors must be escorted at all times."
+   },
+   {
+    "task": "A staff member holds the secure door open for a friendly stranger, to be polite. What would have prevented this?",
+    "o": [
+     "Staff training: don't hold doors and challenge strangers",
+     "A faster internet connection",
+     "A new logo",
+     "Turning off CCTV"
+    ],
+    "a": 0,
+    "e": "Train staff not to hold doors open and to challenge unknown people."
+   },
+   {
+    "task": "Someone fits a tiny camera above a supermarket card machine. What is it for?",
+    "o": [
+     "Tailgating",
+     "Forced entry",
+     "Impersonation",
+     "Shoulder surfing to capture PINs"
+    ],
+    "a": 3,
+    "e": "Public-facing payment devices are prime targets for shoulder surfing, including covertly with cameras."
+   },
+   {
+    "task": "A laptop holding unencrypted customer data is stolen from a café table while its owner is at the counter. What would have best protected the data?",
+    "o": [
+     "A mantrap at the café",
+     "A visitor badge",
+     "Encrypting the laptop and never leaving it unattended",
+     "Turning the brightness down"
+    ],
+    "a": 2,
+    "e": "Unattended devices in public are a big risk. Encryption keeps the data safe even if the laptop is stolen."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define physical security.",
+   "m": 2,
+   "pts": [
+    "Protecting computer systems, devices and data",
+    "from unauthorised physical access, damage or theft"
+   ],
+   "tip": "What is protected + what from."
+  },
+  {
+   "sc": "",
+   "q": "2. What is tailgating?",
+   "m": 1,
+   "pts": [
+    "When an authorised person opens a door and an unauthorised person follows them in"
+   ],
+   "tip": "One clear sentence is enough for 1 mark."
+  },
+  {
+   "sc": "",
+   "q": "3. What is shoulder surfing?",
+   "m": 2,
+   "pts": [
+    "Getting security information (e.g. passwords or PINs) by looking at someone's screen or keypad",
+    "up close, from further away (e.g. binoculars), or covertly using CCTV"
+   ],
+   "tip": "Say what it is and how it can be done."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain the difference between impersonation and coercion.",
+   "m": 2,
+   "pts": [
+    "Impersonation is pretending to be someone else, such as staff or an authorised visitor, to gain access",
+    "whereas coercion is pressuring an authorised person (bribery, social engineering or blackmail) to let an unauthorised person in"
+   ],
+   "tip": "This is the slides' model answer. The key difference: impersonation fakes an identity, coercion pressures a real insider."
+  },
+  {
+   "sc": "",
+   "q": "5. Explain why it is important for staff to challenge unknown individuals in secure areas.",
+   "m": 3,
+   "pts": [
+    "Unknown individuals might be trying to get into restricted areas using impersonation or coercion",
+    "Challenging them helps protect sensitive information and keeps the organisation secure",
+    "because unaccompanied, unauthorised people can cause damage or steal data, information or devices"
+   ],
+   "tip": "Slides' model answer: who they might be → why challenging helps → what could happen if you don't."
+  },
+  {
+   "sc": "",
+   "q": "6. Describe how a restricted area can be protected from tailgating.",
+   "m": 3,
+   "pts": [
+    "Train staff not to hold the door open for anyone, and to challenge unknown individuals",
+    "Use turnstiles, or mantraps/airlocks where people must be authenticated at both ends",
+    "Only one person can be in a mantrap at once, so tailgating is impossible"
+   ],
+   "tip": "Slides' model answer: a people measure (training) plus a physical measure (mantrap or turnstile) and how it works."
+  },
+  {
+   "sc": "Clearview Accounting has just rented a unit in an office block. It keeps clients' financial records on a server in an unlocked back room. One receptionist covers the front desk, and delivery drivers come in several times a day. Staff often work on laptops in the café downstairs and on the train, and they use their phones to approve logins (multi-factor authentication).",
+   "q": "7. Identify two physical security weaknesses at Clearview Accounting.",
+   "m": 2,
+   "pts": [
+    "Any one: the server is in an unlocked back room; one receptionist and frequent delivery drivers make it easy to slip past",
+    "A second, different one: laptops used in the café and on the train (theft, shoulder surfing); phones used for MFA could be lost"
+   ],
+   "tip": "\"Identify\" = pick them straight from the scenario."
+  },
+  {
+   "sc": "Clearview Accounting has just rented a unit in an office block. It keeps clients' financial records on a server in an unlocked back room. One receptionist covers the front desk, and delivery drivers come in several times a day. Staff often work on laptops in the café downstairs and on the train, and they use their phones to approve logins (multi-factor authentication).",
+   "q": "8. Explain two risks of Clearview's staff working on laptops and phones in public places.",
+   "m": 4,
+   "pts": [
+    "Risk 1, e.g. shoulder surfing in the café or on the train",
+    "so someone could see passwords or clients' financial data on screen",
+    "Risk 2, e.g. a laptop or phone is lost or stolen on public transport",
+    "so client data could be accessed, and because phones approve logins (MFA), the attacker may get past that check too"
+   ],
+   "tip": "Two risks, each with a linked consequence. Use the MFA detail. It makes the answer stand out."
+  },
+  {
+   "sc": "Clearview Accounting has just rented a unit in an office block. It keeps clients' financial records on a server in an unlocked back room. One receptionist covers the front desk, and delivery drivers come in several times a day. Staff often work on laptops in the café downstairs and on the train, and they use their phones to approve logins (multi-factor authentication).",
+   "q": "9. Explain the checks Clearview Accounting should put in place to guard against impersonation.",
+   "m": 6,
+   "pts": [
+    "Identity verification: check photo ID badges and expiry dates, and compare the name and photo with the person",
+    "Visitor protocols: sign in, escorted at all times, temporary badges collected on exit",
+    "Confirm appointments (e.g. delivery drivers, contractors) with staff in advance before allowing entry",
+    "Access control: key cards, biometrics or unique PINs, so only pre-authorised people reach the server room",
+    "Staff training to challenge anyone unknown or without visible ID, and to know common impersonation tactics",
+    "CCTV at entrances monitored by security staff, with suspicious behaviour reported and investigated immediately"
+   ],
+   "tip": "Based on the slides' model answer. For 6 marks, cover several different types of check and link them to Clearview's delivery drivers and unlocked server room."
+  }
+ ]
+}
