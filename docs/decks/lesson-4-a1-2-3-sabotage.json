@@ -1,0 +1,649 @@
+{
+ "id": "lesson-4-a1-2-3-sabotage",
+ "title": "Lesson 4 - A1.2.3 Sabotage",
+ "code": "IT · Unit 2 · A1.2.3",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can digital systems be sabotaged and what are the consequences?",
+ "sections": [
+  {
+   "heading": "What is sabotage?",
+   "text": "Sabotage is the deliberate act of damaging, disrupting or interfering with data, systems, devices or infrastructure to cause harm or stop them working properly.",
+   "points": [
+    "Example: a hacker injects false data into a company's AI system, so it makes wrong decisions, causing financial loss or system failure",
+    "Targets: commercial, government and individuals, and it can be an act of terrorism",
+    "On a computer or network it can mean changing settings without authorisation or uploading malware",
+    "In extreme cases: destroying a company's property, or even violence",
+    "Online, libelling or doxxing a person or company can also be seen as sabotage",
+    "Damage can spread beyond the organisation to anyone whose devices link to it"
+   ]
+  },
+  {
+   "heading": "The four types of data sabotage",
+   "table": {
+    "head": [
+     "Type",
+     "What happens",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "Data tampering",
+      "Data is deliberately altered to cause damage",
+      "A service or website stops working properly or shows wrong or inappropriate content"
+     ],
+     [
+      "Data poisoning",
+      "Errors or false data are deliberately added to an AI system's training data",
+      "The AI becomes biased and makes errors"
+     ],
+     [
+      "Data destruction",
+      "Files are deleted or overwritten. Nothing is altered, it is simply removed",
+      "Systems stop running; catastrophic for users, especially if personal or financial data is lost"
+     ],
+     [
+      "Deepfakes",
+      "Video, audio, images or documents are digitally manipulated or made by AI",
+      "Mistrust, reputational damage and financial loss"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Data tampering",
+   "text": "Deliberately altering data to cause damage. A service or website may stop working as expected, or show content that is wrong or inappropriate.",
+   "points": [
+    "Tampering can also be unintentional, e.g. human error that deletes or changes critical data, but that is NOT classed as sabotage",
+    "Link to Lesson 3: front-end tampering changes what the public sees; back-end tampering changes databases"
+   ]
+  },
+  {
+   "heading": "Data poisoning",
+   "text": "AI systems are built by analysing huge amounts of training data. For example, an AI that makes music is trained on examples of instruments and melodies.",
+   "points": [
+    "Data poisoning is deliberately altering, or adding errors to, training data",
+    "This causes bias and errors in the AI system",
+    "Your slides call it the digital version of the Luddites, who smashed machines they saw as a threat"
+   ]
+  },
+  {
+   "heading": "Deepfakes and fakes",
+   "text": "A deepfake is a digitally manipulated video that changes or misrepresents an original, e.g. changing someone's face, voice or words to give a new meaning. The term now includes videos made with AI, and fakes can be audio, images or documents too.",
+   "points": [
+    "Used to cause mistrust, reputational damage or financial loss",
+    "Can trick employees into giving scammers access to company data or money",
+    "Can make a business or its staff look bad, and fake media is easy to make and share",
+    "As AI improves, fakes get harder to verify, so even internet-savvy people share fakes thinking they are real",
+    "Example: in 2023 a fake image of Pope Francis in a Balenciaga puffer jacket got over 20 million views",
+    "Tip from the slides: AI often struggles to draw human hands, which can give a fake away"
+   ]
+  },
+  {
+   "heading": "Case study: artists fighting back",
+   "text": "Your slides link to an article about Nightshade, a tool artists use against AI image generators. Glaze hides an artist's style from AI; Nightshade 'poisons' images so AI trained on them learns the wrong things.",
+   "points": [
+    "What impact do fake images have on society? Think: trust, misinformation, reputations",
+    "Why would artists want to stop their work being used to train AI? Think: copying their style without permission or payment",
+    "Are Nightshade and Glaze good or bad? Think: protecting artists vs it being data poisoning, the same technique used in sabotage"
+   ]
+  },
+  {
+   "heading": "Damage to, or hijacking of, physical systems",
+   "table": {
+    "head": [
+     "Target",
+     "Examples",
+     "Why it's a risk"
+    ],
+    "rows": [
+     [
+      "Machinery and vehicles",
+      "Power generation equipment; autonomous devices such as self-driving cars, traffic lights and central heating",
+      "Can be damaged or taken over by individuals, groups or terrorist organisations"
+     ],
+     [
+      "Internet of Things (IoT) devices",
+      "Door locks, alarm systems, baby monitors, cameras",
+      "Security is often weak, and each device is another way into a home network. Door locks can be disabled remotely"
+     ],
+     [
+      "Industrial processes",
+      "Chemical plants, factories, food distribution",
+      "One weak link in a supply chain exposes the whole chain: tampered food safety data, counterfeit products, production delays, financial crises"
+     ],
+     [
+      "Critical infrastructure",
+      "National: water, energy, communication, transport. Commercial: distribution of products and services, often linked to online shopping",
+      "An attack can cripple whole cities, so governments use top-level security to prevent terrorism"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Why critical infrastructure matters most",
+   "points": [
+    "Attacking one device affects one user. Attacking critical infrastructure affects whole cities",
+    "These are essential services: water, power, communication and transport keep people safe and healthy",
+    "Other services depend on them, e.g. hospitals need power and water",
+    "That's why it's the answer to the Flying Start question on which sabotage has the biggest impact on society"
+   ]
+  }
+ ],
+ "keyIdea": "Sabotage is deliberate damage or disruption. It can target data (tampering, poisoning, destruction, deepfakes) or physical systems (machinery, IoT devices, industrial processes, critical infrastructure), and the bigger and more essential the target, the more people are harmed.",
+ "flashcards": [
+  [
+   "Sabotage",
+   "Deliberately damaging, disrupting or interfering with data, systems, devices or infrastructure to cause harm or stop them working."
+  ],
+  [
+   "Data tampering",
+   "Deliberately altering data to cause damage, so a service or website works wrongly or shows wrong content."
+  ],
+  [
+   "Unintentional tampering",
+   "Accidentally deleting or changing data through human error. Not classed as sabotage."
+  ],
+  [
+   "Training data",
+   "The large amount of example data an AI system learns from."
+  ],
+  [
+   "Data poisoning",
+   "Deliberately altering or adding errors to AI training data, causing bias and errors in the AI."
+  ],
+  [
+   "Bias (AI)",
+   "When an AI system makes unfair or skewed decisions because of faulty or poisoned training data."
+  ],
+  [
+   "Data destruction",
+   "Deleting or overwriting files so they're gone. Nothing is altered, just removed."
+  ],
+  [
+   "Deepfake",
+   "A digitally manipulated or AI-made video that changes someone's face, voice or words to give a new meaning."
+  ],
+  [
+   "Fakes",
+   "Manipulated audio, video, images or documents used to cause mistrust, reputational damage or financial loss."
+  ],
+  [
+   "Spotting AI images",
+   "AI often struggles to draw human hands, which can give a fake image away."
+  ],
+  [
+   "Doxxing",
+   "Publishing someone's private information online to cause them harm. Can be a form of sabotage."
+  ],
+  [
+   "Libel",
+   "Publishing false statements that damage someone's reputation. Online, it can be a form of sabotage."
+  ],
+  [
+   "Nightshade",
+   "A tool artists use to 'poison' their images so AI trained on them learns the wrong things."
+  ],
+  [
+   "Glaze",
+   "A tool that hides an artist's style from AI image generators."
+  ],
+  [
+   "Autonomous device",
+   "A device that runs itself, e.g. self-driving cars, traffic light systems, central heating."
+  ],
+  [
+   "Internet of Things (IoT)",
+   "Everyday devices connected to the internet, such as door locks, alarms and baby monitors."
+  ],
+  [
+   "Why IoT is risky",
+   "Security is often weak, and every device is another access point into a home network."
+  ],
+  [
+   "Industrial process sabotage",
+   "Attacks on chemical plants, factories or food distribution systems."
+  ],
+  [
+   "Supply chain risk",
+   "One weak link can expose the whole chain: tampered safety data, counterfeit goods, delays, financial crises."
+  ],
+  [
+   "Critical infrastructure",
+   "Essential services such as water, energy, communication and transport. Attacks can cripple whole cities."
+  ],
+  [
+   "Commercial infrastructure",
+   "Systems that distribute products and services, often linked to online shopping."
+  ],
+  [
+   "Luddites",
+   "People who smashed machines they saw as a threat. Data poisoning is called their digital version."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "Which type of sabotage could have the biggest impact on society?",
+   "o": [
+    "Data poisoning",
+    "Data destruction",
+    "Deepfake media",
+    "Hacking critical infrastructure"
+   ],
+   "a": 3,
+   "e": "Critical infrastructure (water, energy, communication, transport) affects whole cities, not just one organisation."
+  },
+  {
+   "q": "Which of the following is an example of a deepfake?",
+   "o": [
+    "A corrupted database record",
+    "An AI-generated video showing a politician saying something they never said",
+    "A deleted company file",
+    "A hacked smart thermostat"
+   ],
+   "a": 1,
+   "e": "A deepfake manipulates someone's face, voice or words, often using AI."
+  },
+  {
+   "q": "What is data poisoning?",
+   "o": [
+    "Destroying data so it cannot be recovered",
+    "Stealing data from a database",
+    "Deliberately adding false or misleading data to a dataset",
+    "Encrypting data and demanding a ransom"
+   ],
+   "a": 2,
+   "e": "Data poisoning corrupts AI training data so the AI becomes biased and makes errors."
+  },
+  {
+   "q": "What is sabotage?",
+   "o": [
+    "Backing up data",
+    "Accidentally deleting a file",
+    "Buying new hardware",
+    "Deliberately damaging or disrupting data, systems, devices or infrastructure"
+   ],
+   "a": 3,
+   "e": "The key word is deliberate: sabotage is done on purpose to cause harm."
+  },
+  {
+   "q": "An employee accidentally deletes critical data. Is this sabotage?",
+   "o": [
+    "No, it's unintentional human error",
+    "Yes, all data loss is sabotage"
+   ],
+   "a": 0,
+   "e": "Your slides say unintentional tampering is not classed as sabotage, because sabotage must be deliberate."
+  },
+  {
+   "q": "Hackers delete and overwrite a company's files without changing anything first. This is:",
+   "o": [
+    "Data tampering",
+    "Data poisoning",
+    "Data destruction",
+    "A deepfake"
+   ],
+   "a": 2,
+   "e": "Data destruction removes or overwrites files. Nothing is altered, just wiped."
+  },
+  {
+   "q": "What happens to an AI system whose training data has been poisoned?",
+   "o": [
+    "It runs faster",
+    "It deletes itself",
+    "It becomes biased and makes errors",
+    "Nothing"
+   ],
+   "a": 2,
+   "e": "Poisoned training data leads to bias and errors in the AI's output."
+  },
+  {
+   "q": "Which is NOT a way deepfakes harm businesses?",
+   "o": [
+    "Tricking staff into giving scammers money or data",
+    "Damaging the company's reputation",
+    "Making it harder to know what's real",
+    "Automatically backing up company files"
+   ],
+   "a": 3,
+   "e": "Deepfakes cause mistrust, reputational damage and financial loss. They don't back anything up."
+  },
+  {
+   "q": "According to your slides, what can often give away an AI-generated image?",
+   "o": [
+    "The colours are too bright",
+    "Human hands look wrong",
+    "It has no background",
+    "It is always black and white"
+   ],
+   "a": 1,
+   "e": "AI currently struggles to draw human hands, as the Pope image shows."
+  },
+  {
+   "q": "Why are IoT devices like baby monitors and door locks easy targets?",
+   "o": [
+    "Their security is often weak and they add access points to a home network",
+    "They never connect to the internet",
+    "They are made of metal",
+    "They are always switched off"
+   ],
+   "a": 0,
+   "e": "Weak security plus more access points makes IoT devices attractive to criminals."
+  },
+  {
+   "q": "A self-driving car is an example of:",
+   "o": [
+    "An autonomous device",
+    "A deepfake",
+    "Data poisoning",
+    "Commercial infrastructure"
+   ],
+   "a": 0,
+   "e": "Autonomous devices include self-driving cars, traffic light systems and central heating."
+  },
+  {
+   "q": "What can happen when one link in a food supply chain is attacked?",
+   "o": [
+    "Only that one company is affected",
+    "Food becomes cheaper",
+    "Nothing, food isn't digital",
+    "The whole chain is exposed: tampered safety data, counterfeit products, delays"
+   ],
+   "a": 3,
+   "e": "One vulnerable link can expose the whole supply chain to interference."
+  },
+  {
+   "q": "Which of these is national critical infrastructure?",
+   "o": [
+    "A games console",
+    "A smart speaker",
+    "The water supply",
+    "A school website"
+   ],
+   "a": 2,
+   "e": "Critical infrastructure includes water, energy, communication and transport."
+  },
+  {
+   "q": "Why is attacking critical infrastructure more serious than attacking a single device?",
+   "o": [
+    "It is easier to fix",
+    "Single devices are more expensive",
+    "It can cripple whole cities and put many people's safety at risk",
+    "It isn't more serious"
+   ],
+   "a": 2,
+   "e": "One device affects one user; infrastructure affects everyone who relies on that essential service."
+  },
+  {
+   "q": "Publishing someone's private information online to harm them is called:",
+   "o": [
+    "Doxxing",
+    "Data poisoning",
+    "Glazing",
+    "Encryption"
+   ],
+   "a": 0,
+   "e": "Doxxing (and libel) can be seen as sabotage on the internet."
+  },
+  {
+   "q": "What does the tool Nightshade do?",
+   "o": [
+    "Speeds up AI training",
+    "Poisons images so AI trained on them learns the wrong things",
+    "Deletes deepfakes from the internet",
+    "Blocks DDoS attacks"
+   ],
+   "a": 1,
+   "e": "Artists use it to protect their work, and it works by poisoning data, the same technique used in sabotage."
+  }
+ ],
+ "apply": {
+  "title": "Spot the sabotage",
+  "intro": "Read each situation and pick the type of sabotage or the best answer. In the exam, link your answer to the scenario.",
+  "items": [
+   {
+    "task": "A hacker changes the prices on an online shop so every product shows £0.01.",
+    "o": [
+     "Data tampering",
+     "Data destruction",
+     "Deepfake",
+     "Data poisoning"
+    ],
+    "a": 0,
+    "e": "The data was deliberately altered so the site works wrongly: data tampering."
+   },
+   {
+    "task": "Someone feeds thousands of mislabelled photos into a company's AI system so it starts recognising cats as dogs.",
+    "o": [
+     "Data destruction",
+     "Data poisoning",
+     "Front-end tampering",
+     "Doxxing"
+    ],
+    "a": 1,
+    "e": "Corrupting AI training data causes errors: data poisoning."
+   },
+   {
+    "task": "A hospital's patient records are wiped and overwritten, and the system won't start.",
+    "o": [
+     "Deepfake",
+     "Data poisoning",
+     "Data destruction",
+     "IoT hijack"
+    ],
+    "a": 2,
+    "e": "Files deleted or overwritten, not altered: data destruction."
+   },
+   {
+    "task": "A finance worker gets a video call from what looks and sounds like their boss, asking for an urgent £50,000 transfer. It wasn't really the boss.",
+    "o": [
+     "Data destruction",
+     "Deepfake",
+     "Data poisoning",
+     "Industrial process attack"
+    ],
+    "a": 1,
+    "e": "AI-faked video and voice used to trick staff into handing over money is a deepfake."
+   },
+   {
+    "task": "A family's smart door lock is unlocked remotely by a criminal while they're on holiday.",
+    "o": [
+     "Hijacking an IoT device",
+     "Data poisoning",
+     "Data destruction",
+     "Libel"
+    ],
+    "a": 0,
+    "e": "Internet-connected door locks often have weak security and can be disabled remotely."
+   },
+   {
+    "task": "Hackers take control of a city's traffic light system and turn every light green.",
+    "o": [
+     "Deepfake",
+     "Hijacking machinery / autonomous devices",
+     "Data poisoning",
+     "Doxxing"
+    ],
+    "a": 1,
+    "e": "Traffic light systems are autonomous devices that can be hijacked as an act of sabotage."
+   },
+   {
+    "task": "Food safety test results at a supplier are secretly changed, so unsafe food passes inspection.",
+    "o": [
+     "Sabotage of an industrial process (supply chain)",
+     "A deepfake",
+     "Data destruction",
+     "IoT hijack"
+    ],
+    "a": 0,
+    "e": "Tampering with food safety and testing data is a named risk to food supply chains."
+   },
+   {
+    "task": "A national energy company is attacked, and power goes out across several cities.",
+    "o": [
+     "Commercial IoT attack",
+     "Attack on critical infrastructure",
+     "Data poisoning",
+     "Front-end tampering"
+    ],
+    "a": 1,
+    "e": "Energy is critical infrastructure, and attacks can cripple whole cities."
+   },
+   {
+    "task": "A worker accidentally deletes a key spreadsheet while tidying up files. Is it sabotage?",
+    "o": [
+     "Yes, data destruction",
+     "No, it's unintentional human error",
+     "Yes, a deepfake",
+     "Yes, data poisoning"
+    ],
+    "a": 1,
+    "e": "Sabotage must be deliberate. Accidental deletion is human error."
+   },
+   {
+    "task": "A fake photo of a celebrity endorsing a scam product spreads online, and fans lose money.",
+    "o": [
+     "Data destruction",
+     "Deepfake / fake image",
+     "IoT hijack",
+     "Data poisoning"
+    ],
+    "a": 1,
+    "e": "Fake images cause mistrust, reputational damage and financial loss."
+   },
+   {
+    "task": "Someone posts a rival business owner's home address and phone number online to harass them.",
+    "o": [
+     "Doxxing",
+     "Data poisoning",
+     "Data destruction",
+     "Critical infrastructure attack"
+    ],
+    "a": 0,
+    "e": "Doxxing is listed on your slides as a form of online sabotage."
+   },
+   {
+    "task": "Which target would cause the MOST harm to society if sabotaged?",
+    "o": [
+     "One person's smart speaker",
+     "A company's website colours",
+     "A country's water supply",
+     "A single office printer"
+    ],
+    "a": 2,
+    "e": "Water is critical infrastructure, so an attack affects whole populations."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term sabotage.",
+   "m": 2,
+   "pts": [
+    "The deliberate act of damaging, disrupting or interfering with data, systems, devices or infrastructure",
+    "to cause harm or stop them working properly"
+   ],
+   "tip": "Use the word \"deliberate\". It's what makes it sabotage rather than an accident."
+  },
+  {
+   "sc": "",
+   "q": "2. What is data tampering?",
+   "m": 2,
+   "pts": [
+    "Deliberately altering data to cause damage",
+    "so a service or website doesn't work as expected, or shows wrong or inappropriate content"
+   ],
+   "tip": "Definition + effect. Bonus understanding: accidental changes are human error, not sabotage."
+  },
+  {
+   "sc": "",
+   "q": "3. Describe what is meant by data poisoning.",
+   "m": 2,
+   "pts": [
+    "Deliberately altering, or adding errors or false data to, the training data used by an AI system",
+    "which causes the AI to become biased and make errors"
+   ],
+   "tip": "Mention AI training data. That's what makes it poisoning rather than general tampering."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain one difference between data tampering and data destruction.",
+   "m": 2,
+   "pts": [
+    "Data tampering changes (alters) the data so it is wrong",
+    "whereas data destruction deletes or overwrites the data so it is gone completely"
+   ],
+   "tip": "Both sides, joined with \"whereas\"."
+  },
+  {
+   "sc": "",
+   "q": "5. Give one example of a deepfake and explain why it can be harmful.",
+   "m": 3,
+   "pts": [
+    "Example, e.g. an AI-generated video of a politician saying something they never said",
+    "Harm, e.g. people believe and share it, spreading misinformation and mistrust",
+    "Consequence, e.g. damages the person's or organisation's reputation, or tricks people into losing money"
+   ],
+   "tip": "1 mark for the example, then explain the harm AND what it leads to."
+  },
+  {
+   "sc": "",
+   "q": "6. Explain why Internet of Things (IoT) devices in the home are a target for sabotage.",
+   "m": 2,
+   "pts": [
+    "Their security is often weak",
+    "so criminals can take control, e.g. disabling door locks, and each device is another access point into the home network"
+   ],
+   "tip": "Point (weak security) + linked consequence (more ways in / devices hijacked)."
+  },
+  {
+   "sc": "Riverside Water supplies drinking water to 400,000 homes. Its treatment plant is run by internet-connected sensors and control systems. An AI system, trained on years of sensor data, predicts when pipes need repairing. Finance staff often approve payments after receiving voice messages or video calls from managers.",
+   "q": "7. Explain how data poisoning could affect Riverside Water's AI system.",
+   "m": 3,
+   "pts": [
+    "An attacker deliberately adds false or wrong sensor data to the AI's training data",
+    "so the AI becomes biased and makes errors in its predictions",
+    "which means pipes that need repairing are missed (leaks, unsafe supply) or money is wasted on unneeded repairs"
+   ],
+   "tip": "Cause → effect on the AI → effect on Riverside. Use the scenario's pipe repairs."
+  },
+  {
+   "sc": "Riverside Water supplies drinking water to 400,000 homes. Its treatment plant is run by internet-connected sensors and control systems. An AI system, trained on years of sensor data, predicts when pipes need repairing. Finance staff often approve payments after receiving voice messages or video calls from managers.",
+   "q": "8. Explain how a deepfake could be used to steal money from Riverside Water.",
+   "m": 3,
+   "pts": [
+    "A criminal creates a fake voice message or video call that looks and sounds like a manager",
+    "asking finance staff to approve an urgent payment",
+    "Because staff already approve payments this way, they are tricked and the money goes to the criminal"
+   ],
+   "tip": "The scenario tells you staff approve payments from voice and video. That's the weakness to use."
+  },
+  {
+   "sc": "Riverside Water supplies drinking water to 400,000 homes. Its treatment plant is run by internet-connected sensors and control systems. An AI system, trained on years of sensor data, predicts when pipes need repairing. Finance staff often approve payments after receiving voice messages or video calls from managers.",
+   "q": "9. Explain why sabotaging Riverside Water is more serious than sabotaging a single device.",
+   "m": 4,
+   "pts": [
+    "Riverside Water is critical infrastructure",
+    "so an attack could affect 400,000 homes, not just one user",
+    "Water is an essential service",
+    "so unsafe or no water could put people's health at risk and disrupt other services such as hospitals"
+   ],
+   "tip": "Two points with reasons. Use the numbers from the scenario (400,000 homes)."
+  },
+  {
+   "sc": "Riverside Water supplies drinking water to 400,000 homes. Its treatment plant is run by internet-connected sensors and control systems. An AI system, trained on years of sensor data, predicts when pipes need repairing. Finance staff often approve payments after receiving voice messages or video calls from managers.",
+   "q": "10. Assess which form of sabotage poses the greatest risk to Riverside Water.",
+   "m": 6,
+   "pts": [
+    "Identifies a form of sabotage as the greatest risk, e.g. hijacking the internet-connected control systems",
+    "Explains how it could happen using the scenario (internet-connected sensors and controls)",
+    "Explains the impact: unsafe or no water for 400,000 homes, a risk to health and safety",
+    "Compares with another form, e.g. a deepfake payment scam causes financial loss but doesn't endanger the public",
+    "Considers a third form, e.g. data poisoning of the AI could cause failures more slowly and less obviously",
+    "Justified conclusion: the greatest risk is the one with the biggest impact on public safety, with a reason"
+   ],
+   "tip": "Top-grade \"assess\" = compare at least two forms of sabotage, weigh likelihood AND impact, use the scenario, and give a clear judgement."
+  }
+ ]
+}
