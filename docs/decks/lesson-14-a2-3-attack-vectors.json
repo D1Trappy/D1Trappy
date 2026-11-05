@@ -1,0 +1,743 @@
+{
+ "id": "lesson-14-a2-3-attack-vectors",
+ "title": "Lesson 14 - A2.3 Attack Vectors (Independent Study)",
+ "code": "IT · Unit 2 · A2.3.1–A2.3.3",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can an attacker find a way into a network?",
+ "sections": [
+  {
+   "heading": "What is an attack vector?",
+   "text": "An attack vector is the route (path) or method an attacker uses to reach a system or a weakness.",
+   "points": [
+    "Example: an attacker sets up a fake Wi-Fi hotspot with a trusted name. A student connects, and now the attacker can see their data",
+    "Application: a college has Wi-Fi, an internet connection, and routers and switches. Each one is a possible route into the network",
+    "This lesson covers three groups: wireless (A2.3.1), the internet connection (A2.3.2) and internal network devices (A2.3.3)"
+   ]
+  },
+  {
+   "heading": "Threat, vulnerability or attack vector?",
+   "table": {
+    "head": [
+     "Term",
+     "Meaning",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Threat",
+      "The danger: who or what wants to cause harm",
+      "Someone trying to steal student data"
+     ],
+     [
+      "Vulnerability",
+      "A weakness an attacker can use",
+      "A router that hasn't been updated"
+     ],
+     [
+      "Attack vector",
+      "The route the attacker uses to reach the weakness",
+      "The college's internet connection"
+     ]
+    ]
+   },
+   "points": [
+    "Think of a burglar: the burglar is the threat, a broken window lock is the vulnerability, and the window is the attack vector (the way in)",
+    "Check-in: malware is sent through a weak college Wi-Fi network to steal student data. Threat = the attacker trying to steal student data; vulnerability = the weak Wi-Fi security; attack vector = the Wi-Fi network"
+   ]
+  },
+  {
+   "heading": "Wireless attack vectors (A2.3.1)",
+   "table": {
+    "head": [
+     "Wireless vector",
+     "Used for",
+     "How it can be attacked"
+    ],
+    "rows": [
+     [
+      "Wi-Fi (IEEE 802.11)",
+      "Internet at home and school",
+      "Fake access points, eavesdropping"
+     ],
+     [
+      "Bluetooth",
+      "Headphones, keyboards",
+      "Unprotected pairing, malicious files"
+     ],
+     [
+      "Cellular",
+      "Mobile phones (4G / 5G)",
+      "Rogue base stations, SIM weaknesses"
+     ],
+     [
+      "Satellite link",
+      "Ships, planes, remote places",
+      "Long-distance signals can be intercepted"
+     ],
+     [
+      "Infrared (IR)",
+      "TV remotes, older devices",
+      "Signals captured and replayed"
+     ],
+     [
+      "NFC",
+      "Contactless payments",
+      "Skimming, relay attacks"
+     ],
+     [
+      "RFID",
+      "Door entry cards, tags",
+      "Eavesdropping, cloning tags"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Wi-Fi: a route through the air",
+   "points": [
+    "A fake access point pretends to be a trusted network",
+    "Weak security (no password or old encryption) lets the wrong people in",
+    "Eavesdropping: an attacker listens to data sent through the air",
+    "Deauthentication (deauth) attack, step 1: the attacker sends fake 'disconnect' messages (deauth frames)",
+    "Step 2: the device drops off the Wi-Fi",
+    "Step 3: the device reconnects automatically",
+    "Step 4: while it reconnects, the attacker captures useful login (authentication) information",
+    "Key idea: the attacker is attacking the CONNECTION, not always the device itself"
+   ]
+  },
+  {
+   "heading": "The internet connection (A2.3.2)",
+   "text": "The connection device links the college network to the internet. Think about the connection type (copper, fibre, Wi-Fi, cellular/5G) and the connection device. Attackers target it because it links the inside network to the outside world, almost every outside attack has to cross it, and a badly set-up or out-of-date device is an easy way in.",
+   "table": {
+    "head": [
+     "",
+     "Copper cable",
+     "Optical fibre"
+    ],
+    "rows": [
+     [
+      "Carries data as",
+      "Electrical signals",
+      "Pulses of light"
+     ],
+     [
+      "Tapping",
+      "With physical access, the line can be tapped and data intercepted",
+      "Harder to tap, but with physical access it can still be spliced (cut into)"
+     ],
+     [
+      "Damage",
+      "Cutting or damaging it stops the connection",
+      "Cutting it also stops the connection"
+     ]
+    ]
+   },
+   "points": [
+    "Key idea: 'harder to attack' does NOT mean 'impossible to attack'. If fibre is hard to tap, attackers may go after a wireless link instead"
+   ]
+  },
+  {
+   "heading": "Internet connection devices",
+   "table": {
+    "head": [
+     "Device",
+     "What it does",
+     "Risk"
+    ],
+    "rows": [
+     [
+      "Modem / router-modem",
+      "Links the organisation to its internet provider (cable or fibre)",
+      "Poor set-up (configuration) or missing updates"
+     ],
+     [
+      "Wireless router",
+      "Gives internet access AND Wi-Fi inside the building",
+      "Default passwords, old firmware or weak encryption"
+     ],
+     [
+      "Cellular / 5G router",
+      "Gets the internet through the mobile network",
+      "Default settings or missing security updates"
+     ]
+    ]
+   },
+   "points": [
+    "Check-in: a shop's 5G router still uses the password printed on its label. That's a risk because anyone who sees the label, or looks up the default online, can log in and change its settings",
+    "An unpatched router is a risk even if users have strong passwords, because the attacker can exploit the firmware weakness instead of guessing passwords"
+   ]
+  },
+  {
+   "heading": "Internal network access devices (A2.3.3)",
+   "table": {
+    "head": [
+     "Device",
+     "What it does",
+     "If it's taken over"
+    ],
+    "rows": [
+     [
+      "Router",
+      "Sends data between networks, or parts of a network",
+      "Could redirect traffic, read data or help the attacker move deeper in"
+     ],
+     [
+      "Switch",
+      "Connects devices together inside one part of the network",
+      "A compromised managed switch could let an attacker watch traffic or change port settings"
+     ],
+     [
+      "Wireless access point",
+      "Lets devices join the network using Wi-Fi",
+      "A rogue or badly set-up one can spread the network outside the building"
+     ]
+    ]
+   },
+   "points": [
+    "Key idea: these sit in the MIDDLE of the network, so if one is taken over, MANY devices are affected",
+    "Stretch: a compromised network device can be more serious than one compromised laptop BECAUSE a switch or router connects many devices, WHICH MEANS the attacker can watch or redirect everyone's traffic, SO the organisation could suffer a much wider data breach"
+   ]
+  }
+ ],
+ "keyIdea": "A threat needs a route in: the attack vector. Wireless links (Wi-Fi, Bluetooth, NFC, RFID…), the internet connection and its devices, and internal routers, switches and access points are all routes, and one weak device in the middle of a network can put every device at risk.",
+ "flashcards": [
+  [
+   "Attack vector",
+   "The route (path) or method an attacker uses to reach a system or a weakness."
+  ],
+  [
+   "Threat vs vulnerability vs attack vector",
+   "Threat = who/what wants to cause harm; vulnerability = the weakness; attack vector = the route in."
+  ],
+  [
+   "Burglar analogy",
+   "Burglar = threat; broken window lock = vulnerability; the window = attack vector."
+  ],
+  [
+   "Wi-Fi (IEEE 802.11)",
+   "Wireless networking. Attacked with fake access points and eavesdropping."
+  ],
+  [
+   "Bluetooth",
+   "Short-range wireless for headphones and keyboards. Risks: unprotected pairing, malicious files."
+  ],
+  [
+   "Cellular (4G/5G)",
+   "Mobile networks. Risks: rogue base stations, SIM weaknesses."
+  ],
+  [
+   "Satellite link",
+   "Used by ships, planes and remote places. Long-distance signals can be intercepted."
+  ],
+  [
+   "Infrared (IR)",
+   "Used by TV remotes and older devices. Signals can be captured and replayed."
+  ],
+  [
+   "NFC",
+   "Near-field communication, used for contactless payments. Risks: skimming, relay attacks."
+  ],
+  [
+   "RFID",
+   "Used in door entry cards and tags. Risks: eavesdropping, cloning tags."
+  ],
+  [
+   "Fake (rogue) access point",
+   "A Wi-Fi hotspot pretending to be a trusted network, so the attacker can see connected users' data."
+  ],
+  [
+   "Eavesdropping",
+   "Listening to data sent through the air."
+  ],
+  [
+   "Deauthentication attack",
+   "Fake 'disconnect' frames knock a device off Wi-Fi; as it reconnects, the attacker captures login information."
+  ],
+  [
+   "Copper vs fibre",
+   "Copper = electrical signals, can be tapped; fibre = light pulses, harder to tap but can be spliced."
+  ],
+  [
+   "Why target the internet connection?",
+   "It links the inside network to the outside world, and almost every outside attack crosses it."
+  ],
+  [
+   "Modem / router-modem",
+   "Links the organisation to its internet provider. Risk: poor set-up or missing updates."
+  ],
+  [
+   "Wireless router",
+   "Gives internet access and Wi-Fi. Risks: default passwords, old firmware, weak encryption."
+  ],
+  [
+   "Firmware",
+   "The built-in software in a device such as a router or access point. It needs updating."
+  ],
+  [
+   "Router (internal)",
+   "Sends data between networks. If taken over: redirects traffic, reads data, helps attackers move deeper."
+  ],
+  [
+   "Switch",
+   "Connects devices in one part of a network. If compromised: attacker can watch traffic or change port settings."
+  ],
+  [
+   "Wireless access point",
+   "Lets devices join by Wi-Fi. A rogue or badly placed one can spread the network outside the building."
+  ],
+  [
+   "Why network devices matter",
+   "They sit in the middle of the network, so one compromised device affects many others."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is a vulnerability?",
+   "o": [
+    "A weakness that an attacker can use",
+    "The route an attacker takes",
+    "The attacker",
+    "A firewall"
+   ],
+   "a": 0,
+   "e": "Vulnerability = weakness. The route is the attack vector."
+  },
+  {
+   "q": "Which TWO are ways a device can connect to a network without a cable?",
+   "o": [
+    "Copper and fibre",
+    "USB and HDMI",
+    "Ethernet and power",
+    "Wi-Fi and Bluetooth"
+   ],
+   "a": 3,
+   "e": "Also cellular, NFC, RFID, infrared and satellite."
+  },
+  {
+   "q": "What is an attack vector?",
+   "o": [
+    "A type of antivirus",
+    "A strong password",
+    "The route or method an attacker uses to reach a system or weakness",
+    "A backup"
+   ],
+   "a": 2,
+   "e": "It's the way in."
+  },
+  {
+   "q": "In the burglar analogy, what is the attack vector?",
+   "o": [
+    "The burglar",
+    "The window",
+    "The broken window lock",
+    "The police"
+   ],
+   "a": 1,
+   "e": "Burglar = threat, broken lock = vulnerability, window = attack vector."
+  },
+  {
+   "q": "Which wireless vector do contactless bank cards use?",
+   "o": [
+    "NFC",
+    "Infrared",
+    "Satellite",
+    "Bluetooth"
+   ],
+   "a": 0,
+   "e": "NFC (near-field communication). Risks: skimming and relay attacks."
+  },
+  {
+   "q": "Give one risk of leaving Bluetooth switched on in a public place.",
+   "o": [
+    "The battery explodes",
+    "It blocks Wi-Fi forever",
+    "No risk",
+    "It may accept unwanted connections or malicious files"
+   ],
+   "a": 3,
+   "e": "Unprotected pairing can let attackers connect or send files."
+  },
+  {
+   "q": "Why can satellite signals be intercepted?",
+   "o": [
+    "They use copper cable",
+    "They are always unencrypted on purpose",
+    "They travel long distances through the air, so others can pick them up",
+    "They can't be"
+   ],
+   "a": 2,
+   "e": "Long-distance wireless signals cover a wide area."
+  },
+  {
+   "q": "In a deauthentication attack, what does the attacker send?",
+   "o": [
+    "A phishing email",
+    "Fake 'disconnect' messages (deauth frames)",
+    "A USB stick",
+    "A software patch"
+   ],
+   "a": 1,
+   "e": "The device drops off, reconnects, and the attacker captures login information."
+  },
+  {
+   "q": "Why is optical fibre harder to tap than copper?",
+   "o": [
+    "It carries data as light pulses, not electrical signals",
+    "It is invisible",
+    "It has no data",
+    "It is always underground"
+   ],
+   "a": 0,
+   "e": "Harder, but not impossible: it can still be spliced with physical access."
+  },
+  {
+   "q": "What does a modem / router-modem connect an organisation to?",
+   "o": [
+    "Its printer",
+    "Its staff car park",
+    "Its CCTV only",
+    "Its internet provider"
+   ],
+   "a": 3,
+   "e": "It links the building to the internet provider."
+  },
+  {
+   "q": "Give two reasons a wireless router might be easy to attack.",
+   "o": [
+    "It's switched off and unplugged",
+    "It has strong encryption and updates",
+    "Default passwords and old firmware",
+    "It's in a locked room"
+   ],
+   "a": 2,
+   "e": "Also weak encryption."
+  },
+  {
+   "q": "A student connects to a fake Wi-Fi access point. What attack vector is being used?",
+   "o": [
+    "Copper cable",
+    "Wireless (Wi-Fi)",
+    "Infrared",
+    "Physical theft"
+   ],
+   "a": 1,
+   "e": "One risk: the attacker can see their data, including logins."
+  },
+  {
+   "q": "Why can an unpatched wireless router be a risk even if users have strong passwords?",
+   "o": [
+    "Attackers can exploit the firmware weakness without needing passwords",
+    "Strong passwords make it slower",
+    "Unpatched routers are safer",
+    "It can't be a risk"
+   ],
+   "a": 0,
+   "e": "The vulnerability is in the device itself."
+  },
+  {
+   "q": "A switch inside a college network is compromised. How could this affect other devices?",
+   "o": [
+    "Only the switch is affected",
+    "It makes them faster",
+    "No effect",
+    "The attacker could watch their traffic or change port settings"
+   ],
+   "a": 3,
+   "e": "Switches connect many devices, so one compromise affects them all."
+  },
+  {
+   "q": "Which internal device lets devices join the network using Wi-Fi?",
+   "o": [
+    "Switch",
+    "Modem",
+    "Wireless access point",
+    "Copper cable"
+   ],
+   "a": 2,
+   "e": "A badly set-up one can spread the network outside the building."
+  },
+  {
+   "q": "Why do attackers target an organisation's internet connection?",
+   "o": [
+    "It's always switched off",
+    "It links the inside network to the outside world, and most outside attacks cross it",
+    "It has no data",
+    "It's the cheapest device"
+   ],
+   "a": 1,
+   "e": "It's the main gateway in and out."
+  }
+ ],
+ "apply": {
+  "title": "Find the way in",
+  "intro": "Pick the attack vector, the type of term, or the best fix for each situation.",
+  "items": [
+   {
+    "task": "A criminal group wants to steal a hospital's patient records. Threat, vulnerability or attack vector?",
+    "o": [
+     "Threat",
+     "Vulnerability",
+     "Attack vector"
+    ],
+    "a": 0,
+    "e": "Who or what wants to cause harm = threat."
+   },
+   {
+    "task": "A switch in the comms room hasn't had a firmware update for three years. Threat, vulnerability or attack vector?",
+    "o": [
+     "Threat",
+     "Vulnerability",
+     "Attack vector"
+    ],
+    "a": 1,
+    "e": "A weakness an attacker can use = vulnerability."
+   },
+   {
+    "task": "Malware reaches a laptop through a Bluetooth connection left on in public. Threat, vulnerability or attack vector?",
+    "o": [
+     "Threat",
+     "Vulnerability",
+     "Attack vector"
+    ],
+    "a": 2,
+    "e": "The route used = attack vector (Bluetooth)."
+   },
+   {
+    "task": "Someone copies the signal from an office door entry card and makes a clone.",
+    "o": [
+     "Infrared replay",
+     "Copper tapping",
+     "RFID cloning",
+     "Deauth attack"
+    ],
+    "a": 2,
+    "e": "RFID door cards can be eavesdropped on and cloned."
+   },
+   {
+    "task": "A hidden device near a till relays a contactless card payment to a criminal's reader.",
+    "o": [
+     "Bluetooth pairing",
+     "NFC relay attack",
+     "Satellite interception",
+     "Switch compromise"
+    ],
+    "a": 1,
+    "e": "NFC is used for contactless payments; relay attacks pass the signal on."
+   },
+   {
+    "task": "A fake mobile phone mast tricks nearby phones into connecting to it.",
+    "o": [
+     "Rogue base station (cellular)",
+     "Fake RFID tag",
+     "Infrared replay",
+     "Fibre splice"
+    ],
+    "a": 0,
+    "e": "Cellular networks can be attacked with rogue base stations."
+   },
+   {
+    "task": "Students' laptops keep dropping off the Wi-Fi and reconnecting, and an attacker captures login data while they reconnect.",
+    "o": [
+     "SQL injection",
+     "Copper tapping",
+     "RFID cloning",
+     "Deauthentication attack"
+    ],
+    "a": 3,
+    "e": "Fake disconnect frames force reconnection, exposing authentication information."
+   },
+   {
+    "task": "A shop's 5G router still uses the password printed on its label. What's the best fix?",
+    "o": [
+     "Hide the label behind a poster",
+     "Move the router to the window",
+     "Change it to a strong, unique admin password and update the firmware",
+     "Nothing"
+    ],
+    "a": 2,
+    "e": "Default credentials are easy to find. Change them and keep the device updated."
+   },
+   {
+    "task": "A managed switch linking every office PC is in an unlocked cupboard. What's the risk?",
+    "o": [
+     "The cupboard gets dusty",
+     "An attacker could compromise it and watch or change traffic for all those PCs",
+     "No risk",
+     "Only the switch is affected"
+    ],
+    "a": 1,
+    "e": "Internal devices sit in the middle of the network, so many devices are affected."
+   },
+   {
+    "task": "An access point on an outside wall sends Wi-Fi into the car park. What's the risk?",
+    "o": [
+     "Someone outside the building could try to connect to the network",
+     "The car park gets faster internet",
+     "No risk",
+     "Cars get infected"
+    ],
+    "a": 0,
+    "e": "A badly placed access point spreads the network outside the building."
+   },
+   {
+    "task": "Copper vs fibre: an attacker with physical access wants to intercept data most easily. Which cable is easier to tap?",
+    "o": [
+     "Optical fibre",
+     "Copper",
+     "They are equally impossible"
+    ],
+    "a": 1,
+    "e": "Copper carries electrical signals and can be tapped; fibre is harder (but can be spliced)."
+   },
+   {
+    "task": "Why can a compromised router be more serious than one compromised laptop?",
+    "o": [
+     "Routers are more expensive",
+     "Laptops can't be hacked",
+     "The router connects many devices, so the attacker can redirect or read everyone's traffic",
+     "It isn't more serious"
+    ],
+    "a": 2,
+    "e": "Internal devices sit in the middle of the network: one takeover affects many."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1(a). State what is meant by an attack vector.",
+   "m": 1,
+   "pts": [
+    "The route or method an attacker uses to reach a system or weakness"
+   ],
+   "tip": "\"State\" = one clear sentence."
+  },
+  {
+   "sc": "",
+   "q": "1(b). Give two wireless attack vectors, other than Wi-Fi.",
+   "m": 2,
+   "pts": [
+    "Any one: Bluetooth / cellular (4G/5G) / satellite / infrared / NFC / RFID",
+    "A second, different one from the list"
+   ],
+   "tip": "Don't say Wi-Fi: the question rules it out."
+  },
+  {
+   "sc": "",
+   "q": "1(c). Explain one reason why optical fibre is harder for an attacker to tap than copper cable.",
+   "m": 2,
+   "pts": [
+    "Fibre carries data as pulses of light, not electrical signals like copper",
+    "so the signal can't easily be intercepted by tapping the line; the cable would have to be spliced (cut into)"
+   ],
+   "tip": "Point + linked reason with \"…so…\"."
+  },
+  {
+   "sc": "",
+   "q": "1(d). A school's wireless router still uses its default admin password. Explain why this is a vulnerability.",
+   "m": 2,
+   "pts": [
+    "Default passwords are printed on the device or published online, so they are easy to find or guess",
+    "which means an attacker could log in as admin and change settings, read traffic or get into the network"
+   ],
+   "tip": "Why it's easy to find + what the attacker could then do."
+  },
+  {
+   "sc": "",
+   "q": "2. State whether each describes a threat, a vulnerability or an attack vector. (i) A criminal group wants to steal a hospital's patient records. (ii) A switch in the comms room has not had a firmware update for three years. (iii) Malware reaches a laptop through a Bluetooth connection left on in public.",
+   "m": 3,
+   "pts": [
+    "(i) Threat",
+    "(ii) Vulnerability",
+    "(iii) Attack vector"
+   ],
+   "tip": "Use the burglar analogy: who (threat), what weakness (vulnerability), which way in (attack vector)."
+  },
+  {
+   "sc": "",
+   "q": "3. Describe how a deauthentication attack can be used against a Wi-Fi network.",
+   "m": 3,
+   "pts": [
+    "The attacker sends fake 'disconnect' messages (deauthentication frames) to a device",
+    "The device drops off the Wi-Fi and then automatically reconnects",
+    "While it reconnects, the attacker captures login (authentication) information"
+   ],
+   "tip": "\"Describe\" = the steps in order. 3 marks = 3 clear points."
+  },
+  {
+   "sc": "A college has student Wi-Fi and staff Wi-Fi, a 5G backup router, several switches and wireless access points. One access point has old firmware and a weak admin password.",
+   "q": "Case study (a). Identify the attack vector and the vulnerability, explain one possible impact, and suggest one sensible security improvement.",
+   "m": 4,
+   "pts": [
+    "Attack vector: the wireless access point (Wi-Fi)",
+    "Vulnerability: old firmware and a weak admin password",
+    "Impact, e.g. an attacker takes over the access point and gets into the college network to watch traffic or steal student data",
+    "Improvement, e.g. update the firmware and set a strong, unique admin password"
+   ],
+   "tip": "From the slides' college case study. One mark for each of the four parts."
+  },
+  {
+   "sc": "A college has student Wi-Fi and staff Wi-Fi, a 5G backup router, several switches and wireless access points. One access point has old firmware and a weak admin password.",
+   "q": "Case study (b). Explain why a compromised internal network device can be more serious than one compromised laptop.",
+   "m": 3,
+   "pts": [
+    "Because a switch, router or access point connects many devices, while a laptop is just one",
+    "which means the attacker can watch, redirect or change traffic for every connected device",
+    "so the organisation could suffer a much wider data breach or disruption"
+   ],
+   "tip": "The slides' stretch task: Because… which means… so the organisation could…"
+  },
+  {
+   "sc": "Meridian Parcels is a courier company with 60 staff and a busy warehouse. Broadband comes in over an old copper line to a modem-router, which still uses the default admin password on its label. Drivers connect company tablets to an open guest Wi-Fi network. Staff use RFID swipe cards to enter the warehouse; some cards are over 10 years old. One managed switch, in an unlocked cupboard, links every office computer. A wireless access point on an outside wall sends its signal into the staff car park.",
+   "q": "4(a). Identify one wireless attack vector from the scenario.",
+   "m": 1,
+   "pts": [
+    "Any one: the open guest Wi-Fi / the RFID swipe cards / the wireless access point signal in the car park"
+   ],
+   "tip": "\"Identify\" = pick it straight from the scenario."
+  },
+  {
+   "sc": "Meridian Parcels is a courier company with 60 staff and a busy warehouse. Broadband comes in over an old copper line to a modem-router, which still uses the default admin password on its label. Drivers connect company tablets to an open guest Wi-Fi network. Staff use RFID swipe cards to enter the warehouse; some cards are over 10 years old. One managed switch, in an unlocked cupboard, links every office computer. A wireless access point on an outside wall sends its signal into the staff car park.",
+   "q": "4(b). Identify one internal network access device that could be used as an attack vector.",
+   "m": 1,
+   "pts": [
+    "The managed switch (accept: the wireless access point)"
+   ],
+   "tip": "Internal devices: router, switch, wireless access point."
+  },
+  {
+   "sc": "Meridian Parcels is a courier company with 60 staff and a busy warehouse. Broadband comes in over an old copper line to a modem-router, which still uses the default admin password on its label. Drivers connect company tablets to an open guest Wi-Fi network. Staff use RFID swipe cards to enter the warehouse; some cards are over 10 years old. One managed switch, in an unlocked cupboard, links every office computer. A wireless access point on an outside wall sends its signal into the staff car park.",
+   "q": "4(c). Explain one vulnerability of Meridian's modem-router.",
+   "m": 2,
+   "pts": [
+    "It still uses the default admin password printed on its label",
+    "so anyone who sees the label, or looks up the default online, could log in and change its settings or get into the network"
+   ],
+   "tip": "Use the scenario's exact detail: 'the default admin password on its label'."
+  },
+  {
+   "sc": "Meridian Parcels is a courier company with 60 staff and a busy warehouse. Broadband comes in over an old copper line to a modem-router, which still uses the default admin password on its label. Drivers connect company tablets to an open guest Wi-Fi network. Staff use RFID swipe cards to enter the warehouse; some cards are over 10 years old. One managed switch, in an unlocked cupboard, links every office computer. A wireless access point on an outside wall sends its signal into the staff car park.",
+   "q": "4(d). The access point's signal reaches the staff car park. Describe how an attacker could use this to reach Meridian's systems.",
+   "m": 3,
+   "pts": [
+    "An attacker sits in the car park, within range of the Wi-Fi signal, without entering the building",
+    "They connect to, or attack, the network, e.g. eavesdropping, a deauthentication attack to capture logins, or a fake access point with the same name",
+    "Once connected, they can reach Meridian's internal systems and data"
+   ],
+   "tip": "Describe the steps: get in range → attack the connection → reach systems."
+  },
+  {
+   "sc": "Meridian Parcels is a courier company with 60 staff and a busy warehouse. Broadband comes in over an old copper line to a modem-router, which still uses the default admin password on its label. Drivers connect company tablets to an open guest Wi-Fi network. Staff use RFID swipe cards to enter the warehouse; some cards are over 10 years old. One managed switch, in an unlocked cupboard, links every office computer. A wireless access point on an outside wall sends its signal into the staff car park.",
+   "q": "4(e). The IT manager says: \"As long as the front door is locked, the network is safe.\" Explain two reasons why the IT manager is wrong.",
+   "m": 4,
+   "pts": [
+    "Reason 1: wireless signals go beyond the walls, e.g. the access point reaches the car park, or drivers use open guest Wi-Fi",
+    "so an attacker can reach the network without ever coming through the front door",
+    "Reason 2: the internet connection is an attack vector, e.g. the modem-router still has its default password",
+    "so attackers can get in remotely over the internet (also accept: old RFID cards could be cloned, or the switch is in an unlocked cupboard)"
+   ],
+   "tip": "Two separate points, each with a reason, both using scenario details."
+  }
+ ]
+}
