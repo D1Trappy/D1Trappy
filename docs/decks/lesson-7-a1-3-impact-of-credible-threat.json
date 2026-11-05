@@ -1,0 +1,659 @@
+{
+ "id": "lesson-7-a1-3-impact-of-credible-threat",
+ "title": "Lesson 7 - A1.3 Impact of Credible Threat",
+ "code": "IT · Unit 2 · A1.3",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "What can an organisation lose from a cyber attack?",
+ "sections": [
+  {
+   "heading": "Credible threats and their impact",
+   "text": "A credible threat is a realistic risk that is likely to cause harm if it happens, not just a possible or theoretical danger. A cyber threat impact is the damage or loss an organisation suffers when an attack successfully affects its systems, data or operations.",
+   "points": [
+    "Example: customer details are stolen in a data breach, leading to financial losses, legal action and damage to reputation",
+    "Losses go far beyond one damaged system: they affect operations, finances, reputation and protected ideas",
+    "In most real incidents, MORE THAN ONE type of loss happens at the same time",
+    "One ransomware attack could stop operations, bring financial penalties, damage reputation and expose confidential information all at once",
+    "Schools, shops and online businesses can all suffer downtime, lost trust and theft of sensitive information"
+   ]
+  },
+  {
+   "heading": "The four types of loss",
+   "table": {
+    "head": [
+     "Type of loss",
+     "What it means",
+     "Examples"
+    ],
+    "rows": [
+     [
+      "Operational",
+      "The organisation can't run properly until systems and data are restored",
+      "Production stops; websites and apps go offline; staff can't access data"
+     ],
+     [
+      "Financial",
+      "Money lost through disruption, compensation and legal costs",
+      "Cash flow problems, lost profits, refunds, ICO fines, legal fees"
+     ],
+     [
+      "Reputational",
+      "Damage to how the organisation is seen",
+      "Loss of trust, negative reviews, lower reputation scores"
+     ],
+     [
+      "Intellectual property (IP)",
+      "Valuable ideas, designs or information stolen or exposed without permission",
+      "A new product design leaked before launch so competitors copy it"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Operational loss",
+   "text": "A cyber attack disrupts the normal running of the organisation. It can't operate properly until systems and data are restored.",
+   "points": [
+    "Manufacturing output: production stops because the systems controlling machines fail",
+    "Service availability: websites, apps or customer services go offline",
+    "Data availability: staff can't access the information they need to work",
+    "Even a short period of downtime can be very expensive, especially for businesses that rely on continuous digital services"
+   ]
+  },
+  {
+   "heading": "Financial loss: three kinds",
+   "table": {
+    "head": [
+     "Kind",
+     "What it is",
+     "Includes"
+    ],
+    "rows": [
+     [
+      "Organisational",
+      "The direct hit to the organisation's finances. Business is disrupted and it becomes a higher risk to insure",
+      "Cash flow problems (income slows, costs continue); loss of profits; higher insurance premiums"
+     ],
+     [
+      "Compensation",
+      "Putting things right for customers and partners who were affected. Not the same as fines",
+      "Refunds; payments for exposed data; credit monitoring or identity protection; contractual penalties; discounts or write-offs to win customers back"
+     ],
+     [
+      "Legal liability",
+      "Action from regulators, courts or others, even after customers are compensated",
+      "ICO fines for breaking data protection law; penalty payments; investigation costs; legal fees"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Reputational loss",
+   "text": "Damage to how the organisation is seen after a cyber incident. Unlike financial loss, it's hard to measure directly, but it can have serious long-term effects.",
+   "points": [
+    "Loss of trust: customers, partners and investors lose confidence",
+    "Negative reviews: criticism on social media, review sites or the organisation's own platforms",
+    "Lower reputation scores: independent rating systems downgrade the organisation",
+    "Why it's harder to fix than financial loss: money can be recovered or paid, but trust takes a long time to rebuild, and lost customers may never come back"
+   ]
+  },
+  {
+   "heading": "Intellectual property (IP) loss",
+   "text": "Intellectual property is an organisation's valuable ideas, designs, inventions and information, such as trade secrets. IP loss happens when these are stolen or exposed without permission.",
+   "points": [
+    "Example: a new product design is leaked online before launch, so competitors copy it and the company loses its market advantage",
+    "An NDA (non-disclosure agreement) is a legal contract that stops people sharing confidential information. Your slides ask: is it worthwhile?",
+    "Think: an NDA gives legal protection and puts people off leaking, but it can't stop a hacker who has no agreement with you"
+   ]
+  },
+  {
+   "heading": "Case study: British Airways (2018)",
+   "text": "Attackers stole the personal and payment details of around 400,000 customers. One attack caused all four types of loss:",
+   "table": {
+    "head": [
+     "Loss",
+     "What happened"
+    ],
+    "rows": [
+     [
+      "Operational",
+      "Booking and payment systems were disrupted while the airline responded"
+     ],
+     [
+      "Financial",
+      "The ICO issued a £20 million fine, plus customer compensation costs"
+     ],
+     [
+      "Reputational",
+      "Extensive media coverage damaged public trust"
+     ],
+     [
+      "Intellectual property",
+      "Sensitive internal security information was exposed, possibly weakening future defences"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Worked example: the pizza chain",
+   "text": "A pizza chain normally takes 100 orders per minute, with an average order of £23. Ransomware destroys the data from the last 20 minutes of orders. How much is the operational loss?",
+   "points": [
+    "Orders lost: 100 orders per minute × 20 minutes = 2,000 orders",
+    "Value lost: 2,000 orders × £23 = £46,000",
+    "Winning customers back: apologise, offer refunds, discounts or free items (the compensation costs from this lesson)",
+    "Reputation: customers whose orders vanished may post negative reviews and order from a rival instead"
+   ]
+  },
+  {
+   "heading": "Thinking deeper (plenary)",
+   "points": [
+    "Why is reputational loss often harder to fix than financial loss? Money can be recovered; trust takes years to rebuild",
+    "Which loss is most serious? It depends on the business: an online shop can't trade without its systems, while a design company's IP may be worth the most",
+    "How are customers affected even if they aren't targeted? They can't use services, their data may be exposed, and they may need to change passwords or watch for fraud"
+   ]
+  }
+ ],
+ "keyIdea": "A credible threat usually causes several kinds of loss at once: operational (can't work), financial (organisational, compensation and legal liability), reputational (lost trust) and intellectual property (stolen ideas). The British Airways breach hit all four.",
+ "flashcards": [
+  [
+   "Credible threat",
+   "A realistic risk that is likely to cause harm if it happens, not just a theoretical danger."
+  ],
+  [
+   "Cyber threat impact",
+   "The damage or loss an organisation suffers when an attack successfully affects its systems, data or operations."
+  ],
+  [
+   "Operational loss",
+   "When an attack disrupts normal running, so the organisation can't operate until systems and data are restored."
+  ],
+  [
+   "Manufacturing output loss",
+   "Production stops because the systems that control machines fail."
+  ],
+  [
+   "Service availability loss",
+   "Websites, apps or customer services go offline."
+  ],
+  [
+   "Data availability loss",
+   "Staff can't access the information they need to work."
+  ],
+  [
+   "Organisational financial loss",
+   "The direct hit to finances: cash flow problems, lost profits and higher insurance costs."
+  ],
+  [
+   "Cash flow problems",
+   "Income slows or stops while expenses carry on."
+  ],
+  [
+   "Insurance premiums",
+   "What an organisation pays for insurance. They rise after a reported breach."
+  ],
+  [
+   "Compensation",
+   "Payments to put things right for affected customers or partners, e.g. refunds and credit monitoring. Not fines."
+  ],
+  [
+   "Contractual penalty",
+   "A payment owed when agreed goods or services can't be delivered."
+  ],
+  [
+   "Legal liability",
+   "Costs from regulators, courts or others: fines, penalty payments, investigation costs and legal fees."
+  ],
+  [
+   "ICO",
+   "Information Commissioner's Office: the UK regulator that fines organisations for breaking data protection law."
+  ],
+  [
+   "Reputational loss",
+   "Damage to how an organisation is seen: loss of trust, negative reviews, lower reputation scores."
+  ],
+  [
+   "Reputation score",
+   "A rating from an independent system showing how an organisation is seen. It can be downgraded after an attack."
+  ],
+  [
+   "Intellectual property (IP)",
+   "An organisation's valuable ideas, designs, inventions and information, such as trade secrets."
+  ],
+  [
+   "IP loss",
+   "When valuable ideas, designs or information are stolen or exposed without permission."
+  ],
+  [
+   "Trade secret",
+   "Confidential business information that gives a company an advantage, e.g. a recipe or product design."
+  ],
+  [
+   "NDA",
+   "Non-disclosure agreement: a legal contract that stops people sharing confidential information."
+  ],
+  [
+   "British Airways (2018)",
+   "About 400,000 customers' details stolen; £20 million ICO fine; all four types of loss."
+  ],
+  [
+   "Combined impact",
+   "Real incidents rarely fit one category. Serious attacks cause overlapping losses."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is meant by a cyber threat?",
+   "o": [
+    "A possible attack on computer systems, networks or data that could cause harm",
+    "A new computer",
+    "A type of backup",
+    "A password rule"
+   ],
+   "a": 0,
+   "e": "A cyber threat is anything that could attack systems or data and cause harm. A credible one is realistic and likely."
+  },
+  {
+   "q": "Which is a type of loss an organisation could suffer after a cyber attack?",
+   "o": [
+    "Weight loss",
+    "Signal loss",
+    "Colour loss",
+    "Reputational loss"
+   ],
+   "a": 3,
+   "e": "The four types are operational, financial, reputational and intellectual property loss."
+  },
+  {
+   "q": "What is intellectual property (IP)?",
+   "o": [
+    "Office furniture",
+    "Staff salaries",
+    "An organisation's valuable ideas, designs and information",
+    "The company's IP address"
+   ],
+   "a": 2,
+   "e": "IP is protected ideas and information, such as product designs and trade secrets."
+  },
+  {
+   "q": "What makes a threat 'credible'?",
+   "o": [
+    "It is only theoretical",
+    "It is realistic and likely to cause harm",
+    "It has already been fixed",
+    "It only affects printers"
+   ],
+   "a": 1,
+   "e": "Credible = realistic and likely, not just possible."
+  },
+  {
+   "q": "A factory's machines stop because the systems controlling them have been attacked. Which loss is this?",
+   "o": [
+    "Operational (manufacturing output)",
+    "Reputational",
+    "Intellectual property",
+    "Compensation"
+   ],
+   "a": 0,
+   "e": "Production stopping is operational loss."
+  },
+  {
+   "q": "After a breach, a company's insurance premiums go up. Which kind of financial loss is this?",
+   "o": [
+    "Compensation",
+    "Legal liability",
+    "Reputational loss",
+    "Organisational financial loss"
+   ],
+   "a": 3,
+   "e": "Higher insurance costs are part of the direct, organisational financial loss."
+  },
+  {
+   "q": "A company pays for credit monitoring for customers whose data was leaked. This is:",
+   "o": [
+    "A fine",
+    "Operational loss",
+    "Compensation",
+    "IP loss"
+   ],
+   "a": 2,
+   "e": "Compensation puts things right for the people affected. It's different from fines."
+  },
+  {
+   "q": "The ICO fines a company for breaking data protection law. Which kind of financial loss is this?",
+   "o": [
+    "Compensation",
+    "Legal liability",
+    "Cash flow",
+    "Operational"
+   ],
+   "a": 1,
+   "e": "Fines from regulators such as the ICO are legal liability."
+  },
+  {
+   "q": "Why is reputational loss hard to deal with?",
+   "o": [
+    "It's hard to measure and has long-term effects on trust",
+    "It's easy to measure",
+    "It only lasts a day",
+    "It never affects sales"
+   ],
+   "a": 0,
+   "e": "Trust takes a long time to rebuild, and lost customers may not return."
+  },
+  {
+   "q": "A new phone design is leaked online before launch and rivals copy it. Which loss is this?",
+   "o": [
+    "Operational",
+    "Compensation",
+    "Data availability",
+    "Intellectual property"
+   ],
+   "a": 3,
+   "e": "Stolen or exposed ideas and designs are IP loss, and the company loses its market advantage."
+  },
+  {
+   "q": "In the British Airways breach (2018), how much was the ICO fine?",
+   "o": [
+    "£20,000",
+    "£2 million",
+    "£20 million",
+    "£200 million"
+   ],
+   "a": 2,
+   "e": "The ICO issued a £20 million fine after about 400,000 customers' details were stolen."
+  },
+  {
+   "q": "Pizza chain: 100 orders per minute, £23 average order, 20 minutes of orders destroyed. What is the operational loss?",
+   "o": [
+    "£2,300",
+    "£4,600",
+    "£46,000",
+    "£460,000"
+   ],
+   "a": 2,
+   "e": "100 × 20 = 2,000 orders. 2,000 × £23 = £46,000."
+  },
+  {
+   "q": "In most real-world cyber incidents, how many types of loss happen?",
+   "o": [
+    "Usually more than one at the same time",
+    "Exactly one",
+    "None",
+    "Only financial"
+   ],
+   "a": 0,
+   "e": "Serious attacks cause overlapping losses, like the BA breach, which hit all four."
+  },
+  {
+   "q": "What is an NDA?",
+   "o": [
+    "A type of malware",
+    "A network device",
+    "An ICO fine",
+    "A non-disclosure agreement: a contract to keep information confidential"
+   ],
+   "a": 3,
+   "e": "NDAs legally stop people sharing confidential information, which helps protect IP."
+  },
+  {
+   "q": "Staff can't open the files they need because the file server has been encrypted. Which operational loss is this?",
+   "o": [
+    "Manufacturing output",
+    "Reputation score",
+    "Data availability",
+    "Contractual penalty"
+   ],
+   "a": 2,
+   "e": "Data availability loss means staff can't get to the information they need."
+  },
+  {
+   "q": "How might customers be affected even if they weren't directly targeted?",
+   "o": [
+    "They aren't affected at all",
+    "They can't use services, and their data may be exposed",
+    "They get faster service",
+    "They receive free products automatically"
+   ],
+   "a": 1,
+   "e": "Customers feel the knock-on effects: downtime, exposed data and the need to protect themselves from fraud."
+  }
+ ],
+ "apply": {
+  "title": "Which type of loss?",
+  "intro": "Read each situation and pick the type of loss it shows. Remember: real incidents often cause several at once.",
+  "items": [
+   {
+    "task": "A hospital's appointment booking system goes offline for two days after an attack.",
+    "o": [
+     "Intellectual property loss",
+     "Operational loss (service availability)",
+     "Compensation",
+     "Reputation score"
+    ],
+    "a": 1,
+    "e": "The service can't run until systems are restored: operational loss."
+   },
+   {
+    "task": "After a breach, a retailer is fined by the ICO and pays lawyers to handle the investigation.",
+    "o": [
+     "Legal liability",
+     "Compensation",
+     "Operational loss",
+     "IP loss"
+    ],
+    "a": 0,
+    "e": "Regulator fines, investigation costs and legal fees are legal liability."
+   },
+   {
+    "task": "An online shop gives every affected customer a refund and a 20% discount to win them back.",
+    "o": [
+     "Legal liability",
+     "IP loss",
+     "Manufacturing output",
+     "Compensation"
+    ],
+    "a": 3,
+    "e": "Refunds and discounts to put things right are compensation."
+   },
+   {
+    "task": "A hotel chain gets hundreds of one-star reviews on social media after customers' card details are stolen.",
+    "o": [
+     "Operational loss",
+     "Legal liability",
+     "Reputational loss",
+     "Cash flow"
+    ],
+    "a": 2,
+    "e": "Negative reviews and lost trust are reputational loss."
+   },
+   {
+    "task": "A drinks company's secret recipe is stolen by hackers and sold to a rival.",
+    "o": [
+     "Compensation",
+     "Intellectual property loss",
+     "Data availability",
+     "Insurance costs"
+    ],
+    "a": 1,
+    "e": "A trade secret is intellectual property."
+   },
+   {
+    "task": "A small café can't take card payments for a week. Its bills are still due but money stops coming in.",
+    "o": [
+     "Cash flow problems (organisational financial loss)",
+     "IP loss",
+     "Legal liability",
+     "Reputation score"
+    ],
+    "a": 0,
+    "e": "Income slows or stops while expenses continue: a cash flow problem."
+   },
+   {
+    "task": "A car factory's production line stops because the computers controlling the robots are encrypted.",
+    "o": [
+     "Reputational loss",
+     "Compensation",
+     "Legal liability",
+     "Operational loss (manufacturing output)"
+    ],
+    "a": 3,
+    "e": "Machines can't run without their control systems: manufacturing output loss."
+   },
+   {
+    "task": "A company can't deliver goods it promised a partner because of an attack, and has to pay the penalty in the contract.",
+    "o": [
+     "IP loss",
+     "Reputation score",
+     "Contractual penalty (compensation)",
+     "Data availability"
+    ],
+    "a": 2,
+    "e": "Your slides list contractual penalties as compensation for agreed goods or services that can't be provided."
+   },
+   {
+    "task": "An independent rating site downgrades a bank's security score after a breach.",
+    "o": [
+     "Operational loss",
+     "Lower reputation score (reputational loss)",
+     "Cash flow",
+     "IP loss"
+    ],
+    "a": 1,
+    "e": "Independent ratings downgrading the organisation is reputational loss."
+   },
+   {
+    "task": "A ransomware attack stops a delivery firm working, leads to an ICO fine, causes bad press and leaks its new route-planning software. Which losses happened?",
+    "o": [
+     "Operational, financial, reputational and IP: all four",
+     "Only operational",
+     "Only financial",
+     "None"
+    ],
+    "a": 0,
+    "e": "Like British Airways, one attack can cause every type of loss at once."
+   },
+   {
+    "task": "Online store: £800 per hour, offline for 10 hours. What sales were lost?",
+    "o": [
+     "£80",
+     "£800",
+     "£8,000",
+     "£80,000"
+    ],
+    "a": 2,
+    "e": "£800 × 10 hours = £8,000. Always show your working in the exam."
+   },
+   {
+    "task": "After a breach is reported, a company's yearly insurance bill rises by 40%.",
+    "o": [
+     "Compensation",
+     "IP loss",
+     "Increased insurance costs (organisational financial loss)",
+     "Operational loss"
+    ],
+    "a": 2,
+    "e": "A breach makes the organisation a higher risk to insure, so premiums rise."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term credible threat.",
+   "m": 2,
+   "pts": [
+    "A realistic risk that is likely to cause harm if it happens",
+    "rather than just a possible or theoretical danger"
+   ],
+   "tip": "The key words are \"realistic\" and \"likely\"."
+  },
+  {
+   "sc": "",
+   "q": "2. What is intellectual property (IP)?",
+   "m": 2,
+   "pts": [
+    "An organisation's valuable ideas, designs, inventions or information",
+    "e.g. trade secrets or new product designs, which give it an advantage"
+   ],
+   "tip": "Definition + an example earns both marks."
+  },
+  {
+   "sc": "",
+   "q": "3. Describe two kinds of financial loss an organisation could suffer after a cyber attack.",
+   "m": 4,
+   "pts": [
+    "Kind 1 named, e.g. organisational financial loss",
+    "Description, e.g. cash flow problems, lost profits and higher insurance premiums",
+    "Kind 2 named, e.g. compensation / legal liability",
+    "Description, e.g. refunds and credit monitoring for customers / ICO fines, investigation costs and legal fees"
+   ],
+   "tip": "Use the slides' three kinds: organisational, compensation, legal liability. Name it, then describe it."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain why reputational loss is often harder to fix than financial loss.",
+   "m": 2,
+   "pts": [
+    "Reputational loss is hard to measure and has long-term effects on trust",
+    "so even after the money is recovered, customers, partners and investors may not come back for a long time"
+   ],
+   "tip": "Compare the two: money can be recovered, trust takes much longer."
+  },
+  {
+   "sc": "Kestrel Games is a UK games studio with 60 staff. A week before launching its new game, it is hit by ransomware. Its servers are encrypted and its online store is offline for 3 days. The unreleased game's designs are leaked online, and the email addresses and passwords of 50,000 customers are exposed. The online store normally takes an average of £1,500 per hour.",
+   "q": "5. Calculate the sales Kestrel Games lost while its online store was offline. Show your working.",
+   "m": 2,
+   "pts": [
+    "Working: 3 days × 24 hours = 72 hours, × £1,500",
+    "Answer: £108,000"
+   ],
+   "tip": "Always show your working. You can still get a mark even if the final answer is wrong."
+  },
+  {
+   "sc": "Kestrel Games is a UK games studio with 60 staff. A week before launching its new game, it is hit by ransomware. Its servers are encrypted and its online store is offline for 3 days. The unreleased game's designs are leaked online, and the email addresses and passwords of 50,000 customers are exposed. The online store normally takes an average of £1,500 per hour.",
+   "q": "6. Explain the operational loss Kestrel Games suffered.",
+   "m": 2,
+   "pts": [
+    "The servers were encrypted and the online store was offline for 3 days (service availability)",
+    "so the studio couldn't sell games or work normally until its systems and data were restored, just before a launch"
+   ],
+   "tip": "Use the slides' terms: service availability or data availability, plus what it stopped Kestrel doing."
+  },
+  {
+   "sc": "Kestrel Games is a UK games studio with 60 staff. A week before launching its new game, it is hit by ransomware. Its servers are encrypted and its online store is offline for 3 days. The unreleased game's designs are leaked online, and the email addresses and passwords of 50,000 customers are exposed. The online store normally takes an average of £1,500 per hour.",
+   "q": "7. Explain two ways Kestrel Games could face legal liability after this attack.",
+   "m": 4,
+   "pts": [
+    "The ICO could fine Kestrel for breaking data protection law",
+    "because 50,000 customers' email addresses and passwords were exposed",
+    "Kestrel would have investigation costs and legal fees",
+    "for responding to the regulator's enquiries and getting legal advice during and after the incident"
+   ],
+   "tip": "Also accept penalty payments if Kestrel misses contracted launch dates. Point + reason, twice."
+  },
+  {
+   "sc": "Kestrel Games is a UK games studio with 60 staff. A week before launching its new game, it is hit by ransomware. Its servers are encrypted and its online store is offline for 3 days. The unreleased game's designs are leaked online, and the email addresses and passwords of 50,000 customers are exposed. The online store normally takes an average of £1,500 per hour.",
+   "q": "8. Explain how Kestrel's customers could be affected by the attack.",
+   "m": 3,
+   "pts": [
+    "They couldn't buy or download games while the store was offline",
+    "Their email addresses and passwords were exposed, so they need to change passwords",
+    "and they are at risk of fraud or account takeover, especially if they reused the password elsewhere"
+   ],
+   "tip": "Think beyond the company: what do the customers actually have to deal with?"
+  },
+  {
+   "sc": "Kestrel Games is a UK games studio with 60 staff. A week before launching its new game, it is hit by ransomware. Its servers are encrypted and its online store is offline for 3 days. The unreleased game's designs are leaked online, and the email addresses and passwords of 50,000 customers are exposed. The online store normally takes an average of £1,500 per hour.",
+   "q": "9. Assess which type of loss is most serious for Kestrel Games.",
+   "m": 6,
+   "pts": [
+    "Considers operational loss: 3 days offline and £108,000 in lost sales, but systems can be restored",
+    "Considers financial loss: lost sales plus possible ICO fines, compensation and legal fees",
+    "Considers reputational loss: 50,000 customers' data exposed damages trust just before a launch",
+    "Considers IP loss: leaked game designs let rivals copy them, and the new game loses its market advantage",
+    "Compares the losses, e.g. operational loss is short-term, while IP and reputational loss last much longer",
+    "Justified conclusion, e.g. IP loss is most serious because the leaked designs can't be taken back and the launch was the studio's main source of future income"
+   ],
+   "tip": "Top-grade \"assess\" = weigh up ALL four types using the scenario's facts, say which is short-term vs long-term, then make a clear, justified choice."
+  }
+ ]
+}
