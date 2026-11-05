@@ -1,0 +1,645 @@
+{
+ "id": "lesson-10-a2-1-3-software-vulnerabilities",
+ "title": "Lesson 10 - A2.1.3 Software Vulnerabilities",
+ "code": "IT · Unit 2 · A2.1.3",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can software weaknesses put people and organisations at risk?",
+ "sections": [
+  {
+   "heading": "What is a software vulnerability?",
+   "text": "A software vulnerability is a weakness or flaw in software that could be exploited to cause harm, steal data or gain unauthorised access.",
+   "points": [
+    "Example: a student installs software from an untrustworthy website. The installer contains malware, giving an attacker a way into the device",
+    "Poor software design: security wasn't properly considered when the software was made",
+    "Operating system choices: an unsuitable or poorly secured operating system increases risk",
+    "Poor user habits: unsafe choices, such as downloading from untrusted sources",
+    "Poor checking and testing: software and third-party providers aren't checked or tested properly"
+   ]
+  },
+  {
+   "heading": "Downloading software safely",
+   "text": "Software from an untrusted source may contain security flaws, malware or other malicious content. Before installing, check:",
+   "table": {
+    "head": [
+     "Check",
+     "What to do"
+    ],
+    "rows": [
+     [
+      "Trusted source",
+      "Download from a reliable, official source, not a random download site"
+     ],
+     [
+      "HTTPS and padlock",
+      "Make sure the download page uses HTTPS and shows the padlock (the connection is encrypted)"
+     ],
+     [
+      "Website certificate",
+      "Check the website's certificate is valid"
+     ],
+     [
+      "Malware scan",
+      "Scan the software before installing it"
+     ],
+     [
+      "Hash check",
+      "Check the hash to make sure the file hasn't been changed or tampered with"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Hash checks",
+   "text": "A hash value is like a digital fingerprint for a file. If even one letter in the file changes, the hash becomes completely different, so a hash check shows whether a file has been changed or tampered with.",
+   "table": {
+    "head": [
+     "Step",
+     "What to do"
+    ],
+    "rows": [
+     [
+      "1. Get the original hash",
+      "On the official website, find the hash value provided (often SHA-256) and copy it"
+     ],
+     [
+      "2. Check the file's hash",
+      "On Windows, open Command Prompt and type: certutil -hashfile [file path] SHA256"
+     ],
+     [
+      "3. Compare",
+      "If they match exactly, the file is safe. If not, don't install or open it: it may be corrupted or hacked"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Illegal copies and zero-day exploits",
+   "points": [
+    "Illegal or unofficial copies may not get important security updates or patches",
+    "If the copy has been tampered with, it could contain malware or a backdoor, giving attackers a way in",
+    "A zero-day exploit uses a security flaw that was previously unknown",
+    "Once it's discovered, the manufacturer must release a patch quickly",
+    "Until then there's no fix, so the longer the patch takes, the more time criminals have to exploit it"
+   ]
+  },
+  {
+   "heading": "Outdated software",
+   "points": [
+    "Software that isn't regularly updated becomes vulnerable to new threats",
+    "Security patches fix known weaknesses and protect systems from attackers",
+    "Link to Lesson 9: one unpatched device can be the weak link into a whole network"
+   ]
+  },
+  {
+   "heading": "SQL injection",
+   "text": "SQL (Structured Query Language) is how websites and apps talk to databases, e.g. to log users in, display products and find information. SQL injection is an attack where a hacker inserts ('injects') malicious SQL code into a website's input fields, trying to trick the system into giving them access to the database.",
+   "points": [
+    "Targets: login boxes, search bars and online forms",
+    "If the input isn't properly protected, attackers can bypass login screens; view usernames, passwords or bank details; change or delete data; reach admin controls; and steal personal or customer data",
+    "Why it's serious: data breaches, whole databases deleted, privacy, financial and legal problems, including breaking GDPR"
+   ]
+  },
+  {
+   "heading": "How SQL injection happens: the login example",
+   "text": "The website logs users in with: SELECT * FROM users WHERE username = input AND password = input. Normally someone types Username: Alex, Password: password123. The attacker instead types: ' OR 1=1 --",
+   "points": [
+    "The ' (quote mark) ends the username text early, so what follows is treated as part of the SQL command",
+    "OR 1=1 adds a condition that is always true (1 always equals 1)",
+    "-- turns the rest of the line into a comment, so the password check is ignored",
+    "Result: the database answers 'yes' without a correct username or password, and the attacker gets in",
+    "Standard ways to prevent it (not on the slides): validate and check all input, use parameterised queries so input is never treated as code, and give the website's database account only the access it needs"
+   ]
+  },
+  {
+   "heading": "Case study: Google Chrome zero-day (2022)",
+   "text": "In March 2022, hackers from North Korea found a zero-day weakness in the Google Chrome browser.",
+   "points": [
+    "They used phishing emails to take users to a fake website",
+    "The Chrome vulnerability was used to install spyware and remote monitoring software. It's still unclear what data was taken",
+    "Google issued an emergency patch",
+    "Lessons: even trusted software can have vulnerabilities; browsers are common targets because so many people use them; patches reduce the risk once a flaw is found"
+   ]
+  },
+  {
+   "heading": "Research task: a real software vulnerability",
+   "text": "Choose one: the Chrome zero-day, WannaCry and unpatched Windows, a real SQL injection attack (e.g. TalkTalk, Lesson 8), or a vulnerability in a popular app. Answer these five questions and say where you found the information:",
+   "points": [
+    "1. What software or system was affected?",
+    "2. What was the vulnerability?",
+    "3. How was it exploited?",
+    "4. What was the impact?",
+    "5. How was it fixed or reduced?",
+    "Challenge: which security measure could have reduced the risk? Explain why"
+   ]
+  }
+ ],
+ "keyIdea": "Software vulnerabilities come from poor design, poor choices and poor habits. Attackers exploit untrusted downloads, illegal copies, zero-days, outdated software and unprotected input fields (SQL injection), so download safely, check hashes, patch quickly and protect databases.",
+ "flashcards": [
+  [
+   "Software vulnerability",
+   "A weakness or flaw in software that could be exploited to cause harm, steal data or gain unauthorised access."
+  ],
+  [
+   "Four causes of software vulnerabilities",
+   "Poor software design, operating system choices, poor user habits, poor checking and testing."
+  ],
+  [
+   "Trusted source",
+   "A reliable, official place to download software, e.g. the developer's own website."
+  ],
+  [
+   "HTTPS and padlock",
+   "Shows the connection to the website is encrypted. Check for it before downloading."
+  ],
+  [
+   "Website certificate",
+   "A digital certificate proving a site's identity. It should be valid before you download."
+  ],
+  [
+   "Hash value",
+   "A file's 'digital fingerprint'. Change even one letter and it becomes completely different."
+  ],
+  [
+   "Hash check",
+   "Comparing the official hash with your file's hash. A match means the file hasn't been tampered with."
+  ],
+  [
+   "SHA-256",
+   "A common hashing method used to create hash values for downloads."
+  ],
+  [
+   "certutil",
+   "Windows command to calculate a file's hash: certutil -hashfile [file path] SHA256."
+  ],
+  [
+   "Illegal copy of software",
+   "Unofficial software that may miss security updates and could contain malware or a backdoor."
+  ],
+  [
+   "Backdoor",
+   "A hidden way into a system that lets attackers bypass normal security."
+  ],
+  [
+   "Zero-day exploit",
+   "An attack using a previously unknown flaw. No patch exists yet, so it's especially risky."
+  ],
+  [
+   "Patch",
+   "A fix released by the manufacturer to correct a known weakness."
+  ],
+  [
+   "Outdated software",
+   "Software not regularly updated, so it's vulnerable to new threats."
+  ],
+  [
+   "SQL",
+   "Structured Query Language: how websites and apps communicate with databases."
+  ],
+  [
+   "SQL injection",
+   "Inserting malicious SQL code into input fields (login, search, forms) to trick the system into giving database access."
+  ],
+  [
+   "' OR 1=1 --",
+   "A classic SQL injection: ' ends the input, OR 1=1 is always true, -- comments out the password check."
+  ],
+  [
+   "Input field",
+   "A place users type into, such as login boxes, search bars and online forms."
+  ],
+  [
+   "What SQL injection can do",
+   "Bypass logins; view, change or delete data; reach admin controls; steal customer data."
+  ],
+  [
+   "SQL injection and GDPR",
+   "Leaking personal data through SQL injection can break privacy laws like GDPR."
+  ],
+  [
+   "Parameterised query",
+   "A safe way to build database queries so user input is never run as code (standard prevention)."
+  ],
+  [
+   "Chrome zero-day (2022)",
+   "North Korean hackers used phishing and an unknown Chrome flaw to install spyware; Google issued an emergency patch."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is a software vulnerability?",
+   "o": [
+    "A weakness or flaw in software that could be exploited",
+    "A software licence",
+    "A fast program",
+    "A software update"
+   ],
+   "a": 0,
+   "e": "It can be exploited to cause harm, steal data or gain unauthorised access."
+  },
+  {
+   "q": "Which is the safer place to download software?",
+   "o": [
+    "A random download site",
+    "A pop-up advert",
+    "A link in an unexpected email",
+    "The official website"
+   ],
+   "a": 3,
+   "e": "Official sources are trusted. Random sites may bundle malware."
+  },
+  {
+   "q": "What does HTTPS and the padlock tell you about a website connection?",
+   "o": [
+    "The site is free",
+    "The software is definitely safe",
+    "The connection is encrypted",
+    "The site is fast"
+   ],
+   "a": 2,
+   "e": "It shows the connection is secure (encrypted). You should still check the source, certificate and hash."
+  },
+  {
+   "q": "What does a hash check confirm?",
+   "o": [
+    "The file is the newest version",
+    "The file hasn't been changed or tampered with",
+    "The file is small",
+    "The website is popular"
+   ],
+   "a": 1,
+   "e": "If the hashes match exactly, the file is the same as the official one."
+  },
+  {
+   "q": "You calculate a file's hash and it doesn't match the one on the official website. What should you do?",
+   "o": [
+    "Don't install or open it",
+    "Install it anyway",
+    "Rename it",
+    "Email it to a friend"
+   ],
+   "a": 0,
+   "e": "A mismatch means the file may be corrupted or hacked."
+  },
+  {
+   "q": "Which Windows command calculates a file's SHA-256 hash?",
+   "o": [
+    "ipconfig",
+    "ping",
+    "dir /hash",
+    "certutil -hashfile [file path] SHA256"
+   ],
+   "a": 3,
+   "e": "certutil -hashfile, run in Command Prompt."
+  },
+  {
+   "q": "Why might an illegal copy of software be a security risk?",
+   "o": [
+    "It's always slower",
+    "It uses more ink",
+    "It may not get security updates and could contain malware or a backdoor",
+    "It can't be installed"
+   ],
+   "a": 2,
+   "e": "Tampered, unpatched copies give attackers a way in."
+  },
+  {
+   "q": "A software flaw is discovered but no patch has been released yet. Why is this especially risky?",
+   "o": [
+    "It isn't risky",
+    "Because there's no fix yet, so attackers can exploit it freely",
+    "Patches make things worse",
+    "Only old computers are affected"
+   ],
+   "a": 1,
+   "e": "That's a zero-day: the longer the patch takes, the longer criminals have."
+  },
+  {
+   "q": "A company has an internet-facing database with poor input checking. What attack should it worry about?",
+   "o": [
+    "SQL injection",
+    "Shoulder surfing",
+    "Tailgating",
+    "Smishing"
+   ],
+   "a": 0,
+   "e": "Unprotected input fields connected to a database invite SQL injection."
+  },
+  {
+   "q": "What does SQL stand for?",
+   "o": [
+    "Secure Query Lock",
+    "System Quality Level",
+    "Simple Question List",
+    "Structured Query Language"
+   ],
+   "a": 3,
+   "e": "Structured Query Language: how sites and apps talk to databases."
+  },
+  {
+   "q": "In the attack input ' OR 1=1 --, what does OR 1=1 do?",
+   "o": [
+    "Deletes the database",
+    "Encrypts the password",
+    "Adds a condition that is always true",
+    "Logs the attacker out"
+   ],
+   "a": 2,
+   "e": "1 always equals 1, so the check always passes."
+  },
+  {
+   "q": "In ' OR 1=1 --, what do the two dashes (--) do?",
+   "o": [
+    "Subtract two numbers",
+    "Turn the rest of the command into a comment, so the password check is ignored",
+    "Add a new user",
+    "Start a DDoS attack"
+   ],
+   "a": 1,
+   "e": "Everything after -- is ignored, including the password part."
+  },
+  {
+   "q": "Which is NOT a cause of software vulnerabilities listed on the slides?",
+   "o": [
+    "Using a strong password",
+    "Poor software design",
+    "Poor user habits",
+    "Poor checking and testing"
+   ],
+   "a": 0,
+   "e": "The four causes: poor design, OS choices, poor user habits, poor checking/testing."
+  },
+  {
+   "q": "In the 2022 Chrome zero-day, how were users taken to the fake website?",
+   "o": [
+    "Tailgating",
+    "A USB stick",
+    "A DDoS attack",
+    "Phishing emails"
+   ],
+   "a": 3,
+   "e": "Hackers used phishing emails, then exploited the Chrome flaw to install spyware."
+  },
+  {
+   "q": "Why are web browsers common targets?",
+   "o": [
+    "They are rarely updated",
+    "They have no security",
+    "So many people use them",
+    "They can't be patched"
+   ],
+   "a": 2,
+   "e": "A single browser flaw can reach a huge number of people."
+  },
+  {
+   "q": "Which law could an organisation break if SQL injection leaks customers' personal data?",
+   "o": [
+    "The Highway Code",
+    "GDPR",
+    "Copyright law only",
+    "None"
+   ],
+   "a": 1,
+   "e": "Your slides list breaking privacy laws such as GDPR as a consequence."
+  }
+ ],
+ "apply": {
+  "title": "Spot the software risk",
+  "intro": "Read each situation and pick the vulnerability, or the best check or fix.",
+  "items": [
+   {
+    "task": "A student downloads a 'free' version of expensive editing software from a random website.",
+    "o": [
+     "Zero-day exploit",
+     "Illegal copy / untrusted source",
+     "SQL injection",
+     "Hash check"
+    ],
+    "a": 1,
+    "e": "Untrusted and probably illegal: it could contain malware or a backdoor and won't get updates."
+   },
+   {
+    "task": "Before installing a program, you want to be sure the file is exactly the official one. What should you do?",
+    "o": [
+     "Do a hash check and compare it with the official hash",
+     "Check its size only",
+     "Rename the file",
+     "Turn off antivirus"
+    ],
+    "a": 0,
+    "e": "Matching hashes prove the file hasn't been tampered with."
+   },
+   {
+    "task": "An attacker types ' OR 1=1 -- into a website's username box and gets logged in.",
+    "o": [
+     "Zero-day",
+     "Phishing",
+     "Hash collision",
+     "SQL injection"
+    ],
+    "a": 3,
+    "e": "Malicious SQL in an input field is SQL injection."
+   },
+   {
+    "task": "Hackers exploit a browser flaw that nobody, not even the maker, knew about. No patch exists yet.",
+    "o": [
+     "Outdated software",
+     "SQL injection",
+     "Zero-day exploit",
+     "Illegal copy"
+    ],
+    "a": 2,
+    "e": "A previously unknown flaw with no patch is a zero-day."
+   },
+   {
+    "task": "A company's PCs still run software that hasn't been updated in two years.",
+    "o": [
+     "SQL injection",
+     "Outdated software (missing patches)",
+     "Hash check",
+     "HTTPS"
+    ],
+    "a": 1,
+    "e": "Missing patches leave known weaknesses open."
+   },
+   {
+    "task": "A download page has no padlock and the browser says 'Not secure'. What should you do?",
+    "o": [
+     "Don't download; find the official, HTTPS source instead",
+     "Download quickly",
+     "Turn off the warning",
+     "Download twice"
+    ],
+    "a": 0,
+    "e": "Check HTTPS, the padlock and a valid certificate before downloading."
+   },
+   {
+    "task": "A web form lets users search the product database, and nothing checks what they type. What's the main risk?",
+    "o": [
+     "Tailgating",
+     "Zero-day",
+     "Smishing",
+     "SQL injection"
+    ],
+    "a": 3,
+    "e": "Unchecked input fields connected to a database can be used for SQL injection."
+   },
+   {
+    "task": "Software is designed without anyone thinking about security until after it's released. Which cause of vulnerabilities is this?",
+    "o": [
+     "Poor user habits",
+     "Operating system choice",
+     "Poor software design",
+     "Hash check"
+    ],
+    "a": 2,
+    "e": "Security wasn't considered properly when it was created."
+   },
+   {
+    "task": "A third-party app is added to a company's system without anyone testing it.",
+    "o": [
+     "SQL injection",
+     "Poor checking and testing",
+     "Strong design",
+     "HTTPS"
+    ],
+    "a": 1,
+    "e": "Software and third-party providers should be checked and tested."
+   },
+   {
+    "task": "Google releases an emergency Chrome update after a zero-day is found. What should users do?",
+    "o": [
+     "Install the patch straight away",
+     "Ignore it",
+     "Uninstall all browsers forever",
+     "Wait a year"
+    ],
+    "a": 0,
+    "e": "Patches close the vulnerability once it's discovered."
+   },
+   {
+    "task": "Which is the BEST way for a developer to stop SQL injection?",
+    "o": [
+     "Make the login box bigger",
+     "Use a brighter colour",
+     "Turn off HTTPS",
+     "Validate input and use parameterised queries"
+    ],
+    "a": 3,
+    "e": "Checking input and never running it as code stops injection (standard practice)."
+   },
+   {
+    "task": "A file's hash from your computer is: 9a3f…. The website shows: 9a3f… with exactly the same characters. What does this mean?",
+    "o": [
+     "The file is definitely malware",
+     "You need a new computer",
+     "The file is safe: it hasn't been changed",
+     "The website is fake"
+    ],
+    "a": 2,
+    "e": "An exact match means the file is the same as the official one."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term software vulnerability.",
+   "m": 2,
+   "pts": [
+    "A weakness or flaw in software",
+    "that could be exploited to cause harm, steal data or gain unauthorised access"
+   ],
+   "tip": "Weakness + what an attacker could do with it."
+  },
+  {
+   "sc": "",
+   "q": "2. Describe three checks a user should make before installing downloaded software.",
+   "m": 3,
+   "pts": [
+    "Any one: download from a trusted, official source",
+    "A second: check the page uses HTTPS with the padlock and has a valid certificate",
+    "A third: scan it for malware / do a hash check to make sure it hasn't been tampered with"
+   ],
+   "tip": "Your slides list five checks. Any three, each described clearly."
+  },
+  {
+   "sc": "",
+   "q": "3. Explain how a hash check shows that a downloaded file has not been tampered with.",
+   "m": 3,
+   "pts": [
+    "The official website provides the file's original hash value (a digital fingerprint, e.g. SHA-256)",
+    "The user calculates the hash of the downloaded file, e.g. using certutil",
+    "If the two match exactly the file is unchanged; if even one character of the file changed, the hash would be completely different"
+   ],
+   "tip": "Get the hash → calculate yours → compare. Explain WHY a match proves it's unchanged."
+  },
+  {
+   "sc": "",
+   "q": "4. A software flaw is discovered but the manufacturer has not released a patch yet. Explain why this is especially risky.",
+   "m": 3,
+   "pts": [
+    "This is a zero-day: the flaw was previously unknown",
+    "There is no patch yet, so systems can't be protected by updating",
+    "The longer it takes to release a patch, the more time criminals have to exploit it"
+   ],
+   "tip": "Name it (zero-day), then explain the time window."
+  },
+  {
+   "sc": "",
+   "q": "5. Explain why an illegal copy of software is a security risk.",
+   "m": 2,
+   "pts": [
+    "It may not receive important security updates or patches, and could have been tampered with",
+    "so it might contain malware or a backdoor that gives attackers a way into the system"
+   ],
+   "tip": "Point + linked consequence."
+  },
+  {
+   "sc": "Brightside Pharmacy lets customers order prescriptions on its website, which has a login page and a search box connected to a customer database. The website's server software hasn't been updated for 18 months. Staff PCs run an illegal 'cracked' copy of a design program, and staff often download free tools from whichever site comes up first in a search.",
+   "q": "6. Identify the type of attack Brightside Pharmacy's website is most at risk from.",
+   "m": 1,
+   "pts": [
+    "SQL injection"
+   ],
+   "tip": "Clue: a login page and search box connected to a database."
+  },
+  {
+   "sc": "Brightside Pharmacy lets customers order prescriptions on its website, which has a login page and a search box connected to a customer database. The website's server software hasn't been updated for 18 months. Staff PCs run an illegal 'cracked' copy of a design program, and staff often download free tools from whichever site comes up first in a search.",
+   "q": "7. Explain how an attacker could use SQL injection on Brightside Pharmacy's login page.",
+   "m": 3,
+   "pts": [
+    "The attacker types malicious SQL code into the login box instead of a username, e.g. ' OR 1=1 --",
+    "If the input isn't protected, the database treats it as part of the SQL command: OR 1=1 is always true and -- removes the password check",
+    "so the attacker is logged in without a valid password and can reach the customer database"
+   ],
+   "tip": "Show you understand HOW the code tricks the database, not just that it does."
+  },
+  {
+   "sc": "Brightside Pharmacy lets customers order prescriptions on its website, which has a login page and a search box connected to a customer database. The website's server software hasn't been updated for 18 months. Staff PCs run an illegal 'cracked' copy of a design program, and staff often download free tools from whichever site comes up first in a search.",
+   "q": "8. Explain two impacts of a successful SQL injection attack on Brightside Pharmacy.",
+   "m": 4,
+   "pts": [
+    "Impact 1, e.g. a data breach: customers' personal and prescription details are viewed or stolen",
+    "which could break GDPR and lead to fines and legal problems",
+    "Impact 2, e.g. data changed or deleted, such as prescription records",
+    "so orders go wrong or are lost, causing financial problems and damage to trust"
+   ],
+   "tip": "Use the slides' list: breaches, deleted databases, privacy, financial and legal problems. Link to medical data."
+  },
+  {
+   "sc": "Brightside Pharmacy lets customers order prescriptions on its website, which has a login page and a search box connected to a customer database. The website's server software hasn't been updated for 18 months. Staff PCs run an illegal 'cracked' copy of a design program, and staff often download free tools from whichever site comes up first in a search.",
+   "q": "9. Evaluate the measures Brightside Pharmacy could take to reduce its software vulnerabilities.",
+   "m": 6,
+   "pts": [
+    "Update/patch the website's server software: closes 18 months of known weaknesses",
+    "Protect the website's input fields (validation, parameterised queries) to stop SQL injection",
+    "Replace the cracked design program with a legal, licensed copy that gets updates and has no hidden backdoor",
+    "Safe download rules: official sources only, HTTPS and certificate checks, malware scans and hash checks",
+    "Limitations: patches can't stop zero-days, and rules only work if staff follow them, so training is needed",
+    "Justified conclusion: which measure is most urgent (e.g. fixing the internet-facing website, as it holds medical data) and why"
+   ],
+   "tip": "Top-grade \"evaluate\" = several measures linked to Brightside's actual problems, their limits, and a clear priority."
+  }
+ ]
+}
