@@ -1,8 +1,8 @@
 # Study Hub
 
-A static revision website in `docs/`. No build step and no server. Repository `nbastudyhub/nba` (previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`).
+A static revision website in `docs/`, plus one Cloudflare Pages Function for the AI helper. Repository `nbastudyhub/nba` (previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`).
 
-- **Main address:** https://nbastudyhub.pages.dev/ (Cloudflare Pages, production branch `main`, output directory `docs`, no build command)
+- **Main address:** https://nbastudyhub.pages.dev/ (Cloudflare Pages, production branch `main`, build command `npm ci` so the AI helper's `@anthropic-ai/sdk` is installed for `functions/`, output directory `docs`)
 - **Backup address:** https://nbastudyhub.github.io/nba/ (GitHub Pages, `main` branch, `/docs` folder)
 
 Both rebuild by themselves about a minute after `main` changes. When telling people the site's link, give the main address.
