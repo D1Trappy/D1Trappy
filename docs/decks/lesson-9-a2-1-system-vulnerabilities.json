@@ -1,0 +1,780 @@
+{
+ "id": "lesson-9-a2-1-system-vulnerabilities",
+ "title": "Lesson 9 - A2.1 System Vulnerabilities",
+ "code": "IT · Unit 2 · A2.1",
+ "subject": "Information Technology",
+ "added": "2026-11-05",
+ "bigQuestion": "How can cyber vulnerabilities put an organisation at risk?",
+ "sections": [
+  {
+   "heading": "What is a vulnerability?",
+   "text": "A vulnerability is a weakness in a system that can be exploited by cybercriminals to gain unauthorised access.",
+   "points": [
+    "Example: an organisation leaves software unpatched, so a known weakness stays open as a route into the network",
+    "One unpatched device can be the weak link an attacker uses to get in, spread malware or steal data",
+    "Network vulnerabilities: weaknesses in the technology and connections that make up a network",
+    "Organisational vulnerabilities: weaknesses in people, policies and processes"
+   ]
+  },
+  {
+   "heading": "Network ports",
+   "text": "A port can be physical (such as USB) or logical, in software. Different ports are linked to different network services, and firewalls use ports to control incoming and outgoing connections.",
+   "table": {
+    "head": [
+     "Port",
+     "Protocol / service",
+     "Common use"
+    ],
+    "rows": [
+     [
+      "20/21",
+      "FTP",
+      "File transfer"
+     ],
+     [
+      "22",
+      "SSH",
+      "Secure remote access"
+     ],
+     [
+      "25",
+      "SMTP",
+      "Sending email"
+     ],
+     [
+      "53",
+      "DNS",
+      "Domain name lookup"
+     ],
+     [
+      "80",
+      "HTTP",
+      "Web traffic"
+     ],
+     [
+      "443",
+      "HTTPS",
+      "Secure web traffic"
+     ]
+    ]
+   },
+   "points": [
+    "0–1023: well-known ports, for common network services",
+    "1024–49151: registered ports, used by specific applications or services",
+    "49152–65535: dynamic/private ports, for temporary or private connections"
+   ]
+  },
+  {
+   "heading": "Firewalls and common network vulnerabilities",
+   "text": "A firewall is like a gate between a trusted network and the internet. It controls incoming and outgoing traffic, which moves through ports linked to particular services. A badly configured firewall can leave unwanted access open; good configuration reduces the routes an attacker can use.",
+   "points": [
+    "Weak passwords and authentication",
+    "Outdated software",
+    "Unsecured network access points",
+    "Firewall misconfiguration",
+    "Phishing and social engineering",
+    "Insider threats",
+    "IoT vulnerabilities",
+    "No regular security audits"
+   ]
+  },
+  {
+   "heading": "How attackers use open ports",
+   "points": [
+    "They scan an IP address to find open ports",
+    "An open port can reveal which services and protocols are running",
+    "Port 80 (HTTP) is usually open, so malicious traffic can be disguised and sent through an expected port",
+    "Ports can be targeted in denial-of-service (DoS) attacks",
+    "Close ports that aren't needed, and configure the firewall properly"
+   ]
+  },
+  {
+   "heading": "Unpatched software and external storage",
+   "table": {
+    "head": [
+     "Vulnerability",
+     "The weakness",
+     "Risk and impact",
+     "Controls"
+    ],
+    "rows": [
+     [
+      "Unpatched software",
+      "A weakness is found in software or an operating system, and the patch (fix) isn't installed",
+      "The known weakness stays open. One unpatched device becomes the weak link: attackers enter, spread malware, steal data or shut systems down",
+      "Install patches promptly; patch management policy"
+     ],
+     [
+      "External storage (USB drives etc.)",
+      "Portable storage can be lost or stolen, or misused by a malicious employee",
+      "Data copied or exposed; malware installed",
+      "Clear rules on who can use external devices; password protection, encryption, tracking and remote wiping"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Poor access controls",
+   "text": "Access control decides who can access systems, files or data, and what they can do with them. A vulnerability occurs when the rules don't work properly.",
+   "table": {
+    "head": [
+     "Vulnerability",
+     "What happens",
+     "Example"
+    ],
+    "rows": [
+     [
+      "Broken access control",
+      "A user can access information or files they shouldn't",
+      "A student can see or edit another student's profile"
+     ],
+     [
+      "Weak passwords",
+      "Passwords are too easy to guess or crack",
+      "password123, or a birthday"
+     ],
+     [
+      "Privilege escalation",
+      "A normal user gets higher-level (e.g. admin) access without permission",
+      "A student account gains administrator rights"
+     ],
+     [
+      "IDOR (Insecure Direct Object Reference)",
+      "Changing part of a web address or request to reach someone else's data",
+      "Changing /profile/123 to /profile/124 shows another user's profile"
+     ]
+    ]
+   },
+   "points": [
+    "Permissions: read (view), write (add or save), execute (run a program), modify/change (edit)",
+    "Give the right account type: user, admin, system or guest",
+    "Users should only have the access they need to do their job, no more"
+   ]
+  },
+  {
+   "heading": "Organisational vulnerabilities",
+   "text": "Not every vulnerability is technical. Weaknesses inside an organisation can make attacks easier.",
+   "points": [
+    "People: lack of training leads to mistakes such as clicking phishing links or sharing confidential information",
+    "Policies: unclear rules on passwords, software use or reporting suspicious activity leave data at risk",
+    "Process: poor permissions, or no incident response plan, make the damage worse when something goes wrong",
+    "Human-centric weaknesses: falling for social engineering, poor password hygiene, no security awareness training, misuse of access rights",
+    "Human error is one of the biggest causes of data breaches. Good training helps staff recognise threats and know what to report",
+    "Exam tip from the slides: poor training → unsafe action → possible data breach"
+   ]
+  },
+  {
+   "heading": "Security policies",
+   "table": {
+    "head": [
+     "Policy",
+     "Purpose"
+    ],
+    "rows": [
+     [
+      "Acceptable use policy (AUP)",
+      "Sets clear security expectations"
+     ],
+     [
+      "Password policy",
+      "Ensures strong login credentials"
+     ],
+     [
+      "Patch management policy",
+      "Keeps software up to date"
+     ],
+     [
+      "Access control policy",
+      "Limits access to systems and data"
+     ],
+     [
+      "Incident response policy",
+      "Guides actions after an incident"
+     ],
+     [
+      "Security awareness and training policy",
+      "Educates staff to reduce human error"
+     ],
+     [
+      "BYOD (bring your own device) policy",
+      "Secures personal devices on the network"
+     ],
+     [
+      "Firewall / network configuration policy",
+      "Protects the network structure"
+     ],
+     [
+      "Data protection and backup policy",
+      "Safeguards and restores critical data"
+     ]
+    ]
+   }
+  },
+  {
+   "heading": "Passwords and incident response",
+   "points": [
+    "A password policy should set sensible length rules, stop reuse across users or systems, ban obvious personal information like birthdays, manage inactive accounts, and give guidance on saved/autofill passwords",
+    "A password manager stores passwords in one place behind a single 'master' password",
+    "Password managers can be device-based (an encrypted vault), synchronised across a network, or cloud-based for remote working; they create complex passwords you don't need to remember",
+    "An incident response plan helps an organisation respond quickly to an attack. Without one, delays make the damage worse",
+    "The plan should be thorough and tested, so people know what to do when an incident happens"
+   ]
+  },
+  {
+   "heading": "Exam method: the four-step chain",
+   "text": "Build stronger answers by linking four steps. Here's the slides' mini scenario (a school's old till system with unpatched software) done as an example:",
+   "table": {
+    "head": [
+     "Step",
+     "Ask",
+     "Example answer"
+    ],
+    "rows": [
+     [
+      "CAUSE",
+      "What is the vulnerability?",
+      "The school's till system runs old, unpatched software."
+     ],
+     [
+      "RISK",
+      "How could an attacker exploit it?",
+      "An attacker could use the known, unfixed weakness to get into the till and the school network."
+     ],
+     [
+      "IMPACT",
+      "What could happen to the organisation or data?",
+      "Card or payment data could be stolen, or the tills shut down, so the canteen can't take payments."
+     ],
+     [
+      "RESPONSE",
+      "What control or policy would reduce the risk?",
+      "A patch management policy, so updates are installed promptly, or replacing the outdated till."
+     ]
+    ]
+   }
+  }
+ ],
+ "keyIdea": "A vulnerability is a weakness attackers can exploit. Some are technical (open ports, misconfigured firewalls, unpatched software, USB drives, poor access control) and some are organisational (untrained people, unclear policies, no incident plan). In the exam, link Cause → Risk → Impact → Response.",
+ "flashcards": [
+  [
+   "Vulnerability",
+   "A weakness in a system that can be exploited by cybercriminals to gain unauthorised access."
+  ],
+  [
+   "Network vulnerability",
+   "A weakness in the technology and connections that make up a network."
+  ],
+  [
+   "Organisational vulnerability",
+   "A weakness in people, policies or processes that makes attacks easier."
+  ],
+  [
+   "Port",
+   "A physical (e.g. USB) or logical connection point; logical ports are linked to network services."
+  ],
+  [
+   "Port 80 / 443",
+   "80 = HTTP (web traffic); 443 = HTTPS (secure web traffic)."
+  ],
+  [
+   "Port 20/21, 22, 25, 53",
+   "21 = FTP (file transfer), 22 = SSH (secure remote access), 25 = SMTP (sending email), 53 = DNS."
+  ],
+  [
+   "Well-known ports",
+   "0–1023: used by common network services."
+  ],
+  [
+   "Registered ports",
+   "1024–49151: used by specific applications or services."
+  ],
+  [
+   "Dynamic/private ports",
+   "49152–65535: used for temporary or private connections."
+  ],
+  [
+   "Firewall",
+   "A gate between a trusted network and the internet that controls incoming and outgoing traffic using ports."
+  ],
+  [
+   "Firewall misconfiguration",
+   "Wrong firewall settings that leave unwanted access open to attackers."
+  ],
+  [
+   "Port scanning (attack)",
+   "Scanning an IP address to find open ports and discover which services are running."
+  ],
+  [
+   "Patch",
+   "A fix or update released to correct a known weakness."
+  ],
+  [
+   "Unpatched software",
+   "Software without the latest fix installed, so a known weakness stays open."
+  ],
+  [
+   "Access control",
+   "Deciding who can access systems, files or data, and what they can do."
+  ],
+  [
+   "Broken access control",
+   "A user can access information or files they shouldn't."
+  ],
+  [
+   "Privilege escalation",
+   "A normal user gains higher-level (e.g. admin) access without permission."
+  ],
+  [
+   "IDOR",
+   "Insecure Direct Object Reference: changing part of a URL (e.g. /profile/123 to /124) to see someone else's data."
+  ],
+  [
+   "Permissions",
+   "Read (view), write (add/save), execute (run) and modify/change (edit)."
+  ],
+  [
+   "Least privilege",
+   "Users should only have the access they need to do their job, no more."
+  ],
+  [
+   "Acceptable use policy (AUP)",
+   "Sets clear expectations for how staff use IT systems securely."
+  ],
+  [
+   "Patch management policy",
+   "A policy that keeps software up to date."
+  ],
+  [
+   "BYOD policy",
+   "Bring your own device: secures personal devices used on the network."
+  ],
+  [
+   "Password manager",
+   "An app storing passwords in an encrypted vault behind one master password."
+  ],
+  [
+   "Incident response plan",
+   "A tested plan so people know what to do during a cyber attack, reducing delays and damage."
+  ],
+  [
+   "Cause → Risk → Impact → Response",
+   "The four-step chain for strong exam answers about vulnerabilities."
+  ]
+ ],
+ "quiz": [
+  {
+   "q": "What is a vulnerability?",
+   "o": [
+    "A weakness in a system that can be exploited to gain unauthorised access",
+    "A type of antivirus",
+    "A strong password",
+    "A backup copy"
+   ],
+   "a": 0,
+   "e": "Vulnerabilities are weaknesses. Threats are what exploit them."
+  },
+  {
+   "q": "What is an open network port?",
+   "o": [
+    "A broken cable",
+    "A USB port with nothing plugged in",
+    "A closed firewall",
+    "A port that accepts connections, so a service can be reached through it"
+   ],
+   "a": 3,
+   "e": "Open ports let traffic in to a service. Unneeded open ports give attackers routes in."
+  },
+  {
+   "q": "What does 'unpatched software' mean?",
+   "o": [
+    "Software with no bugs",
+    "Software that is brand new",
+    "Software that hasn't had the fix for a known weakness installed",
+    "Software that is switched off"
+   ],
+   "a": 2,
+   "e": "The patch exists but isn't installed, so the known weakness stays open."
+  },
+  {
+   "q": "What is access control?",
+   "o": [
+    "Controlling the room temperature",
+    "Deciding who can access systems, files or data, and what they can do",
+    "Turning computers off at night",
+    "Backing up data"
+   ],
+   "a": 1,
+   "e": "Good access control means only authorised users reach the right resources."
+  },
+  {
+   "q": "Which is an organisational weakness that could help an attacker?",
+   "o": [
+    "Lack of staff training",
+    "A fully patched server",
+    "A well-configured firewall",
+    "Encrypted USB drives"
+   ],
+   "a": 0,
+   "e": "Untrained staff may click phishing links or share confidential information."
+  },
+  {
+   "q": "Which port is used for HTTPS (secure web traffic)?",
+   "o": [
+    "21",
+    "25",
+    "80",
+    "443"
+   ],
+   "a": 3,
+   "e": "443 = HTTPS. 80 = HTTP."
+  },
+  {
+   "q": "Which port is used for DNS (domain name lookup)?",
+   "o": [
+    "22",
+    "53",
+    "80",
+    "443"
+   ],
+   "a": 1,
+   "e": "53 = DNS. 22 = SSH."
+  },
+  {
+   "q": "Port 50000 is in which range?",
+   "o": [
+    "Well-known",
+    "Registered",
+    "Dynamic/private"
+   ],
+   "a": 2,
+   "e": "49152–65535 are dynamic/private ports."
+  },
+  {
+   "q": "Why might attackers send malicious traffic through port 80?",
+   "o": [
+    "Port 80 is usually open, so the traffic is disguised as normal web traffic",
+    "Port 80 is always closed",
+    "Port 80 is encrypted",
+    "Port 80 only accepts email"
+   ],
+   "a": 0,
+   "e": "Using an expected port helps malicious traffic blend in."
+  },
+  {
+   "q": "A normal user manages to gain administrator access. What type of vulnerability is this?",
+   "o": [
+    "IDOR",
+    "Weak passwords",
+    "Firewall misconfiguration",
+    "Privilege escalation"
+   ],
+   "a": 3,
+   "e": "Getting higher-level access without permission is privilege escalation."
+  },
+  {
+   "q": "Changing a URL from /profile/123 to /profile/124 shows another user's profile. What is this?",
+   "o": [
+    "Port scanning",
+    "Phishing",
+    "IDOR (Insecure Direct Object Reference)",
+    "Patch management"
+   ],
+   "a": 2,
+   "e": "IDOR: changing part of a request to reach someone else's data."
+  },
+  {
+   "q": "A company lets all employees access every file. What vulnerability is this?",
+   "o": [
+    "Unpatched software",
+    "Poor access control (not least privilege)",
+    "Weak firewall",
+    "IoT vulnerability"
+   ],
+   "a": 1,
+   "e": "Users should only have the access they need. Otherwise one compromised account exposes everything."
+  },
+  {
+   "q": "A company has no plan for what to do after a cyber attack. What is the vulnerability?",
+   "o": [
+    "No incident response plan",
+    "Too many ports closed",
+    "Strong passwords",
+    "A BYOD policy"
+   ],
+   "a": 0,
+   "e": "Without a plan, delays make the damage worse."
+  },
+  {
+   "q": "Which policy keeps software up to date?",
+   "o": [
+    "Acceptable use policy",
+    "BYOD policy",
+    "Password policy",
+    "Patch management policy"
+   ],
+   "a": 3,
+   "e": "Patch management makes sure fixes are installed."
+  },
+  {
+   "q": "Which permission lets a user run a program?",
+   "o": [
+    "Read",
+    "Write",
+    "Execute",
+    "Modify"
+   ],
+   "a": 2,
+   "e": "Execute = run a program or process."
+  },
+  {
+   "q": "What are the four steps of the exam chain from the slides?",
+   "o": [
+    "Scan, Score, Prioritise, Track",
+    "Cause, Risk, Impact, Response",
+    "Identify, Protect, Detect, Recover",
+    "Read, Write, Execute, Modify"
+   ],
+   "a": 1,
+   "e": "Cause (the vulnerability) → Risk (how exploited) → Impact (what happens) → Response (the fix)."
+  }
+ ],
+ "apply": {
+  "title": "Name the vulnerability",
+  "intro": "Read each situation and pick the vulnerability or the best response. Then try saying the full Cause → Risk → Impact → Response chain out loud.",
+  "items": [
+   {
+    "task": "A security update was released three months ago, but the office PCs still haven't installed it.",
+    "o": [
+     "IDOR",
+     "Unpatched software",
+     "BYOD",
+     "Privilege escalation"
+    ],
+    "a": 1,
+    "e": "The fix exists but isn't installed, so the known weakness is still open."
+   },
+   {
+    "task": "A student logs in and can edit other students' coursework files.",
+    "o": [
+     "Broken access control",
+     "Port scanning",
+     "Weak firewall",
+     "Unpatched software"
+    ],
+    "a": 0,
+    "e": "Users accessing files they shouldn't is broken access control."
+   },
+   {
+    "task": "An attacker scans a company's IP address and finds several unused ports open.",
+    "o": [
+     "Weak password",
+     "IDOR",
+     "Human error",
+     "Firewall misconfiguration / open ports"
+    ],
+    "a": 3,
+    "e": "Unneeded open ports are routes in, so close them and configure the firewall properly."
+   },
+   {
+    "task": "A receptionist's account suddenly has full administrator rights it was never given.",
+    "o": [
+     "IDOR",
+     "Phishing",
+     "Privilege escalation",
+     "Unpatched software"
+    ],
+    "a": 2,
+    "e": "A normal user gaining admin access without permission is privilege escalation."
+   },
+   {
+    "task": "An employee copies the customer database onto a USB stick and takes it home.",
+    "o": [
+     "Port vulnerability",
+     "External storage device risk",
+     "Weak firewall",
+     "IDOR"
+    ],
+    "a": 1,
+    "e": "External storage can be misused to copy data. Use rules on device use, encryption and tracking."
+   },
+   {
+    "task": "Staff passwords include 'password123' and their birthdays.",
+    "o": [
+     "Weak passwords",
+     "IDOR",
+     "Unpatched software",
+     "Open ports"
+    ],
+    "a": 0,
+    "e": "Easily guessed passwords. A password policy and password manager help."
+   },
+   {
+    "task": "A ransomware attack hits, and nobody knows who to call or what to switch off. Recovery takes weeks.",
+    "o": [
+     "Too many patches",
+     "IDOR",
+     "BYOD",
+     "No incident response plan"
+    ],
+    "a": 3,
+    "e": "Without a tested plan, delays make the damage worse."
+   },
+   {
+    "task": "Staff keep clicking links in fake emails because nobody has shown them what phishing looks like.",
+    "o": [
+     "Open port 443",
+     "Privilege escalation",
+     "Lack of staff training (organisational vulnerability)",
+     "IDOR"
+    ],
+    "a": 2,
+    "e": "Poor training → unsafe action → possible data breach."
+   },
+   {
+    "task": "Staff connect their own phones and laptops to the company network with no rules at all. Which policy is missing?",
+    "o": [
+     "Patch management policy",
+     "BYOD policy",
+     "Backup policy",
+     "Firewall policy"
+    ],
+    "a": 1,
+    "e": "A BYOD policy secures personal devices on the network."
+   },
+   {
+    "task": "A web address ends in /invoice/5001. A customer changes it to /invoice/5002 and sees someone else's invoice.",
+    "o": [
+     "IDOR",
+     "Weak password",
+     "Port scanning",
+     "Phishing"
+    ],
+    "a": 0,
+    "e": "Changing part of a request to reach someone else's data is IDOR."
+   },
+   {
+    "task": "Which response best fixes unpatched software across a whole organisation?",
+    "o": [
+     "A BYOD policy",
+     "More USB sticks",
+     "Opening more ports",
+     "A patch management policy"
+    ],
+    "a": 3,
+    "e": "Patch management keeps software up to date."
+   },
+   {
+    "task": "Which is the correct order for a strong exam answer?",
+    "o": [
+     "Response → Cause → Impact → Risk",
+     "Impact → Response → Risk → Cause",
+     "Cause → Risk → Impact → Response",
+     "Risk → Cause → Response → Impact"
+    ],
+    "a": 2,
+    "e": "Start with the vulnerability, then how it's exploited, what happens, and how to fix it."
+   }
+  ]
+ },
+ "exam": [
+  {
+   "sc": "",
+   "q": "1. Define the term vulnerability.",
+   "m": 2,
+   "pts": [
+    "A weakness in a system",
+    "that can be exploited by cybercriminals to gain unauthorised access"
+   ],
+   "tip": "Weakness + exploited + unauthorised access."
+  },
+  {
+   "sc": "",
+   "q": "2. State the port number normally used for HTTPS traffic.",
+   "m": 1,
+   "pts": [
+    "443"
+   ],
+   "tip": "Learn the port table: 21 FTP, 22 SSH, 25 SMTP, 53 DNS, 80 HTTP, 443 HTTPS."
+  },
+  {
+   "sc": "",
+   "q": "3. Explain how an attacker could exploit open network ports.",
+   "m": 3,
+   "pts": [
+    "The attacker scans the organisation's IP address to find open ports",
+    "Open ports reveal which services and protocols are running, showing possible ways in",
+    "so the attacker can target those services, disguise malicious traffic through an expected port (e.g. 80), or launch a DoS attack"
+   ],
+   "tip": "Find → learn → attack. Three linked steps."
+  },
+  {
+   "sc": "",
+   "q": "4. Explain the difference between broken access control and privilege escalation.",
+   "m": 2,
+   "pts": [
+    "Broken access control is when a user can access information or files they shouldn't be able to",
+    "whereas privilege escalation is when a normal user gains higher-level access, such as admin rights, without permission"
+   ],
+   "tip": "Use the slides' examples: seeing another student's profile vs a student account gaining admin rights."
+  },
+  {
+   "sc": "",
+   "q": "5. Describe two security policies an organisation could use to reduce vulnerabilities.",
+   "m": 4,
+   "pts": [
+    "Policy 1 named, e.g. patch management policy",
+    "Description, e.g. makes sure updates are installed promptly so software is kept up to date",
+    "Policy 2 named, e.g. password / access control / BYOD / incident response policy",
+    "Description, e.g. enforces strong passwords / limits access to what each user needs / secures personal devices / guides actions after an incident"
+   ],
+   "tip": "Name it + say what it does. Nine policies are on your slides, so pick two you can describe clearly."
+  },
+  {
+   "sc": "Hillside School's canteen uses an old till system that hasn't had software updates for two years. Every member of staff can open every file on the shared drive, including student records. Teachers often bring in their own USB sticks to move files. The school's firewall has several unused ports open, and there is no plan for what to do if the school suffers a cyber attack.",
+   "q": "6. Using cause, risk, impact and response, explain the vulnerability created by Hillside School's canteen till.",
+   "m": 4,
+   "pts": [
+    "Cause: the till runs old software that hasn't been patched for two years",
+    "Risk: an attacker can exploit the known, unfixed weakness to get into the till and the school network",
+    "Impact: payment data could be stolen, malware spread, or the tills shut down so the canteen can't take payments",
+    "Response: a patch management policy so updates are installed, or replace the outdated till"
+   ],
+   "tip": "This is the slides' mini scenario. One mark per step, and each sentence must link to the next."
+  },
+  {
+   "sc": "Hillside School's canteen uses an old till system that hasn't had software updates for two years. Every member of staff can open every file on the shared drive, including student records. Teachers often bring in their own USB sticks to move files. The school's firewall has several unused ports open, and there is no plan for what to do if the school suffers a cyber attack.",
+   "q": "7. Every member of staff at Hillside can open every file. Identify the vulnerability and explain why it is a risk.",
+   "m": 3,
+   "pts": [
+    "Vulnerability: poor access control (users have more access than they need)",
+    "If any one staff account is compromised, e.g. by phishing, the attacker can reach all files",
+    "so confidential student records could be viewed, changed or stolen, causing a data breach"
+   ],
+   "tip": "Name the weakness, then follow the chain: risk → impact."
+  },
+  {
+   "sc": "Hillside School's canteen uses an old till system that hasn't had software updates for two years. Every member of staff can open every file on the shared drive, including student records. Teachers often bring in their own USB sticks to move files. The school's firewall has several unused ports open, and there is no plan for what to do if the school suffers a cyber attack.",
+   "q": "8. Hillside has no plan for what to do after a cyber attack. Explain one possible impact.",
+   "m": 2,
+   "pts": [
+    "Without an incident response plan, staff won't know what to do, so the response is delayed",
+    "which makes the damage worse, e.g. malware spreads further, more data is lost, and the school is disrupted for longer"
+   ],
+   "tip": "From the plenary: no plan → delays → more damage."
+  },
+  {
+   "sc": "Hillside School's canteen uses an old till system that hasn't had software updates for two years. Every member of staff can open every file on the shared drive, including student records. Teachers often bring in their own USB sticks to move files. The school's firewall has several unused ports open, and there is no plan for what to do if the school suffers a cyber attack.",
+   "q": "9. Evaluate which security policy Hillside School should introduce first.",
+   "m": 6,
+   "pts": [
+    "Considers a patch management policy: fixes the unpatched till, a known route into the network",
+    "Considers an access control policy: limits who can open student records, reducing the impact of any breach",
+    "Considers a BYOD / external device policy: controls teachers' USB sticks, which could bring in malware or leak data",
+    "Considers an incident response policy and firewall configuration (closing unused ports)",
+    "Compares likelihood and impact, e.g. open ports and unpatched software are easy routes in; student records are highly sensitive",
+    "Justified conclusion: chooses one policy as most urgent, with a clear reason linked to Hillside"
+   ],
+   "tip": "Top-grade \"evaluate\" = weigh up several policies against Hillside's actual weaknesses, then make a clear, justified choice."
+  }
+ ]
+}
