@@ -24,8 +24,11 @@
   const root = document.createElement('div');
   root.className = 'helper';
   root.innerHTML = `
-    <button class="helper-fab" id="helper-fab" aria-expanded="false" aria-controls="helper-panel">
-      <span aria-hidden="true">?</span><span class="helper-fab-label">Ask for help</span>
+    <button class="helper-fab" id="helper-fab" aria-expanded="false" aria-controls="helper-panel" aria-label="Ask the AI study helper" title="Ask the AI study helper">
+      <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M12 2.5l2.1 5.6 5.9 2.4-5.9 2.4L12 18.5l-2.1-5.6L4 10.5l5.9-2.4z"/>
+        <path fill="currentColor" d="M19 15l.9 2.1 2.1.9-2.1.9L19 21l-.9-2.1-2.1-.9 2.1-.9z" opacity=".85"/>
+      </svg>
     </button>
     <section class="helper-panel" id="helper-panel" role="dialog" aria-label="Study helper" hidden>
       <header class="helper-head">
