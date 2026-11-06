@@ -177,3 +177,15 @@ a.btn { text-decoration: none; display: inline-block; }
 .small-note { font-size: 13px; }
 @media (max-width: 480px) { .pv-bar { grid-template-columns: 74px 1fr 56px; } .next .row { gap: 14px; } }
 .ai-result ul { list-style: none; padding-left: 2px; }
+/* Accounts (account.js) */
+button.view-link { cursor: pointer; }
+.ac-tabs { margin: 0; }
+.ac-label { font-weight: 600; font-size: 14px; margin-bottom: -8px; }
+.ac-input { width: 100%; max-width: 420px; font: 16px var(--font-body); padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.ac-input:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.ac-notice { padding: 10px 14px; border-radius: 10px; font-weight: 600; }
+.ac-notice.ok { background: var(--good-soft); color: var(--good); }
+.ac-notice.bad { background: var(--bad-soft); color: var(--bad); }
+.ac-code { border: 2px solid var(--amber); }
+.code-big { font: 700 24px var(--font-mono); letter-spacing: .08em; text-align: center; padding: 12px; border-radius: 8px; background: var(--amber-soft); color: var(--ink); overflow-wrap: anywhere; }
+details.card summary { cursor: pointer; }

@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Study Hub">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <div class="wrap">
@@ -26,6 +26,7 @@
     <a href="#" data-view="lessons" class="view-link">Lessons</a>
     <a href="#progress" data-view="progress" class="view-link">My progress</a>
     <a href="#glossary" data-view="glossary" class="view-link">Glossary</a>
+    <a href="#account" data-view="account" class="view-link" id="account-link">Sign in</a>
     <span class="spacer"></span>
     <button class="btn small hidden" id="install-btn" type="button">Install app</button>
   </nav>
@@ -35,11 +36,16 @@
   <section id="progressview" class="stack hidden" aria-labelledby="pv-title">
     <div>
       <h1 id="pv-title">My progress</h1>
-      <p class="lead">Your best scores for every lesson, saved on this device. Aim to get every bar green before the exam.</p>
+      <p class="lead">Your best scores for every lesson. Sign in to keep them in sync across your devices. Aim to get every bar green before the exam.</p>
     </div>
     <div class="card next" id="pv-next"></div>
     <div id="pv-list" class="stack"></div>
     <div class="row"><span class="spacer"></span><button class="btn ghost small" id="pv-reset" type="button">Reset all progress</button></div>
+  </section>
+
+  <section id="accountview" class="stack hidden" aria-labelledby="ac-title">
+    <h1 id="ac-title">Account</h1>
+    <div id="ac-body" class="stack"></div>
   </section>
 
   <section id="glossaryview" class="stack hidden" aria-labelledby="gv-title">
@@ -109,9 +115,10 @@
     </div>
   </section>
 
-  <footer>Answers and progress are saved on this device only. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</footer>
+  <footer>Answers and progress are saved on this device, and in your account if you sign in. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</footer>
 </div>
-<script src="app.js?v=5"></script>
-<script src="assistant.js?v=5"></script>
+<script src="app.js?v=6"></script>
+<script src="assistant.js?v=6"></script>
+<script src="account.js?v=6"></script>
 </body>
 </html>

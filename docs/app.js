@@ -11,7 +11,15 @@ const ls = {
 
 let index = [], current = null, progress = { answers: {} }, tab = 'learn';
 // Lets the AI helper (assistant.js) see which lesson is open.
-window.studyHub = { get deck() { return current; } };
+window.studyHub = {
+  get deck() { return current; },
+  get index() { return index; },
+  // Called by account.js after syncing, so the open lesson and pages show the merged progress.
+  reloadProgress() {
+    if (current) { progress = ls.get('sh-prog-' + current.id, { answers: {} }); if (!progress.answers) progress.answers = {}; renderExam(); }
+    if (view === 'progress') renderProgress();
+  }
+};
 const cache = {};
 
 // ---------- Shelf ----------
@@ -147,7 +155,8 @@ let saveTimer = null, pendingSave = null;
 function save() {
   clearTimeout(saveTimer);
   const id = current.id, p = progress;
-  pendingSave = () => { ls.set('sh-prog-' + id, p); pendingSave = null; };
+  p._t = Date.now(); // when this lesson's progress last changed, for syncing between devices
+  pendingSave = () => { ls.set('sh-prog-' + id, p); pendingSave = null; if (window.onProgressSaved) window.onProgressSaved(id, p); };
   saveTimer = setTimeout(pendingSave, 500);
 }
 // Save straight away if the page is closed or hidden mid-typing.
@@ -232,7 +241,11 @@ function exTotal() {
   let t = 0, m = 0;
   (current.exam || []).forEach((it, i) => { m += it.m; t += qScore(it, progress.answers['e' + i]); });
   $('ex-total').textContent = t; $('ex-max').textContent = '/ ' + m;
-  if (progress.examScore !== t) { progress.examScore = t; save(); } // for the progress page
+  if (progress.examScore !== t) { // for the progress page; don't create a record just to store 0
+    const had = progress.examScore !== undefined;
+    progress.examScore = t;
+    if (had || t > 0) save();
+  }
 }
 
 // ---------- Pages: lessons / progress / glossary ----------
@@ -244,10 +257,13 @@ function showView(v) {
   $('search').classList.toggle('hidden', v !== 'lessons');
   $('progressview').classList.toggle('hidden', v !== 'progress');
   $('glossaryview').classList.toggle('hidden', v !== 'glossary');
+  $('accountview').classList.toggle('hidden', v !== 'account');
   document.querySelectorAll('.view-link').forEach(a => a.setAttribute('aria-current', a.dataset.view === v ? 'page' : 'false'));
   if (v === 'progress') { renderProgress(); document.title = 'My progress · Study Hub'; }
   if (v === 'glossary') { renderGlossary(); document.title = 'Glossary · Study Hub'; }
+  if (v === 'account') document.title = 'Account · Study Hub';
   if (v === 'lessons' && current) document.title = current.title + ' · Study Hub';
+  window.dispatchEvent(new CustomEvent('studyhub:view', { detail: { view: v } }));
   window.scrollTo(0, 0);
 }
 document.querySelector('.view-link[data-view=lessons]').onclick = e => {
@@ -294,6 +310,7 @@ $('pv-reset').onclick = () => {
   const b = $('pv-reset');
   if (b.dataset.sure !== '1') { b.dataset.sure = '1'; b.textContent = 'Tap again to delete all progress and answers'; setTimeout(() => { b.dataset.sure = ''; b.textContent = 'Reset all progress'; }, 4000); return; }
   index.forEach(d => { try { localStorage.removeItem('sh-prog-' + d.id); } catch (e) {} });
+  if (window.onProgressReset) window.onProgressReset(index.map(d => d.id)); // clears your account's copy too
   if (current) { progress = { answers: {} }; renderExam(); }
   b.dataset.sure = ''; b.textContent = 'Reset all progress'; renderProgress();
 };
@@ -337,7 +354,7 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 // ---------- Start ----------
 function route() {
   const h = location.hash.slice(1);
-  if (h === 'progress' || h === 'glossary') return showView(h);
+  if (h === 'progress' || h === 'glossary' || h === 'account') return showView(h);
   if (h && index.some(d => d.id === h)) { showView('lessons'); return openDeck(h); }
   showView('lessons');
 }
@@ -351,5 +368,5 @@ window.addEventListener('hashchange', route);
   const h = location.hash.slice(1), last = ls.get('sh-last', null);
   const id = [h, last].find(x => x && index.some(d => d.id === x)) || (index[0] && index[0].id);
   if (id) openDeck(id); else $('d-title').textContent = 'No topics yet.';
-  if (h === 'progress' || h === 'glossary') showView(h); else showView('lessons');
+  if (h === 'progress' || h === 'glossary' || h === 'account') showView(h); else showView('lessons');
 })();

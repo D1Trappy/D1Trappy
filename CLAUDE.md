@@ -1,6 +1,6 @@
 # Study Hub
 
-A static revision website in `docs/`, plus one Cloudflare Pages Function for the AI helper. Repository `nbastudyhub/nba` (previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`).
+A static revision website in `docs/`, plus Cloudflare Pages Functions (in `functions/`) for the AI helper, AI marking and accounts. Repository `nbastudyhub/nba` (previously `d1trappy/D1Trappy`, then `nbastudyhub/D1Trappy`).
 
 - **Main address:** https://nbastudyhub.pages.dev/ (Cloudflare Pages, production branch `main`, build command `npm ci` so the AI helper's `@anthropic-ai/sdk` is installed for `functions/`, output directory `docs`)
 - **Backup address:** https://nbastudyhub.github.io/nba/ (GitHub Pages, `main` branch, `/docs` folder)
@@ -13,6 +13,7 @@ Both rebuild by themselves about a minute after `main` changes. When telling peo
 - `scripts/build-index.mjs`: checks every pack and rebuilds the list
 - Site pages (hash routes in `docs/app.js`): a lesson id, `#progress` (My progress: best scores saved in localStorage as `sh-prog-<id>`) and `#glossary`
 - Installable app: `docs/manifest.webmanifest`, `docs/icons/`, `docs/sw.js` (network-first offline cache; when you bump the `?v=` numbers in `index.html`, bump them in `CORE` in `sw.js` too)
+- Accounts (username + password, no email): `functions/api/account/[action].js` (`me`, `signup`, `login`, `logout`, `reset` with the one-time recovery code, `delete`), `functions/api/progress.js` (sync one lesson's progress), helpers in `lib/auth.js` (PBKDF2 hashes, HttpOnly session cookie). Data lives in a Cloudflare D1 database bound to the Pages project as `DB`; tables are created on first use. The browser side is `docs/account.js` (account page `#account`, merges device and account progress, signing out clears the device)
 - `functions/api/mark.js`: AI marking for exam answers. The browser sends only the lesson id, question number and answer; the mark scheme comes from the pack on the server. Shared checks (origin, rate limit, lesson loading, errors) are in `lib/shared.js`
 - `docs/assistant.js` + `functions/api/ask.js`: the AI study helper (chat bubble, bottom right). The function runs on Cloudflare Pages only (not the GitHub Pages backup), loads the open lesson's pack as context, and calls Claude Haiku 5.5 (`claude-haiku-5-5`, chosen by the owner for cost) with the official `@anthropic-ai/sdk` (`package.json` at the repo root). The API key is the Cloudflare secret `ANTHROPIC_API_KEY`; never put a key in the repo. Safety rules for students live in `systemPrompt()` in the function.
 
