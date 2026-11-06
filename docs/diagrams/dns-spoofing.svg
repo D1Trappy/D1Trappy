@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290" width="760" height="290" role="img" aria-labelledby="t d"><title id="t">Normal DNS lookup vs DNS spoofing</title><desc id="d">Left: a normal DNS lookup. You ask the DNS server for the IP address of bank.com, it replies with the real IP, and you reach the real bank site. Right: DNS spoofing. A hacker inserts a fake entry into the DNS server, so when you ask for bank.com it replies with a fake IP and you land on a fake look-alike site that steals your login details; the real site is never reached. A red flag is the missing padlock or a &#x27;Not secure&#x27; warning.</desc><style>
+.bg{fill:#ffffff}
+.t{font:600 15px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.tb{font:700 17px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.s{font:500 13px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#5b6a78}
+.m{font:600 13px ui-monospace,Menlo,Consolas,monospace;fill:#12202b}
+.h{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#0a6b84;letter-spacing:.08em}
+.w{fill:#ffffff}
+.box{fill:#f3f8fa;stroke:#a9bfca;stroke-width:1.5}
+.acc{fill:#e3f1f5;stroke:#0a6b84;stroke-width:1.5}
+.bad{fill:#fbe5e3;stroke:#b3302b;stroke-width:1.5}
+.good{fill:#e1f3e8;stroke:#1d7a45;stroke-width:1.5}
+.amb{fill:#fbf0dc;stroke:#a8650a;stroke-width:1.5}
+.dim{fill:#eef2f4;stroke:#c9d3da;stroke-width:1.5}
+.solid-acc{fill:#0a6b84}.solid-bad{fill:#b3302b}.solid-good{fill:#1d7a45}.solid-amb{fill:#a8650a}.solid-ink{fill:#12202b}
+.ln{stroke:#5b6a78;stroke-width:2;fill:none}
+.ln-acc{stroke:#0a6b84;stroke-width:2.2;fill:none}
+.ln-bad{stroke:#b3302b;stroke-width:2.2;fill:none}
+.ln-good{stroke:#1d7a45;stroke-width:2.2;fill:none}
+.dash{stroke-dasharray:6 5}
+.tx-acc{fill:#0a6b84}.tx-bad{fill:#b3302b}.tx-good{fill:#1d7a45}.tx-amb{fill:#a8650a}
+.ic{fill:none;stroke:#12202b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-bad{fill:none;stroke:#b3302b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-acc{fill:none;stroke:#0a6b84;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mk-ln{fill:#5b6a78}.mk-acc{fill:#0a6b84}.mk-bad{fill:#b3302b}.mk-good{fill:#1d7a45}
+@media (prefers-color-scheme: dark){
+.bg{fill:#15202a}
+.t,.tb,.m{fill:#e6edf3}.s{fill:#98a8b6}.h{fill:#4fb6cf}
+.box{fill:#192632;stroke:#3a4c5a}.acc{fill:#143440;stroke:#4fb6cf}.bad{fill:#3c1d1b;stroke:#ef7c76}
+.good{fill:#15352a;stroke:#5cc98a}.amb{fill:#392b13;stroke:#e2a645}.dim{fill:#1b2833;stroke:#34444f}
+.solid-acc{fill:#2f8fa8}.solid-bad{fill:#c9534d}.solid-good{fill:#2f9a5f}.solid-amb{fill:#b97c1e}.solid-ink{fill:#e6edf3}
+.ln{stroke:#98a8b6}.ln-acc{stroke:#4fb6cf}.ln-bad{stroke:#ef7c76}.ln-good{stroke:#5cc98a}
+.tx-acc{fill:#4fb6cf}.tx-bad{fill:#ef7c76}.tx-good{fill:#5cc98a}.tx-amb{fill:#e2a645}
+.ic{stroke:#e6edf3}.ic-bad{stroke:#ef7c76}.ic-acc{stroke:#4fb6cf}
+.mk-ln{fill:#98a8b6}.mk-acc{fill:#4fb6cf}.mk-bad{fill:#ef7c76}.mk-good{fill:#5cc98a}
+}
+</style><defs><marker id="a-ln" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-ln"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-acc"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-bad"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-good"/></marker></defs><rect class="bg" width="760" height="290" rx="16"/><text x="24" y="34" class="h" text-anchor="start">NORMAL DNS LOOKUP</text><circle cx="64" cy="94" r="7" class="ic"/><path d="M52 118 q0 -14 12 -14 q12 0 12 14" class="ic"/><text x="64" y="140" class="s" text-anchor="middle">You</text><path d="M92 92 L224 92" class="ln-acc" marker-end="url(#a-acc)"/><text x="158" y="80" class="s" text-anchor="middle">1. IP of bank.com?</text><rect x="228" y="64" width="120" height="60" rx="10" class="acc"/><rect x="273" y="77" width="30" height="10" rx="2" class="ic-acc"/><circle cx="279" cy="82" r="1.4" class="ic-acc"/><rect x="273" y="89" width="30" height="10" rx="2" class="ic-acc"/><circle cx="279" cy="94" r="1.4" class="ic-acc"/><rect x="273" y="101" width="30" height="10" rx="2" class="ic-acc"/><circle cx="279" cy="106" r="1.4" class="ic-acc"/><text x="288" y="140" class="s" text-anchor="middle">DNS server</text><path d="M226 108 L94 108" class="ln-good" marker-end="url(#a-good)"/><text x="158" y="126" class="s" text-anchor="middle">2. Real IP</text><path d="M64 150 L64 200" class="ln-good" marker-end="url(#a-good)"/><rect x="20" y="202" width="90" height="46" rx="10" class="good"/><text x="65" y="224" class="t" text-anchor="middle">Real</text><text x="65" y="240" class="s" text-anchor="middle">bank site</text><text x="160" y="186" class="s" text-anchor="middle">3. You reach the</text><text x="160" y="202" class="s" text-anchor="middle">real website</text><path d="M380 20 V280" class="ln dash"/><text x="404" y="34" class="h" text-anchor="start">DNS SPOOFING</text><circle cx="728" cy="92" r="7" class="ic-bad"/><path d="M716 116 q0 -14 12 -14 q12 0 12 14" class="ic-bad"/><text x="728" y="138" class="s" text-anchor="middle">Hacker</text><path d="M704 96 L644 96" class="ln-bad" marker-end="url(#a-bad)"/><text x="684" y="72" class="s" text-anchor="middle">1. Fake entry</text><rect x="520" y="64" width="120" height="60" rx="10" class="bad"/><rect x="565" y="77" width="30" height="10" rx="2" class="ic-bad"/><circle cx="571" cy="82" r="1.4" class="ic-bad"/><rect x="565" y="89" width="30" height="10" rx="2" class="ic-bad"/><circle cx="571" cy="94" r="1.4" class="ic-bad"/><rect x="565" y="101" width="30" height="10" rx="2" class="ic-bad"/><circle cx="571" cy="106" r="1.4" class="ic-bad"/><text x="580" y="140" class="s" text-anchor="middle">DNS server</text><circle cx="436" cy="94" r="7" class="ic"/><path d="M424 118 q0 -14 12 -14 q12 0 12 14" class="ic"/><text x="436" y="140" class="s" text-anchor="middle">You</text><path d="M462 92 L516 92" class="ln-acc" marker-end="url(#a-acc)"/><text x="489" y="56" class="s" text-anchor="middle">2. bank.com?</text><path d="M580 150 L580 196" class="ln-bad" marker-end="url(#a-bad)"/><text x="636" y="176" class="s" text-anchor="middle">3. Fake IP</text><rect x="520" y="200" width="120" height="50" rx="10" class="bad"/><text x="580" y="222" class="t" text-anchor="middle">Fake look-alike</text><text x="580" y="240" class="s" text-anchor="middle">steals logins</text><rect x="656" y="200" width="88" height="50" rx="10" class="dim"/><text x="700" y="222" class="s" text-anchor="middle">Real site</text><text x="700" y="240" class="s" text-anchor="middle">not reached</text><text x="580" y="272" class="s" text-anchor="middle">Red flag: no padlock / &#x27;Not secure&#x27; warning</text></svg>

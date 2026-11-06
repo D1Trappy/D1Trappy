@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 184" width="760" height="184" role="img" aria-labelledby="t d"><title id="t">Detection and management software</title><desc id="d">Four repeating steps used by vulnerability detection and management software. Scan devices against a database of known vulnerabilities. Score each one, for example with a CVSS score from 0 to 10. Prioritise the most dangerous first. Track each fix until it is done, then scan again.</desc><style>
+.bg{fill:#ffffff}
+.t{font:600 15px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.tb{font:700 17px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.s{font:500 13px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#5b6a78}
+.m{font:600 13px ui-monospace,Menlo,Consolas,monospace;fill:#12202b}
+.h{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#0a6b84;letter-spacing:.08em}
+.w{fill:#ffffff}
+.box{fill:#f3f8fa;stroke:#a9bfca;stroke-width:1.5}
+.acc{fill:#e3f1f5;stroke:#0a6b84;stroke-width:1.5}
+.bad{fill:#fbe5e3;stroke:#b3302b;stroke-width:1.5}
+.good{fill:#e1f3e8;stroke:#1d7a45;stroke-width:1.5}
+.amb{fill:#fbf0dc;stroke:#a8650a;stroke-width:1.5}
+.dim{fill:#eef2f4;stroke:#c9d3da;stroke-width:1.5}
+.solid-acc{fill:#0a6b84}.solid-bad{fill:#b3302b}.solid-good{fill:#1d7a45}.solid-amb{fill:#a8650a}.solid-ink{fill:#12202b}
+.ln{stroke:#5b6a78;stroke-width:2;fill:none}
+.ln-acc{stroke:#0a6b84;stroke-width:2.2;fill:none}
+.ln-bad{stroke:#b3302b;stroke-width:2.2;fill:none}
+.ln-good{stroke:#1d7a45;stroke-width:2.2;fill:none}
+.dash{stroke-dasharray:6 5}
+.tx-acc{fill:#0a6b84}.tx-bad{fill:#b3302b}.tx-good{fill:#1d7a45}.tx-amb{fill:#a8650a}
+.ic{fill:none;stroke:#12202b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-bad{fill:none;stroke:#b3302b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-acc{fill:none;stroke:#0a6b84;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mk-ln{fill:#5b6a78}.mk-acc{fill:#0a6b84}.mk-bad{fill:#b3302b}.mk-good{fill:#1d7a45}
+@media (prefers-color-scheme: dark){
+.bg{fill:#15202a}
+.t,.tb,.m{fill:#e6edf3}.s{fill:#98a8b6}.h{fill:#4fb6cf}
+.box{fill:#192632;stroke:#3a4c5a}.acc{fill:#143440;stroke:#4fb6cf}.bad{fill:#3c1d1b;stroke:#ef7c76}
+.good{fill:#15352a;stroke:#5cc98a}.amb{fill:#392b13;stroke:#e2a645}.dim{fill:#1b2833;stroke:#34444f}
+.solid-acc{fill:#2f8fa8}.solid-bad{fill:#c9534d}.solid-good{fill:#2f9a5f}.solid-amb{fill:#b97c1e}.solid-ink{fill:#e6edf3}
+.ln{stroke:#98a8b6}.ln-acc{stroke:#4fb6cf}.ln-bad{stroke:#ef7c76}.ln-good{stroke:#5cc98a}
+.tx-acc{fill:#4fb6cf}.tx-bad{fill:#ef7c76}.tx-good{fill:#5cc98a}.tx-amb{fill:#e2a645}
+.ic{stroke:#e6edf3}.ic-bad{stroke:#ef7c76}.ic-acc{stroke:#4fb6cf}
+.mk-ln{fill:#98a8b6}.mk-acc{fill:#4fb6cf}.mk-bad{fill:#ef7c76}.mk-good{fill:#5cc98a}
+}
+</style><defs><marker id="a-ln" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-ln"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-acc"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-bad"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-good"/></marker></defs><rect class="bg" width="760" height="184" rx="16"/><text x="20" y="26" class="h" text-anchor="start">DETECTION AND MANAGEMENT SOFTWARE</text><polygon points="20.0,40 176.5,40 192.5,85 176.5,130 20.0,130" class="acc" stroke-linejoin="round"/><text x="98.25" y="70" class="tb" text-anchor="middle">1 Scan</text><text x="98.25" y="94" class="s" text-anchor="middle">Check devices against</text><text x="98.25" y="112" class="s" text-anchor="middle">known vulnerabilities</text><polygon points="202.5,40 359.0,40 375.0,85 359.0,130 202.5,130 218.5,85" class="amb" stroke-linejoin="round"/><text x="288.75" y="70" class="tb" text-anchor="middle">2 Score</text><text x="288.75" y="94" class="s" text-anchor="middle">Rate each one, e.g.</text><text x="288.75" y="112" class="s" text-anchor="middle">CVSS 0 to 10</text><polygon points="385.0,40 541.5,40 557.5,85 541.5,130 385.0,130 401.0,85" class="bad" stroke-linejoin="round"/><text x="471.25" y="70" class="tb" text-anchor="middle">3 Prioritise</text><text x="471.25" y="94" class="s" text-anchor="middle">Most dangerous and</text><text x="471.25" y="112" class="s" text-anchor="middle">easiest to exploit first</text><polygon points="567.5,40 724.0,40 740.0,85 724.0,130 567.5,130 583.5,85" class="good" stroke-linejoin="round"/><text x="653.75" y="70" class="tb" text-anchor="middle">4 Track</text><text x="653.75" y="94" class="s" text-anchor="middle">Follow each fix</text><text x="653.75" y="112" class="s" text-anchor="middle">until it&#x27;s done</text><path d="M720 136 q0 20 -20 20 H60 q-20 0 -20 -20" class="ln dash"/><path d="M34 142 l6 -8 l6 8" class="ln"/><text x="380.0" y="151" class="s" text-anchor="middle">Repeat regularly: new vulnerabilities appear all the time</text></svg>

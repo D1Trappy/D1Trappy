@@ -119,7 +119,12 @@
     "Users rarely notice the small red flags on a spoofed site",
     "Big red flag: the fake site usually has no encryption certificate, so the connection is unencrypted (cleartext)",
     "Browsers warn when a connection isn't secure, but many people ignore it and log in anyway"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/dns-spoofing.svg",
+    "alt": "Left: a normal DNS lookup. You ask the DNS server for the IP address of bank.com, it replies with the real IP, and you reach the real bank site. Right: DNS spoofing. A hacker inserts a fake entry into the DNS server, so when you ask for bank.com it replies with a fake IP and you land on a fake look-alike site that steals your login details; the real site is never reached. A red flag is the missing padlock or a 'Not secure' warning.",
+    "caption": "A poisoned DNS entry sends you to a fake look-alike site instead of the real one."
+   }
   },
   {
    "heading": "Tools to identify a host or IP address",

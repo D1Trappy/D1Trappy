@@ -165,5 +165,22 @@
    "apply": 12,
    "marks": 24
   }
+ ],
+ "diagrams": [
+  "diagrams/attack-vectors.svg",
+  "diagrams/cloud-transit.svg",
+  "diagrams/dns-spoofing.svg",
+  "diagrams/dos-vs-ddos.svg",
+  "diagrams/firewall-ports.svg",
+  "diagrams/four-losses.svg",
+  "diagrams/mantrap.svg",
+  "diagrams/mobile-lifecycle.svg",
+  "diagrams/nist-csf.svg",
+  "diagrams/port-states.svg",
+  "diagrams/review-timescales.svg",
+  "diagrams/sql-injection.svg",
+  "diagrams/virus-vs-worm.svg",
+  "diagrams/vuln-chain.svg",
+  "diagrams/vuln-management.svg"
  ]
 }

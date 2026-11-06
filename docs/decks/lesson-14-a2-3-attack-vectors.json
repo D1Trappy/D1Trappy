@@ -13,7 +13,12 @@
     "Example: an attacker sets up a fake Wi-Fi hotspot with a trusted name. A student connects, and now the attacker can see their data",
     "Application: a college has Wi-Fi, an internet connection, and routers and switches. Each one is a possible route into the network",
     "This lesson covers three groups: wireless (A2.3.1), the internet connection (A2.3.2) and internal network devices (A2.3.3)"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/attack-vectors.svg",
+    "alt": "A college network in the centre, with four routes in. Wireless: Wi-Fi, Bluetooth, NFC and RFID. A fake access point pretending to be trusted. The internet connection through the modem or router. An internal device such as a switch, router or access point. One weak device in the middle can expose every device on the network.",
+    "caption": "Every route into the network is a possible attack vector."
+   }
   },
   {
    "heading": "Threat, vulnerability or attack vector?",

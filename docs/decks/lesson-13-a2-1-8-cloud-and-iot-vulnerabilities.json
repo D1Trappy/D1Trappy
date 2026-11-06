@@ -66,7 +66,12 @@
    },
    "points": [
     "Remember: data needs protecting when it's stored AND when it's being transferred"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/cloud-transit.svg",
+    "alt": "Data travels from your organisation across the internet to a cloud provider. Using HTTPS or a VPN encrypts it in transit, so an attacker who intercepts it can't read it. At the cloud provider, stored data should also be encrypted and the security settings configured correctly.",
+    "caption": "Protect data when it is stored AND when it is being transferred."
+   }
   },
   {
    "heading": "IoT vulnerabilities",

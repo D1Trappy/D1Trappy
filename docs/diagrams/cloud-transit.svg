@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" role="img" aria-labelledby="t d"><title id="t">Protecting cloud data</title><desc id="d">Data travels from your organisation across the internet to a cloud provider. Using HTTPS or a VPN encrypts it in transit, so an attacker who intercepts it can&#x27;t read it. At the cloud provider, stored data should also be encrypted and the security settings configured correctly.</desc><style>
+.bg{fill:#ffffff}
+.t{font:600 15px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.tb{font:700 17px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.s{font:500 13px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#5b6a78}
+.m{font:600 13px ui-monospace,Menlo,Consolas,monospace;fill:#12202b}
+.h{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#0a6b84;letter-spacing:.08em}
+.w{fill:#ffffff}
+.box{fill:#f3f8fa;stroke:#a9bfca;stroke-width:1.5}
+.acc{fill:#e3f1f5;stroke:#0a6b84;stroke-width:1.5}
+.bad{fill:#fbe5e3;stroke:#b3302b;stroke-width:1.5}
+.good{fill:#e1f3e8;stroke:#1d7a45;stroke-width:1.5}
+.amb{fill:#fbf0dc;stroke:#a8650a;stroke-width:1.5}
+.dim{fill:#eef2f4;stroke:#c9d3da;stroke-width:1.5}
+.solid-acc{fill:#0a6b84}.solid-bad{fill:#b3302b}.solid-good{fill:#1d7a45}.solid-amb{fill:#a8650a}.solid-ink{fill:#12202b}
+.ln{stroke:#5b6a78;stroke-width:2;fill:none}
+.ln-acc{stroke:#0a6b84;stroke-width:2.2;fill:none}
+.ln-bad{stroke:#b3302b;stroke-width:2.2;fill:none}
+.ln-good{stroke:#1d7a45;stroke-width:2.2;fill:none}
+.dash{stroke-dasharray:6 5}
+.tx-acc{fill:#0a6b84}.tx-bad{fill:#b3302b}.tx-good{fill:#1d7a45}.tx-amb{fill:#a8650a}
+.ic{fill:none;stroke:#12202b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-bad{fill:none;stroke:#b3302b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-acc{fill:none;stroke:#0a6b84;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mk-ln{fill:#5b6a78}.mk-acc{fill:#0a6b84}.mk-bad{fill:#b3302b}.mk-good{fill:#1d7a45}
+@media (prefers-color-scheme: dark){
+.bg{fill:#15202a}
+.t,.tb,.m{fill:#e6edf3}.s{fill:#98a8b6}.h{fill:#4fb6cf}
+.box{fill:#192632;stroke:#3a4c5a}.acc{fill:#143440;stroke:#4fb6cf}.bad{fill:#3c1d1b;stroke:#ef7c76}
+.good{fill:#15352a;stroke:#5cc98a}.amb{fill:#392b13;stroke:#e2a645}.dim{fill:#1b2833;stroke:#34444f}
+.solid-acc{fill:#2f8fa8}.solid-bad{fill:#c9534d}.solid-good{fill:#2f9a5f}.solid-amb{fill:#b97c1e}.solid-ink{fill:#e6edf3}
+.ln{stroke:#98a8b6}.ln-acc{stroke:#4fb6cf}.ln-bad{stroke:#ef7c76}.ln-good{stroke:#5cc98a}
+.tx-acc{fill:#4fb6cf}.tx-bad{fill:#ef7c76}.tx-good{fill:#5cc98a}.tx-amb{fill:#e2a645}
+.ic{stroke:#e6edf3}.ic-bad{stroke:#ef7c76}.ic-acc{stroke:#4fb6cf}
+.mk-ln{fill:#98a8b6}.mk-acc{fill:#4fb6cf}.mk-bad{fill:#ef7c76}.mk-good{fill:#5cc98a}
+}
+</style><defs><marker id="a-ln" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-ln"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-acc"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-bad"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-good"/></marker></defs><rect class="bg" width="760" height="250" rx="16"/><text x="24" y="32" class="h" text-anchor="start">PROTECT CLOUD DATA IN TRANSIT AND WHEN STORED</text><rect x="20" y="70" width="150" height="110" rx="10" class="acc"/><rect x="55" y="103" width="30" height="20" rx="3" class="ic"/><path d="M63 129 h14 M70 123 v6" class="ic"/><rect x="109" y="103" width="30" height="10" rx="2" class="ic"/><circle cx="115" cy="108" r="1.4" class="ic"/><rect x="109" y="115" width="30" height="10" rx="2" class="ic"/><circle cx="115" cy="120" r="1.4" class="ic"/><rect x="109" y="127" width="30" height="10" rx="2" class="ic"/><circle cx="115" cy="132" r="1.4" class="ic"/><text x="95" y="160" class="s" text-anchor="middle">Your organisation</text><path transform="translate(630 118) scale(1.5)" d="M-26 12 h52 a13 13 0 0 0 0 -26 a19 19 0 0 0 -36 -6 a13 13 0 0 0 -16 32 z" class="ic-acc"/><text x="630" y="176" class="s" text-anchor="middle">Cloud provider</text><rect x="621" y="115" width="18" height="14" rx="3" class="ic-acc"/><path d="M625 115 v-5 a5 5 0 0 1 10 0 v5" class="ic-acc"/><path d="M180 112 C300 80 460 80 570 112" class="ln-good"/><path d="M562 104 l9 8 l-11 4" class="ln-good"/><rect x="330" y="70" width="110" height="34" rx="17" class="good"/><rect x="341" y="83" width="18" height="14" rx="3" class="ic"/><path d="M345 83 v-5 a5 5 0 0 1 10 0 v5" class="ic"/><text x="398" y="92" class="s" text-anchor="middle">encrypted</text><text x="385" y="128" class="t" text-anchor="middle">HTTPS / VPN</text><circle cx="385" cy="186" r="7" class="ic-bad"/><path d="M373 210 q0 -14 12 -14 q12 0 12 14" class="ic-bad"/><text x="385" y="236" class="s" text-anchor="middle">Attacker can&#x27;t read it</text><path d="M385 176 L385 138" class="ln-bad dash" marker-end="url(#a-bad)"/><circle cx="410" cy="160" r="11" class="bad"/><path d="M405.5 155.5 l9 9 M414.5 155.5 l-9 9" class="ln-bad"/><text x="630" y="210" class="s" text-anchor="middle">Stored data: encrypted</text><text x="630" y="228" class="s" text-anchor="middle">+ correct settings</text></svg>

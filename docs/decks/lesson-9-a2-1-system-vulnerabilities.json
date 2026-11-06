@@ -76,7 +76,12 @@
     "Insider threats",
     "IoT vulnerabilities",
     "No regular security audits"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/firewall-ports.svg",
+    "alt": "Traffic from the internet reaches the firewall, which acts as a gate. Ports that are needed, such as 443 for HTTPS and 80 for HTTP, are allowed through to the trusted network. Ports that are not needed, such as 3389 Remote Desktop and 21 FTP, are blocked. Close or block ports that aren't needed.",
+    "caption": "Needed ports are allowed through; ports that aren't needed should be closed or blocked."
+   }
   },
   {
    "heading": "How attackers use open ports",
@@ -251,6 +256,11 @@
       "A patch management policy, so updates are installed promptly, or replacing the outdated till."
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/vuln-chain.svg",
+    "alt": "Four linked steps for answering vulnerability questions, using a school's unpatched till as the example. Cause: the till runs unpatched software. Risk: an attacker exploits the known weakness. Impact: payment data stolen or tills shut down. Response: a patch management policy.",
+    "caption": "Link all four steps for full marks: Cause, Risk, Impact, Response."
    }
   }
  ],

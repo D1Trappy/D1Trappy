@@ -131,6 +131,11 @@
       "Sensitive internal security information was exposed, possibly weakening future defences"
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/four-losses.svg",
+    "alt": "The 2018 British Airways data breach affecting around 400,000 customers in the centre, with arrows to four types of loss. Operational: booking and payment systems disrupted. Financial: a £20 million ICO fine plus customer compensation. Reputational: media coverage damaged public trust. Intellectual property: internal security information exposed.",
+    "caption": "One breach caused all four types of loss at the same time."
    }
   },
   {

@@ -109,7 +109,12 @@
     "-- turns the rest of the line into a comment, so the password check is ignored",
     "Result: the database answers 'yes' without a correct username or password, and the attacker gets in",
     "Standard ways to prevent it (not on the slides): validate and check all input, use parameterised queries so input is never treated as code, and give the website's database account only the access it needs"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/sql-injection.svg",
+    "alt": "Top: a normal login query checks WHERE username equals Alex AND password equals password123, so you only get in with the right password. Bottom: the attacker types quote OR 1=1 dash dash as the username. The quote ends the username text, OR 1=1 is always true, and the two dashes turn the rest of the line, including the password check, into a comment. Result: logged in without a valid password.",
+    "caption": "Each part of the attack input changes what the database is asked to do."
+   }
   },
   {
    "heading": "Case study: Google Chrome zero-day (2022)",

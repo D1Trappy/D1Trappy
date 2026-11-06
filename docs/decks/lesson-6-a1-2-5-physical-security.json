@@ -57,7 +57,12 @@
     "Train staff not to hold the door open for anyone, and to challenge people they don't know",
     "Turnstiles let only one person through at a time",
     "Mantraps (airlocks): a small space with two doors. People must be authenticated at both ends, and it's impossible to have two people inside at once, so tailgating can't happen"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/mantrap.svg",
+    "alt": "Plan view of a mantrap. From outside, a member of staff authenticates with a pass at door 1 and enters the mantrap chamber, which fits only one person, so a tailgater behind them is blocked. Door 2 checks them again and only opens when door 1 is shut, letting them into the secure area.",
+    "caption": "Only one person fits in the chamber, and door 2 opens only when door 1 is shut."
+   }
   },
   {
    "heading": "Guarding against impersonation (model answer)",

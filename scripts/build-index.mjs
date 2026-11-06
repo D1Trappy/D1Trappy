@@ -1,12 +1,13 @@
 // Checks every study pack in docs/decks/ and rebuilds docs/decks/index.json, topics.json and glossary.json.
 // Run after adding or editing a deck:  node scripts/build-index.mjs
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const dir = join(dirname(fileURLToPath(import.meta.url)), '..', 'docs', 'decks');
 const errors = [];
 const GENERATED = ['index.json', 'topics.json', 'glossary.json'];
+const diagrams = new Set(); // every diagram used, so the app can save them for offline use
 const decks = [];
 const glossary = []; // every key term, for the Glossary page
 const topics = []; // course index for the AI helper (functions/api/ask.js)
@@ -28,6 +29,13 @@ for (const file of readdirSync(dir).filter(f => f.endsWith('.json') && !GENERATE
   if (d.id !== id) errors.push(`${where}: "id" must be "${id}"`);
   for (const k of ['title', 'subject', 'added']) if (!isStr(d[k])) errors.push(`${where}: missing "${k}"`);
   if (!Array.isArray(d.sections) || !d.sections.length) errors.push(`${where}: needs "sections"`);
+  (d.sections || []).forEach((s, i) => {
+    if (!s.diagram) return;
+    if (!isStr(s.diagram.src) || !/^diagrams\/[a-z0-9-]+\.svg$/.test(s.diagram.src)) errors.push(`${where} sections[${i}]: diagram "src" must look like diagrams/name.svg`);
+    else if (!existsSync(join(dir, '..', s.diagram.src))) errors.push(`${where} sections[${i}]: ${s.diagram.src} doesn't exist (run python3 scripts/make-diagrams.py)`);
+    else diagrams.add(s.diagram.src);
+    if (!isStr(s.diagram.alt)) errors.push(`${where} sections[${i}]: diagram needs "alt" text describing it`);
+  });
   if (!Array.isArray(d.flashcards) || d.flashcards.some(c => !Array.isArray(c) || c.length !== 2)) errors.push(`${where}: "flashcards" must be [term, definition] pairs`);
   checkMc(d.quiz || [], `${where} quiz`);
   checkMc((d.apply && d.apply.items) || [], `${where} apply.items`);
@@ -49,7 +57,7 @@ if (errors.length) {
 }
 // Sort by title in natural number order, so "Lesson 2" comes before "Lesson 10".
 decks.sort((a, b) => a.title.localeCompare(b.title, 'en', { numeric: true, sensitivity: 'base' }) || a.added.localeCompare(b.added));
-writeFileSync(join(dir, 'index.json'), JSON.stringify({ decks }, null, 1) + '\n');
+writeFileSync(join(dir, 'index.json'), JSON.stringify({ decks, diagrams: [...diagrams].sort() }, null, 1) + '\n');
 const order = new Map(decks.map((d, i) => [d.id, i]));
 topics.sort((a, b) => order.get(a.id) - order.get(b.id));
 writeFileSync(join(dir, 'topics.json'), JSON.stringify({ topics }) + '\n');

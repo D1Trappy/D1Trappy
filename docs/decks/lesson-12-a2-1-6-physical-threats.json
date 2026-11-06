@@ -65,6 +65,11 @@
       "Review security immediately and make improvements"
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/review-timescales.svg",
+    "alt": "A timeline of physical security reviews. Daily: check doors, alarms and restricted areas. Monthly: review access logs, security passes and CCTV. Every 6 months: check staff access and remove what isn't needed. Annually: a full physical security audit. After an incident: review immediately and improve.",
+    "caption": "Learn the timescales: daily, monthly, every 6 months, annually, and straight after an incident."
    }
   },
   {

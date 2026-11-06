@@ -93,6 +93,11 @@
       "Huge amounts of traffic at once, overloading the server rapidly"
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/dos-vs-ddos.svg",
+    "alt": "Top: a DoS attack, where one attacker uses one computer to flood a web server with requests. It is easy to block because there is one source. Bottom: a DDoS attack, where the attacker controls a command-and-control server that directs many infected zombie computers (a botnet) to flood the web server at once. It is hard to block because traffic comes from everywhere.",
+    "caption": "One source is easy to block. A botnet sends traffic from everywhere at once."
    }
   },
   {

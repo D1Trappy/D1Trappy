@@ -87,6 +87,11 @@
       "The worm steals data by installing backdoors and spyware. WannaCry spread ransomware across the NHS in 2017"
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/virus-vs-worm.svg",
+    "alt": "Left: a virus spreads by infecting files, passing from one file to the next, and needs someone to open or run an infected file. Right: a worm spreads by itself, copying itself from computer to computer across a network through the LAN, email or links, with no one needing to open anything.",
+    "caption": "A virus needs someone to open an infected file. A worm copies itself from computer to computer on its own."
    }
   },
   {

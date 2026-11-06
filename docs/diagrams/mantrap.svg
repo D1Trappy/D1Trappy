@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 252" width="760" height="252" role="img" aria-labelledby="t d"><title id="t">How a mantrap stops tailgating</title><desc id="d">Plan view of a mantrap. From outside, a member of staff authenticates with a pass at door 1 and enters the mantrap chamber, which fits only one person, so a tailgater behind them is blocked. Door 2 checks them again and only opens when door 1 is shut, letting them into the secure area.</desc><style>
+.bg{fill:#ffffff}
+.t{font:600 15px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.tb{font:700 17px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.s{font:500 13px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#5b6a78}
+.m{font:600 13px ui-monospace,Menlo,Consolas,monospace;fill:#12202b}
+.h{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#0a6b84;letter-spacing:.08em}
+.w{fill:#ffffff}
+.box{fill:#f3f8fa;stroke:#a9bfca;stroke-width:1.5}
+.acc{fill:#e3f1f5;stroke:#0a6b84;stroke-width:1.5}
+.bad{fill:#fbe5e3;stroke:#b3302b;stroke-width:1.5}
+.good{fill:#e1f3e8;stroke:#1d7a45;stroke-width:1.5}
+.amb{fill:#fbf0dc;stroke:#a8650a;stroke-width:1.5}
+.dim{fill:#eef2f4;stroke:#c9d3da;stroke-width:1.5}
+.solid-acc{fill:#0a6b84}.solid-bad{fill:#b3302b}.solid-good{fill:#1d7a45}.solid-amb{fill:#a8650a}.solid-ink{fill:#12202b}
+.ln{stroke:#5b6a78;stroke-width:2;fill:none}
+.ln-acc{stroke:#0a6b84;stroke-width:2.2;fill:none}
+.ln-bad{stroke:#b3302b;stroke-width:2.2;fill:none}
+.ln-good{stroke:#1d7a45;stroke-width:2.2;fill:none}
+.dash{stroke-dasharray:6 5}
+.tx-acc{fill:#0a6b84}.tx-bad{fill:#b3302b}.tx-good{fill:#1d7a45}.tx-amb{fill:#a8650a}
+.ic{fill:none;stroke:#12202b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-bad{fill:none;stroke:#b3302b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-acc{fill:none;stroke:#0a6b84;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mk-ln{fill:#5b6a78}.mk-acc{fill:#0a6b84}.mk-bad{fill:#b3302b}.mk-good{fill:#1d7a45}
+@media (prefers-color-scheme: dark){
+.bg{fill:#15202a}
+.t,.tb,.m{fill:#e6edf3}.s{fill:#98a8b6}.h{fill:#4fb6cf}
+.box{fill:#192632;stroke:#3a4c5a}.acc{fill:#143440;stroke:#4fb6cf}.bad{fill:#3c1d1b;stroke:#ef7c76}
+.good{fill:#15352a;stroke:#5cc98a}.amb{fill:#392b13;stroke:#e2a645}.dim{fill:#1b2833;stroke:#34444f}
+.solid-acc{fill:#2f8fa8}.solid-bad{fill:#c9534d}.solid-good{fill:#2f9a5f}.solid-amb{fill:#b97c1e}.solid-ink{fill:#e6edf3}
+.ln{stroke:#98a8b6}.ln-acc{stroke:#4fb6cf}.ln-bad{stroke:#ef7c76}.ln-good{stroke:#5cc98a}
+.tx-acc{fill:#4fb6cf}.tx-bad{fill:#ef7c76}.tx-good{fill:#5cc98a}.tx-amb{fill:#e2a645}
+.ic{stroke:#e6edf3}.ic-bad{stroke:#ef7c76}.ic-acc{stroke:#4fb6cf}
+.mk-ln{fill:#98a8b6}.mk-acc{fill:#4fb6cf}.mk-bad{fill:#ef7c76}.mk-good{fill:#5cc98a}
+}
+</style><defs><marker id="a-ln" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-ln"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-acc"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-bad"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-good"/></marker></defs><rect class="bg" width="760" height="252" rx="16"/><text x="24" y="32" class="h" text-anchor="start">HOW A MANTRAP (AIRLOCK) STOPS TAILGATING</text><rect x="20" y="56" width="190" height="150" rx="10" class="dim"/><text x="115" y="80" class="t" text-anchor="middle">Outside</text><circle cx="80" cy="130" r="7" class="ic"/><path d="M68 154 q0 -14 12 -14 q12 0 12 14" class="ic"/><circle cx="150" cy="130" r="7" class="ic-bad"/><path d="M138 154 q0 -14 12 -14 q12 0 12 14" class="ic-bad"/><text x="150" y="186" class="s" text-anchor="middle">Tailgater</text><text x="80" y="186" class="s" text-anchor="middle">Staff</text><rect x="214" y="56" width="12" height="150" rx="3" class="solid-acc"/><rect x="232" y="70" width="24" height="30" rx="4" class="acc"/><text x="244" y="118" class="s" text-anchor="middle">pass</text><rect x="262" y="56" width="236" height="150" rx="10" class="acc"/><text x="380" y="80" class="t" text-anchor="middle">Mantrap chamber</text><circle cx="380" cy="130" r="7" class="ic"/><path d="M368 154 q0 -14 12 -14 q12 0 12 14" class="ic"/><text x="380" y="186" class="s" text-anchor="middle">Only one person fits</text><circle cx="150" cy="104" r="11" class="bad"/><path d="M145.5 99.5 l9 9 M154.5 99.5 l-9 9" class="ln-bad"/><rect x="502" y="56" width="12" height="150" rx="3" class="solid-acc"/><rect x="520" y="70" width="24" height="30" rx="4" class="acc"/><text x="532" y="118" class="s" text-anchor="middle">scan</text><rect x="550" y="56" width="190" height="150" rx="10" class="good"/><text x="645" y="80" class="t" text-anchor="middle">Secure area</text><rect x="610" y="123" width="30" height="10" rx="2" class="ic"/><circle cx="616" cy="128" r="1.4" class="ic"/><rect x="610" y="135" width="30" height="10" rx="2" class="ic"/><circle cx="616" cy="140" r="1.4" class="ic"/><rect x="610" y="147" width="30" height="10" rx="2" class="ic"/><circle cx="616" cy="152" r="1.4" class="ic"/><rect x="650" y="123" width="30" height="10" rx="2" class="ic"/><circle cx="656" cy="128" r="1.4" class="ic"/><rect x="650" y="135" width="30" height="10" rx="2" class="ic"/><circle cx="656" cy="140" r="1.4" class="ic"/><rect x="650" y="147" width="30" height="10" rx="2" class="ic"/><circle cx="656" cy="152" r="1.4" class="ic"/><path d="M100 220 L360 220" class="ln-acc" marker-end="url(#a-acc)"/><path d="M400 220 L660 220" class="ln-acc" marker-end="url(#a-acc)"/><text x="230" y="240" class="s" text-anchor="middle">Door 1: authenticate</text><text x="530" y="240" class="s" text-anchor="middle">Door 2 opens only when door 1 is shut</text></svg>

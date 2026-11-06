@@ -312,3 +312,14 @@ footer img { flex: none; border-radius: 6px; opacity: .85; }
 .tab-short { display: none; }
 @media (max-width: 640px) { .tab-long { display: none; } .tab-short { display: inline; } }
 @media (max-width: 380px) { .views .view-link svg { display: none; } .view-link { padding: 7px 7px; } }
+
+/* ---------- Diagrams (docs/diagrams/, drawn by scripts/make-diagrams.py) ---------- */
+.diagram { margin: 14px 0 2px; }
+.diagram a { display: block; border-radius: 14px; border: 1px solid var(--line); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-sm); transition: box-shadow .15s; cursor: zoom-in; }
+.diagram a:hover { box-shadow: var(--shadow-md); }
+.diagram img { display: block; width: 100%; height: auto; }
+.diagram figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); padding-left: 12px; border-left: 3px solid var(--accent); }
+.sec .diagram { margin-left: -46px; }
+@media (max-width: 480px) { .sec .diagram { margin-left: 0; } }
+.zoom-hint { display: none; }
+@media (max-width: 640px) { .zoom-hint { display: inline; font-weight: 600; color: var(--accent); } }

@@ -97,6 +97,11 @@
       "Without security updates, it becomes more and more vulnerable to malware, hacking and other threats"
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/mobile-lifecycle.svg",
+    "alt": "Four stages in order: Release, when the device is launched; Active updates, when the manufacturer sends regular OS and security updates; End-of-support, when updates stop but the phone still works; and Rising risk, when known flaws are never fixed. A bar underneath shows security risk staying low while patched, then rising sharply after end-of-support.",
+    "caption": "A phone can keep working after end-of-support, but its risk keeps rising."
    }
   },
   {

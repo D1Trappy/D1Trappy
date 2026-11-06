@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 214" width="760" height="214" role="img" aria-labelledby="t d"><title id="t">Lifecycle of a mobile device</title><desc id="d">Four stages in order: Release, when the device is launched; Active updates, when the manufacturer sends regular OS and security updates; End-of-support, when updates stop but the phone still works; and Rising risk, when known flaws are never fixed. A bar underneath shows security risk staying low while patched, then rising sharply after end-of-support.</desc><style>
+.bg{fill:#ffffff}
+.t{font:600 15px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.tb{font:700 17px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#12202b}
+.s{font:500 13px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#5b6a78}
+.m{font:600 13px ui-monospace,Menlo,Consolas,monospace;fill:#12202b}
+.h{font:700 12px ui-monospace,Menlo,Consolas,monospace;fill:#0a6b84;letter-spacing:.08em}
+.w{fill:#ffffff}
+.box{fill:#f3f8fa;stroke:#a9bfca;stroke-width:1.5}
+.acc{fill:#e3f1f5;stroke:#0a6b84;stroke-width:1.5}
+.bad{fill:#fbe5e3;stroke:#b3302b;stroke-width:1.5}
+.good{fill:#e1f3e8;stroke:#1d7a45;stroke-width:1.5}
+.amb{fill:#fbf0dc;stroke:#a8650a;stroke-width:1.5}
+.dim{fill:#eef2f4;stroke:#c9d3da;stroke-width:1.5}
+.solid-acc{fill:#0a6b84}.solid-bad{fill:#b3302b}.solid-good{fill:#1d7a45}.solid-amb{fill:#a8650a}.solid-ink{fill:#12202b}
+.ln{stroke:#5b6a78;stroke-width:2;fill:none}
+.ln-acc{stroke:#0a6b84;stroke-width:2.2;fill:none}
+.ln-bad{stroke:#b3302b;stroke-width:2.2;fill:none}
+.ln-good{stroke:#1d7a45;stroke-width:2.2;fill:none}
+.dash{stroke-dasharray:6 5}
+.tx-acc{fill:#0a6b84}.tx-bad{fill:#b3302b}.tx-good{fill:#1d7a45}.tx-amb{fill:#a8650a}
+.ic{fill:none;stroke:#12202b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-bad{fill:none;stroke:#b3302b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic-acc{fill:none;stroke:#0a6b84;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mk-ln{fill:#5b6a78}.mk-acc{fill:#0a6b84}.mk-bad{fill:#b3302b}.mk-good{fill:#1d7a45}
+@media (prefers-color-scheme: dark){
+.bg{fill:#15202a}
+.t,.tb,.m{fill:#e6edf3}.s{fill:#98a8b6}.h{fill:#4fb6cf}
+.box{fill:#192632;stroke:#3a4c5a}.acc{fill:#143440;stroke:#4fb6cf}.bad{fill:#3c1d1b;stroke:#ef7c76}
+.good{fill:#15352a;stroke:#5cc98a}.amb{fill:#392b13;stroke:#e2a645}.dim{fill:#1b2833;stroke:#34444f}
+.solid-acc{fill:#2f8fa8}.solid-bad{fill:#c9534d}.solid-good{fill:#2f9a5f}.solid-amb{fill:#b97c1e}.solid-ink{fill:#e6edf3}
+.ln{stroke:#98a8b6}.ln-acc{stroke:#4fb6cf}.ln-bad{stroke:#ef7c76}.ln-good{stroke:#5cc98a}
+.tx-acc{fill:#4fb6cf}.tx-bad{fill:#ef7c76}.tx-good{fill:#5cc98a}.tx-amb{fill:#e2a645}
+.ic{stroke:#e6edf3}.ic-bad{stroke:#ef7c76}.ic-acc{stroke:#4fb6cf}
+.mk-ln{fill:#98a8b6}.mk-acc{fill:#4fb6cf}.mk-bad{fill:#ef7c76}.mk-good{fill:#5cc98a}
+}
+</style><defs><marker id="a-ln" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-ln"/></marker><marker id="a-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-acc"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-bad"/></marker><marker id="a-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="mk-good"/></marker></defs><rect class="bg" width="760" height="214" rx="16"/><text x="24" y="32" class="h" text-anchor="start">LIFECYCLE OF A MOBILE DEVICE</text><rect x="20" y="50" width="170" height="74" rx="10" class="acc"/><text x="105" y="78" class="tb" text-anchor="middle">Release</text><text x="105" y="98" class="s" text-anchor="middle">Device launched</text><text x="105" y="114" class="s" text-anchor="middle">and on sale</text><path d="M192 87 L203 87" class="ln" marker-end="url(#a-ln)"/><rect x="205" y="50" width="170" height="74" rx="10" class="good"/><text x="290" y="78" class="tb" text-anchor="middle">Active updates</text><text x="290" y="98" class="s" text-anchor="middle">Regular OS and</text><text x="290" y="114" class="s" text-anchor="middle">security updates</text><path d="M377 87 L388 87" class="ln" marker-end="url(#a-ln)"/><rect x="390" y="50" width="170" height="74" rx="10" class="amb"/><text x="475" y="78" class="tb" text-anchor="middle">End-of-support</text><text x="475" y="98" class="s" text-anchor="middle">Updates stop;</text><text x="475" y="114" class="s" text-anchor="middle">phone still works</text><path d="M562 87 L573 87" class="ln" marker-end="url(#a-ln)"/><rect x="575" y="50" width="170" height="74" rx="10" class="bad"/><text x="660" y="78" class="tb" text-anchor="middle">Rising risk</text><text x="660" y="98" class="s" text-anchor="middle">Known flaws</text><text x="660" y="114" class="s" text-anchor="middle">never fixed</text><text x="24" y="156" class="h" text-anchor="start">SECURITY RISK</text><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1d7a45"/><stop offset=".5" stop-color="#1d7a45"/><stop offset=".7" stop-color="#a8650a"/><stop offset="1" stop-color="#b3302b"/></linearGradient></defs><path d="M20 198 L20 184 L380 184 C470 184 520 168 560 160 S700 136 740 128 L740 198 Z" fill="url(#g)" opacity=".9"/><text x="200" y="196" class="s w" text-anchor="middle">Low while patched</text><text x="650" y="190" class="s w" text-anchor="middle">High: unpatched</text></svg>

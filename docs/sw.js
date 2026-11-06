@@ -1,7 +1,7 @@
 // Study Hub offline support. Network first, so you always get the newest lessons when online;
 // the saved copy is used only when there's no connection. The AI (/api/) always needs internet.
-const CACHE = 'study-hub-v3';
-const CORE = ['./', 'index.html', 'style.css?v=7', 'app.js?v=7', 'assistant.js?v=7', 'account.js?v=7', 'manifest.webmanifest',
+const CACHE = 'study-hub-v4';
+const CORE = ['./', 'index.html', 'style.css?v=8', 'app.js?v=8', 'assistant.js?v=8', 'account.js?v=8', 'manifest.webmanifest',
   'icons/icon.svg', 'icons/icon-192.png', 'decks/index.json', 'decks/topics.json', 'decks/glossary.json'];
 
 self.addEventListener('install', (event) => {
@@ -11,7 +11,7 @@ self.addEventListener('install', (event) => {
     // Save every lesson too, so all of them work offline.
     try {
       const list = await (await fetch('decks/index.json', { cache: 'no-cache' })).json();
-      await cache.addAll((list.decks || []).map((d) => `decks/${d.id}.json`));
+      await cache.addAll([...(list.decks || []).map((d) => `decks/${d.id}.json`), ...(list.diagrams || [])]);
     } catch (e) { /* lessons are still saved as you open them */ }
     self.skipWaiting();
   })());

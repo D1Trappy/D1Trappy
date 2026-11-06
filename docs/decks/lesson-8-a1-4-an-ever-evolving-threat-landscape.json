@@ -104,6 +104,11 @@
       "Get systems and data back to normal, e.g. from backups, and learn from it"
      ]
     ]
+   },
+   "diagram": {
+    "src": "diagrams/nist-csf.svg",
+    "alt": "The five core functions of the NIST Cybersecurity Framework in order. Identify: know what to protect and the risks. Protect: put safeguards in place. Detect: spot attacks quickly. Respond: act to contain an incident. Recover: restore systems and learn from it, then the cycle repeats.",
+    "caption": "Learn them in order: Identify, Protect, Detect, Respond, Recover."
    }
   },
   {

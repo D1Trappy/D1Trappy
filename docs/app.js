@@ -96,6 +96,7 @@ function renderLearn() {
       ${s.text ? `<p>${esc(s.text)}</p>` : ''}
       ${s.points && s.points.length ? `<ul class="tight">${s.points.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
       ${s.table ? `<table><thead><tr>${s.table.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : ''}
+      ${s.diagram ? `<figure class="diagram"><a href="${esc(s.diagram.src)}" target="_blank" rel="noopener" title="Open the diagram full size"><img src="${esc(s.diagram.src)}" alt="${esc(s.diagram.alt)}" loading="lazy" decoding="async"></a><figcaption>${esc(s.diagram.caption || '')}<span class="zoom-hint"> Tap the diagram to enlarge it.</span></figcaption></figure>` : ''}
     </div>`).join('')
     + (p.keyIdea ? `<div class="callout"><strong>Key idea:</strong> ${esc(p.keyIdea)}</div>` : '')
     + `<div class="row"><span class="spacer"></span><button class="btn" id="to-flash">Next: Flashcards →</button></div>`;

@@ -15,6 +15,7 @@ export function lessonNotes(deck) {
     out.push(`\n## ${s.heading}`);
     if (s.text) out.push(s.text);
     for (const p of s.points || []) out.push(`- ${p}`);
+    if (s.diagram) out.push(`[Diagram on the page: ${s.diagram.alt}]`);
     if (s.table) {
       out.push(s.table.head.join(" | "));
       for (const r of s.table.rows) out.push(r.join(" | "));

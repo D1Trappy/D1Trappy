@@ -48,7 +48,12 @@
     "Closed: replies, but nothing is listening",
     "Filtered: no reply, a firewall is blocking it",
     "An open port is only a problem if it isn't needed or isn't protected"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/port-states.svg",
+    "alt": "Three rows showing what a port scanner sees. Open: the scanner sends a request and the port accepts the connection because a service is listening. Closed: the port replies to refuse the connection because nothing is listening right now, so keep scanning as it could open later. Filtered: a firewall silently blocks the request so there is no reply at all.",
+    "caption": "The three replies a port scanner can get, and what each means."
+   }
   },
   {
    "heading": "A2.4.2 Network mapper / system discovery",
@@ -85,7 +90,12 @@
     "Score each one with CVSS (0 to 10)",
     "Prioritise the most dangerous and easiest to exploit",
     "Track each fix until it is done and produce reports"
-   ]
+   ],
+   "diagram": {
+    "src": "diagrams/vuln-management.svg",
+    "alt": "Four repeating steps used by vulnerability detection and management software. Scan devices against a database of known vulnerabilities. Score each one, for example with a CVSS score from 0 to 10. Prioritise the most dangerous first. Track each fix until it is done, then scan again.",
+    "caption": "The four steps repeat, because new vulnerabilities appear all the time."
+   }
   },
   {
    "heading": "A2.4.6 Assessing user vulnerabilities",
