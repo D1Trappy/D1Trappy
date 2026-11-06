@@ -144,3 +144,4 @@ footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
   .helper-panel { right: 0; bottom: 0; width: 100vw; height: 85vh; border-radius: 14px 14px 0 0; }
 }
 @media (prefers-reduced-motion: reduce) { .helper-msg.typing span, .helper-fab::after { animation: none; } .helper-fab { transition: none; } }
+.credit { margin: 0 0 8px; font: 600 13px var(--font-body); color: var(--muted); letter-spacing: .01em; }
