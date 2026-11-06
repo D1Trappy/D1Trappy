@@ -18,6 +18,7 @@ window.studyHub = {
   reloadProgress() {
     if (current) { progress = ls.get('sh-prog-' + current.id, { answers: {} }); if (!progress.answers) progress.answers = {}; renderExam(); }
     if (view === 'progress') renderProgress();
+    updateRing(); renderShelf();
   }
 };
 const cache = {};
@@ -27,12 +28,32 @@ function renderShelf() {
   const q = $('search').value.trim().toLowerCase();
   const list = index.filter(d => !q || [d.title, d.code, d.subject].join(' ').toLowerCase().includes(q));
   $('shelf').innerHTML = list.length
-    ? list.map(d => `<button class="deck" data-id="${esc(d.id)}" aria-pressed="${current && current.id === d.id}"><small>${esc(d.code || d.subject || 'Topic')}</small>${esc(d.title)}</button>`).join('')
-    : '<p class="muted">No topics match that search.</p>';
+    ? list.map(d => {
+        const m = d.title.match(/^Lesson\s+(\d+)\s*[-–:]\s*(.*)$/i);
+        const num = m ? m[1].padStart(2, '0') : '•', name = m ? m[2] : d.title;
+        const done = lessonStats(d).overall;
+        return `<button class="deck" data-id="${esc(d.id)}" aria-pressed="${current && current.id === d.id}" aria-label="${esc(d.title)}, ${done}% done">
+          <span class="deck-num">${num}</span>
+          <span class="deck-body"><small>${esc(d.code || d.subject || 'Topic')}</small><span class="deck-name">${esc(name)}</span>
+          <span class="deck-bar"><span class="${level(done)}" style="width:${done}%"></span></span></span>
+        </button>`;
+      }).join('')
+    : '<p class="muted">No lessons match that search.</p>';
   $('shelf').querySelectorAll('.deck').forEach(b => b.onclick = () => { location.hash = b.dataset.id; });
 }
 
 $('search').oninput = renderShelf;
+
+// A small progress ring, e.g. ring(62) for 62%.
+function ring(n, size = '') {
+  const c = 2 * Math.PI * 18;
+  return `<span class="ring ${size} ${level(n)}" role="img" aria-label="${n}% done"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="ring-bg" cx="22" cy="22" r="18"/><circle class="ring-fg" cx="22" cy="22" r="18" stroke-dasharray="${(n / 100 * c).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 22 22)"/></svg><span class="ring-n">${n}<small>%</small></span></span>`;
+}
+function updateRing() {
+  if (!current) return;
+  const d = index.find(x => x.id === current.id);
+  if (d) $('d-ring').innerHTML = ring(lessonStats(d).overall, 'lg') + '<span class="ring-cap">done</span>';
+}
 
 async function loadDeck(id) {
   if (!cache[id]) {
@@ -54,7 +75,7 @@ async function openDeck(id) {
   $('d-code').textContent = current.code || current.subject || '';
   $('d-title').textContent = current.title;
   $('d-q').textContent = current.bigQuestion || '';
-  renderLearn(); fcStart(); qzStart(); apStart(); renderExam(); showTab(tab);
+  renderLearn(); fcStart(); qzStart(); apStart(); renderExam(); showTab(tab); updateRing();
   window.dispatchEvent(new CustomEvent('studyhub:deck', { detail: { id, title: current.title } }));
 }
 
@@ -156,7 +177,12 @@ function save() {
   clearTimeout(saveTimer);
   const id = current.id, p = progress;
   p._t = Date.now(); // when this lesson's progress last changed, for syncing between devices
-  pendingSave = () => { ls.set('sh-prog-' + id, p); pendingSave = null; if (window.onProgressSaved) window.onProgressSaved(id, p); };
+  pendingSave = () => {
+    ls.set('sh-prog-' + id, p); pendingSave = null;
+    if (window.onProgressSaved) window.onProgressSaved(id, p);
+    if (current && current.id === id) updateRing();
+    renderShelf();
+  };
   saveTimer = setTimeout(pendingSave, 500);
 }
 // Save straight away if the page is closed or hidden mid-typing.
@@ -254,7 +280,7 @@ function showView(v) {
   view = v;
   $('deckview').classList.toggle('hidden', v !== 'lessons');
   $('shelf').classList.toggle('hidden', v !== 'lessons');
-  $('search').classList.toggle('hidden', v !== 'lessons');
+  $('shelf-head').classList.toggle('hidden', v !== 'lessons');
   $('progressview').classList.toggle('hidden', v !== 'progress');
   $('glossaryview').classList.toggle('hidden', v !== 'glossary');
   $('accountview').classList.toggle('hidden', v !== 'account');
@@ -287,7 +313,7 @@ function lessonStats(d) {
   const started = parts.some(x => x[1] > 0) || Object.keys(p.answers || {}).length > 0;
   return { parts, overall, started };
 }
-const level = n => n >= 80 ? 'good' : n >= 50 ? 'mid' : 'low';
+const level = n => n >= 80 ? 'good' : n >= 50 ? 'mid' : n > 0 ? 'low' : 'none';
 function renderProgress() {
   const stats = index.map(d => ({ d, ...lessonStats(d) }));
   const started = stats.filter(x => x.started).length;
@@ -296,11 +322,11 @@ function renderProgress() {
   const pool = stats.filter(x => x.started && x.overall < 100);
   const next = pool.length ? pool.reduce((a, b) => b.overall < a.overall ? b : a) : stats.find(x => !x.started) || null;
   const weakest = next && next.parts.length ? next.parts.reduce((a, b) => pct(b[1], b[2]) < pct(a[1], a[2]) ? b : a) : null;
-  $('pv-next').innerHTML = `<div class="row"><div><div class="code">OVERALL</div><div class="big score">${avg}%</div><div class="muted">${started} of ${stats.length} lessons started</div></div><span class="spacer"></span>
+  $('pv-next').innerHTML = `<div class="row"><div class="row" style="gap:16px">${ring(avg, 'lg')}<div><div class="code">OVERALL</div><div class="muted">${started} of ${stats.length} lessons started</div></div></div><span class="spacer"></span>
     ${next ? `<div class="next-box"><div class="code">REVISE NEXT</div><strong>${esc(next.d.title)}</strong><div class="muted">${next.started ? `Weakest area: ${esc(weakest[0])} (${pct(weakest[1], weakest[2])}%)` : 'You haven\'t started this one yet.'}</div><a class="btn small" href="#${esc(next.d.id)}">Open lesson</a></div>` : '<div class="next-box"><strong>Everything is at 100%. Amazing work!</strong></div>'}</div>`;
   $('pv-list').innerHTML = stats.map(x => `
     <div class="card pv-card">
-      <div class="row"><a class="pv-title" href="#${esc(x.d.id)}">${esc(x.d.title)}</a><span class="spacer"></span><span class="pill ${level(x.overall)}">${x.overall}%</span></div>
+      <div class="row pv-head">${ring(x.overall, 'sm')}<a class="pv-title" href="#${esc(x.d.id)}">${esc(x.d.title)}</a></div>
       <div class="pv-bars">${x.parts.map(([name, got, of]) => { const n = pct(got, of); return `
         <div class="pv-bar"><span>${name}</span><div class="progress"><div class="${level(n)}" style="width:${n}%"></div></div><span class="score">${got}/${of}</span></div>`; }).join('')}
       </div>

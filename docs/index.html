@@ -8,30 +8,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#0a6b84">
+<meta name="theme-color" content="#0a6b84" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d151c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Study Hub">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
-<div class="wrap">
-  <p class="credit">Made by Anointed <span role="img" aria-label="goat">🐐</span></p>
-  <div class="toolbar">
-    <span class="code">STUDY HUB</span>
-    <input type="search" id="search" placeholder="Find a topic…" aria-label="Find a topic">
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#" aria-label="Study Hub home">
+      <img src="icons/icon.svg" alt="" width="34" height="34">
+      <span class="brand-text"><strong>Study Hub</strong><span class="credit">Made by Anointed <span role="img" aria-label="goat">🐐</span></span></span>
+    </a>
+    <nav class="views" aria-label="Pages">
+      <a href="#" data-view="lessons" class="view-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>Lessons</a>
+      <a href="#progress" data-view="progress" class="view-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Progress</a>
+      <a href="#glossary" data-view="glossary" class="view-link"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4zM8 9h8M8 13h6"/></svg>Glossary</a>
+      <a href="#account" data-view="account" class="view-link" id="account-link">Sign in</a>
+      <button class="btn small hidden" id="install-btn" type="button">Install app</button>
+    </nav>
   </div>
-  <nav class="views" aria-label="Pages">
-    <a href="#" data-view="lessons" class="view-link">Lessons</a>
-    <a href="#progress" data-view="progress" class="view-link">My progress</a>
-    <a href="#glossary" data-view="glossary" class="view-link">Glossary</a>
-    <a href="#account" data-view="account" class="view-link" id="account-link">Sign in</a>
-    <span class="spacer"></span>
-    <button class="btn small hidden" id="install-btn" type="button">Install app</button>
-  </nav>
+</header>
+<div class="wrap">
   <p class="install-tip hidden" id="install-tip">On iPhone or iPad: tap the <strong>Share</strong> button in Safari, then <strong>Add to Home Screen</strong>.</p>
-  <div class="shelf" id="shelf" aria-label="Topics"></div>
+  <div class="shelf-head" id="shelf-head">
+    <h2>Your lessons</h2>
+    <input type="search" id="search" placeholder="Find a lesson…" aria-label="Find a lesson">
+  </div>
+  <div class="shelf" id="shelf" aria-label="Lessons"></div>
 
   <section id="progressview" class="stack hidden" aria-labelledby="pv-title">
     <div>
@@ -59,17 +66,20 @@
   </section>
 
   <section id="deckview">
-    <header>
-      <div class="code" id="d-code"></div>
-      <h1 id="d-title">Loading…</h1>
-      <p class="muted" id="d-q" style="margin:0"></p>
+    <header class="hero">
+      <div class="hero-text">
+        <span class="chip" id="d-code"></span>
+        <h1 id="d-title">Loading…</h1>
+        <p class="bigq"><span class="bigq-label">Big question</span><span id="d-q"></span></p>
+      </div>
+      <div class="ring-wrap" id="d-ring" aria-label="Your progress in this lesson"></div>
     </header>
     <nav class="tabs" role="tablist" aria-label="Study methods">
-      <button role="tab" data-tab="learn" aria-selected="true">1 · Learn</button>
-      <button role="tab" data-tab="flash" aria-selected="false">2 · Flashcards</button>
-      <button role="tab" data-tab="quiz" aria-selected="false">3 · Quiz</button>
-      <button role="tab" data-tab="apply" aria-selected="false">4 · Apply it</button>
-      <button role="tab" data-tab="exam" aria-selected="false">5 · Exam practice</button>
+      <button role="tab" data-tab="learn" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg><span>Learn</span></button>
+      <button role="tab" data-tab="flash" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 2h12a2 2 0 0 1 2 2v12"/></svg><span class="tab-long">Flashcards</span><span class="tab-short">Cards</span></button>
+      <button role="tab" data-tab="quiz" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg><span>Quiz</span></button>
+      <button role="tab" data-tab="apply" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2zM9 21h6"/></svg><span>Apply it</span></button>
+      <button role="tab" data-tab="exam" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"/></svg><span class="tab-long">Exam practice</span><span class="tab-short">Exam</span></button>
     </nav>
 
     <div id="learn" class="pane stack"></div>
@@ -109,16 +119,16 @@
         </tbody></table>
       </div>
       <div id="exam-list" class="stack"></div>
-      <div class="card row totalbar" style="position:sticky;bottom:8px">
+      <div class="card row totalbar">
         <span>Your total</span><span class="spacer"></span><span class="big score" id="ex-total">0</span><span class="score" id="ex-max">/ 0</span>
       </div>
     </div>
   </section>
 
-  <footer>Answers and progress are saved on this device, and in your account if you sign in. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</footer>
+  <footer><img src="icons/icon.svg" alt="" width="22" height="22"><span>Answers and progress are saved on this device, and in your account if you sign in. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</span></footer>
 </div>
-<script src="app.js?v=6"></script>
-<script src="assistant.js?v=6"></script>
-<script src="account.js?v=6"></script>
+<script src="app.js?v=7"></script>
+<script src="assistant.js?v=7"></script>
+<script src="account.js?v=7"></script>
 </body>
 </html>
