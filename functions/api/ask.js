@@ -1,50 +1,10 @@
 // Study Hub AI helper: POST /api/ask
-// Runs as a Cloudflare Pages Function. The Anthropic API key lives in the Cloudflare
-// project's settings as the secret ANTHROPIC_API_KEY, never in the website's code.
-import Anthropic from "@anthropic-ai/sdk";
+// Runs as a Cloudflare Pages Function; shared checks and the API client are in lib/shared.js.
+import { MODEL, json, guard, readJson, loadDeck, loadTopics, newClient, apiError, textOf } from "../../lib/shared.js";
 
-const MODEL = "claude-haiku-5-5";
 const MAX_QUESTION = 600;        // characters per question
 const MAX_HISTORY = 8;           // earlier messages sent back for context
 const MAX_HISTORY_TEXT = 2000;   // characters per earlier message
-const RATE_LIMIT = 15;           // questions per person…
-const RATE_WINDOW_MS = 10 * 60 * 1000; // …per 10 minutes
-
-// Best-effort limit per visitor. It resets when Cloudflare restarts the worker, so the
-// monthly spend limit in the Anthropic Console is the real safety net.
-const recent = new Map();
-function rateLimited(ip) {
-  const now = Date.now();
-  const times = (recent.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
-  if (times.length >= RATE_LIMIT) { recent.set(ip, times); return true; }
-  times.push(now);
-  recent.set(ip, times);
-  if (recent.size > 5000) recent.clear();
-  return false;
-}
-
-function allowedOrigin(request) {
-  const origin = request.headers.get("Origin");
-  if (!origin) return false;
-  try {
-    const host = new URL(origin).hostname;
-    return host === "nbastudyhub.pages.dev" || host.endsWith(".nbastudyhub.pages.dev") ||
-      host === "localhost" || host === "127.0.0.1";
-  } catch { return false; }
-}
-
-let topicsCache = null;
-async function loadTopics(env, url) {
-  if (topicsCache) return topicsCache;
-  try {
-    const res = await env.ASSETS.fetch(new URL("/decks/topics.json", url));
-    if (res.ok) topicsCache = (await res.json()).topics || [];
-  } catch { /* the helper still works with just the open lesson */ }
-  return topicsCache || [];
-}
-
-const json = (body, status = 200) =>
-  new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 
 // Turn a study pack into plain-text notes for the system prompt.
 export function lessonNotes(deck) {
@@ -110,34 +70,24 @@ function cleanHistory(history) {
 }
 
 export async function onRequestPost({ request, env }) {
-  if (!allowedOrigin(request)) return json({ error: "forbidden" }, 403);
-  if (!env.ANTHROPIC_API_KEY) return json({ error: "not_configured" }, 503);
+  const blocked = guard(request, env);
+  if (blocked) return blocked;
 
-  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
-  if (rateLimited(ip)) return json({ error: "rate_limited" }, 429);
-
-  let body;
-  try { body = await request.json(); } catch { return json({ error: "bad_request" }, 400); }
-  const deckId = typeof body.deckId === "string" ? body.deckId : "";
-  const question = typeof body.question === "string" ? body.question.trim() : "";
-  if (!/^[a-z0-9-]{1,120}$/.test(deckId) || !question || question.length > MAX_QUESTION) {
+  const body = await readJson(request);
+  const question = body && typeof body.question === "string" ? body.question.trim() : "";
+  if (!body || typeof body.deckId !== "string" || !/^[a-z0-9-]{1,120}$/.test(body.deckId) || !question || question.length > MAX_QUESTION) {
     return json({ error: "bad_request" }, 400);
   }
-
-  const deckRes = await env.ASSETS.fetch(new URL(`/decks/${deckId}.json`, request.url));
-  if (!deckRes.ok) return json({ error: "unknown_lesson" }, 404);
-  let deck;
-  try { deck = await deckRes.json(); } catch { return json({ error: "unknown_lesson" }, 404); }
-  if (!deck || deck.id !== deckId || !Array.isArray(deck.sections)) return json({ error: "unknown_lesson" }, 404);
+  const deck = await loadDeck(env, request.url, body.deckId);
+  if (!deck) return json({ error: "unknown_lesson" }, 404);
   const topics = await loadTopics(env, request.url);
 
   const messages = cleanHistory(body.history);
   if (messages.length && messages[messages.length - 1].role === "user") messages.pop();
   messages.push({ role: "user", content: question });
 
-  const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, maxRetries: 1, timeout: 30_000 });
   try {
-    const response = await client.messages.create({
+    const response = await newClient(env).messages.create({
       model: MODEL,
       max_tokens: 4000,
       output_config: { effort: "low" },
@@ -151,20 +101,10 @@ export async function onRequestPost({ request, env }) {
     if (response.stop_reason === "refusal") {
       return json({ answer: "Sorry, I can't help with that one. Try asking me something about this lesson." });
     }
-    const answer = response.content.filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
+    const answer = textOf(response);
     if (!answer) return json({ error: "empty" }, 502);
     return json({ answer });
   } catch (error) {
-    if (error instanceof Anthropic.RateLimitError) return json({ error: "busy" }, 429);
-    if (error instanceof Anthropic.AuthenticationError || error instanceof Anthropic.PermissionDeniedError) {
-      console.error("Anthropic key problem:", error.status);
-      return json({ error: "not_configured" }, 503);
-    }
-    if (error instanceof Anthropic.APIError) {
-      console.error("Anthropic API error:", error.status, error.message);
-      return json({ error: "upstream" }, 502);
-    }
-    console.error("Helper error:", error);
-    return json({ error: "upstream" }, 502);
+    return apiError(error);
   }
 }

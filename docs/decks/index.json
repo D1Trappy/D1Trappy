@@ -5,105 +5,165 @@
    "title": "Lesson 1 - Internal Threats",
    "code": "IT · Unit 2 · A1.1",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 26,
+   "quiz": 17,
+   "apply": 12,
+   "marks": 27
   },
   {
    "id": "lesson-2-a1-2-function-of-external-threats",
    "title": "Lesson 2 - A1.2 Function of External Threats",
    "code": "IT · Unit 2 · A1.2",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 29,
+   "quiz": 17,
+   "apply": 12,
+   "marks": 28
   },
   {
    "id": "lesson-3-a1-2-2-hacking",
    "title": "Lesson 3 - A1.2.2 Hacking",
    "code": "IT · Unit 2 · A1.2.2",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 24,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 26
   },
   {
    "id": "lesson-4-a1-2-3-sabotage",
    "title": "Lesson 4 - A1.2.3 Sabotage",
    "code": "IT · Unit 2 · A1.2.3",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 22,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 29
   },
   {
    "id": "lesson-5-a1-2-4-social-engineering",
    "title": "Lesson 5 - A1.2.4 Social Engineering",
    "code": "IT · Unit 2 · A1.2.4",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 22,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 28
   },
   {
    "id": "lesson-6-a1-2-5-physical-security",
    "title": "Lesson 6 - A1.2.5 Physical Security",
    "code": "IT · Unit 2 · A1.2.5",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 21,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 25
   },
   {
    "id": "lesson-7-a1-3-impact-of-credible-threat",
    "title": "Lesson 7 - A1.3 Impact of Credible Threat",
    "code": "IT · Unit 2 · A1.3",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 21,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 27
   },
   {
    "id": "lesson-8-a1-4-an-ever-evolving-threat-landscape",
    "title": "Lesson 8 - A1.4 An Ever-Evolving Threat Landscape (Independent Study)",
    "code": "IT · Unit 2 · A1.4",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 21,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 28
   },
   {
    "id": "lesson-9-a2-1-system-vulnerabilities",
    "title": "Lesson 9 - A2.1 System Vulnerabilities",
    "code": "IT · Unit 2 · A2.1",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 26,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 27
   },
   {
    "id": "lesson-10-a2-1-3-software-vulnerabilities",
    "title": "Lesson 10 - A2.1.3 Software Vulnerabilities",
    "code": "IT · Unit 2 · A2.1.3",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 22,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 27
   },
   {
    "id": "lesson-11-a2-1-4-5-operating-systems-and-mobile-devices",
    "title": "Lesson 11 - A2.1.4-5 Operating Systems and Mobile Devices (Independent Study)",
    "code": "IT · Unit 2 · A2.1.4–A2.1.5",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 19,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 24
   },
   {
    "id": "lesson-12-a2-1-6-physical-threats",
    "title": "Lesson 12 - A2.1.6 Physical Threats",
    "code": "IT · Unit 2 · A2.1.6",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 20,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 26
   },
   {
    "id": "lesson-13-a2-1-8-cloud-and-iot-vulnerabilities",
    "title": "Lesson 13 - A2.1.8 Cloud & IoT Vulnerabilities",
    "code": "IT · Unit 2 · A2.1.8",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 19,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 30
   },
   {
    "id": "lesson-14-a2-3-attack-vectors",
    "title": "Lesson 14 - A2.3 Attack Vectors (Independent Study)",
    "code": "IT · Unit 2 · A2.3.1–A2.3.3",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 22,
+   "quiz": 16,
+   "apply": 12,
+   "marks": 31
   },
   {
    "id": "lesson-15-a2-4-tools-to-assess-vulnerabilities",
    "title": "Lesson 15 - A2.4 Tools to Assess Vulnerabilities (Independent Study)",
    "code": "IT · Unit 2 · A2.4.1–A2.4.6",
    "subject": "Information Technology",
-   "added": "2026-11-05"
+   "added": "2026-11-05",
+   "cards": 28,
+   "quiz": 15,
+   "apply": 12,
+   "marks": 24
   }
  ]
 }

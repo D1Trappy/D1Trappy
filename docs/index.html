@@ -7,7 +7,13 @@
 <meta name="description" content="Revision packs made from lesson slides: summaries, flashcards, quizzes and exam practice.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0a6b84">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Study Hub">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <div class="wrap">
@@ -16,7 +22,35 @@
     <span class="code">STUDY HUB</span>
     <input type="search" id="search" placeholder="Find a topic…" aria-label="Find a topic">
   </div>
+  <nav class="views" aria-label="Pages">
+    <a href="#" data-view="lessons" class="view-link">Lessons</a>
+    <a href="#progress" data-view="progress" class="view-link">My progress</a>
+    <a href="#glossary" data-view="glossary" class="view-link">Glossary</a>
+    <span class="spacer"></span>
+    <button class="btn small hidden" id="install-btn" type="button">Install app</button>
+  </nav>
+  <p class="install-tip hidden" id="install-tip">On iPhone or iPad: tap the <strong>Share</strong> button in Safari, then <strong>Add to Home Screen</strong>.</p>
   <div class="shelf" id="shelf" aria-label="Topics"></div>
+
+  <section id="progressview" class="stack hidden" aria-labelledby="pv-title">
+    <div>
+      <h1 id="pv-title">My progress</h1>
+      <p class="lead">Your best scores for every lesson, saved on this device. Aim to get every bar green before the exam.</p>
+    </div>
+    <div class="card next" id="pv-next"></div>
+    <div id="pv-list" class="stack"></div>
+    <div class="row"><span class="spacer"></span><button class="btn ghost small" id="pv-reset" type="button">Reset all progress</button></div>
+  </section>
+
+  <section id="glossaryview" class="stack hidden" aria-labelledby="gv-title">
+    <div>
+      <h1 id="gv-title">Glossary</h1>
+      <p class="lead">Every key term from every lesson. Search for a word, then tap the lesson to study it.</p>
+    </div>
+    <input type="search" id="gv-search" class="bigsearch" placeholder="Search key terms… e.g. phishing, DDoS, CVSS" aria-label="Search key terms">
+    <p class="muted" id="gv-count"></p>
+    <div id="gv-list" class="glossary"></div>
+  </section>
 
   <section id="deckview">
     <header>
@@ -57,7 +91,7 @@
     </div>
 
     <div id="exam" class="pane stack hidden">
-      <div><h2>Exam practice</h2><p class="lead">Write your answer first, then open the mark scheme and tick each point you got. Your answers are saved on this device.</p></div>
+      <div><h2>Exam practice</h2><p class="lead">Write your answer first. Then either get it marked by the AI, or open the mark scheme and tick each point you got. Your answers are saved on this device.</p></div>
       <div class="card tablebox">
         <h3>Command words</h3>
         <table><tbody>
@@ -75,9 +109,9 @@
     </div>
   </section>
 
-  <footer>Answers and progress are saved in this browser only. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</footer>
+  <footer>Answers and progress are saved on this device only. Packs are made from lesson slides. If something here disagrees with your teacher, go with your teacher.</footer>
 </div>
-<script src="app.js?v=4"></script>
-<script src="assistant.js?v=4"></script>
+<script src="app.js?v=5"></script>
+<script src="assistant.js?v=5"></script>
 </body>
 </html>
